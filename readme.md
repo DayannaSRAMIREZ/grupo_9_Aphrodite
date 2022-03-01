@@ -11,3 +11,11 @@ https://www.bulgari.com/en-int/ Muy estética, con efectos en las fotos, mas sof
 https://inplata.com/categories/destacados/ mucho menos compleja, te tira directo a destacados donde tiene promociones, y esta todo ordenado por categoria
 
 https://www.tiffany.com/ Bueno, palabras mayores, sofisticada, linda visiblemente, facil de navegar
+
+https://www.instagram.com/joyaslakshmi/?utm_medium=copy_link (imagenes de compromiso)
+
+https://www.tiffany.com.mx/size-guide/bracelets-size/ (guia de tamaños)
+
+https://www.tiffany.com/customer-service/ (servicio al cliente)
+
+https://www.chanel.com/es/joyeria/coco-crush-encuentros/ (video de presentacion)
