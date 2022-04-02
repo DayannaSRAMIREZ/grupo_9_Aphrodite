@@ -1,0 +1,55 @@
+#menu{
+
+    display: inline;
+}
+
+.logo a {
+
+    color: var(--colorNegroClaro);
+}
+
+header {
+
+    background-color: var(--colorRosaClaro);
+    display: flex;
+    font-family: roboto ;  
+  
+     
+
+}
+.header__nav__ul-menuPrincipal a{
+
+    font-family: roboto;
+    color: var(--colorNegroClaro);
+    display: flex;
+    justify-content: none;
+    
+    
+}
+
+.header__nav__ul-menuSecundario{
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.header__nav__ul-menuSecundario a{
+
+    color: var(--colorNegroClaro);
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.listas{
+
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.header__nav{
+
+    width: 100%;
+}
