@@ -1,0 +1,70 @@
+footer {
+    background-color: var(--colorGris);
+    text-align: center;
+    color: var(--colorNegroClaro);
+    font-family: roboto;
+}
+
+footer section a {
+    color: var(--colorNegroClaro);
+}
+
+.footer__buscador {
+    display: none;
+}
+
+.footer__redes {
+    display: none;
+}
+
+.footer__contacto {
+    display: none;
+}
+
+.footer__iconos ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.footer__iconos img {
+    width: 35px;
+    margin: 15px;
+   
+}
+
+.footer__subscripcion input {
+    background-color: var(--colorGris);
+    border: 0;
+    border-bottom: 1px solid var(--colorNegroClaro);
+
+
+
+}
+
+.footer__subscripcion {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.placeholder {
+    text-align: center;
+    padding: 10px 0 15px 0;
+    margin: 10px;
+    font-size: 16px;
+}
+.footer__subscripcion button{
+    background-color: var(--colorGris);
+    border: solid 1px var(--colorNegroClaro);
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.footer__legales{
+    line-height: 28px; 
+    margin: 10px;
+}
