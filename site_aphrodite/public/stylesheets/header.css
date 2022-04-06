@@ -100,7 +100,7 @@ header {
     
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
 
     header {
 
@@ -125,7 +125,7 @@ header {
     .header__nav__ul-menuPrincipal li{
         padding: 0px 10px 0px 10px;
     }
-    
+
     .header__nav__ul-menuSecundario li {
 
         margin-inline-end: 8px;
