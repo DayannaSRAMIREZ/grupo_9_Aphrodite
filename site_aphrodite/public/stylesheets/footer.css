@@ -68,3 +68,86 @@ footer section a {
     line-height: 28px; 
     margin: 10px;
 }
+
+@media (min-width: 768px){
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 25px 25px  0px 25px ;
+        line-height: 40px; 
+        
+    }
+     footer h4{
+         margin-bottom: 35px;
+
+    }
+   
+    .footer__section__sectionUno{
+        width: 25%;
+
+    } 
+    .footer__section__sectionDos{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 75%;
+        text-align: left;
+        
+
+    }
+    .footer__section__sectionTres{
+        width: 100%;
+        text-align: center;
+    }
+    .footer__buscador {
+        display: block;
+       
+    }
+    .footer__buscador input{
+        background-color: var(--colorRosaClaro);
+        border: solid 1px var(--colorNegroClaro);
+        color: var(--colorNegroClaro);
+    }
+    .footer__buscador button{
+        display: none;
+    }
+    
+    .footer__redes {
+        display: block;
+    }
+    
+    .footer__contacto {
+        display: block;
+    }
+    .footer__iconos{
+        display: none;
+    }
+    .footer__legales{
+
+        margin: -3px;
+    }
+    footer{
+        background-color: var(--colorRosaClaro);
+    }
+    .footer__subscripcion button{
+        background-color: var(--colorRosaClaro);
+    }
+    .footer__subscripcion input{
+        background-color: var(--colorRosaClaro);
+    }
+    .placeholder__buscador::placeholder {
+    font-size: 16px;
+    color: var(--colorNegroClaro);
+    }
+    .placeholder__buscador{
+        padding: 3px 3px 3px 8px;
+        width: 240px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    .footer__subscripcion input{
+        padding-top: 45px;
+        width:240px ;
+
+     
+    }
+}
