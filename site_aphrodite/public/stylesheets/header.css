@@ -1,37 +1,79 @@
+header {
+
+    background-color: var(--colorRosaClaro);
+    display: flex;
+    flex-direction: row;
+     
+     
+
+}
+
 #menu{
 
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    padding: 4px;
+    justify-content: space-between;
+    
+}
+
+#menu button {
+
+    background-color: var(--colorRosaClaro);
+    color: var(--colorNegroClaro);
+    border: none;
+    font-size: 20px ;
+    
+}
+
+.header__nav__button {
+
+    background-color: var(--colorRosaClaro);
+    color: var(--colorNegroClaro);
+    border: none;
+    font-size: 14px ;
+    border: solid 1px var(--colorNegroClaro);
+    border-radius: 5px;
 }
 
 .logo a {
 
     color: var(--colorNegroClaro);
-}
-
-header {
-
-    background-color: var(--colorRosaClaro);
     display: flex;
-    font-family: roboto ;  
-  
-     
-
+    flex-direction: center;
+    padding: 8.3px;
+    justify-content: space-between;
 }
+
+
 .header__nav__ul-menuPrincipal a{
 
-    font-family: roboto;
     color: var(--colorNegroClaro);
     display: flex;
-    justify-content: none;
+    justify-content: left;
     
     
+}
+.header__nav__ul-menuPrincipal li{
+
+    margin: 3px;
 }
 
 .header__nav__ul-menuSecundario{
 
     display: flex;
     flex-direction: row;
+    width: 50%;
+    padding: 5px;
+    justify-content: space-between;
     
+    
+}
+
+.header__nav__ul-menuSecundario li {
+
+    margin-inline-end: 4px;
 }
 
 .header__nav__ul-menuSecundario a{
@@ -49,7 +91,44 @@ header {
     
 }
 
-.header__nav{
 
+.header__nav{
+    
+    
     width: 100%;
+    
+    
+}
+
+@media (min-width: 1024px) {
+
+    header {
+
+        height: 40px;
+        align-items: center;
+    }
+    #menu button {
+
+        display: none;
+        
+    }
+
+    .header__nav__ul-menuPrincipal {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+
+    }
+    
+    .header__nav__ul-menuPrincipal li{
+        padding: 0px 10px 0px 10px;
+    }
+    
+    .header__nav__ul-menuSecundario li {
+
+        margin-inline-end: 8px;
+    }
+
 }
