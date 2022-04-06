@@ -1,105 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-</head>
+  </head>
 
-
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <a href="/">
-              <i class="fas fa-gem"></i>
-            </a>
-          </div>
-                  <nav class="header__nav">
-                        <div id="menu">
-                            <button>
-                                <i class="fas fa-bars"></i>
-                            </button>
-                        </div>
-                        <div class="listas">
-                        <ul class="header__nav__ul-menuPrincipal">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/gifts">Gifts</a></li>
-                            <li><a href="/products">Products</a></li>
-                            <li><a href="/find">Find a Store</a></li>
-                            <li><a href="/weAre">We Are</a></li>
-                        </ul>
-                        <ul class="header__nav__ul-menuSecundario">
-                            <li>
-                                <a href=""><i class="fas fa-user"></i></a>
-                            </li>
-                            <li>
-                                <a href=""><i class="fas fa-shopping-bag"></i></a>
-                            </li>
-                            <li>
-                                <a href=""><i class="fas fa-sign-in-alt"></i></a>
-                            </li>
-                        </ul></div>
-                        <button class="header__nav__button">EN</button>
-                    </nav>
+      <div class="logo">
+        <a href="/">
+          <i class="fas fa-gem"></i>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <div id="menu">
+          <button>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div class="listas">
+          <ul class="header__nav__ul-menuPrincipal">
+            <li><a href="/">Home</a></li>
+            <li><a href="/gifts">Gifts</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/find">Find a Store</a></li>
+            <li><a href="/weAre">We Are</a></li>
+          </ul>
+          <ul class="header__nav__ul-menuSecundario">
+            <li>
+              <a href=""><i class="fas fa-user"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-shopping-bag"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-sign-in-alt"></i></a>
+            </li>
+          </ul>
+        </div>
+        <button class="header__nav__button">EN</button>
+      </nav>
     </header>
-    <br>
+    <br />
     <footer>
-        <section class="footer__section__sectionUno">
-            <form class="footer__buscador" action="">
-                <input type="text" placeholder="Buscar">
-                <button type="submit"></button>
+      <section class="footer__section__sectionUno">
+        <form class="footer__buscador" action="">
+          <input type="text" placeholder="Buscar" />
+          <button type="submit"></button>
+        </form>
+        <form class="footer__subscripcion" action="">
+          <input
+            class="placeholder"
+            type="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <button type="submit">Suscribirse</button>
+        </form>
+      </section>
 
-            </form>
-            <form class="footer__subscripcion" action="">
-                <input class="placeholder" type="email" placeholder="Correo electrónico" required>
-                <button type="submit">Suscribirse</button>
-            </form>
-        </section>
+      <section class="footer__section__sectionDos">
+        <article class="footer__redes">
+          <ul>
+            <h4>Redes</h4>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Twitter</a></li>
+          </ul>
+        </article>
+        <article class="footer__contacto">
+          <ul>
+            <h4>Contacto</h4>
+            <li><a href="">Teléfono</a></li>
+            <li><a href="">Mail</a></li>
+          </ul>
+        </article>
 
-        <section class="footer__section__sectionDos">
-            <article class="footer__redes">
-                <ul>
-                    <h4>Redes</h4>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">Twitter</a></li>
-                </ul>
-            </article>
-            <article class="footer__contacto">
-                <ul>
-                    <h4>Contacto</h4>
-                    <li><a href="">Teléfono</a></li>
-                    <li><a href="">Mail</a></li>
-                </ul>
-            </article>
-            
-            <article class="footer__legales">
-                <ul>
-                    <h4>Legales</h4>
-                    <li><a href="">Preguntas frecuentes</a></li>
-                    <li><a href="">Cancelación, Cambios y Devoluciones</a></li>
-                    <li><a href="">Términos y Condiciones</a></li>
-                </ul>
-            </article>
-            <article class="footer__iconos">
-                
-                <ul>
-                    <li><a href=""><img src="/images/facebook.png" alt=""></a></li>
-                    <li><a href=""><img src="/images/gorjeo.png" alt=""></a></li>
-                    <li><a href=""><img src="/images/gmail.png" alt=""></a></li>
-                    <li><a href=""><img src="/images/instagram.png" alt=""></a></li>
-                    <li><a href=""><img src="/images/whatsapp.png" alt=""></a></li>
-                </ul>
-            </article>
-        </section>
-        <section class="footer__section__sectionTres">
-            <div>© Aphrodite 2022</div>
-        </section>
+        <article class="footer__legales">
+          <ul>
+            <h4>Legales</h4>
+            <li><a href="">Preguntas frecuentes</a></li>
+            <li><a href="">Cancelación, Cambios y Devoluciones</a></li>
+            <li><a href="">Términos y Condiciones</a></li>
+          </ul>
+        </article>
+        <article class="footer__iconos">
+          <ul>
+            <li>
+              <a href=""><img src="/images/facebook.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="/images/gorjeo.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="/images/gmail.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="/images/instagram.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="/images/whatsapp.png" alt="" /></a>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="footer__section__sectionTres">
+        <div>© Aphrodite 2022</div>
+      </section>
     </footer>
-</body>
-
+  </body>
 </html>
