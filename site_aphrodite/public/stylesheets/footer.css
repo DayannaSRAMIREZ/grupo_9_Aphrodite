@@ -3,6 +3,9 @@ footer {
     text-align: center;
     color: var(--colorNegroClaro);
     font-family: roboto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer section a {
@@ -124,7 +127,10 @@ footer section a {
     }
     .footer__legales{
 
-        margin: -3px;
+        display: block;
+    }
+    .footer__legales ul li{
+        line-height: 40px; 
     }
     footer{
         background-color: var(--colorRosaClaro);
