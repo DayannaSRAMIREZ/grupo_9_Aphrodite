@@ -1,0 +1,82 @@
+body.home {
+    font-family: rosarivo;
+}
+
+.home a {
+    color: var(--colorNegroClaro);
+}
+
+
+#video {
+    position: relative;
+    height: 50vh;
+}
+
+#video video {
+    background-position: absolute;
+    z-index: 1;
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video .content {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.home__principal{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.home__main__carrousel{
+    display: none;
+}
+.home__main__atajos{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 11vw 0 11vw 7px;
+ 
+
+}
+
+.home__main__atajos h4{
+    font-size: 3vw;
+}
+.home__main__atajos img{
+    width: 15vw;
+    height: 15vw;
+}
+.home__main__atajos button{
+    display: none;
+}
+.home__main__destacados{
+    display: none;
+}
+.home__main__lonuevo{
+    background-image: url("/images/home/lonuevo.jpg");
+    background-size: cover;
+    height: 150px;
+    position: relative;
+   
+
+}
+.home__main__lonuevo a{
+position: absolute;
+bottom: 40%;
+left: 25%;
+}
+.home__main__lonuevo h3{
+    color: white;
+    font-weight: lighter;
+}
+.home__main__cuotas{
+    background-color: var(--colorRosaFuerte);
+    font-size: 3vw;
+
+}
