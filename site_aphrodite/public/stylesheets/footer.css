@@ -3,8 +3,8 @@ footer {
     text-align: center;
     color: var(--colorNegroClaro);
     font-family: roboto;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     width: 100%;
 }
 

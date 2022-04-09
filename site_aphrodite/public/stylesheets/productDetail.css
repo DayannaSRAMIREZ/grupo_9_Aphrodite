@@ -1,0 +1,458 @@
+.detalle__productos__caracteristicas .mas , .detalle__productos__envios .mas{
+    display: none;
+}
+.product__detail__interarte{
+    display: none;
+}
+
+.detalle__imagenes .arrow_right, .detalle__imagenes .arrow_left{
+    display: none;
+}
+.product__detail main {
+
+    width: 100%;
+    font-family: rosarivo;
+    color: var(--colorNegroClaro);
+
+
+}
+.detalle__producto__art1, .detalle__producto, .detalle__productos__caracteristicas, .detalle__productos__envios, .detalle__productos__descripcion{
+
+    padding: 20px;
+}
+
+.detalle__producto__art1 {
+
+    padding: 1px;
+}
+
+.product__detail h2{
+
+     font-size: 18px;
+}
+.detalle__imagenes {
+
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+
+}
+
+.collar1 img {
+
+    border: solid 2px var(--colorNegroClaro);
+    width: 250px;
+    
+
+}
+
+.collar1 {
+
+    text-align: center;
+    width: 100%;
+}
+
+
+.imagenes__chicas img {
+    
+    display: none;
+    
+}
+
+.detalle__carrusel {
+
+    text-align: center;
+}
+
+.detalle__carrusel img {
+
+    width: 10px;
+    
+
+}
+
+.detalle__medios__pago img{
+
+    width: 20px;
+}
+
+.detalle__producto{
+
+    font-size: 10px;
+    
+}
+/**/
+
+.botoncm button{
+
+    width: 50px ;
+    color: var(--colorNegroClaro);
+    background-color: white;
+    border: solid 2px var(--colorNegroClaro);
+    margin-top: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+
+    
+}
+
+.comprar button {
+
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    background-color: var(--colorRosaFuerte);
+    padding: 9px 8px 9px 5px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+    
+ 
+}
+
+.deseos button {
+
+    display: flex;
+    flex-direction:row;
+    background-color: var(--colorRosaClaro);
+    width: 60x ;
+    color: var(--colorNegroClaro);
+    padding: 9px 10px 9px 5px;
+    justify-content: flex-end;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+    
+   
+}
+
+.iconify{
+
+    margin-left: 5px;
+}
+
+.detalle__envios {
+
+    font-size: 12px;
+}
+
+.detalle__medios__pago {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    font-size: 14px;
+    
+}
+.detalle__medios__pago img {
+
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    padding: 10px;
+    /* margin: 0 0 5px 5px; */
+}
+.detalle__productos__descripcion, .detalle__productos__caracteristicas, .detalle__productos__envios {
+
+    font-size: 12px;
+}
+.detalle__producto__art2 {
+
+    display: flex;
+    justify-content:center; 
+    
+       
+     
+}
+.detalle__producto__art2 button {
+
+    display: flex;
+    margin-top: 24px;
+    align-self: initial;
+     
+       
+}
+.detalle__estrella img {
+
+    width: 12px;
+    margin: 3px 0 3px 0;
+}
+
+.tarjetas {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.visa img {
+
+    width: 26px;
+    margin: 0 0 5px 5px;
+    
+}
+.amer img {
+
+    width: 40px;
+    align-self: flex-start;
+    margin: 2px 2px 0px 0px;
+    padding: 10px 3px 0px 0px !important;
+}
+.master img {
+
+    width: 40px;
+    align-self: flex-end;
+    margin: 2px 0px 3px 0px;
+    padding: 10px 0px 0px 0px !important;
+}
+
+.detalle__envios {
+
+    display: flex;
+    border: 1px solid var(--colorGris);
+    margin: 20px;
+    padding: 6px;
+}
+
+.detalle__envios article {
+
+    padding: 0px 0 0px 5px;
+    
+}
+.camion{
+
+    color:var(--colorVerdeManzana);
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+.detalle__envios h3 {
+
+    color: var(--colorVerdeManzana);
+    width: 300px;
+    font-size: 13px;
+    
+    
+}
+
+.detalle__envios span {
+
+    color: var(--colorDurazno);
+}
+
+.detalle__productos__caracteristicas{
+
+    position: relative;
+}
+.detalle__productos__caracteristicas div{
+
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    
+}
+.detalle__productos__descripcion{
+
+    position: relative;
+}
+.detalle__productos__descripcion div{
+
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    
+}
+.detalle__productos__envios{
+
+    position: relative;
+}
+.detalle__productos__envios div{
+
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    
+}
+@media (min-width: 768px) {
+
+    .detalle__imagenes {
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .detalle__carrusel{
+        display: none;
+    }
+
+    .imagenes__chicas{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .imagenes__chicas img {
+    
+        display: block;
+        width: 110px;
+        margin:0 10px 0 0;
+        
+    }
+    .collar1{
+        
+        width: 350px;
+        position: relative;
+        
+
+    }
+    .collar1 img{
+
+        width: 350px;
+        border: none;
+        
+    }
+    .arrow_left {
+
+        position: absolute;
+        left: 0;
+        top: 175px;
+    }
+    .arrow_right {
+
+        position: absolute;
+        right: 0;
+        top: 175px;
+    }
+    .detalle__producto__art1 h2{
+
+        font-size: 25px;
+    }
+    .detalle__producto__art1 h3{
+
+        font-size: 25px;
+    }
+    .detalle__estrella img{
+
+        width: 20px;
+    }
+    .detalle__producto__art1 p {
+
+        font-size: 15px;
+    }
+    .detalle__envios{
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .detalle__envios h3{
+
+        width: 100%;
+    }
+    
+    .detalle__envios, .detalle__envios h3, .detalle__envios .camion {
+
+        font-size: 15px;
+    }
+    .detalle__productos__descripcion h3, .detalle__productos__caracteristicas h3, .detalle__productos__envios h3{
+        
+        font-size: 20px;
+    }
+    .detalle__productos__caracteristicas p, .detalle__productos__descripcion p, .detalle__productos__envios p {
+        font-size: 17px;
+    }
+
+} 
+@media (min-width:1024px){
+
+    .detalle__imagenes .arrow_right, .detalle__imagenes .arrow_left{
+        display: block;
+    }
+    .product__detail main{
+
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .detalle__imagenes{
+
+        width:100%;
+        height: 350px;
+    }
+    .detalle__desk{
+
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .detalle__producto{
+
+        padding: 0px;
+    }
+    .detalle__productos__descripcion h3 {
+        display: none;
+    }
+    .detalle__productos__caracteristicas p {
+        display: none;
+
+    }
+    .detalle__productos__descripcion hr{
+
+        display: none;
+    }
+    .detalle__productos__envios p{
+        display: none;
+    }
+    .detalle__envios{
+
+        order: 1;
+
+    }
+    .detalle__medios__pago{
+
+        order: 2;
+    }
+    .imagenes__chicas{
+
+        justify-content: space-between;
+        
+    }
+    .menos{
+        display: none;
+    }
+    .detalle__productos__caracteristicas .mas , .detalle__productos__envios .mas{
+        display: block;
+    }
+    .interesarte__fotos img{
+
+        width: 20%;
+   }
+   .desktop__formato{
+       width: 50%;
+   }
+
+   .product__detail__interarte{
+
+    display: block;
+   }
+
+   .product__detail__interarte .interesarte__fotos {
+
+    display: flex;
+    align-items: center;
+   }
+   .product__detail__interarte h3{
+
+    color: var(--colorGris);
+    margin-top: 40px;
+    margin-left: 20px;
+   }
+   .product__detail__interarte img {
+
+    margin: 20px;
+    border: solid 1.5px var(--colorGris);
+   }
+
+}
