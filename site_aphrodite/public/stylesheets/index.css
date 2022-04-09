@@ -13,8 +13,6 @@ body.home {
 }
 
 #video video {
-    background-position: absolute;
-    z-index: 1;
     height: 50vh;
     width: 100%;
     object-fit: cover;
@@ -24,7 +22,7 @@ body.home {
     background: rgba(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;
-    z-index: 20;
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
