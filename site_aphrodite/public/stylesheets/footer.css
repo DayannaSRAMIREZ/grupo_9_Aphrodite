@@ -2,7 +2,8 @@ footer {
     background-color: var(--colorGris);
     text-align: center;
     color: var(--colorNegroClaro);
-    font-family: roboto;
+    font-family: rosarivo;
+    font-size: 12px;
     /* position: absolute;
     bottom: 0; */
     width: 100%;
@@ -33,7 +34,7 @@ footer section a {
 }
 
 .footer__iconos img {
-    width: 35px;
+    width: 25px;
     margin: 15px;
    
 }
@@ -72,7 +73,7 @@ footer section a {
     margin: 10px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
     footer{
         display: flex;
         flex-wrap: wrap;
