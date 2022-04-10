@@ -129,7 +129,7 @@ body.home {
    background-color: var(--colorRosaClaro);
 
 animation-name: mianimacion2;
-    animation-duration: 6s;
+    animation-duration: 25s;
     
 }
 .tarjeta p{
@@ -180,7 +180,7 @@ animation-name: mianimacion2;
     height: 150px;
     position: relative;
     animation-name: aparecer;
-    animation-duration: 10s;
+    animation-duration: 20s;
 
 
 }
@@ -213,12 +213,13 @@ animation-name: mianimacion2;
 }
 .home__main__fuente{
     display: flex;
-    flex-wrap: wrap;
+
     margin: 10px 7px;
 }
 .home__main__fuente__texto{
     width: 50%;
-    text-align: center;
+    text-align:justify;
+    margin: 7px;
   
 }
 .home__main__fuente__texto h3{
@@ -229,9 +230,6 @@ animation-name: mianimacion2;
 }
 .home__main__fuente__img{
     width: 50%;
-    background-image: url("/images/home/diamonds-g6718b8062_1920.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
    
 }
 .video__publi{
