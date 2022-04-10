@@ -60,6 +60,8 @@ footer section a {
     padding: 10px 0 15px 0;
     margin: 10px;
     font-size: 16px;
+    font-family: rosarivo;
+    
 }
 .footer__subscripcion button{
     background-color: var(--colorGris);
@@ -67,6 +69,7 @@ footer section a {
     padding: 5px 15px;
     margin-bottom: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-family: rosarivo;
 }
 .footer__legales{
     line-height: 28px; 

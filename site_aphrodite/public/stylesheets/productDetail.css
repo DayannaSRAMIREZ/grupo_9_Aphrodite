@@ -83,7 +83,7 @@
     font-size: 10px;
     
 }
-/**/
+
 
 .botoncm button{
 
@@ -151,7 +151,7 @@
     flex-direction: center;
     justify-content: center;
     padding: 10px;
-    /* margin: 0 0 5px 5px; */
+    
 }
 .detalle__productos__descripcion, .detalle__productos__caracteristicas, .detalle__productos__envios {
 
@@ -179,7 +179,7 @@
     margin: 3px 0 3px 0;
 }
 
-.tarjetas {
+.tarjetas__credito__detail {
 
     display: flex;
     flex-direction: row;
