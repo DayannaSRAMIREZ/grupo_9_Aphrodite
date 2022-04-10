@@ -1,0 +1,237 @@
+body.home {
+    font-family: rosarivo;
+}
+
+.home a {
+    color: var(--colorNegroClaro);
+}
+
+
+#video {
+    position: relative;
+    height: 50vh;
+}
+
+#video video {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video .content {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home__principal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home__main__carrousel {
+    display: none;
+}
+
+.home__main__atajos {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 11vw 7px 11vw 7px;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+}
+.home__main__atajos article{
+    height: 100px;
+    width: 130px;
+    margin-top: 1vh;
+    text-align: center;
+    padding-top: 1vh;
+    border: solid 1px var(--colorRosaFuerte);
+}
+
+.home__main__atajos h4 {
+    font-size: 3vw;
+}
+
+.home__main__atajos img {
+    width: 15vw;
+    height: 15vw;
+}
+
+.home__main__atajos button {
+    background-color: var(--colorDorado);
+    color: white;
+    font-family: rosarivo;
+    font-size: 12px;
+    border : none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 75px;
+    
+}
+
+.imagenes__fotos img {
+    width: 50px;
+}
+/*tarjetas*/
+
+.tarjetas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+
+}
+
+
+
+.tarjetas article {
+    display: flex;
+    justify-content: center;
+}
+@keyframes mianimacion2 {
+    0% {
+        top: 0px;
+        left: 50px;
+        background-color: var(--colorRosaClaro)
+    }
+
+    50% {
+        top: 0px;
+        background-color: var(--colorRosaFuerte);
+    }
+    75% {
+        left: 0;
+        top: 0;
+        background-color: var(--colorRosaClaro)
+    }
+
+    100% {
+        left: 0;
+        top: 0px;
+    }
+
+}
+.tarjeta {
+    width: 60px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+   background-color: var(--colorRosaClaro);
+
+animation-name: mianimacion2;
+    animation-duration: 25s;
+    
+}
+.tarjeta p{
+    position: absolute;
+    top:0px;
+    right: 5px;
+    font-size: 5px;
+    background-color: rgb(226, 50, 50);
+    padding: 0px 2px;
+}
+.home__contenedor{
+    position: relative;
+}
+
+.tarjeta img {
+    width: 50px;
+
+}
+
+.tarjetas h3,h4 {
+    font-size: 11px;
+}
+.tarjeta__pie a{
+    font-size: 12px;
+    font-family: rosarivo; 
+    color: white
+}
+.tarjeta__pie button{
+    border: solid 1px white;
+   border-radius: 5px;
+    padding: 2px;
+    background-color: var(--colorRosaFuerte);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+.tarjeta__pie button:hover{
+  background-color: var(--colorDorado);
+}
+/******/
+
+.arrow__destacados {
+    display: none;
+}
+
+.home__main__lonuevo {
+    background-image: url("/images/home/lonuevo.jpg");
+    background-size: cover;
+    height: 150px;
+    position: relative;
+    animation-name: aparecer;
+    animation-duration: 20s;
+
+
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+.home__main__lonuevo a {
+    position: absolute;
+    bottom: 40%;
+    left: 25%;
+}
+
+.home__main__lonuevo h3 {
+    color: white;
+    font-weight: lighter;
+}
+
+.home__main__cuotas {
+    background-color: var(--colorRosaFuerte);
+    font-size: 12px; 
+    padding-top: 4px;
+
+}
+.home__main__fuente{
+    display: flex;
+
+    margin: 10px 7px;
+}
+.home__main__fuente__texto{
+    width: 50%;
+    text-align:justify;
+    margin: 7px;
+  
+}
+.home__main__fuente__texto h3{
+    font-size: 12px;
+}
+.home__main__fuente__texto p{
+    font-size: 10px;
+}
+.home__main__fuente__img{
+    width: 50%;
+   
+}
+.video__publi{
+    width: 100vw;
+}
