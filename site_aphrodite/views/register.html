@@ -48,6 +48,92 @@
                         </ul></div>
                     </nav>
     </header>
+
+    <main class="register__main">
+      <h2>Crear Cuenta</h2>
+      <marquee>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</marquee>
+      <div class="register__login"><a href="/login">¡Ya tengo una cuenta!</a></div>
+      <hr>
+      <form>
+        <article>
+          <div class="register__form-box">
+            <label for="nombre">Nombre</label>
+            <br>
+            <input class="register__form-input" type="text" id="nombre" name="nombre">
+        
+          </div>
+          <div class="register__form-box">
+            <label for="nombre">Apellido</label>
+            <br>
+            <input class="register__form-input" type="text" id="nombre" name="nombre">
+  
+          </div>
+          <div class="register__form-box">
+            <label for="email">Email</label>
+            <br>
+            <input class="register__form-input" type="email" id="email" name="email">
+  
+          </div>
+          <div class="register__form-box">
+            <label for="password">Contraseña</label>
+            <br>
+            <input class="register__form-input" type="password" id="password" name="password">
+  
+          </div>
+          <div class="register__form-box">
+            <label for="password"> Repetir Contraseña</label>
+            <br>
+            <input class="register__form-input" type="password" id="password" name="password">
+  
+          </div>
+          <div class="register__form-box pais">
+            <label class="pais" for="pais">País</label>
+      
+            <select class="register__form-select" name="pais" id="pais">
+              <option value="" hidden selected>Por favor elegí uno...</option>
+              <option value="ar">Argentina</option>
+              <option value="bol">Bolivia</option>
+              <option value="br">Brasil</option>
+              <option value="cl">Chile</option>
+              <option value="col">Colombia</option>
+              <option value="mx">México</option>
+              <option value="par">Paraguay</option>
+              <option value="per">Perú</option>
+              <option value="uy">Uruguay</option>
+              <option value="vnz">Venezuela</option>
+  
+            </select>
+  
+          </div>
+          <div class="register__form-box__genero">
+            <h4>Género</h4>
+            <div class="register__radio-box">
+              <input class="" type="radio" name="genero" id="masculino" value="m">
+              <label for="masculino">M</label>
+            </div>
+            <div class="register__radio-box">
+              <input class="" type="radio" name="genero" id="femenino" value="f">
+              <label for="femenino">F</label>
+            </div>
+            <div class="register__radio-box">
+              <input class="" type="radio" name="genero" id="nodice" value="n">
+              <label for="nodice">Otro</label>
+            </div>
+          </div>
+          <div class="register__form-box">
+  
+            <div class="register__radio-box__suscribir">
+              <input class="checkbox" type="checkbox" name="suscribirse" id="suscribirse" value="g">
+              <label for="suscribirse">Suscribirse al newsletter</label>
+            </div>
+          </div>
+        </article>
+        <div class="button_register_box">
+        <button class="button_register" type="submit">REGISTRARSE</button>
+      </div>
+      </form>
+  
+    </main>
     <footer>
       <section class="footer__section__sectionUno">
         <form class="footer__buscador" action="">
