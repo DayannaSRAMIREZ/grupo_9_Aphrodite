@@ -2,7 +2,8 @@ footer {
     background-color: var(--colorGris);
     text-align: center;
     color: var(--colorNegroClaro);
-    font-family: roboto;
+    font-family: rosarivo;
+    font-size: 12px;
     /* position: absolute;
     bottom: 0; */
     width: 100%;
@@ -33,7 +34,7 @@ footer section a {
 }
 
 .footer__iconos img {
-    width: 35px;
+    width: 25px;
     margin: 15px;
    
 }
@@ -59,6 +60,8 @@ footer section a {
     padding: 10px 0 15px 0;
     margin: 10px;
     font-size: 16px;
+    font-family: rosarivo;
+    
 }
 .footer__subscripcion button{
     background-color: var(--colorGris);
@@ -66,13 +69,14 @@ footer section a {
     padding: 5px 15px;
     margin-bottom: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-family: rosarivo;
 }
 .footer__legales{
     line-height: 28px; 
     margin: 10px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
     footer{
         display: flex;
         flex-wrap: wrap;
