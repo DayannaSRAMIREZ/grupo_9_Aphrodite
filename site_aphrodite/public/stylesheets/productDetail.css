@@ -273,44 +273,49 @@
     right: 30px;
     
 }
-@media (min-width: 768px) {
 
-    .detalle__imagenes {
+@media (min-width:768px){
+
+    .detalle__imagenes .arrow_right, .detalle__imagenes .arrow_left{
+        display: block;
+    }
+    .product__detail main{
 
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
+        flex-direction: row;
+        
     }
-
-    .detalle__carrusel{
-        display: none;
-    }
-
     .imagenes__chicas{
 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
     }
 
     .imagenes__chicas img {
     
         display: block;
-        width: 110px;
-        margin:0 10px 0 0;
+        width: 95px;
+        margin: 4px 15px;
+        
+        
         
     }
     .collar1{
         
-        width: 350px;
+        width: 240px;
         position: relative;
+        justify-self: center;
+        margin: auto;
         
-
+        
     }
     .collar1 img{
 
-        width: 350px;
+        width: 240px;
         border: none;
+        position: relative;
+               
         
     }
     .arrow_left {
@@ -325,61 +330,12 @@
         right: 0;
         top: 175px;
     }
-    .detalle__producto__art1 h2{
-
-        font-size: 25px;
-    }
-    .detalle__producto__art1 h3{
-
-        font-size: 25px;
-    }
-    .detalle__estrella img{
-
-        width: 20px;
-    }
-    .detalle__producto__art1 p {
-
-        font-size: 15px;
-    }
-    .detalle__envios{
-
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .detalle__envios h3{
-
-        width: 100%;
-    }
-    
-    .detalle__envios, .detalle__envios h3, .detalle__envios .camion {
-
-        font-size: 15px;
-    }
-    .detalle__productos__descripcion h3, .detalle__productos__caracteristicas h3, .detalle__productos__envios h3{
-        
-        font-size: 20px;
-    }
-    .detalle__productos__caracteristicas p, .detalle__productos__descripcion p, .detalle__productos__envios p {
-        font-size: 17px;
-    }
-
-} 
-@media (min-width:1024px){
-
-    .detalle__imagenes .arrow_right, .detalle__imagenes .arrow_left{
-        display: block;
-    }
-    .product__detail main{
-
-        display: flex;
-        flex-direction: row;
-        
-    }
 
     .detalle__imagenes{
 
         width:100%;
         height: 350px;
+        display: flex;
     }
     .detalle__desk{
 
@@ -453,6 +409,9 @@
 
     margin: 20px;
     border: solid 1.5px var(--colorGris);
+   }
+   .detalle__carrusel{
+       display: none;
    }
 
 }
