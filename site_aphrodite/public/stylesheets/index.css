@@ -30,7 +30,7 @@ body.home {
 
 .home__principal {
     display: flex;
-    flex-wrap: wrap;
+   
 }
 
 .home__main__carrousel {
@@ -45,15 +45,25 @@ body.home {
     flex-wrap: wrap;
     align-items: center;
 
-
 }
-.home__main__atajos article{
-    height: 100px;
-    width: 130px;
+
+.home__main__atajos__clickeables {
+
+    border: solid 1px var(--colorRosaFuerte);
+}
+
+.home__main__atajos__mas,
+.home__main__atajos__clickeables {
+    height: 30vw;
+    width: 32vw;
     margin-top: 1vh;
     text-align: center;
     padding-top: 1vh;
-    border: solid 1px var(--colorRosaFuerte);
+
+}
+
+.home__main__atajos__mas button {
+    margin-top: 25%;
 }
 
 .home__main__atajos h4 {
@@ -70,32 +80,118 @@ body.home {
     color: white;
     font-family: rosarivo;
     font-size: 12px;
-    border : none;
+    border: none;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     width: 75px;
-    
+
 }
 
 .imagenes__fotos img {
     width: 50px;
 }
+
 /*tarjetas*/
 
-.tarjetas {
+.card {
+    text-align: center;
+}
+
+.card article {
+
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.tarjeta img {
+    width: 40vw;
+}
+
+.tarjeta {
+    background-color: var(--colorRosaClaro);
+    width: 50vw;
+    height: 80vw;
+    margin: 3vw;
+    padding: 3vw;
+    border-radius: 3vw;
+    position: relative;
 
 }
 
-
-
-.tarjetas article {
-    display: flex;
-    justify-content: center;
+.tarjeta h4 {
+    font-size: 7vw;
 }
+
+.tarjeta h4 {
+    font-size: 6vw;
+
+}
+
+.tarjeta p,
+h6 {
+    font-size: 4.5vw;
+    margin: 4px 0;
+}
+
+.tarjeta1 {
+    animation-name: mianimacion2;
+    animation-duration: 15s;
+}
+
+.tarjeta2 {
+    animation-name: mianimacion1;
+    animation-duration: 15s;
+}
+
+.home__contenedor {
+    position: relative;
+}
+
+.tarjeta__pie a {
+    font-size: 12px;
+    font-family: rosarivo;
+    color: white
+}
+
+.tarjeta__pie button {
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 2vw 5vw;
+    background-color: var(--colorRosaFuerte);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.tarjeta__pie button:hover {
+    background-color: var(--colorDorado);
+}
+
+@keyframes mianimacion1 {
+    0% {
+        top: 0px;
+        right: 50px;
+        background-color: var(--colorRosaClaro)
+    }
+
+    50% {
+        top: 0px;
+        background-color: var(--colorRosaFuerte);
+    }
+
+    75% {
+        right: 0;
+        top: 0;
+        background-color: var(--colorRosaClaro)
+    }
+
+    100% {
+        left: 0;
+        top: 0px;
+    }
+
+}
+
 @keyframes mianimacion2 {
     0% {
         top: 0px;
@@ -107,6 +203,7 @@ body.home {
         top: 0px;
         background-color: var(--colorRosaFuerte);
     }
+
     75% {
         left: 0;
         top: 0;
@@ -119,56 +216,12 @@ body.home {
     }
 
 }
-.tarjeta {
-    width: 60px;
-    padding: 5px;
-    margin: 5px;
-    text-align: center;
-    border-radius: 5px;
-    position: relative;
-   background-color: var(--colorRosaClaro);
 
-animation-name: mianimacion2;
-    animation-duration: 25s;
-    
-}
-.tarjeta p{
-    position: absolute;
-    top:0px;
-    right: 5px;
-    font-size: 5px;
-    background-color: rgb(226, 50, 50);
-    padding: 0px 2px;
-}
-.home__contenedor{
-    position: relative;
-}
-
-.tarjeta img {
-    width: 50px;
+.diamante {
+    width: 50%;
 
 }
 
-.tarjetas h3,h4 {
-    font-size: 11px;
-}
-.tarjeta__pie a{
-    font-size: 12px;
-    font-family: rosarivo; 
-    color: white
-}
-.tarjeta__pie button{
-    border: solid 1px white;
-   border-radius: 5px;
-    padding: 2px;
-    background-color: var(--colorRosaFuerte);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-}
-.tarjeta__pie button:hover{
-  background-color: var(--colorDorado);
-}
-/******/
 
 .arrow__destacados {
     display: none;
@@ -186,14 +239,16 @@ animation-name: mianimacion2;
 }
 
 @keyframes aparecer {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
-    
+
 }
+
 .home__main__lonuevo a {
     position: absolute;
     bottom: 40%;
@@ -207,31 +262,200 @@ animation-name: mianimacion2;
 
 .home__main__cuotas {
     background-color: var(--colorRosaFuerte);
-    font-size: 12px; 
+    font-size: 12px;
     padding-top: 4px;
 
 }
-.home__main__fuente{
+
+.home__main__fuente {
     display: flex;
 
     margin: 10px 7px;
 }
-.home__main__fuente__texto{
+
+.home__main__fuente__texto {
     width: 50%;
-    text-align:justify;
+    text-align: justify;
     margin: 7px;
-  
+
 }
-.home__main__fuente__texto h3{
+
+.home__main__fuente__texto h3 {
     font-size: 12px;
 }
-.home__main__fuente__texto p{
+
+.home__main__fuente__texto p {
     font-size: 10px;
 }
-.home__main__fuente__img{
+
+.home__main__fuente__img {
     width: 50%;
-   
+
 }
-.video__publi{
+
+.video__publi {
     width: 100vw;
+}
+
+@media (min-width: 460px) {
+   
+    .home__main__carrousel__foto {
+        display: block;
+        width: 50%;
+        background-image: url(/images/home/cuello.png);
+        background-size: cover;
+
+    }
+    .home__principal{
+        width: 100%;
+    }
+  
+
+    .home__tablet {
+        display: flex;
+        width: 100%;
+        margin: 5vw 0; 
+    }
+
+    .home__main__atajos {
+        width: 50vw;
+        margin: 0 0 0 0vw;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .home__main__atajos__mas,
+    .home__main__atajos__clickeables {
+        height: 15vw;
+        width: 19vw;
+        margin: 1vh 0;
+        text-align: center;
+        padding: 1vh 0;
+    
+    }
+    .home__main__atajos img {
+        width: 9vw;
+        height: 9vw;
+      
+      
+    }
+    .video__publi{
+        margin: 5vw 0; 
+    }
+    .card article {
+
+      flex-direction: row;
+        width: 100%;
+    }
+    .tarjeta{
+        width: 30vw; 
+        height: 30vw;
+    }
+    .tarjeta h4 {
+        font-size: 2.1vw;
+    }
+    .tarjeta img {
+        width: 13vw;
+    }
+    
+    .tarjeta p,
+    h6 {
+        font-size:1.5vw;
+        margin: 4px 0;
+    }
+    
+    
+.tarjeta__pie a {
+    font-size: 10px;
+    font-family: rosarivo;
+    color: white
+}
+
+.tarjeta__pie button {
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 1vw 2vw; 
+    background-color: var(--colorRosaFuerte);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.tarjeta__pie button:hover {
+    background-color: var(--colorDorado);
+}
+.home__main__fuente__texto h3{
+    font-size: 3vw;
+   
+    
+}
+
+
+@keyframes mianimacion1 {
+    0% {
+        top: 0px;
+        left: 50px;
+        background-color: var(--colorRosaClaro)
+    }
+
+    50% {
+        top: 0px;
+        background-color: var(--colorRosaFuerte);
+    }
+
+    75% {
+        left: 0;
+        top: 0;
+        background-color: var(--colorRosaClaro)
+    }
+
+    100% {
+        left: 0;
+        top: 0px;
+    }
+
+}
+
+@keyframes mianimacion2 {
+    0% {
+        top: 0px;
+        left: 50px;
+        background-color: var(--colorRosaClaro)
+    }
+
+    50% {
+        top: 0px;
+        background-color: var(--colorRosaFuerte);
+    }
+
+    75% {
+        left:  0;
+        top: 0;
+        background-color: var(--colorRosaClaro)
+    }
+
+    100% {
+        left:0;
+        top: 0px;
+    }
+
+}
+
+.home__main__fuente__texto p{
+    font-size: 2vw;
+    
+}
+.home__main__lonuevo {
+ 
+    height: 200px;
+    width: 100%;
+
+}
+.home__main__lonuevo a {
+    width: 50%;
+ 
+    text-align: center;
+}
+
+
+
+
 }

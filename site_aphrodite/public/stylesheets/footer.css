@@ -75,17 +75,17 @@ footer section a {
     line-height: 28px; 
     margin: 10px;
 }
-
-@media (min-width: 1024px){
+/*desktop*/
+@media (min-width: 768px){
     footer{
         display: flex;
         flex-wrap: wrap;
-        padding: 25px 25px  0px 25px ;
-        line-height: 40px; 
+        padding: 25px 25px  0px 25px ; 
+         line-height: 40px; 
         
     }
      footer h4{
-         margin-bottom: 35px;
+         /* margin-bottom: 35px; */
 
     }
    
@@ -151,13 +151,25 @@ footer section a {
     }
     .placeholder__buscador{
         padding: 3px 3px 3px 8px;
-        width: 240px;
+        width: 180px;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     }
     .footer__subscripcion input{
         padding-top: 45px;
-        width:240px ;
-
+        width:180px 
      
     }
+}
+@media (min-width: 1024px) {
+    .placeholder__buscador{
+       
+        width: 240px;
+       
+    }
+    .footer__subscripcion input{
+        
+        width:240px 
+     
+    }
+    
 }
