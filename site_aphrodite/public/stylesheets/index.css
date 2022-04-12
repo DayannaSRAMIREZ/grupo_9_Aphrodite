@@ -296,7 +296,7 @@ h6 {
 .video__publi {
     width: 100vw;
 }
-
+/*-----------tablet--------------------*/
 @media (min-width: 460px) {
    
     .home__main__carrousel__foto {
@@ -441,6 +441,7 @@ h6 {
 
 .home__main__fuente__texto p{
     font-size: 2vw;
+  
     
 }
 .home__main__lonuevo {
@@ -451,11 +452,109 @@ h6 {
 }
 .home__main__lonuevo a {
     width: 50%;
- 
-    text-align: center;
+ text-align: center;
 }
 
 
+}
+/*--------------desktop------------*/
+@media (min-width:768px) {
 
+    .home__main__lonuevo {
+ 
+    height: 400px;
+   
+
+}
+.home__main__fuente__texto {
+     text-align: center;
+     margin-top: 7%;
+}
+.home__main__fuente__texto p{
+    font-size: 1.2vw;
+   width: 100%;
+ line-height: 3vw;
+ padding: 4px;
+}
+    .home__main__fuente__texto h3{
+  font-size: 1.5vw;
+ 
+  
+}
+.home__main__atajos {
+    width: 100vw;
+    margin: 0 0 0 0vw;
+    display:flex; 
+}
+.home__main__atajos__clickeables {
+    height: 12vw;
+    width: 14vw;
+    margin: 1vh 0;
+    text-align: center;
+    padding: 0 0 2vw 0;
+}
+
+.home__main__carrousel__foto{
+    display: none;
+}
+.home__main__atajos__mas button {
+    margin-top: 25%;
+}
+
+.home__main__atajos h4 {
+    font-size: 1.5vw;
+}
+
+.home__main__atajos img {
+    width: 10vw;
+    height: 10vw;
+}
+.video__publi source{
+    height: 50px;
+}
+
+.card{
+    text-align: center;
+}
+.card article{
+    justify-content:center
+}
+
+  .tarjeta{
+      width: 8vw; 
+      height: 14vw;
+  }
+  .tarjeta h4 {
+      font-size: 1vw;
+  }
+  .tarjeta img {
+      width: 7vw;
+  }
+  
+  .tarjeta p,
+  h6 {
+      font-size:0.8vw;
+      margin: 4px 0;
+  }
+ 
+  
+.tarjeta__pie a {
+  font-size: 1vw;
+  font-family: rosarivo;
+  color: white
+}
+
+.tarjeta__pie button {
+  border: solid 1px white;
+  border-radius: 5px;
+  padding: 0.5vw 0.8vw; 
+  background-color: var(--colorRosaFuerte);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.tarjeta__pie button:hover {
+  background-color: var(--colorDorado);
+}
 
 }

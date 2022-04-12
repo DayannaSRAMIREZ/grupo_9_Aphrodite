@@ -80,19 +80,19 @@ footer section a {
     footer{
         display: flex;
         flex-wrap: wrap;
-        padding: 25px 25px  0px 25px ; 
-         line-height: 40px; 
+         line-height: 3vw; 
+         font-size: 1vw;
         
     }
-     footer h4{
-         /* margin-bottom: 35px; */
-
+    .footer__legales{
+      display: block;
     }
-   
+    
     .footer__section__sectionUno{
         width: 25%;
 
     } 
+    
     .footer__section__sectionDos{
         display: flex;
         justify-content: space-around;
@@ -134,7 +134,7 @@ footer section a {
         display: block;
     }
     .footer__legales ul li{
-        line-height: 40px; 
+        line-height: 3vw; 
     }
     footer{
         background-color: var(--colorRosaClaro);
@@ -146,20 +146,26 @@ footer section a {
         background-color: var(--colorRosaClaro);
     }
     .placeholder__buscador::placeholder {
-    font-size: 16px;
+    font-size: 1vw;
     color: var(--colorNegroClaro);
     }
     .placeholder__buscador{
         padding: 3px 3px 3px 8px;
-        width: 180px;
+        width: 170px;
+    
+        margin: 1.5vw;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     }
     .footer__subscripcion input{
         padding-top: 45px;
-        width:180px 
+        width:180px;
+        font-size: 1vw;
      
     }
-}
+    .home__main__lonuevo{
+        background-size: contain;
+    }
+    
 @media (min-width: 1024px) {
     .placeholder__buscador{
        
@@ -172,4 +178,5 @@ footer section a {
      
     }
     
+}
 }
