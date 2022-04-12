@@ -322,13 +322,13 @@
 
         position: absolute;
         left: 0;
-        top: 175px;
+        top:45%;
     }
     .arrow_right {
 
         position: absolute;
         right: 0;
-        top: 175px;
+        top: 45%;
     }
 
     .detalle__imagenes{
