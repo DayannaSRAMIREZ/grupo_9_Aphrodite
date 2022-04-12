@@ -66,19 +66,22 @@
 }
 
 @media (min-width: 460px) {
+    .main__login {
+
+        padding: 10% 0;
+    }
+
 
     .main__login form {
 
-        width: 80%;
-
+        width: 200px;
+        margin: auto;
     }
 
     .input__comun {
 
         height: 35px;
         margin: 10px 0px;
-
-
     }
 
 }
@@ -87,13 +90,12 @@
 
     .main__login form {
 
-        width: 70%;
-
+        width: 250px;
     }
 
-   .main__login form{
+    .main__login form {
 
-    padding: 10% 15%;
-    
-   }
+        padding: 30px;
+
+    }
 }
