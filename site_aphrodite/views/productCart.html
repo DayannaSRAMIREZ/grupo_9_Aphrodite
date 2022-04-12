@@ -1,209 +1,218 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProductCart</title>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+<html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProductCart</title>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <a href="/">
-              <i class="fas fa-gem"></i>
-            </a>
-          </div>
-                    <nav class="header__nav">
-                        <div id="menu">
-                            <button>
-                                <i class="fas fa-bars"></i>
-                            </button>
-                        </div>
-                        <div class="listas">
-                            <ul class="header__nav__ul-menuPrincipal">
-                                <li><a href="/">HOME</a></li>
-                                <li><a href="/gifts">GIFTS</a></li>
-                                <li><a href="/products">PRODUCTS</a></li>
-                                <li><a href="/find">FIND A STORE</a></li>
-                                <li><a href="/weAre">WE ARE</a></li>
-                            </ul>
-                    </nav>
-                    <nav>
-                        <ul class="header__nav__ul-menuSecundario">
-                            <li>
-                                <a href="/login"><i class="fas fa-user"></i></a>
-                            </li>
-                            <li>
-                                <a href="/productCart"><i class="fas fa-shopping-bag"></i></a>
-                            </li>
-                            <li>
-                                <a href="/register"><i class="fas fa-sign-in-alt"></i></a>
-                            </li>
-                            <li><button class="header__nav__button">EN</button></li>
-                        </ul></div>
-                    </nav>
-     </header>
-   <main>
-      <section class="main__contenedorPadreRombos">
-          <hr id="lineaRombos" size="2px" width="300" color="black">
-          <section class="main__section__section__contenedorRombo">
-              <div class="main__section__formaRombo1">
-                <p class="main__section__div__texto1">1</p>
-              </div>
-             <div class="main__section__section__box1">
-               <p>Carrito</p>
-             </div>
-          </section>
-          <section class="main__section__section__contenedorRombo">
-            <div class="main__section__formaRombo">
-              <p class="main__section__div__texto">2</p>
-            </div>
-            <div>
-              <p>Identificación</p>
-            </div>
-          </section>
-          <section class="main__section__section__contenedorRombo">
-            <div class="main__section__formaRombo">
-              <p class="main__section__div__texto">3</p>
-            </div>
-            <div>
-              <p>Pago</p>
-            </div>
-          </section>
-          <section class="main__section__section__contenedorRombo">
-            <div class="main__section__formaRombo">
-              <p class="main__section__div__texto">4</p>
-            </div>
-            <div>
-              <p>Confirmaión</p>
-            </div>
-          </section>
+  <header>
+    <div class="logo">
+      <a href="/">
+        <i class="fas fa-gem"></i>
+      </a>
+    </div>
+    <nav class="header__nav">
+      <div id="menu">
+        <button>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="listas">
+        <ul class="header__nav__ul-menuPrincipal">
+          <li><a href="/">HOME</a></li>
+          <li><a href="/gifts">GIFTS</a></li>
+          <li><a href="/products">PRODUCTS</a></li>
+          <li><a href="/find">FIND A STORE</a></li>
+          <li><a href="/weAre">WE ARE</a></li>
+        </ul>
+    </div></nav>
+    <nav>
+      <ul class="header__nav__ul-menuSecundario">
+        <li>
+          <a href="/login"><i class="fas fa-user"></i></a>
+        </li>
+        <li>
+          <a href="/productCart"><i class="fas fa-shopping-bag"></i></a>
+        </li>
+        <li>
+          <a href="/register"><i class="fas fa-sign-in-alt"></i></a>
+        </li>
+        <li><button class="header__nav__button">EN</button></li>
+      </ul>
+      
+    </nav>
+  </header>
+  <main class="carrito">
+    <hr class="line">
+    <section class="main__contenedorPadreRombos">
+      <section class="main__section__section__contenedorRombo">
+        <div class="main__section__formaRombo colorGris">
+          <p class="main__section__div__texto1">1</p>
+        </div>
+        <span>Carrito</span>
+      </section>
+      <section class="main__section__section__contenedorRombo">
+        <div class="main__section__formaRombo">
+          <p class="main__section__div__texto">2</p>
+        </div>
+        <span>Identificación</span>
+      </section>
+      <section class="main__section__section__contenedorRombo">
+        <div class="main__section__formaRombo">
+          <p class="main__section__div__texto">3</p>
+        </div>
+        <span>Pago</span>
+      </section>
+      <section class="main__section__section__contenedorRombo">
+        <div class="main__section__formaRombo">
+          <p class="main__section__div__texto">4</p>
+        </div>
+        <span>Confirmaión</span>
+      </section>
     </section>
-      <section class="main__section__contenedorProductos">
-        <article class="main__section__articuloUno">
-          <img class="main__article__imgPulcera" src="/images/carritoDani/pulceraPandora.jpg" alt=""> 
-          <div class="main__article__descripcion">
-            <h5>Pulcera Sarta de Esferas Cierre Deslizante.</h5>
-          </div>
-          <div>
-            <h5>Precio</h5>
-            <s>$25.000</s>
-            <p>$20.000</p>
-          </div>
-          <div>
-            <button>-</button>
-              <p>1</p>
-            <button>+</button>
-            <span class="iconify" data-icon="bx:trash-alt"></span>
-          </div>
+    <div class="productCart__boxDesktop">
+    <section class="main__section__contenedorProductos">
+      <article class="main__section__producto">
+        <img class="main__article__imgPulcera" src="/images/carritoDani/pulceraPandora.jpg" alt="">
+        <h5>Pulcera Sarta de Esferas Cierre Deslizante.</h5>
+        <div class="productCart__producto__precio">
+          <h5>Precio</h5>
+          <s>$25.000</s>
+          <p>$20.000</p>
+        </div>
+        <div class="productCart__producto__cantidad">
+          <button>-</button>
+          <input type="text" value="1">
+
+          <button>+</button>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--bx" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-icon="bx:trash-alt"><path fill="currentColor" d="M15 2H9c-1.103 0-2 .897-2 2v2H3v2h2v12c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm8 16H7V8h10v12z"></path></svg>
+
+      </article>
+      <article class="main__section__producto">
+        <img class="main__article__imgAnillo" src="/images/carritoDani/anilloPandora.jpg" alt="">
+        <h5>Anillo Sarta de Cuentas.</h5>
+        <div class="productCart__producto__precio">
+          <h5>Precio</h5>
+          <s>$25.000</s>
+          <p>$20.000</p>
+        </div>
+        <div class="productCart__producto__cantidad">
+          <button>-</button>
+          <input type="text" value="1">
+
+          <button>+</button>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--bx" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-icon="bx:trash-alt"><path fill="currentColor" d="M15 2H9c-1.103 0-2 .897-2 2v2H3v2h2v12c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm8 16H7V8h10v12z"></path></svg>
+      </article>
+      <hr class="primeraHorizontal" size="2px" width="100%" color="black">
+
+    </section>
+
+    <section>
+
+      <div class="productCart__totales">
+        <article>
+          <h4>SUBTOTAL</h4>
+          <p>$50.000</p>
         </article>
         <article>
-          <img class="main__article__imgAnillo" src="/images/carritoDani/anilloPandora.jpg" alt="">
-          <div>
-            <h5>Anillo Sarta de Cuentas.</h5>
-          </div>
-          <div>
-            <h5>Precio</h5>
-            <s>$25.000</s>
-            <p>$20.000</p>
-          </div>
-          <div>
-            <button>-</button>
-            <p class="main__article__div__numeroAumento">1</p>
-            <button>+</button>
-            <span class="iconify" data-icon="bx:trash-alt"></span>
-          </div>
+          <h5>Descuento</h5>
+          <s>$10.000</s>
         </article>
-      </section> 
-   <section>
-    <hr class="primeraHorizontal" size="2px" width="340" color="black">
-      <div class="main__section__">
-        <h4>SUBTOTAL</h4>
-        <p>$50.000</p>
-        <h5>Descuento</h5>
-        <s>$10.000</s>
-        <hr size="2px" width="200" color="black"> 
-        <h4>TOTAL</h4>
-        <p>$40.000</p>
+       
+        <hr size="2px" width="100%" color="black">
+        <article>
+          <h4>TOTAL</h4>
+          <p>$40.000</p>
+        </article>
+     
+      <div class="productCart__descuento">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" data-icon="ic:outline-discount"><path fill="currentColor" d="M12.79 21L3 11.21v2c0 .53.21 1.04.59 1.41l7.79 7.79c.78.78 2.05.78 2.83 0l6.21-6.21c.78-.78.78-2.05 0-2.83L12.79 21z"></path><path fill="currentColor" d="M11.38 17.41c.39.39.9.59 1.41.59c.51 0 1.02-.2 1.41-.59l6.21-6.21c.78-.78.78-2.05 0-2.83L12.62.58C12.25.21 11.74 0 11.21 0H5C3.9 0 3 .9 3 2v6.21c0 .53.21 1.04.59 1.41l7.79 7.79zM5 2h6.21L19 9.79L12.79 16L5 8.21V2z"></path><circle cx="7.25" cy="4.25" r="1.25" fill="currentColor"></circle></svg>
+        <h4>Cupón de descuento</h4>
       </div>
-     <span class="iconify" data-icon="ic:outline-discount"></span>
-      <h5>Cupón de descuento</h5>
-      <input type="number" name="" id="" placeholder="código">
-       <BUtton class="main__button__flecha"><span class="iconify" data-icon="ant-design:arrow-right-outlined"></span></BUtton>
-      <button class="main__section__botonComprar">
-        <h5 class="main__section__textoBoton">COMPRAR</h5>
-      </button>
-      <div>
-        <p>Calcular envío con su código postal:</p>
-        <input type="number" name="" id="">
+      <div class="productCart__cupon">
+        <input type="text" name="cupon" id="cupon" placeholder="código">
+        <button class="main__button__flecha"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" data-icon="ant-design:arrow-right-outlined"><path fill="currentColor" d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z"></path></svg></button>
       </div>
+      <button class="productCart__botonComprar">
+        COMPRAR
+       </button>
+    </div>
     </section>
+  </div>
+  <section>
+    <label for="">Calcular envío con su código postal:</label>
+    <input type="text" id="codigopostal" maxlength="5" required="required">
+  </section>
   </main>
-    <footer>
-      <section class="footer__section__sectionUno">
-        <form class="footer__buscador" action="">
-          <input class="placeholder__buscador" type="text" placeholder="Buscar" />
-          <button type="submit"></button>
-        </form>
-        <form class="footer__subscripcion" action="">
-          <input class="placeholder" type="email" placeholder="Correo electrónico" required />
-          <button type="submit">Suscribirse</button>
-        </form>
-      </section>
-  
-      <section class="footer__section__sectionDos">
-        <article class="footer__redes">
-  
-          <h4>Redes</h4>
-          <ul>
-  
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Twitter</a></li>
-          </ul>
-        </article>
-        <article class="footer__contacto">
-          <h4>Contacto</h4>
-          <ul>
-            <li><a href="">Teléfono</a></li>
-            <li><a href="">Mail</a></li>
-          </ul>
-        </article>
-  
-        <article class="footer__legales">
-  
-          <h4>Legales</h4>
-          <ul>
-            <li><a href="">Preguntas frecuentes</a></li>
-            <li><a href="">Cancelación, Cambios y Devoluciones</a></li>
-            <li><a href="">Términos y Condiciones</a></li>
-          </ul>
-        </article>
-        <article class="footer__iconos">
-          <ul>
-            <li>
-              <a href=""><img src="/images/facebook.png" alt="" /></a>
-            </li>
-            <li>
-              <a href=""><img src="/images/gorjeo.png" alt="" /></a>
-            </li>
-            <li>
-              <a href=""><img src="/images/gmail.png" alt="" /></a>
-            </li>
-            <li>
-              <a href=""><img src="/images/instagram.png" alt="" /></a>
-            </li>
-            <li>
-              <a href=""><img src="/images/whatsapp.png" alt="" /></a>
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section class="footer__section__sectionTres">
-        <div>© Aphrodite 2022</div>
-      </section>
-    </footer>
-</body>
-</html>
+  <footer>
+    <section class="footer__section__sectionUno">
+      <form class="footer__buscador" action="">
+        <input class="placeholder__buscador" type="text" placeholder="Buscar">
+        <button type="submit"></button>
+      </form>
+      <form class="footer__subscripcion" action="">
+        <input class="placeholder" type="email" placeholder="Correo electrónico" required="">
+        <button type="submit">Suscribirse</button>
+      </form>
+    </section>
+
+    <section class="footer__section__sectionDos">
+      <article class="footer__redes">
+
+        <h4>Redes</h4>
+        <ul>
+
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Twitter</a></li>
+        </ul>
+      </article>
+      <article class="footer__contacto">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="">Teléfono</a></li>
+          <li><a href="">Mail</a></li>
+        </ul>
+      </article>
+
+      <article class="footer__legales">
+
+        <h4>Legales</h4>
+        <ul>
+          <li><a href="">Preguntas frecuentes</a></li>
+          <li><a href="">Cancelación, Cambios y Devoluciones</a></li>
+          <li><a href="">Términos y Condiciones</a></li>
+        </ul>
+      </article>
+      <article class="footer__iconos">
+        <ul>
+          <li>
+            <a href=""><img src="/images/facebook.png" alt=""></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/gorjeo.png" alt=""></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/gmail.png" alt=""></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/instagram.png" alt=""></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/whatsapp.png" alt=""></a>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="footer__section__sectionTres">
+      <div>© Aphrodite 2022</div>
+    </section>
+  </footer>
+
+
+</body></html>
