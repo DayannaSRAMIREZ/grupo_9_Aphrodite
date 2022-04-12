@@ -52,8 +52,8 @@
       <h2>Crear Cuenta</h2>
       <marquee>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</marquee>
       <div class="register__login"><a href="/login">¡Ya tengo una cuenta!</a></div>
-      <hr>
-      <form>
+      <hr class="linea__salto">
+      <form class="register__form">
         <article>
           <div class="register__form-box">
             <label for="nombre">Nombre</label>
@@ -86,13 +86,13 @@
   
           </div>
           <div class="register__form-box">
-            <label for="password">Fecha de nacimiento</label>
+            <label for="date">Fecha de nacimiento</label>
             <br>
-            <input class="register_" type="date" id="password" name="password">
+            <input class="register__date" type="date" id="date" name="date">
   
           </div>
           <div class="register__form-box pais">
-            <label class="pais" for="pais">País</label>
+            <label class="register__pais" for="pais">País</label>
       
             <select class="register__form-select" name="pais" id="pais">
               <option value="" hidden selected>Por favor elegí uno...</option>
@@ -110,8 +110,13 @@
             </select>
   
           </div>
+          <div class="genero__titulo">
+           <h4>Género</h4> 
+          </div>
+          
           <div class="register__form-box__genero">
-            <h4>Género</h4>
+            
+          
             <div class="register__radio-box">
               <input class="" type="radio" name="genero" id="masculino" value="m">
               <label for="masculino">M</label>
@@ -139,17 +144,7 @@
       </form>
   
     </main>
-    <footer>
-      <section class="footer__section__sectionUno">
-        <form class="footer__buscador" action="">
-          <input class="placeholder__buscador" type="text" placeholder="Buscar" />
-          <button type="submit"></button>
-        </form>
-        <form class="footer__subscripcion" action="">
-          <input class="placeholder" type="email" placeholder="Correo electrónico" required />
-          <button type="submit">Suscribirse</button>
-        </form>
-      </section>
+ 
   
   <footer>
     <section class="footer__section__sectionUno">

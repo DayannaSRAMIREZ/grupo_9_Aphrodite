@@ -7,21 +7,25 @@
     position: relative;
 }
 
-.register__main::before{
-    content:'';
-	position: absolute;
+.register__main::before {
+    content: '';
+    position: absolute;
     top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: rgba(253, 251, 251, 0.185)
-} 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(253, 251, 251, 0.185)
+}
 
 .register__main label {
 
     position: relative;
 }
+.register__main .register__login a {
+    font-size: 1.9vw;}
+
 .register__main .register__login {
+    font-size: 1.9vw;
 
     text-align: center;
     margin: 10px;
@@ -102,10 +106,12 @@
     margin: 10px 0px;
 }
 
-.register__form-box__genero h4 {
+.genero__titulo h4 {
     margin: 0px 10px;
     font-weight: lighter;
-    font-size: 15px;
+    font-size: 4vw;
+    width: 100;
+    text-align: center;
 }
 
 .register__radio-box label {
@@ -118,20 +124,22 @@
     text-align: center;
 }
 
-.register__radio-box__suscribir input, .register__radio-box input {
+.register__radio-box__suscribir input{
     background: inherit;
     background-color: var(--colorRosaClaro);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border: none;
     position: relative;
 }
+
 .button_register_box {
     width: 100%;
     text-align: center;
     margin: 10px 0px;
     position: relative;
-    
+
 }
+
 .button_register {
 
     width: 30%;
@@ -143,7 +151,109 @@
     color: white;
     letter-spacing: 1px;
     position: relative;
+    font-size: 3vw;
+}
+.register__form-select{
+    background-color: var(--colorRosaClaro);
+    border: none;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.register__date{
+    background-color: var(--colorRosaClaro);
+    border: none;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 460px) {
+    .register__main {
+        text-align: center;
+        padding-bottom: 30px;
+
+    }
+    .linea__salto{
+        margin-bottom: 30px;
+    }
+
+    .register__form {
+        width: 50%;
+        height: 20%;
+        border-radius: 25px;
+        text-align: center;
+        
+        margin-left: 23%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+        /* .pais{
+            width: 50%;
+        } */
+    .button_register {
+
+        width: 50%;
+        height: 3.5vw;
+        font-size: 1.8vw;
+      
+    }
+  
+    .register__main label {
+    
+        font-size: 1.5vw;
+    }
+    .genero__titulo h4 {
+       margin-top: 6px;
+        font-size: 11px;
+       
+    }
+    
+
+
+}
+@media (min-width: 768px) {
+    .register__form {
+    width: 30%;
+    height: 20%;
+    margin-left: 35%;}
+    .register__form-input {
+
+    
+        width: 80%;
+        height: 24px;
+        margin: 5px 0px;
+       
+    }
+    .button_register {
+
+        font-size: 1.5vw;
+    }
+    .register__main h2{
+        font-size: 30px;
+    }
+    .register__main label {
+    
+        font-size: 1.3vw;
+    }
+    .register__main .register__login a {
+        font-size: 1.3vw;
+    }
+    .genero__titulo h4 {
+       
+        font-size: 14px;
+       
+    }
+    .register__main marquee {
+
+        padding: 5px 0;
+    }
     
 }
