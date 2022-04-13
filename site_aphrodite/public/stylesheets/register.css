@@ -1,0 +1,259 @@
+.register__main {
+
+    background-image: url("/images/register/foto_fondo_diamantes.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.register__main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(253, 251, 251, 0.185)
+}
+
+.register__main label {
+
+    position: relative;
+}
+.register__main .register__login a {
+    font-size: 1.9vw;}
+
+.register__main .register__login {
+    font-size: 1.9vw;
+
+    text-align: center;
+    margin: 10px;
+    position: relative;
+}
+
+.register__main marquee {
+
+    padding: 1px;
+    color: white;
+    margin: 10px 0px;
+    background: var(--colorDorado);
+
+}
+
+.register__main h2 {
+
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.register__main a {
+
+
+    color: var(--colorNegroClaro);
+
+}
+
+.register__main hr {
+
+    color: var(--colorGris);
+    /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+}
+
+.register__main form {
+
+    padding: 10px;
+}
+
+.register__form-input {
+
+    background-color: var(--colorRosaClaro);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 24px;
+    margin: 5px 0px;
+    position: relative;
+}
+
+.register__form-box label {
+
+    color: var(--colorNegroClaro);
+    font-weight: lighter;
+    font-size: 13px;
+
+}
+
+.pais {
+
+    font-size: 30px;
+    position: relative;
+
+}
+
+.register__form-select {
+
+    border-radius: 0;
+}
+
+.register__form-box__genero {
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.genero__titulo h4 {
+    margin: 0px 10px;
+    font-weight: lighter;
+    font-size: 4vw;
+    width: 100;
+    text-align: center;
+}
+
+.register__radio-box label {
+
+    margin: 0px 10px;
+
+}
+
+.register__radio-box__suscribir {
+    text-align: center;
+}
+
+.register__radio-box__suscribir input{
+    background: inherit;
+    background-color: var(--colorRosaClaro);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    position: relative;
+}
+
+.button_register_box {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+    position: relative;
+
+}
+
+.button_register {
+
+    width: 30%;
+    text-align: center;
+    background-color: var(--colorDorado);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    color: white;
+    letter-spacing: 1px;
+    position: relative;
+    font-size: 3vw;
+}
+.register__form-select{
+    background-color: var(--colorRosaClaro);
+    border: none;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.register__date{
+    background-color: var(--colorRosaClaro);
+    border: none;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 460px) {
+    .register__main {
+        text-align: center;
+        padding-bottom: 30px;
+
+    }
+    .linea__salto{
+        margin-bottom: 30px;
+    }
+
+    .register__form {
+        width: 50%;
+        height: 20%;
+        border-radius: 25px;
+        text-align: center;
+        
+        margin-left: 23%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+        /* .pais{
+            width: 50%;
+        } */
+    .button_register {
+
+        width: 50%;
+        height: 3.5vw;
+        font-size: 1.8vw;
+      
+    }
+  
+    .register__main label {
+    
+        font-size: 1.5vw;
+    }
+    .genero__titulo h4 {
+       margin-top: 6px;
+        font-size: 11px;
+       
+    }
+    
+
+
+}
+@media (min-width: 768px) {
+    .register__form {
+    width: 30%;
+    height: 20%;
+    margin-left: 35%;}
+    .register__form-input {
+
+    
+        width: 80%;
+        height: 24px;
+        margin: 5px 0px;
+       
+    }
+    .button_register {
+
+        font-size: 1.5vw;
+    }
+    .register__main h2{
+        font-size: 30px;
+    }
+    .register__main label {
+    
+        font-size: 1.3vw;
+    }
+    .register__main .register__login a {
+        font-size: 1.3vw;
+    }
+    .genero__titulo h4 {
+       
+        font-size: 14px;
+       
+    }
+    .register__main marquee {
+
+        padding: 5px 0;
+    }
+    
+}

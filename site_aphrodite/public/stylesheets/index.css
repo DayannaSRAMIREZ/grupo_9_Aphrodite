@@ -1,0 +1,560 @@
+body.home {
+    font-family: rosarivo;
+}
+
+.home a {
+    color: var(--colorNegroClaro);
+}
+
+
+#video {
+    position: relative;
+    height: 50vh;
+}
+
+#video video {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video .content {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home__principal {
+    display: flex;
+   
+}
+
+.home__main__carrousel {
+    display: none;
+}
+
+.home__main__atajos {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 11vw 7px 11vw 7px;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.home__main__atajos__clickeables {
+
+    border: solid 1px var(--colorRosaFuerte);
+}
+
+.home__main__atajos__mas,
+.home__main__atajos__clickeables {
+    height: 30vw;
+    width: 32vw;
+    margin-top: 1vh;
+    text-align: center;
+    padding-top: 1vh;
+
+}
+
+.home__main__atajos__mas button {
+    margin-top: 25%;
+}
+
+.home__main__atajos h4 {
+    font-size: 3vw;
+}
+
+.home__main__atajos img {
+    width: 15vw;
+    height: 15vw;
+}
+
+.home__main__atajos button {
+    background-color: var(--colorDorado);
+    color: white;
+    font-family: rosarivo;
+    font-size: 12px;
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 75px;
+
+}
+
+.imagenes__fotos img {
+    width: 50px;
+}
+
+/*tarjetas*/
+
+.card {
+    text-align: center;
+}
+
+.card article {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tarjeta img {
+    width: 40vw;
+}
+
+.tarjeta {
+    background-color: var(--colorRosaClaro);
+    width: 50vw;
+    height: 80vw;
+    margin: 3vw;
+    padding: 3vw;
+    border-radius: 3vw;
+    position: relative;
+
+}
+
+.tarjeta h4 {
+    font-size: 7vw;
+}
+
+.tarjeta h4 {
+    font-size: 6vw;
+
+}
+
+.tarjeta p,
+h6 {
+    font-size: 4.5vw;
+    margin: 4px 0;
+}
+
+.tarjeta1 {
+    animation-name: mianimacion2;
+    animation-duration: 15s;
+}
+
+.tarjeta2 {
+    animation-name: mianimacion1;
+    animation-duration: 15s;
+}
+
+.home__contenedor {
+    position: relative;
+}
+
+.tarjeta__pie a {
+    font-size: 12px;
+    font-family: rosarivo;
+    color: white
+}
+
+.tarjeta__pie button {
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 2vw 5vw;
+    background-color: var(--colorRosaFuerte);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.tarjeta__pie button:hover {
+    background-color: var(--colorDorado);
+}
+
+@keyframes mianimacion1 {
+    0% {
+        top: 0px;
+        right: 50px;
+        background-color: var(--colorRosaClaro)
+    }
+
+    50% {
+        top: 0px;
+        background-color: var(--colorRosaFuerte);
+    }
+
+    75% {
+        right: 0;
+        top: 0;
+        background-color: var(--colorRosaClaro)
+    }
+
+    100% {
+        left: 0;
+        top: 0px;
+    }
+
+}
+
+@keyframes mianimacion2 {
+    0% {
+        top: 0px;
+        left: 50px;
+        background-color: var(--colorRosaClaro)
+    }
+
+    50% {
+        top: 0px;
+        background-color: var(--colorRosaFuerte);
+    }
+
+    75% {
+        left: 0;
+        top: 0;
+        background-color: var(--colorRosaClaro)
+    }
+
+    100% {
+        left: 0;
+        top: 0px;
+    }
+
+}
+
+.diamante {
+    width: 50%;
+
+}
+
+
+.arrow__destacados {
+    display: none;
+}
+
+.home__main__lonuevo {
+    background-image: url("/images/home/lonuevo.jpg");
+    background-size: cover;
+    height: 150px;
+    position: relative;
+    animation-name: aparecer;
+    animation-duration: 20s;
+
+
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.home__main__lonuevo a {
+    position: absolute;
+    bottom: 40%;
+    left: 25%;
+}
+
+.home__main__lonuevo h3 {
+    color: white;
+    font-weight: lighter;
+}
+
+.home__main__cuotas {
+    background-color: var(--colorRosaFuerte);
+    font-size: 12px;
+    padding-top: 4px;
+
+}
+
+.home__main__fuente {
+    display: flex;
+
+    margin: 10px 7px;
+}
+
+.home__main__fuente__texto {
+    width: 50%;
+    text-align: justify;
+    margin: 7px;
+
+}
+
+.home__main__fuente__texto h3 {
+    font-size: 12px;
+}
+
+.home__main__fuente__texto p {
+    font-size: 10px;
+}
+
+.home__main__fuente__img {
+    width: 50%;
+
+}
+
+.video__publi {
+    width: 100vw;
+}
+/*-----------tablet--------------------*/
+@media (min-width: 460px) {
+   
+    .home__main__carrousel__foto {
+        display: block;
+        width: 50%;
+        background-image: url(/images/home/cuello.png);
+        background-size: cover;
+
+    }
+    .home__principal{
+        width: 100%;
+    }
+  
+
+    .home__tablet {
+        display: flex;
+        width: 100%;
+        margin: 5vw 0; 
+    }
+
+    .home__main__atajos {
+        width: 50vw;
+        margin: 0 0 0 0vw;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .home__main__atajos__mas,
+    .home__main__atajos__clickeables {
+        height: 15vw;
+        width: 19vw;
+        margin: 1vh 0;
+        text-align: center;
+        padding: 1vh 0;
+    
+    }
+    .home__main__atajos img {
+        width: 9vw;
+        height: 9vw;
+      
+      
+    }
+    .video__publi{
+        margin: 5vw 0; 
+    }
+    .card article {
+
+      flex-direction: row;
+        width: 100%;
+    }
+    .tarjeta{
+        width: 30vw; 
+        height: 30vw;
+    }
+    .tarjeta h4 {
+        font-size: 2.1vw;
+    }
+    .tarjeta img {
+        width: 13vw;
+    }
+    
+    .tarjeta p,
+    h6 {
+        font-size:1.5vw;
+        margin: 4px 0;
+    }
+    
+    
+.tarjeta__pie a {
+    font-size: 10px;
+    font-family: rosarivo;
+    color: white
+}
+
+.tarjeta__pie button {
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 1vw 2vw; 
+    background-color: var(--colorRosaFuerte);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.tarjeta__pie button:hover {
+    background-color: var(--colorDorado);
+}
+.home__main__fuente__texto h3{
+    font-size: 3vw;
+   
+    
+}
+
+
+@keyframes mianimacion1 {
+    0% {
+        top: 0px;
+        left: 50px;
+        background-color: var(--colorRosaClaro)
+    }
+
+    50% {
+        top: 0px;
+        background-color: var(--colorRosaFuerte);
+    }
+
+    75% {
+        left: 0;
+        top: 0;
+        background-color: var(--colorRosaClaro)
+    }
+
+    100% {
+        left: 0;
+        top: 0px;
+    }
+
+}
+
+@keyframes mianimacion2 {
+    0% {
+        top: 0px;
+        left: 50px;
+        background-color: var(--colorRosaClaro)
+    }
+
+    50% {
+        top: 0px;
+        background-color: var(--colorRosaFuerte);
+    }
+
+    75% {
+        left:  0;
+        top: 0;
+        background-color: var(--colorRosaClaro)
+    }
+
+    100% {
+        left:0;
+        top: 0px;
+    }
+
+}
+
+.home__main__fuente__texto p{
+    font-size: 2vw;
+  
+    
+}
+.home__main__lonuevo {
+ 
+    height: 200px;
+    width: 100%;
+
+}
+.home__main__lonuevo a {
+    width: 50%;
+ text-align: center;
+}
+
+
+}
+/*--------------desktop------------*/
+@media (min-width:768px) {
+
+    .home__main__lonuevo {
+ 
+    height: 400px;
+   
+
+}
+.home__main__fuente__texto {
+     text-align: center;
+     margin-top: 7%;
+}
+.home__main__fuente__texto p{
+    font-size: 1.2vw;
+   width: 100%;
+ line-height: 3vw;
+ padding: 4px;
+}
+    .home__main__fuente__texto h3{
+  font-size: 1.5vw;
+ 
+  
+}
+.home__main__atajos {
+    width: 100vw;
+    margin: 0 0 0 0vw;
+    display:flex; 
+}
+.home__main__atajos__clickeables {
+    height: 12vw;
+    width: 14vw;
+    margin: 1vh 0;
+    text-align: center;
+    padding: 0 0 2vw 0;
+}
+
+.home__main__carrousel__foto{
+    display: none;
+}
+.home__main__atajos__mas button {
+    margin-top: 25%;
+}
+
+.home__main__atajos h4 {
+    font-size: 1.5vw;
+}
+
+.home__main__atajos img {
+    width: 10vw;
+    height: 10vw;
+}
+.video__publi source{
+    height: 50px;
+}
+
+.card{
+    text-align: center;
+}
+.card article{
+    justify-content:center
+}
+
+  .tarjeta{
+      width: 8vw; 
+      height: 14vw;
+  }
+  .tarjeta h4 {
+      font-size: 1vw;
+  }
+  .tarjeta img {
+      width: 7vw;
+  }
+  
+  .tarjeta p,
+  h6 {
+      font-size:0.8vw;
+      margin: 4px 0;
+  }
+ 
+  
+.tarjeta__pie a {
+  font-size: 1vw;
+  font-family: rosarivo;
+  color: white
+}
+
+.tarjeta__pie button {
+  border: solid 1px white;
+  border-radius: 5px;
+  padding: 0.5vw 0.8vw; 
+  background-color: var(--colorRosaFuerte);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.tarjeta__pie button:hover {
+  background-color: var(--colorDorado);
+}
+
+}
