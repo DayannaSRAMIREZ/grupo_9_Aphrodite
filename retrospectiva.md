@@ -1,0 +1,11 @@
+##RETROSPECTIVA
+
+#SEGUIR HACIENDO:
+** **
+#HACER MAS:
+** **
+#HACER MENOS:
+** **
+#EMPEZAR A HACER:
+** **
+***
