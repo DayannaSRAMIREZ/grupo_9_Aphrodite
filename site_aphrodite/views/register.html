@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -48,69 +47,169 @@
                         </ul></div>
                     </nav>
     </header>
-    <footer>
-      <section class="footer__section__sectionUno">
-        <form class="footer__buscador" action="">
-          <input class="placeholder__buscador" type="text" placeholder="Buscar" />
-          <button type="submit"></button>
-        </form>
-        <form class="footer__subscripcion" action="">
-          <input class="placeholder" type="email" placeholder="Correo electrónico" required />
-          <button type="submit">Suscribirse</button>
-        </form>
-      </section>
+
+    <main class="register__main">
+      <h2>Crear Cuenta</h2>
+      <marquee>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</marquee>
+      <div class="register__login"><a href="/login">¡Ya tengo una cuenta!</a></div>
+      <hr class="linea__salto">
+      <form class="register__form">
+        <article>
+          <div class="register__form-box">
+            <label for="nombre">Nombre</label>
+            <br>
+            <input class="register__form-input" type="text" id="nombre" name="nombre">
+        
+          </div>
+          <div class="register__form-box">
+            <label for="nombre">Apellido</label>
+            <br>
+            <input class="register__form-input" type="text" id="nombre" name="nombre">
   
-      <section class="footer__section__sectionDos">
-        <article class="footer__redes">
+          </div>
+          <div class="register__form-box">
+            <label for="email">Email</label>
+            <br>
+            <input class="register__form-input" type="email" id="email" name="email">
   
-          <h4>Redes</h4>
-          <ul>
+          </div>
+          <div class="register__form-box">
+            <label for="password">Contraseña</label>
+            <br>
+            <input class="register__form-input" type="password" id="password" name="password">
   
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Twitter</a></li>
-          </ul>
+          </div>
+          <div class="register__form-box">
+            <label for="password"> Repetir Contraseña</label>
+            <br>
+            <input class="register__form-input" type="password" id="password" name="password">
+  
+          </div>
+          <div class="register__form-box">
+            <label for="date">Fecha de nacimiento</label>
+            <br>
+            <input class="register__date" type="date" id="date" name="date">
+  
+          </div>
+          <div class="register__form-box pais">
+            <label class="register__pais" for="pais">País</label>
+      
+            <select class="register__form-select" name="pais" id="pais">
+              <option value="" hidden selected>Por favor elegí uno...</option>
+              <option value="ar">Argentina</option>
+              <option value="bol">Bolivia</option>
+              <option value="br">Brasil</option>
+              <option value="cl">Chile</option>
+              <option value="col">Colombia</option>
+              <option value="mx">México</option>
+              <option value="par">Paraguay</option>
+              <option value="per">Perú</option>
+              <option value="uy">Uruguay</option>
+              <option value="vnz">Venezuela</option>
+  
+            </select>
+  
+          </div>
+          <div class="genero__titulo">
+           <h4>Género</h4> 
+          </div>
+          
+          <div class="register__form-box__genero">
+            
+          
+            <div class="register__radio-box">
+              <input class="" type="radio" name="genero" id="masculino" value="m">
+              <label for="masculino">M</label>
+            </div>
+            <div class="register__radio-box">
+              <input class="" type="radio" name="genero" id="femenino" value="f">
+              <label for="femenino">F</label>
+            </div>
+            <div class="register__radio-box">
+              <input class="" type="radio" name="genero" id="nodice" value="n">
+              <label for="nodice">Otro</label>
+            </div>
+          </div>
+          <div class="register__form-box">
+  
+            <div class="register__radio-box__suscribir">
+              <input class="checkbox" type="checkbox" name="suscribirse" id="suscribirse" value="g">
+              <label for="suscribirse">Suscribirse al newsletter</label>
+            </div>
+          </div>
         </article>
-        <article class="footer__contacto">
-          <h4>Contacto</h4>
-          <ul>
-            <li><a href="">Teléfono</a></li>
-            <li><a href="">Mail</a></li>
-          </ul>
-        </article>
+        <div class="button_register_box">
+        <button class="button_register" type="submit">REGISTRARSE</button>
+      </div>
+      </form>
   
-        <article class="footer__legales">
+    </main>
+ 
   
-          <h4>Legales</h4>
-          <ul>
-            <li><a href="">Preguntas frecuentes</a></li>
-            <li><a href="">Cancelación, Cambios y Devoluciones</a></li>
-            <li><a href="">Términos y Condiciones</a></li>
-          </ul>
-        </article>
-        <article class="footer__iconos">
-          <ul>
-            <li>
-              <a href=""><img src="/images/facebook.png" alt="" /></a>
-            </li>
-            <li>
-              <a href=""><img src="/images/gorjeo.png" alt="" /></a>
-            </li>
-            <li>
-              <a href=""><img src="/images/gmail.png" alt="" /></a>
-            </li>
-            <li>
-              <a href=""><img src="/images/instagram.png" alt="" /></a>
-            </li>
-            <li>
-              <a href=""><img src="/images/whatsapp.png" alt="" /></a>
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section class="footer__section__sectionTres">
-        <div>© Aphrodite 2022</div>
-      </section>
-    </footer>
+  <footer>
+    <section class="footer__section__sectionUno">
+      <form class="footer__buscador" action="">
+        <input class="placeholder__buscador" type="text" placeholder="Buscar" />
+        <button type="submit"></button>
+      </form>
+      <form class="footer__subscripcion" action="">
+        <input class="placeholder" type="email" placeholder="Correo electrónico" required />
+        <button type="submit">Suscribirse</button>
+      </form>
+    </section>
+
+    <section class="footer__section__sectionDos">
+      <article class="footer__redes">
+
+        <h4>Redes</h4>
+        <ul>
+
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Twitter</a></li>
+        </ul>
+      </article>
+      <article class="footer__contacto">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="">Teléfono</a></li>
+          <li><a href="">Mail</a></li>
+        </ul>
+      </article>
+
+      <article class="footer__legales">
+
+        <h4>Legales</h4>
+        <ul>
+          <li><a href="">Preguntas frecuentes</a></li>
+          <li><a href="">Cancelación, Cambios y Devoluciones</a></li>
+          <li><a href="">Términos y Condiciones</a></li>
+        </ul>
+      </article>
+      <article class="footer__iconos">
+        <ul>
+          <li>
+            <a href=""><img src="/images/facebook.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/gorjeo.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/gmail.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/instagram.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="/images/whatsapp.png" alt="" /></a>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="footer__section__sectionTres">
+      <div>© Aphrodite 2022</div>
+    </section>
+  </footer>
 </body>
+
 </html>

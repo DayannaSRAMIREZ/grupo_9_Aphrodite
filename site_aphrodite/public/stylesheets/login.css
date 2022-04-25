@@ -1,0 +1,101 @@
+.main__login {
+    background-image: url("/images/register/foto_fondo_diamantes.jpeg");
+    background-size: cover;
+    text-align: center;
+    padding: 10%;
+}
+
+.main__login form {
+
+    padding: 10%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.input__comun {
+
+    background-color: var(--colorRosaClaro);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 24px;
+    margin: 5px 0px;
+    position: relative;
+
+}
+
+.login__recordarme {
+
+    font-size: 15px;
+}
+
+.boton__login,
+.boton__login__registrar {
+
+    width: 80%;
+    text-align: center;
+    background-color: var(--colorDorado);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    color: white;
+    letter-spacing: 1px;
+    position: relative;
+    font-size: 13px;
+    font-family: rosarivo;
+    margin-top: 10px;
+}
+
+.boton__login__registrar a {
+
+    color: white;
+}
+
+.main__login div {
+
+    margin: 10px 0px;
+}
+
+.boton__registrar label {
+
+    margin: 20px 0px;
+}
+
+@media (min-width: 460px) {
+    .main__login {
+
+        padding: 10% 0;
+    }
+
+
+    .main__login form {
+
+        width: 200px;
+        margin: auto;
+    }
+
+    .input__comun {
+
+        height: 35px;
+        margin: 10px 0px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .main__login form {
+
+        width: 250px;
+    }
+
+    .main__login form {
+
+        padding: 30px;
+
+    }
+}
