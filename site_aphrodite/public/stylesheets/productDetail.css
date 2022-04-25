@@ -185,11 +185,17 @@
     flex-direction: row;
 }
 
+.detalle__medios__pago p{
+
+    margin-top: 6px;
+    padding: 5px;
+    justify-content: center;
+}
 .visa img {
 
-    width: 26px;
-    margin: 0 0 5px 5px;
-    
+ width: 46px;
+ margin: 0 0 5px 5px;
+ 
 }
 .amer img {
 
@@ -285,20 +291,14 @@
         flex-direction: row;
         
     }
-    .imagenes__chicas{
+    .detalle__imagenes{
 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        margin-left: 6px;
     }
+    .detalle__producto__art1{
 
-    .imagenes__chicas img {
-    
-        display: block;
-        width: 95px;
-        margin: 4px 15px;
-        
-        
+        padding-left: 15px;
+
         
     }
     .collar1{
@@ -347,20 +347,6 @@
 
         padding: 0px;
     }
-    .detalle__productos__descripcion h3 {
-        display: none;
-    }
-    .detalle__productos__caracteristicas p {
-        display: none;
-
-    }
-    .detalle__productos__descripcion hr{
-
-        display: none;
-    }
-    .detalle__productos__envios p{
-        display: none;
-    }
     .detalle__envios{
 
         order: 1;
@@ -376,11 +362,9 @@
         
     }
     .menos{
-        display: none;
-    }
-    .detalle__productos__caracteristicas .mas , .detalle__productos__envios .mas{
         display: block;
     }
+   
     .interesarte__fotos img{
 
         width: 20%;
@@ -413,5 +397,17 @@
    .detalle__carrusel{
        display: none;
    }
+   .detalle__medios__pago p{
+
+       margin-top: 6px;
+       padding: 5px;
+       justify-content: center;
+   }
+   .visa img {
+
+    width: 46px;
+    margin: 0 0 5px 5px;
+    
+}
 
 }
