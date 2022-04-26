@@ -1,4 +1,5 @@
 .carrito{
+    padding: 15px 20px;
     display: flex;
     flex-direction: column;
     font-family: var(--rosarivo);
@@ -13,7 +14,7 @@
 }
 
 .line{
-  color: black;
+  color: rgb(0, 0, 0);
   width: 80%;
   margin: 0 auto;
   position: relative;
@@ -141,8 +142,8 @@
     color: white;
     font-weight: 800;
     border: none;
-    padding: 5px;
-    width: 10%;
+    padding: 10px;
+    width: 20%;
 }
 
 .productCart__botonComprar{
@@ -165,12 +166,12 @@
     width: 70px;
     height: 20px;
     background-color: var(--colorGris);
-    margin-right: 40px;
+    margin-right: 35px;
 }
 
 @media (min-width:768px) {
     .line{
-        width: 60%;
+        width: 70%;
         top: 58px;
       }
 
@@ -192,11 +193,15 @@
         margin-bottom: 20px;
     }
     .productCart__cogigoPostal input{ 
-        margin-right: 100px;
+        margin-right: 360px;
     }
 }
 
 @media (min-width:1024px){
+    .productCart__contenedorPadreRombos{
+        width: 70%;
+        right: 55px;
+    }
     .productCart__boxDesktop{
         display: flex;
         justify-content: space-evenly;
@@ -207,9 +212,19 @@
         margin: 0;
       
     }
+    .primeraHorizontal{
+        width: 95%;
+        margin-left: 15px;
+    }
     .productCart__totales{
-       
-        width: 100%;
-      
+        margin-top: -28px;
+      padding: 0px 2px;
+    }
+    .line{
+        right: 135px;
+        width: 50%;
+      }
+    .productCart__cogigoPostal input{ 
+        margin-right: 625px;
     }
 }
