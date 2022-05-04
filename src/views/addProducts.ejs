@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gifts</title>
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="/stylesheets/style.css" />
-    </head>
-    <body>
-    
-        <%- include('./partials/header') %>  
-        <main class="register__main">
-            <h2>Formulario de Ingreso de productos</h2>
-        
-        <form class="register__form"></form>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifts</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <main class="register__main">
+        <h2>Agregar Productos </h2>
+
+        <form class="register__form">
             <article>
-                <div class="register__form">
-                    <label for="nombre">Nombre del producto</label>
-                    <input class="register__form-input" type="text" id="nombre" name="nombre"
-                        placeholder="tu producto">
+                <h3>Producto</h3>
+                <div class="register__form-box">
+                    <label for="nombre">Nombre</label>
+                    <input class="register__form-input" type="text" id="nombre" name="nombre">
 
                 </div>
-                <div class="register__form-box">
-                    <label for="description">Descripción</label>
-                    <input class="register__form-input" type="text" id="description" name="description"
-                        placeholder="breve descripción de tu producto">
 
-                </div>
-                
-                <div class="register__form-box">
-                    <label for="category">Categorias</label>
-                    <select class="register__form-select" name="materials" id="materials">
-                        <option value="" hidden selected>Por favor elegí uno...</option>
-                        <option value="or">Oro</option>
-                        <option value="ar">Plata</option>
-                        <option value="fan">Fantasía</option>
-                    </select>    
-                </div>
+                <div class="register__form-box pais">
+                    <label class="register__pais" for="categorias">Categorías</label>
 
-                <div class="register__form-box">
-                    <label for="category">Materiales</label>
-                    <select class="register__form-select" name="materials" id="materials">
+                    <select class="register__form-select" name="categorias" id="categorias">
                         <option value="" hidden selected>Por favor elegí uno...</option>
                         <option value="pul">Pulseras</option>
                         <option value="col">Collares</option>
@@ -53,32 +37,63 @@
                         <option value="tob">Tobilleras</option>
                         <option value="con">Conjuntos</option>
 
-                    </select>    
-                </div>
-                <div class="register__radio-box">
-                    <h4>Talles</h4>
-                    <div class="register__radio-box">
-                        <input class="" type="radio" name="size" id="size" value="m">
-                        <label for="masculino">Mediano</label>
-                    </div>
-                    <div class="register__radio-box">
-                        <input class="" type="radio" name="size" id="size" value="p">
-                        <label for="pequeño">F</label>
-                    </div>
-                    <div class="register__radio-boxx">
-                        <input class="" type="radio" name="size" id="size" value="g">
-                        <label for="size">Grande</label>
-                    </div>
-                </div>
-                <div class="register__radio-box">
-                    <label for="price">Precio</label>
-                    <input class="register__radio-box" type="number" id="price" name="price"
-                        placeholder="precio del producto">
+                    </select>
 
-                </div>                          
-                 
-              </article>
-             </main>
-             <%- include('./partials/footer') %> 
+                </div>
+                <div class="register__form-box pais">
+                    <label class="register__pais" for="materiales">Materiales</label>
+
+                    <select class="register__form-select" name="materiales" id="materiales">
+                        <option value="" hidden selected>Por favor elegí uno...</option>
+                        <option value="or">Oro</option>
+                        <option value="ar">Plata</option>
+                        <option value="fan">Fantasía</option>
+
+                    </select>
+
+                </div>
+
+                <div class="genero__titulo">
+
+                    <div class="register__form-box pais">
+                        <label class="register__pais" for="talles">Talles</label>
+
+                        <select class="register__form-select" name="talles" id="talles">
+                            <option value="" hidden selected>Por favor elegí uno...</option>
+                            <option value="or">XL</option>
+                            <option value="ar">XS</option>
+                            <option value="fan">S</option>
+
+                        </select>
+
+                    </div>
+                </div>
+                <div class="register__form-box">
+                    <label for="precio"> Precio </label>
+
+                    <input class="register__form-product" type="number" id="precio" name="precio">
+
+                
+                    <label for="precio"> Unidades </label>
+
+                    <input class="register__form-product" type="number" id="unidades" name="unidades">
+
+                </div>
+                <div class="register__form-box">
+                    <label for="precio"> Descripción </label>
+
+                    <textarea class="textarea__clase" name="textarea" rows="10" cols="50" placeholder="Descripción del producto..."></textarea>
+
+                </div>
+            </article>
+            <div class="button_register_box">
+                <button class="button_register" type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+
+    <%- include('./partials/footer') %>
 </body>
+
 </html>

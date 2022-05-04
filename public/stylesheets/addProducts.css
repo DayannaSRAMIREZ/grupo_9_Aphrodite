@@ -1,0 +1,17 @@
+.textarea__clase {
+    background-color: var(--colorRosaClaro);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 5px 0px;
+    position: relative;
+}
+.register__form-product {
+    background-color: var(--colorRosaClaro);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 10%;
+    height: 24px;
+    margin: 5px 0px;
+    position: relative;
+}
