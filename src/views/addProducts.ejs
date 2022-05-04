@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gifts</title>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+<body>
+    <%- include('./partials/header') %> 
+    <main class="register__main">
+        <h2>Formulario de Ingreso de productos</h2>
+        <hr>
+        <form>
+            <article>
+                <div class="register__form">
+                    <label for="nombre">Nombre del producto</label>
+                    <input class="register__form-input" type="text" id="nombre" name="nombre"
+                        placeholder="tu producto">
+
+                </div>
+
+                <div class="register__form-box">
+                    <label for="description">Descripción</label>
+                    <input class="formulario__User__form-input" type="text" id="description" name="description"
+                        placeholder="breve descripción de tu producto">
+
+                </div>
+                <div class="register__form-box">
+                    <label for="category">Categorias</label>
+                    <select class="formulario__User__form-box" name="materials" id="materials">
+                        <option value="" hidden selected>Por favor elegí uno...</option>
+                        <option value="or">Oro</option>
+                        <option value="ar">Plata</option>
+                        <option value="fan">Fantasía</option>
+                    </select>                              
+            </div>
+                <div class="register__form-box">
+                    <label for="materials">Materiales</label>
+
+                    <select class="register__form-box" name="materials" id="materials">
+                        <option value="" hidden selected>Por favor elegí uno...</option>
+                        <option value="or">Oro</option>
+                        <option value="ar">Plata</option>
+                        <option value="fan">Fantasía</option>
+                    </select>
+
+                </div>
+                <div class="register__form-box">
+                    <h4>Talles</h4>
+                    <div class="formulario__User__radio-box">
+                        <input class="" type="radio" name="size" id="size" value="m">
+                        <label for="masculino">Mediano</label>
+                    </div>
+                    <div class="formulario__User__radio-box">
+                        <input class="" type="radio" name="size" id="size" value="p">
+                        <label for="pequeño">F</label>
+                    </div>
+                    <div class="formulario__User__radio-box">
+                        <input class="" type="radio" name="size" id="size" value="g">
+                        <label for="size">Grande</label>
+                    </div>
+                </div>
+                <div class="formulario__User__form-box">
+                    <label for="price">Precio</label>
+                    <input class="formulario__User__form-input" type="number" id="price" name="price"
+                        placeholder="precio del producto">
+
+                </div>
+                <div class="formulario__User__box">
+
+                    <div class="formulario__User__box">
+                        <input class="" type="checkbox" name="suscribirse" id="suscribirse" value="g">
+                        
+                    </div>
+                </div>
+            </article>
+
+            <%- include('./partials/footer') %> 
+</body>
+</html>

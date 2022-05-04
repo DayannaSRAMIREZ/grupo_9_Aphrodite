@@ -10,5 +10,9 @@ module.exports={
     }, 
     gift: (req,res)=>{
         res.render('gifts')
+    },
+    addProduct: (req, res)=> {
+        res.render('addProducts')
     }
+    
 }
