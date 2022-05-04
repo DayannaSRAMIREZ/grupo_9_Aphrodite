@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var productRouter = require('./routes/product');
 
 var app = express();
 
@@ -19,17 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..', 'public')));
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-app.get('/',(req,res) => res.sendFile(path.resolve(__dirname,'views','index.html')))
-app.get('/login',(req,res) => res.sendFile(path.resolve(__dirname,'views','login.html')))
-app.get('/productCart',(req,res) => res.sendFile(path.resolve(__dirname,'views','productCart.html')))
-app.get('/productDetail',(req,res) => res.sendFile(path.resolve(__dirname,'views','productDetail.html')))
-app.get('/register',(req,res) => res.sendFile(path.resolve(__dirname,'views','register.html')))
-app.get('/find',(req,res) => res.sendFile(path.resolve(__dirname,'views','find.html')))
-app.get('/gifts',(req,res) => res.sendFile(path.resolve(__dirname,'views','gifts.html')))
-app.get('/products',(req,res) => res.sendFile(path.resolve(__dirname,'views','products.html')))
-app.get('/weAre',(req,res) => res.sendFile(path.resolve(__dirname,'views','weAre.html')))
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/product', productRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
