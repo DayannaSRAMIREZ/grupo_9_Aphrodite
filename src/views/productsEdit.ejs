@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gifts</title>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+<body>
+    <%- include('./partials/header') %> 
+    <main>
+        <h3>Edición de productos</h3>
+        <form method="post" action="">
+            <article>
+              <div class="formEdit">
+                  <label for="nameProduct">Nombre de producto</label>
+                  <input class="editFormInput" type="text" id="name" name="name">
+              </div>
+              <div class="formEdit">
+                  <label for="description">Descripción</label>
+                  <input class="editFormInput" type="text" id="description" name="description">
+              </div>
+              <div class="formEdit">
+                  <label for="category"> Categoría</label>
+                  <select class="selectFormCategory" name="materials" id="materials">
+                      <option hidden selected>Elija la opcíon deseada:</option>
+                      <option value="or">Oro</option>
+                      <option value="ar">Plata</option>
+                      <option value="fan">Fantasía</option>
+                  </select>
+              </div>
+              <div class="formEdit">
+                  <label for="size">Talles</label>
+                  <select class="selectFormCategory" name="size" id="size">
+                      <option hidden selected>Seleccione el talle:</option>
+                      <option value="xl">XL</option>
+                      <option value="l">L</option>
+                      <option value="m">M</option>
+                      <option value="s">S</option>
+                      <option value="xs">XS</option>
+                  </select>
+              </div>
+              <div class="formEdit">
+                  <label for="price">Precio</label>
+                  <input class="editFormInput" type="number" name="price" id="price">
+              </div>
+            </article>
+        </form>
+            <%- include('./partials/footer') %> 
+</body>
+</html>
