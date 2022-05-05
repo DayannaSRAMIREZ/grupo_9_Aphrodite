@@ -10,4 +10,5 @@
 @import './productDetail.css'; 
 @import './register.css'; 
 @import './variables.css'; 
-@import './addProducts.css'
+@import './addProducts.css';
+@import './productsEdit.css';

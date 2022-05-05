@@ -13,31 +13,44 @@
     </head>
 <body>
     <%- include('./partials/header') %> 
-    <main>
-        <h3>Edición de productos</h3>
-        <form method="post" action="">
+    <main class="mainEdit">
+        <h2>Edición de productos</h2>
+        <form class="boxEditForm" method="post" action="">
             <article>
+                <h3>Producto</h3>
               <div class="formEdit">
-                  <label for="nameProduct">Nombre de producto</label>
+                  <label for="nameProduct">Nombre:</label>
                   <input class="editFormInput" type="text" id="name" name="name">
               </div>
               <div class="formEdit">
-                  <label for="description">Descripción</label>
+                  <label for="description">Descripción:</label>
                   <input class="editFormInput" type="text" id="description" name="description">
               </div>
               <div class="formEdit">
-                  <label for="category"> Categoría</label>
-                  <select class="selectFormCategory" name="materials" id="materials">
-                      <option hidden selected>Elija la opcíon deseada:</option>
+                  <label class="formSelectOption" for="category">Categoria:</label>
+                  <select class="selectForm" name="materials" id="materials">
+                      <option hidden selected>Seleccione uno:</option>
+                      <option value="pul">Pulseras</option>
+                      <option value="col">Collares</option>
+                      <option value="an">Anillos</option>
+                      <option value="rlj">Relojes</option>
+                      <option value="tob">Tobilleras</option>
+                      <option value="con">Conjuntos</option>
+                  </select>
+              </div>
+              <div class="formEdit">
+                  <label class="formSelectOption" for="materials"> Material:</label>
+                  <select class="selectForm" name="materials" id="materials">
+                      <option hidden selected>Seleccione uno:</option>
                       <option value="or">Oro</option>
                       <option value="ar">Plata</option>
                       <option value="fan">Fantasía</option>
                   </select>
               </div>
               <div class="formEdit">
-                  <label for="size">Talles</label>
-                  <select class="selectFormCategory" name="size" id="size">
-                      <option hidden selected>Seleccione el talle:</option>
+                  <label class="formSelectOption" for="size">Talles</label>
+                  <select class="selectForm" name="size" id="size">
+                      <option hidden selected>Seleccione uno:</option>
                       <option value="xl">XL</option>
                       <option value="l">L</option>
                       <option value="m">M</option>
@@ -46,9 +59,13 @@
                   </select>
               </div>
               <div class="formEdit">
-                  <label for="price">Precio</label>
+                  <label for="price">Precio:</label>
                   <input class="editFormInput" type="number" name="price" id="price">
               </div>
+              <div class="boxButton">
+                  <button class="buttonEdit" type="submit">Editar</button>
+              </div>
+              
             </article>
         </form>
             <%- include('./partials/footer') %> 
