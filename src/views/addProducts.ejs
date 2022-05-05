@@ -12,88 +12,66 @@
 
 <body>
     <%- include('./partials/header') %>
-
-    <main class="register__main">
-        <h2>Agregar Productos </h2>
-
-        <form class="register__form">
+    <main class="mainEdit">
+        <h2> Agregar productos</h2>
+        <form class="boxEditForm" method="post" action="">
             <article>
                 <h3>Producto</h3>
-                <div class="register__form-box">
-                    <label for="nombre">Nombre</label>
-                    <input class="register__form-input" type="text" id="nombre" name="nombre">
-
+                <div class="formEdit">
+                    <label for="nameProduct">Nombre:</label>
+                    <input class="editFormInput" type="text" id="name" name="name">
                 </div>
 
-                <div class="register__form-box pais">
-                    <label class="register__pais" for="categorias">Categorías</label>
-
-                    <select class="register__form-select" name="categorias" id="categorias">
-                        <option value="" hidden selected>Por favor elegí uno...</option>
+                <div class="formEdit">
+                    <label class="formSelectOption" for="category">Categoria:</label>
+                    <select class="selectForm" name="materials" id="materials">
+                        <option hidden selected>Seleccione uno:</option>
                         <option value="pul">Pulseras</option>
                         <option value="col">Collares</option>
                         <option value="an">Anillos</option>
                         <option value="rlj">Relojes</option>
                         <option value="tob">Tobilleras</option>
                         <option value="con">Conjuntos</option>
-
                     </select>
-
                 </div>
-                <div class="register__form-box pais">
-                    <label class="register__pais" for="materiales">Materiales</label>
-
-                    <select class="register__form-select" name="materiales" id="materiales">
-                        <option value="" hidden selected>Por favor elegí uno...</option>
+                <div class="formEdit">
+                    <label class="formSelectOption" for="materials"> Material:</label>
+                    <select class="selectForm" name="materials" id="materials">
+                        <option hidden selected>Seleccione uno:</option>
                         <option value="or">Oro</option>
                         <option value="ar">Plata</option>
                         <option value="fan">Fantasía</option>
-
                     </select>
-
                 </div>
-
-                <div class="genero__titulo">
-
-                    <div class="register__form-box pais">
-                        <label class="register__pais" for="talles">Talles</label>
-
-                        <select class="register__form-select" name="talles" id="talles">
-                            <option value="" hidden selected>Por favor elegí uno...</option>
-                            <option value="or">XL</option>
-                            <option value="ar">XS</option>
-                            <option value="fan">S</option>
-
-                        </select>
-
-                    </div>
+                <div class="formEdit">
+                    <label class="formSelectOption" for="size">Talles</label>
+                    <select class="selectForm" name="size" id="size">
+                        <option hidden selected>Seleccione uno:</option>
+                        <option value="xl">XL</option>
+                        <option value="l">L</option>
+                        <option value="m">M</option>
+                        <option value="s">S</option>
+                        <option value="xs">XS</option>
+                    </select>
                 </div>
-                <div class="register__form-box">
-                    <label for="precio"> Precio </label>
-
-                    <input class="register__form-product" type="number" id="precio" name="precio">
-
+                <div class="formEdit">
+                    <label for="price">Precio:</label>
+                    <input class="editFormInput" type="number" name="price" id="price">
+                </div>
                 
-                    <label for="precio"> Unidades </label>
-
-                    <input class="register__form-product" type="number" id="unidades" name="unidades">
-
+                <div class="formEdit">
+                    <label for="description">Descripción:</label>
+                    <textarea class="textarea__clase" name="textarea" rows="10" cols="50"
+                        placeholder="Descripción del producto..."></textarea>
                 </div>
-                <div class="register__form-box">
-                    <label for="precio"> Descripción </label>
-
-                    <textarea class="textarea__clase" name="textarea" rows="10" cols="50" placeholder="Descripción del producto..."></textarea>
-
+                <div class="boxButton">
+                    <button class="buttonEdit" type="submit">Agregar</button>
                 </div>
+
             </article>
-            <div class="button_register_box">
-                <button class="button_register" type="submit">Enviar</button>
-            </div>
         </form>
-    </main>
-
-
-    <%- include('./partials/footer') %>
+        <%- include('./partials/footer') %>
 </body>
+
 
 </html>

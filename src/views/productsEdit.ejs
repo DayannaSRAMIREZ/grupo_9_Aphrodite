@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gifts</title>
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="/stylesheets/style.css" />
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifts</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
 <body>
-    <%- include('./partials/header') %> 
+    <%- include('./partials/header') %>
     <main class="mainEdit">
         <h2>Edición de productos</h2>
         <form class="boxEditForm" method="post" action="">
             <article>
                 <h3>Producto</h3>
-              <div class="formEdit">
-                  <label for="nameProduct">Nombre:</label>
-                  <input class="editFormInput" type="text" id="name" name="name">
-              </div>
-              <div class="formEdit">
-                  <label for="description">Descripción:</label>
-                  <input class="editFormInput" type="text" id="description" name="description">
-              </div>
-              <div class="formEdit">
-                  <label class="formSelectOption" for="category">Categoria:</label>
-                  <select class="selectForm" name="materials" id="materials">
-                      <option hidden selected>Seleccione uno:</option>
-                      <option value="pul">Pulseras</option>
-                      <option value="col">Collares</option>
-                      <option value="an">Anillos</option>
-                      <option value="rlj">Relojes</option>
-                      <option value="tob">Tobilleras</option>
-                      <option value="con">Conjuntos</option>
-                  </select>
-              </div>
-              <div class="formEdit">
-                  <label class="formSelectOption" for="materials"> Material:</label>
-                  <select class="selectForm" name="materials" id="materials">
-                      <option hidden selected>Seleccione uno:</option>
-                      <option value="or">Oro</option>
-                      <option value="ar">Plata</option>
-                      <option value="fan">Fantasía</option>
-                  </select>
-              </div>
-              <div class="formEdit">
-                  <label class="formSelectOption" for="size">Talles</label>
-                  <select class="selectForm" name="size" id="size">
-                      <option hidden selected>Seleccione uno:</option>
-                      <option value="xl">XL</option>
-                      <option value="l">L</option>
-                      <option value="m">M</option>
-                      <option value="s">S</option>
-                      <option value="xs">XS</option>
-                  </select>
-              </div>
-              <div class="formEdit">
-                  <label for="price">Precio:</label>
-                  <input class="editFormInput" type="number" name="price" id="price">
-              </div>
-              <div class="boxButton">
-                  <button class="buttonEdit" type="submit">Editar</button>
-              </div>
-              
+                <div class="formEdit">
+                    <label for="nameProduct">Nombre:</label>
+                    <input class="editFormInput" type="text" id="name" name="name">
+                </div>
+                <div class="formEdit">
+                    <label class="formSelectOption" for="category">Categoria:</label>
+                    <select class="selectForm" name="materials" id="materials">
+                        <option hidden selected>Seleccione uno:</option>
+                        <option value="pul">Pulseras</option>
+                        <option value="col">Collares</option>
+                        <option value="an">Anillos</option>
+                        <option value="rlj">Relojes</option>
+                        <option value="tob">Tobilleras</option>
+                        <option value="con">Conjuntos</option>
+                    </select>
+                </div>
+                <div class="formEdit">
+                    <label class="formSelectOption" for="materials"> Material:</label>
+                    <select class="selectForm" name="materials" id="materials">
+                        <option hidden selected>Seleccione uno:</option>
+                        <option value="or">Oro</option>
+                        <option value="ar">Plata</option>
+                        <option value="fan">Fantasía</option>
+                    </select>
+                </div>
+                <div class="formEdit">
+                    <label class="formSelectOption" for="size">Talles</label>
+                    <select class="selectForm" name="size" id="size">
+                        <option hidden selected>Seleccione uno:</option>
+                        <option value="xl">XL</option>
+                        <option value="l">L</option>
+                        <option value="m">M</option>
+                        <option value="s">S</option>
+                        <option value="xs">XS</option>
+                    </select>
+                </div>
+                <div class="formEdit">
+                    <label for="price">Precio:</label>
+                    <input class="editFormInput" type="number" name="price" id="price">
+                </div>
+                
+                <div class="formEdit">
+                    <label for="description">Descripción:</label>
+                    <textarea class="textarea__clase" name="textarea" rows="10" cols="50"
+                        placeholder="Descripción del producto..."></textarea>
+                </div>
+                <div class="boxButton">
+                    <button class="buttonEdit" type="submit">Editar</button>
+                </div>
+
             </article>
         </form>
-            <%- include('./partials/footer') %> 
+        <%- include('./partials/footer') %>
 </body>
+
 </html>

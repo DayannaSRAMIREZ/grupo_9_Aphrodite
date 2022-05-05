@@ -1,14 +1,16 @@
-.mainEdit{
+.mainEdit {
     background-image: url("/images/register/foto_fondo_diamantes.jpeg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
 }
-.boxEditForm{
+
+.boxEditForm {
     padding: 10px;
 }
-.mainEdit h2{
+
+.mainEdit h2 {
     padding: 5px;
     text-align: center;
     font-size: 20px;
@@ -16,17 +18,18 @@
 }
 
 
-.formEdit{
+.formEdit {
     font-size: 35px;
     position: relative;
-}    
-.formEdit label{
+}
+
+.formEdit label {
     color: var(--colorNegroClaro);
     font-weight: lighter;
     font-size: 15px
 }
 
-.editFormInput{
+.editFormInput {
     background-color: var(--colorRosaClaro);
     border: none;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -35,24 +38,26 @@
     margin: 4px 0px;
     position: relative;
 }
-.selectForm{
+
+.selectForm {
     background-color: var(--colorRosaClaro);
     border: none;
     padding: 5px;
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 }
 
-article{
+article {
     display: block;
 }
-.boxButton{
+
+.boxButton {
     width: 100%;
     text-align: center;
     margin: 10px 0px;
     position: relative;
 }
 
-.buttonEdit{
+.buttonEdit {
     width: 30%;
     text-align: center;
     background-color: var(--colorDorado);
@@ -64,17 +69,40 @@ article{
     position: relative;
     font-size: 16px;
 }
-@media (min-width: 768px){
-    .mainEdit{
+
+.textarea__clase {
+    background-color: var(--colorRosaClaro);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    text-align: center;
+    margin: 5px 0px;
+    position: relative;
+}
+
+.register__form-product {
+    background-color: var(--colorRosaClaro);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 10%;
+    height: 24px;
+    margin: 5px 0px;
+    position: relative;
+}
+
+
+@media (min-width: 768px) {
+    .mainEdit {
         text-align: center;
 
     }
 
-   
-    .mainEdit h2{
+
+    .mainEdit h2 {
         font-size: 30px;
     }
-    .boxEditForm{
+
+    .boxEditForm {
         width: 30%;
         height: 20%;
         margin-left: 35%;
@@ -85,15 +113,19 @@ article{
         backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.3)
     }
+
     .formEdit {
         font-size: 40px;
     }
+
     .formEdit lebel {
         font-size: 16px;
     }
-    .editFormInput{
+
+    .editFormInput {
         width: 60%;
         height: 24px;
         margin: 5px 0px;
     }
+    
 }
