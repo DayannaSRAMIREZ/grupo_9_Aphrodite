@@ -13,6 +13,8 @@ module.exports={
     },
     addProduct: (req, res)=> {
         res.render('addProducts')
+    },
+    productsEdit: (req,res)=> {
+        res.render('productsEdit')
     }
-    
 }

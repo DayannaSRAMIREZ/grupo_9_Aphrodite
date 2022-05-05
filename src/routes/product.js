@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router(); 
 
-const{detail, cart, product, gift, addProduct}= require('../controllers/productController');
+const{detail, cart, product, gift, addProduct, productsEdit}= require('../controllers/productController');
 router.get('/detail', detail)
-router.get('/cart', cart )
-router.get('/products', product)
-router.get('/gifts', gift)
-router.get('/addProducts', addProduct)
-
-;
+      .get('/cart', cart )
+      .get('/products', product)
+      .get('/gifts', gift)
+      .get('/addProducts', addProduct)
+      .get('/productsEdit', productsEdit)
+      
 
 
 module.exports= router
