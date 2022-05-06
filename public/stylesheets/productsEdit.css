@@ -5,6 +5,22 @@
     background-repeat: no-repeat;
     position: relative;
 }
+.boxEditForm h3{
+    text-align: center;
+}
+.sectionForm{
+    display: flex;
+}
+
+.art{
+    display: flex;
+    flex-direction: column;
+}
+.artDos{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
 
 .boxEditForm {
     padding: 10px;
@@ -19,21 +35,46 @@
 
 
 .formEdit {
+    display: flex;
     font-size: 35px;
     position: relative;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .formEdit label {
     color: var(--colorNegroClaro);
     font-weight: lighter;
-    font-size: 15px
+    font-size: 15px;
+    display:block;
 }
 
-.editFormInput {
+
+.editFormInputName {
     background-color: var(--colorRosaClaro);
     border: none;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 80%;
+    height: 24px;
+    margin: 4px 0px;
+    position: relative;
+}
+.editFormInputPrecio {
+    background-color: var(--colorRosaClaro);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    height: 24px;
+    margin: 4px 0px;
+    position: relative;
+}
+.editFormInputUni{
+    background-color: var(--colorRosaClaro);
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 40%;
     height: 24px;
     margin: 4px 0px;
     position: relative;
@@ -45,7 +86,13 @@
     padding: 5px;
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 }
-
+.selectFormTalle{
+    width: 60%;
+    background-color: var(--colorRosaClaro);
+    border: none;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+}
 article {
     display: block;
 }
@@ -68,6 +115,12 @@ article {
     letter-spacing: 1px;
     position: relative;
     font-size: 16px;
+}
+.labelArea{
+    text-align: center;
+}
+.formEdit area{
+    display: flex;
 }
 
 .textarea__clase {

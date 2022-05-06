@@ -1,4 +1,4 @@
-# RETROSPECTIVA
+# RETROSPECTIVA (segundoSprint)
 
 ## SEGUIR HACIENDO:
 - Reuniones y trabajando en equipo.

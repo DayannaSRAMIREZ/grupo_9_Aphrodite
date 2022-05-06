@@ -14,12 +14,13 @@
     <%- include('./partials/header') %>
     <main class="mainEdit">
         <h2>Edición de productos</h2>
+        <section class="sectionForm">
         <form class="boxEditForm" method="post" action="">
-            <article>
                 <h3>Producto</h3>
+                <article class="art">
                 <div class="formEdit">
                     <label for="nameProduct">Nombre:</label>
-                    <input class="editFormInput" type="text" id="name" name="name">
+                    <input class="editFormInputName" type="text" id="name" name="name">
                 </div>
                 <div class="formEdit">
                     <label class="formSelectOption" for="category">Categoria:</label>
@@ -42,9 +43,12 @@
                         <option value="fan">Fantasía</option>
                     </select>
                 </div>
+                
+            </article>
+            <article class="artDos">
                 <div class="formEdit">
                     <label class="formSelectOption" for="size">Talles</label>
-                    <select class="selectForm" name="size" id="size">
+                    <select class="selectFormTalle" name="size" id="size">
                         <option hidden selected>Seleccione uno:</option>
                         <option value="xl">XL</option>
                         <option value="l">L</option>
@@ -54,21 +58,28 @@
                     </select>
                 </div>
                 <div class="formEdit">
-                    <label for="price">Precio:</label>
-                    <input class="editFormInput" type="number" name="price" id="price">
+                    <label for="uni">Unidades:</label>
+                    <input class="editFormInputUni" type="number" name="unidades" id="unidades">
                 </div>
+                <div class="formEdit">
+                    <label for="price">Precio:</label>
+                    <input class="editFormInputPrecio" type="number" name="price" id="price">
+                </div>
+            </article>
+            <article class="art">
                 
                 <div class="formEdit">
-                    <label for="description">Descripción:</label>
+                    <label class="labelArea" for="description">Descripción:</label>
+
                     <textarea class="textarea__clase" name="textarea" rows="10" cols="50"
                         placeholder="Descripción del producto..."></textarea>
                 </div>
                 <div class="boxButton">
                     <button class="buttonEdit" type="submit">Editar</button>
                 </div>
-
             </article>
         </form>
+    </section>
         <%- include('./partials/footer') %>
 </body>
 
