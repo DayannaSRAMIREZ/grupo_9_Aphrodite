@@ -30,7 +30,7 @@ body.home {
 
 .home__principal {
     display: flex;
-   
+
 }
 
 .home__main__carrousel {
@@ -60,6 +60,16 @@ body.home {
     text-align: center;
     padding-top: 1vh;
 
+}
+.carousel-item img{
+    
+    height: 60vh !important;
+ 
+}
+
+.carousel {
+    width: 100vw;
+    height: 60vh;
 }
 
 .home__main__atajos__mas button {
@@ -105,13 +115,13 @@ body.home {
 }
 
 .tarjeta img {
-    width: 40vw;
+    width: 30vw;
 }
 
 .tarjeta {
     background-color: var(--colorRosaClaro);
     width: 50vw;
-    height: 80vw;
+    height: 55vh;
     margin: 3vw;
     padding: 3vw;
     border-radius: 3vw;
@@ -296,9 +306,10 @@ h6 {
 .video__publi {
     width: 100vw;
 }
+
 /*-----------tablet--------------------*/
 @media (min-width: 460px) {
-   
+
     .home__main__carrousel__foto {
         display: block;
         width: 50%;
@@ -306,15 +317,16 @@ h6 {
         background-size: cover;
 
     }
-    .home__principal{
+
+    .home__principal {
         width: 100%;
     }
-  
+
 
     .home__tablet {
         display: flex;
         width: 100%;
-        margin: 5vw 0; 
+        margin: 5vw 0;
     }
 
     .home__main__atajos {
@@ -323,6 +335,7 @@ h6 {
         display: grid;
         grid-template-columns: auto auto;
     }
+
     .home__main__atajos__mas,
     .home__main__atajos__clickeables {
         height: 15vw;
@@ -330,231 +343,254 @@ h6 {
         margin: 1vh 0;
         text-align: center;
         padding: 1vh 0;
-    
+
     }
+
     .home__main__atajos img {
         width: 9vw;
         height: 9vw;
-      
-      
+
+
     }
-    .video__publi{
-        margin: 5vw 0; 
+
+    .video__publi {
+        margin: 5vw 0;
     }
+
     .card article {
 
-      flex-direction: row;
+        flex-direction: row;
         width: 100%;
     }
-    .tarjeta{
-        width: 30vw; 
+
+    .tarjeta {
+        width: 30vw;
         height: 30vw;
     }
+
     .tarjeta h4 {
         font-size: 2.1vw;
     }
+
     .tarjeta img {
         width: 13vw;
     }
-    
+
     .tarjeta p,
     h6 {
-        font-size:1.5vw;
+        font-size: 1.5vw;
         margin: 4px 0;
     }
-    
-    
-.tarjeta__pie a {
-    font-size: 10px;
-    font-family: rosarivo;
-    color: white
-}
-
-.tarjeta__pie button {
-    border: solid 1px white;
-    border-radius: 5px;
-    padding: 1vw 2vw; 
-    background-color: var(--colorRosaFuerte);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-}
-
-.tarjeta__pie button:hover {
-    background-color: var(--colorDorado);
-}
-.home__main__fuente__texto h3{
-    font-size: 3vw;
-   
-    
-}
 
 
-@keyframes mianimacion1 {
-    0% {
-        top: 0px;
-        left: 50px;
-        background-color: var(--colorRosaClaro)
+    .tarjeta__pie a {
+        font-size: 10px;
+        font-family: rosarivo;
+        color: white
     }
 
-    50% {
-        top: 0px;
+    .tarjeta__pie button {
+        border: solid 1px white;
+        border-radius: 5px;
+        padding: 1vw 2vw;
         background-color: var(--colorRosaFuerte);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
     }
 
-    75% {
-        left: 0;
-        top: 0;
-        background-color: var(--colorRosaClaro)
+    .tarjeta__pie button:hover {
+        background-color: var(--colorDorado);
     }
 
-    100% {
-        left: 0;
-        top: 0px;
+    .home__main__fuente__texto h3 {
+        font-size: 3vw;
+
+
     }
+
+
+    @keyframes mianimacion1 {
+        0% {
+            top: 0px;
+            left: 50px;
+            background-color: var(--colorRosaClaro)
+        }
+
+        50% {
+            top: 0px;
+            background-color: var(--colorRosaFuerte);
+        }
+
+        75% {
+            left: 0;
+            top: 0;
+            background-color: var(--colorRosaClaro)
+        }
+
+        100% {
+            left: 0;
+            top: 0px;
+        }
+
+    }
+
+    @keyframes mianimacion2 {
+        0% {
+            top: 0px;
+            left: 50px;
+            background-color: var(--colorRosaClaro)
+        }
+
+        50% {
+            top: 0px;
+            background-color: var(--colorRosaFuerte);
+        }
+
+        75% {
+            left: 0;
+            top: 0;
+            background-color: var(--colorRosaClaro)
+        }
+
+        100% {
+            left: 0;
+            top: 0px;
+        }
+
+    }
+
+    .home__main__fuente__texto p {
+        font-size: 2vw;
+
+
+    }
+
+    .home__main__lonuevo {
+
+        height: 200px;
+        width: 100%;
+
+    }
+
+    .home__main__lonuevo a {
+        width: 50%;
+        text-align: center;
+    }
+
 
 }
 
-@keyframes mianimacion2 {
-    0% {
-        top: 0px;
-        left: 50px;
-        background-color: var(--colorRosaClaro)
-    }
-
-    50% {
-        top: 0px;
-        background-color: var(--colorRosaFuerte);
-    }
-
-    75% {
-        left:  0;
-        top: 0;
-        background-color: var(--colorRosaClaro)
-    }
-
-    100% {
-        left:0;
-        top: 0px;
-    }
-
-}
-
-.home__main__fuente__texto p{
-    font-size: 2vw;
-  
-    
-}
-.home__main__lonuevo {
- 
-    height: 200px;
-    width: 100%;
-
-}
-.home__main__lonuevo a {
-    width: 50%;
- text-align: center;
-}
-
-
-}
 /*--------------desktop------------*/
 @media (min-width:768px) {
 
     .home__main__lonuevo {
- 
-    height: 400px;
-   
 
-}
-.home__main__fuente__texto {
-     text-align: center;
-     margin-top: 7%;
-}
-.home__main__fuente__texto p{
-    font-size: 1.2vw;
-   width: 100%;
- line-height: 3vw;
- padding: 4px;
-}
-    .home__main__fuente__texto h3{
-  font-size: 1.5vw;
- 
-  
-}
-.home__main__atajos {
-    width: 100vw;
-    margin: 0 0 0 0vw;
-    display:flex; 
-}
-.home__main__atajos__clickeables {
-    height: 12vw;
-    width: 14vw;
-    margin: 1vh 0;
-    text-align: center;
-    padding: 0 0 2vw 0;
-}
+        height: 400px;
 
-.home__main__carrousel__foto{
-    display: none;
-}
-.home__main__atajos__mas button {
-    margin-top: 25%;
-}
 
-.home__main__atajos h4 {
-    font-size: 1.5vw;
-}
+    }
 
-.home__main__atajos img {
-    width: 10vw;
-    height: 10vw;
-}
-.video__publi source{
-    height: 50px;
-}
+    .home__main__fuente__texto {
+        text-align: center;
+        margin-top: 7%;
+    }
 
-.card{
-    text-align: center;
-}
-.card article{
-    justify-content:center
-}
+    .home__main__fuente__texto p {
+        font-size: 1.2vw;
+        width: 100%;
+        line-height: 3vw;
+        padding: 4px;
+    }
 
-  .tarjeta{
-      width: 8vw; 
-      height: 14vw;
-  }
-  .tarjeta h4 {
-      font-size: 1vw;
-  }
-  .tarjeta img {
-      width: 7vw;
-  }
-  
-  .tarjeta p,
-  h6 {
-      font-size:0.8vw;
-      margin: 4px 0;
-  }
- 
-  
-.tarjeta__pie a {
-  font-size: 1vw;
-  font-family: rosarivo;
-  color: white
-}
+    .home__main__fuente__texto h3 {
+        font-size: 1.5vw;
 
-.tarjeta__pie button {
-  border: solid 1px white;
-  border-radius: 5px;
-  padding: 0.5vw 0.8vw; 
-  background-color: var(--colorRosaFuerte);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
-}
+    }
 
-.tarjeta__pie button:hover {
-  background-color: var(--colorDorado);
-}
+    .home__main__atajos {
+        width: 100vw;
+        margin: 0 0 0 0vw;
+        display: flex;
+    }
+
+    .home__main__atajos__clickeables {
+        height: 12vw;
+        width: 14vw;
+        margin: 1vh 0;
+        text-align: center;
+        padding: 0 0 2vw 0;
+    }
+
+    .home__main__carrousel__foto {
+        display: none;
+    }
+
+    .home__main__atajos__mas button {
+        margin-top: 25%; 
+        height: 5vw;
+    width: 8vw;
+    font-size: 1vw;
+    }
+
+    .home__main__atajos h4 {
+        font-size: 1.5vw;
+    }
+
+    .home__main__atajos img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .video__publi source {
+        height: 50px;
+    }
+
+    .card {
+        text-align: center;
+    }
+
+    .card article {
+        justify-content: center
+    }
+
+    .tarjeta {
+        width: 8vw;
+        height: 14vw;
+    }
+
+    .tarjeta h4 {
+        font-size: 1vw;
+    }
+
+    .tarjeta img {
+        width: 7vw;
+    }
+
+    .tarjeta p,
+    h6 {
+        font-size: 0.8vw;
+        margin: 4px 0;
+    }
+
+
+    .tarjeta__pie a {
+        font-size: 1vw;
+        font-family: rosarivo;
+        color: white
+    }
+
+    .tarjeta__pie button {
+        border: solid 1px white;
+        border-radius: 5px;
+        padding: 0.5vw 0.8vw;
+        background-color: var(--colorRosaFuerte);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .tarjeta__pie button:hover {
+        background-color: var(--colorDorado);
+    }
 
 }
