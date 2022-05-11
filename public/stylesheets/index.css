@@ -61,10 +61,11 @@ body.home {
     padding-top: 1vh;
 
 }
-.carousel-item img{
-    
+
+.carousel-item img {
+
     height: 60vh !important;
- 
+
 }
 
 .carousel {
@@ -101,128 +102,88 @@ body.home {
 }
 
 /*tarjetas*/
-
-.card {
+.home_destacados {
+    margin: 5vh;
     text-align: center;
+    font-size: 3.5vw;
 }
 
-.card article {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.home_cards {
     width: 100%;
-}
-
-.tarjeta img {
-    width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .tarjeta {
     background-color: var(--colorRosaClaro);
-    width: 50vw;
-    height: 55vh;
-    margin: 3vw;
-    padding: 3vw;
-    border-radius: 3vw;
-    position: relative;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 320px;
+    border-radius: 20px;
+    margin: 10px;
+    animation-name: mianimacion;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 
 }
 
 .tarjeta h4 {
-    font-size: 7vw;
+    font-size: 19px;
+    text-align: center;
+    padding: 15px 0px 0px 0px;
+}
+.tarjeta h6 {
+    
+    padding: 1px;
 }
 
-.tarjeta h4 {
-    font-size: 6vw;
-
+.tarjeta img {
+    height: 150px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
-.tarjeta p,
-h6 {
-    font-size: 4.5vw;
-    margin: 4px 0;
+.tarjeta p {
+    text-align: center;
 }
 
-.tarjeta1 {
-    animation-name: mianimacion2;
-    animation-duration: 15s;
+.tarjeta__pie {
+    text-align: center;
 }
 
-.tarjeta2 {
-    animation-name: mianimacion1;
-    animation-duration: 15s;
-}
-
-.home__contenedor {
-    position: relative;
-}
-
-.tarjeta__pie a {
-    font-size: 12px;
-    font-family: rosarivo;
-    color: white
-}
-
-.tarjeta__pie button {
-    border: solid 1px white;
-    border-radius: 5px;
-    padding: 2vw 5vw;
+.tarjeta button {
     background-color: var(--colorRosaFuerte);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
+    border: none;
+    padding: 10px 20px;
+    font-size: 10px;
+    border-radius: 10px;
 }
+
 
 .tarjeta__pie button:hover {
     background-color: var(--colorDorado);
-}
+} 
 
 @keyframes mianimacion1 {
     0% {
-        top: 0px;
-        right: 50px;
-        background-color: var(--colorRosaClaro)
+
+        background-color: var(--colorRosaClaro); 
     }
 
     50% {
-        top: 0px;
+    
         background-color: var(--colorRosaFuerte);
     }
 
-    75% {
-        right: 0;
-        top: 0;
-        background-color: var(--colorRosaClaro)
-    }
+   
 
     100% {
-        left: 0;
-        top: 0px;
-    }
-
-}
-
-@keyframes mianimacion2 {
-    0% {
-        top: 0px;
-        left: 50px;
-        background-color: var(--colorRosaClaro)
-    }
-
-    50% {
-        top: 0px;
-        background-color: var(--colorRosaFuerte);
-    }
-
-    75% {
-        left: 0;
-        top: 0;
-        background-color: var(--colorRosaClaro)
-    }
-
-    100% {
-        left: 0;
-        top: 0px;
+        background-color: var(--colorRosaClaro); 
     }
 
 }
@@ -279,17 +240,29 @@ h6 {
 
 .home__main__fuente {
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 
     margin: 10px 7px;
 }
 
 .home__main__fuente__texto {
     width: 50%;
+   
     text-align: justify;
     margin: 7px;
 
 }
-
+.caja_diamante{
+    width: 45%;
+    display: flex;
+    margin: auto;
+}
+.diamante{
+ width: 100%;
+ display: flex;
+    margin: auto;
+}
 .home__main__fuente__texto h3 {
     font-size: 12px;
 }
@@ -297,16 +270,6 @@ h6 {
 .home__main__fuente__texto p {
     font-size: 10px;
 }
-
-.home__main__fuente__img {
-    width: 50%;
-
-}
-
-.video__publi {
-    width: 100vw;
-}
-
 /*-----------tablet--------------------*/
 @media (min-width: 460px) {
 
@@ -363,102 +326,6 @@ h6 {
         width: 100%;
     }
 
-    .tarjeta {
-        width: 30vw;
-        height: 30vw;
-    }
-
-    .tarjeta h4 {
-        font-size: 2.1vw;
-    }
-
-    .tarjeta img {
-        width: 13vw;
-    }
-
-    .tarjeta p,
-    h6 {
-        font-size: 1.5vw;
-        margin: 4px 0;
-    }
-
-
-    .tarjeta__pie a {
-        font-size: 10px;
-        font-family: rosarivo;
-        color: white
-    }
-
-    .tarjeta__pie button {
-        border: solid 1px white;
-        border-radius: 5px;
-        padding: 1vw 2vw;
-        background-color: var(--colorRosaFuerte);
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-    }
-
-    .tarjeta__pie button:hover {
-        background-color: var(--colorDorado);
-    }
-
-    .home__main__fuente__texto h3 {
-        font-size: 3vw;
-
-
-    }
-
-
-    @keyframes mianimacion1 {
-        0% {
-            top: 0px;
-            left: 50px;
-            background-color: var(--colorRosaClaro)
-        }
-
-        50% {
-            top: 0px;
-            background-color: var(--colorRosaFuerte);
-        }
-
-        75% {
-            left: 0;
-            top: 0;
-            background-color: var(--colorRosaClaro)
-        }
-
-        100% {
-            left: 0;
-            top: 0px;
-        }
-
-    }
-
-    @keyframes mianimacion2 {
-        0% {
-            top: 0px;
-            left: 50px;
-            background-color: var(--colorRosaClaro)
-        }
-
-        50% {
-            top: 0px;
-            background-color: var(--colorRosaFuerte);
-        }
-
-        75% {
-            left: 0;
-            top: 0;
-            background-color: var(--colorRosaClaro)
-        }
-
-        100% {
-            left: 0;
-            top: 0px;
-        }
-
-    }
-
     .home__main__fuente__texto p {
         font-size: 2vw;
 
@@ -495,6 +362,7 @@ h6 {
         margin-top: 7%;
     }
 
+
     .home__main__fuente__texto p {
         font-size: 1.2vw;
         width: 100%;
@@ -527,10 +395,10 @@ h6 {
     }
 
     .home__main__atajos__mas button {
-        margin-top: 25%; 
+        margin-top: 25%;
         height: 5vw;
-    width: 8vw;
-    font-size: 1vw;
+        width: 8vw;
+        font-size: 1vw;
     }
 
     .home__main__atajos h4 {
@@ -546,51 +414,48 @@ h6 {
         height: 50px;
     }
 
-    .card {
-        text-align: center;
+    .home_destacados {
+
+        font-size: 1.5vw;
     }
+    
 
-    .card article {
-        justify-content: center
-    }
+.tarjeta {
+   
+    width: 230px;
+    height: 350px;
 
-    .tarjeta {
-        width: 8vw;
-        height: 14vw;
-    }
+}
 
-    .tarjeta h4 {
-        font-size: 1vw;
-    }
+.tarjeta h4 {
+    font-size: 25px;
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+}
+.tarjeta h6 {
+    
+    padding: 3px;
+}
 
-    .tarjeta img {
-        width: 7vw;
-    }
-
-    .tarjeta p,
-    h6 {
-        font-size: 0.8vw;
-        margin: 4px 0;
-    }
+.tarjeta img {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
 
 
-    .tarjeta__pie a {
-        font-size: 1vw;
-        font-family: rosarivo;
-        color: white
-    }
+.tarjeta button {
+   
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
 
-    .tarjeta__pie button {
-        border: solid 1px white;
-        border-radius: 5px;
-        padding: 0.5vw 0.8vw;
-        background-color: var(--colorRosaFuerte);
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
-    }
 
-    .tarjeta__pie button:hover {
-        background-color: var(--colorDorado);
-    }
+
+   
 
 }

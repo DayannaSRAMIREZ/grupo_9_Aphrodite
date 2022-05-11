@@ -1,161 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
+  <%- include('./partials/head') %>
+  <body class="home">
+    <%- include('./partials/header') %>
 
-  <%- include('./partials/head') %> 
-<body class="home">
-  <%- include('./partials/header') %> 
- 
-  <main class="home__main">
-
-    <div id="video">
-      <video loop muted autoplay poster="">
-        <source src="/video/presentacion.mp4" type="video/mp4">
-      </video>
-      <div class="content"></div>
-    </div>
-    <div class="home__tablet">
-      <div class="home__principal">
-
-        <div class="home__main__carrousel__foto">
-        </div>
-
-        <section class="home__main__atajos">
-          <article class="home__main__atajos__clickeables">
-            <a href="">
-              <img src="images/home/atajos/collar.jpeg" alt="collar">
-              <h4>Collares</h4>
-            </a>
-          </article>
-          <article class="home__main__atajos__clickeables">
-            <img src="/images/home/atajos/pulsera.jpeg" alt="pulsera">
-            <h4>Pulseras</h4>
-          </article>
-          <article class="home__main__atajos__clickeables">
-            <img src="/images/home/atajos/anillo.jpeg" alt="anillo">
-            <h4>Anillos</h4>
-          </article>
-          <article class="home__main__atajos__clickeables">
-            <img src="/images/home/atajos/aritos.jpeg" alt="aritos">
-            <h4>Aritos</h4>
-          </article>
-          <article class="home__main__atajos__clickeables">
-            <img src="/images/home/atajos/reloj.jpeg" alt="reloj">
-            <h4>Relojes</h4>
-          </article>
-
-          <article class="home__main__atajos__mas">
-            <button>Ver todo en joyería</button>
-          </article>
-
-        </section>
+    <main class="home__main">
+      <div id="video">
+        <video loop muted autoplay poster="">
+          <source src="/video/presentacion.mp4" type="video/mp4" />
+        </video>
+        <div class="content"></div>
       </div>
-    </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class=" foto d-block w-100" src="/images/home/carousel/carousel1.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="/images/home/carousel/carousel2.jpeg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="/images/home/carousel/carousel3.jpg" alt="Third slide">
+      <div class="home__tablet">
+        <div class="home__principal">
+          <div class="home__main__carrousel__foto"></div>
+
+          <section class="home__main__atajos">
+            <article class="home__main__atajos__clickeables">
+              <a href="">
+                <img src="images/home/atajos/collar.jpeg" alt="collar" />
+                <h4>Collares</h4>
+              </a>
+            </article>
+            <article class="home__main__atajos__clickeables">
+              <img src="/images/home/atajos/pulsera.jpeg" alt="pulsera" />
+              <h4>Pulseras</h4>
+            </article>
+            <article class="home__main__atajos__clickeables">
+              <img src="/images/home/atajos/anillo.jpeg" alt="anillo" />
+              <h4>Anillos</h4>
+            </article>
+            <article class="home__main__atajos__clickeables">
+              <img src="/images/home/atajos/aritos.jpeg" alt="aritos" />
+              <h4>Aritos</h4>
+            </article>
+            <article class="home__main__atajos__clickeables">
+              <img src="/images/home/atajos/reloj.jpeg" alt="reloj" />
+              <h4>Relojes</h4>
+            </article>
+
+            <article class="home__main__atajos__mas">
+              <button>Ver todo en joyería</button>
+            </article>
+          </section>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-
-
-    <section class="card">
-      <h3>DESTACADOS</h3>
-      <article>
-        <div class="tarjeta tarjeta1">
-          <h4>Adonis</h4>
-          <div class="home__contenedor">
-            <p>10% off</p>
-            <img src="/images/home/adonis.jpg" alt="destacados1">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="foto d-block w-100"
+              src="/images/home/carousel/carousel1.jpg"
+              alt="First slide"
+            />
           </div>
-          <div class="tarjeta__pie">
-            <h6>$50.000</h6>
-            <button><a href="/product/detail">ver más</a></button>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/images/home/carousel/carousel2.jpeg"
+              alt="Second slide"
+            />
           </div>
-        <!-- </div>
-        <div class="tarjeta tarjeta2">
-          <h4>Sparkling</h4>
-          <div class="home__contenedor">
-            <p>5% off</p>
-            <img src="/images/home/snake2.jpg" alt="destacados1">
-          </div>
-          <div class="tarjeta__pie">
-            <h6>$35.000</h6>
-            <button><a href="/product/detail">ver más</a></button>
-          </div>
-        </div>
-        <div class="tarjeta tarjeta1">
-          <h4>Eternity</h4>
-          <div class="home__contenedor">
-            <p>8% off</p>
-            <img src="/images/home/anto.jpg" alt="destacados1">
-          </div>
-          <div class="tarjeta__pie">
-            <h6>$45.000</h6>
-            <button><a href="/product/detail">ver más</a></button>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/images/home/carousel/carousel3.jpg"
+              alt="Third slide"
+            />
           </div>
         </div>
-
-
-        <div class="tarjeta tarjeta2">
-          <h4>Chameleon</h4>
-          <div class="home__contenedor">
-            <p>8% off</p>
-            <img src="/images/home/N102147_03.jpg" alt="destacados1">
-          </div>
-          <div class="tarjeta__pie">
-            <h6>$50.000</h6>
-            <button><a href="/product/detail">ver más</a></button>
-          </div>
-        </div> -->
-      </article>
-    </section>
-    <section class="home__main__fuente">
-      <div class="home__main__fuente__texto">
-        <h3>De la fuente</h3>
-        <p>La fabricación artesanal de los mejores diamantes del munco comienza con saber de dónde vienen. Estamos
-          orgullosos de rastrear el 100% de nuestros diamantes en bruto hasta minas y fuentes conocidas</p>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <video class="diamante" loop muted autoplay poster="">
-        <source src="/video/diamondring.mp4" type="video/mp4">
-      </video>
-      <!-- <img class="home__main__fuente__img" src="/images/home/diamonds-g6718b8062_1920.jpg" alt=""> -->
+      <h3 class="home_destacados">DESTACADOS</h3>
 
-    </section>
-    <section class="home__main__lonuevo">
-      <a href="">
-        <h3>Lo nuevo de Aphrodite</h3>
-      </a>
-    </section>
+      <section class="home_cards">
+        <article>
+          <div class="tarjeta tarjeta1">
+            <h4>Adonis</h4>
+            <div class="home__contenedor">
+              <p>10% off</p>
+              <img src="/images/home/adonis.jpg" alt="destacados1" />
+            </div>
+            <div class="tarjeta__pie">
+              <h6>$50.000</h6>
+              <button><a href="/product/detail">ver más</a></button>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="tarjeta tarjeta2">
+            <h4>Adonis</h4>
+            <div class="home__contenedor">
+              <p>10% off</p>
+              <img src="/images/home/adonis.jpg" alt="destacados1" />
+            </div>
+            <div class="tarjeta__pie">
+              <h6>$50.000</h6>
+              <button><a href="/product/detail">ver más</a></button>
+            </div>
+          </div>
+        </article>
+      </section>
 
+      <section class="home__main__fuente">
+        <div class="home__main__fuente__texto">
+          <h3>De la fuente</h3>
+          <p>
+            La fabricación artesanal de los mejores diamantes del munco comienza
+            con saber de dónde vienen. Estamos orgullosos de rastrear el 100% de
+            nuestros diamantes en bruto hasta minas y fuentes conocidas
+          </p>
+        </div>
+        <div class="caja_diamante">
+          <video class="diamante" loop muted autoplay poster="">
+            <source src="/video/diamondring.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+      <section class="home__main__lonuevo">
+        <a href="">
+          <h3>Lo nuevo de Aphrodite</h3>
+        </a>
+      </section>
 
-    <section class="home__main__cuotas">
-      <marquee behavior="" direction="" scrollamount="3"> PAGÁ EN 3 Y 6 CUOTAS SIN INTERES CON VISA, MASTER Y AMEX DESDE
-        15.000$</marquee>
-    </section>
+      <section class="home__main__cuotas">
+        <marquee behavior="" direction="" scrollamount="3">
+          PAGÁ EN 3 Y 6 CUOTAS SIN INTERES CON VISA, MASTER Y AMEX DESDE
+          15.000$</marquee
+        >
+      </section>
+    </main>
 
-  </main>
-
- <%- include('./partials/footer') %> 
-</body>
-
+    <%- include('./partials/footer') %>
+  </body>
 </html>
