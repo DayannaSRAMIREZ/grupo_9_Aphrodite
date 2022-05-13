@@ -407,7 +407,10 @@
 
     .desktop__formato {
         width: 50%;
-    }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 90vh;}
 
     .product__detail__interarte {
 

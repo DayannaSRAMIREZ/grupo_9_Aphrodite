@@ -6,8 +6,8 @@ router.get('/detail', detail)
       .get('/cart', cart )
       .get('/products', product)
       .get('/gifts', gift)
-      .get('/addProducts', addProduct)
-      .get('/productsEdit', productsEdit)
+      .get('/add', addProduct)
+      .get('/edit/:id', productsEdit)
       
 
 
