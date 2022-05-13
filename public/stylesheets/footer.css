@@ -107,7 +107,7 @@ padding-left: 0 !important;
         align-items: flex-start;
         width: 75%;
         text-align: left;
-        margin-top: 10px;
+        margin-top: 15px;
         
 
     }
@@ -161,7 +161,6 @@ padding-left: 0 !important;
     .placeholder__buscador{
         padding: 3px 3px 3px 8px;
         width: 170px;
-    
         margin: 1.5vw;
         box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     }
@@ -174,6 +173,19 @@ padding-left: 0 !important;
     .home__main__lonuevo{
         background-size: contain;
     }
+    footer button, input, optgroup, select, textarea {
+      
+    
+        font-size: 10 !important; 
+         line-height: 0 !important; 
+    }
+    .footer__subscripcion button{
+      margin-top: 2vh;
+        padding: 0.9vw 2vh;
+   
+      
+    }
+   
     
 @media (min-width: 1024px) {
     .placeholder__buscador{
