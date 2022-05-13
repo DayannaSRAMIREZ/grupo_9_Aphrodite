@@ -1,13 +1,17 @@
-.detalle__productos__caracteristicas .mas , .detalle__productos__envios .mas{
-    display: none;
-}
-.product__detail__interarte{
+.detalle__productos__caracteristicas .mas,
+.detalle__productos__envios .mas {
     display: none;
 }
 
-.detalle__imagenes .arrow_right, .detalle__imagenes .arrow_left{
+.product__detail__interarte {
     display: none;
 }
+
+.detalle__imagenes .arrow_right,
+.detalle__imagenes .arrow_left {
+    display: none;
+}
+
 .product__detail main {
 
     width: 100%;
@@ -16,7 +20,12 @@
 
 
 }
-.detalle__producto__art1, .detalle__producto, .detalle__productos__caracteristicas, .detalle__productos__envios, .detalle__productos__descripcion{
+
+.detalle__producto__art1,
+.detalle__producto,
+.detalle__productos__caracteristicas,
+.detalle__productos__envios,
+.detalle__productos__descripcion {
 
     padding: 20px;
 }
@@ -26,17 +35,18 @@
     padding: 1px;
 }
 
-.product__detail h2{
+.product__detail h2 {
 
-     font-size: 18px;
+    font-size: 18px;
 }
+
 .detalle__imagenes {
 
     justify-content: center;
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+
 
 }
 
@@ -44,7 +54,7 @@
 
     border: solid 2px var(--colorNegroClaro);
     width: 250px;
-    
+
 
 }
 
@@ -56,9 +66,9 @@
 
 
 .imagenes__chicas img {
-    
+
     display: none;
-    
+
 }
 
 .detalle__carrusel {
@@ -69,32 +79,30 @@
 .detalle__carrusel img {
 
     width: 10px;
-    
+
 
 }
 
-.detalle__medios__pago img{
+.detalle__medios__pago img {
 
     width: 20px;
 }
 
-.detalle__producto{
+.detalle__producto {
 
     font-size: 10px;
-    
+
 }
 
 
-.botoncm button{
+.botoncm button {
 
-    width: 50px ;
+    width: 50px;
     color: var(--colorNegroClaro);
     background-color: white;
     border: solid 2px var(--colorNegroClaro);
     margin-top: 5px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
-
-    
 }
 
 .comprar button {
@@ -106,26 +114,22 @@
     padding: 9px 8px 9px 5px;
     margin: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
-    
- 
 }
 
 .deseos button {
 
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     background-color: var(--colorRosaClaro);
-    width: 60x ;
+    width: 60x;
     color: var(--colorNegroClaro);
     padding: 9px 10px 9px 5px;
     justify-content: flex-end;
     margin: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
-    
-   
 }
 
-.iconify{
+.iconify {
 
     margin-left: 5px;
 }
@@ -140,39 +144,46 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     width: 100%;
     font-size: 14px;
-    
+
 }
+
 .detalle__medios__pago img {
 
     display: flex;
     flex-direction: center;
     justify-content: center;
     padding: 10px;
-    
+
 }
-.detalle__productos__descripcion, .detalle__productos__caracteristicas, .detalle__productos__envios {
+
+.detalle__productos__descripcion,
+.detalle__productos__caracteristicas,
+.detalle__productos__envios {
 
     font-size: 12px;
 }
+
 .detalle__producto__art2 {
 
     display: flex;
-    justify-content:center; 
-    
-       
-     
+    justify-content: center;
+
+
+
 }
+
 .detalle__producto__art2 button {
 
     display: flex;
     margin-top: 24px;
     align-self: initial;
-     
-       
+
+
 }
+
 .detalle__estrella img {
 
     width: 12px;
@@ -185,18 +196,20 @@
     flex-direction: row;
 }
 
-.detalle__medios__pago p{
+.detalle__medios__pago p {
 
     margin-top: 6px;
     padding: 5px;
     justify-content: center;
 }
+
 .visa img {
 
- width: 46px;
- margin: 0 0 5px 5px;
- 
+    width: 46px;
+    margin: 0 0 5px 5px;
+
 }
+
 .amer img {
 
     width: 40px;
@@ -204,6 +217,7 @@
     margin: 2px 2px 0px 0px;
     padding: 10px 3px 0px 0px !important;
 }
+
 .master img {
 
     width: 40px;
@@ -223,22 +237,24 @@
 .detalle__envios article {
 
     padding: 0px 0 0px 5px;
-    
-}
-.camion{
 
-    color:var(--colorVerdeManzana);
+}
+
+.camion {
+
+    color: var(--colorVerdeManzana);
     font-size: 20px;
     margin: 0px;
     padding: 0px;
 }
+
 .detalle__envios h3 {
 
     color: var(--colorVerdeManzana);
     width: 300px;
     font-size: 13px;
-    
-    
+
+
 }
 
 .detalle__envios span {
@@ -246,84 +262,97 @@
     color: var(--colorDurazno);
 }
 
-.detalle__productos__caracteristicas{
+.detalle__productos__caracteristicas {
 
     position: relative;
 }
-.detalle__productos__caracteristicas div{
+
+.detalle__productos__caracteristicas div {
 
     position: absolute;
     top: 25px;
     right: 30px;
-    
+
 }
-.detalle__productos__descripcion{
+
+.detalle__productos__descripcion {
 
     position: relative;
 }
-.detalle__productos__descripcion div{
+
+.detalle__productos__descripcion div {
 
     position: absolute;
     top: 25px;
     right: 30px;
-    
+
 }
-.detalle__productos__envios{
+
+.detalle__productos__envios {
 
     position: relative;
 }
-.detalle__productos__envios div{
+
+.detalle__productos__envios div {
 
     position: absolute;
     top: 25px;
     right: 30px;
-    
+
 }
 
-@media (min-width:768px){
+@media (min-width:768px) {
 
-    .detalle__imagenes .arrow_right, .detalle__imagenes .arrow_left{
+    .detalle__imagenes .arrow_right,
+    .detalle__imagenes .arrow_left {
         display: block;
     }
-    .product__detail main{
+
+    .product__detail main {
 
         display: flex;
         flex-direction: row;
-        
+
     }
-    .detalle__imagenes{
+
+    .detalle__imagenes {
 
         margin-left: 6px;
     }
-    .detalle__producto__art1{
+
+    .detalle__producto__art1 {
 
         padding-left: 15px;
 
-        
+
     }
-    .collar1{
-        
+
+    .collar1 {
+
         width: 240px;
         position: relative;
         justify-self: center;
         margin: auto;
-        
-        
+
+
     }
-    .collar1 img{
+
+    .collar1 img {
 
         width: 240px;
         border: none;
         position: relative;
-               
-        
+
+
     }
+
     .arrow_left {
 
         position: absolute;
         left: 0;
-        top:45%;
+        top: 45%;
     }
+
     .arrow_right {
 
         position: absolute;
@@ -331,83 +360,129 @@
         top: 45%;
     }
 
-    .detalle__imagenes{
+    .detalle__imagenes {
 
-        width:100%;
+        width: 100%;
         height: 350px;
         display: flex;
     }
-    .detalle__desk{
+
+    .detalle__desk {
 
         width: 50%;
         display: flex;
         flex-direction: column;
     }
-    .detalle__producto{
+
+    .detalle__producto {
 
         padding: 0px;
     }
-    .detalle__envios{
+
+    .detalle__envios {
 
         order: 1;
 
     }
-    .detalle__medios__pago{
+
+    .detalle__medios__pago {
 
         order: 2;
     }
-    .imagenes__chicas{
+
+    .imagenes__chicas {
 
         justify-content: space-between;
-        
+
     }
-    .menos{
+
+    .menos {
         display: block;
     }
-   
-    .interesarte__fotos img{
+
+    .interesarte__fotos img {
 
         width: 20%;
-   }
-   .desktop__formato{
-       width: 50%;
-   }
+    }
 
-   .product__detail__interarte{
+    .desktop__formato {
+        width: 50%;
+    }
 
-    display: block;
-   }
+    .product__detail__interarte {
 
-   .product__detail__interarte .interesarte__fotos {
+        display: block;
+    }
 
-    display: flex;
-    align-items: center;
-   }
-   .product__detail__interarte h3{
+    .product__detail__interarte .interesarte__fotos {
 
-    color: var(--colorGris);
-    margin-top: 40px;
-    margin-left: 20px;
-   }
-   .product__detail__interarte img {
+        display: flex;
+        align-items: center;
+    }
 
-    margin: 20px;
-    border: solid 1.5px var(--colorGris);
-   }
-   .detalle__carrusel{
-       display: none;
-   }
-   .detalle__medios__pago p{
+    .product__detail__interarte h3 {
 
-       margin-top: 6px;
-       padding: 5px;
-       justify-content: center;
-   }
-   .visa img {
+        color: var(--colorGris);
+        margin-top: 40px;
+        margin-left: 20px;
+    }
 
-    width: 46px;
-    margin: 0 0 5px 5px;
-    
+    .product__detail__interarte img {
+
+        margin: 20px;
+        border: solid 1.5px var(--colorGris);
+    }
+
+    .detalle__carrusel {
+        display: none;
+    }
+
+    .detalle__medios__pago p {
+
+        margin-top: 6px;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .visa img {
+
+        width: 46px;
+        margin: 0 0 5px 5px;
+
+    }
+
+    .carousel__detail {
+
+        width: 45vw;
+        height: 40vh;
+    }
+    .product__detail .carousel-item img {
+
+        
+        height: 40vh !important;
+
+    }
+
+
 }
 
+
+
+@media (min-width:1024px) {
+
+    .carousel__detail {
+
+        width: 45vw;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+
+    }
+
+    .product__detail .carousel-item img {
+
+        
+        height: 43vh !important;
+
+    }
 }

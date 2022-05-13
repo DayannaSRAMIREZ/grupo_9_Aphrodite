@@ -134,8 +134,9 @@ body.home {
     text-align: center;
     padding: 15px 0px 0px 0px;
 }
+
 .tarjeta h6 {
-    
+
     padding: 1px;
 }
 
@@ -167,23 +168,23 @@ body.home {
 
 .tarjeta__pie button:hover {
     background-color: var(--colorDorado);
-} 
+}
 
 @keyframes mianimacion1 {
     0% {
 
-        background-color: var(--colorRosaClaro); 
+        background-color: var(--colorRosaClaro);
     }
 
     50% {
-    
+
         background-color: var(--colorRosaFuerte);
     }
 
-   
+
 
     100% {
-        background-color: var(--colorRosaClaro); 
+        background-color: var(--colorRosaClaro);
     }
 
 }
@@ -248,21 +249,24 @@ body.home {
 
 .home__main__fuente__texto {
     width: 50%;
-   
+
     text-align: justify;
     margin: 7px;
 
 }
-.caja_diamante{
+
+.caja_diamante {
     width: 45%;
     display: flex;
     margin: auto;
 }
-.diamante{
- width: 100%;
- display: flex;
+
+.diamante {
+    width: 100%;
+    display: flex;
     margin: auto;
 }
+
 .home__main__fuente__texto h3 {
     font-size: 12px;
 }
@@ -270,6 +274,7 @@ body.home {
 .home__main__fuente__texto p {
     font-size: 10px;
 }
+
 /*-----------tablet--------------------*/
 @media (min-width: 460px) {
 
@@ -418,44 +423,45 @@ body.home {
 
         font-size: 1.5vw;
     }
-    
-
-.tarjeta {
-   
-    width: 230px;
-    height: 350px;
-
-}
-
-.tarjeta h4 {
-    font-size: 25px;
-    text-align: center;
-    padding: 25px 0px 0px 0px;
-}
-.tarjeta h6 {
-    
-    padding: 3px;
-}
-
-.tarjeta img {
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
 
 
-.tarjeta button {
-   
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-}
+    .tarjeta {
+
+        width: 230px;
+        height: 350px;
+
+    }
+
+    .tarjeta h4 {
+        font-size: 25px;
+        text-align: center;
+        padding: 25px 0px 0px 0px;
+    }
+
+    .tarjeta h6 {
+
+        padding: 3px;
+    }
+
+    .tarjeta img {
+        height: 150px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+
+    .tarjeta button {
+
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
 
 
 
 
-   
+
 
 }
