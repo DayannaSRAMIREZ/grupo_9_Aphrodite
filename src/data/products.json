@@ -1,0 +1,27 @@
+[
+   {
+      "id": 1,
+      "name": "Diva's Dream",
+      "materials": "Oro",
+      "size": "XS",
+      "description": "Anillo Contraire DIVAS' DREAM pequeño en oro rosa de 18 qt con madreperla y pavé de diamantes",
+      "category": "Anillos",
+      "price": 2100,
+      "unidades": 2,
+      "img1": "noimage.JPG",
+      "img2": "noimage.JPG",
+      "img3": "noimage.JPG"
+   },
+   {
+      "id": 2,
+      "name": "Fiorever Anillo",
+      "materials": "or",
+      "size": "xl",
+      "category": "an",
+      "price": 4100,
+      "unidades": 21,
+      "img1": "noimage.JPG",
+      "img2": "noimage.JPG",
+      "img3": "noimage.JPG"
+   }
+]

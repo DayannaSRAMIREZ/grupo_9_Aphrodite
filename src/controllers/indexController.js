@@ -6,6 +6,6 @@ module.exports= {
         res.render('weAre')
     },
     find: (req,res)=>{
-        res.render('find')
+        res.render('findStore')
     }
 }
