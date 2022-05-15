@@ -4,30 +4,32 @@
 <body>
   <%- include('./partials/header') %> 
   <main>
-    <form action="/product/result" method="GET" >
-      <input type="text" name="keyword" placeholder="Buscar un producto... "> 
-      <button type="submit">Buscar</button> 
-      </form>
-  <section class="home_cards">
+ <section>
+       <h2 class="resultados__titulo">Resultados para la búsqueda: "<%= keyword %>"</h2>
+   </section>
 
-    <% products.forEach(({id, name, price, img1}) => { %>
-      <article>
+    <section class="home_cards">
+  
+   <br>
+  <% results.forEach(({id, name,materials,size,description,category, price,unidades, img1}) => { %>
+      
+    
+        <article>
         <div class="tarjeta tarjeta1">
-          <h4><%= name %> </h4>
+          <h4> <%=name%> </h4>
           <div class="home__contenedor">
             <p>10% off</p>
-            
             <img src="/images/products/<%= img1 %> " alt="destacados1" />
-        
           </div>
           <div class="tarjeta__pie">
-            <h6>u$s 5<%= price %> </h6>
+            <h6> u$s <%= price %> </h6>
             <button><a href="/product/detail/<%= id %> ">ver más</a></button>
           </div>
         </div>
       </article>
-    <% }) %>
-     
+   
+  <% }) %>
+    
   
     </section>
   </main>

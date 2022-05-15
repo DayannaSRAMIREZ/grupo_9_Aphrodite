@@ -1,7 +1,7 @@
 const products = require('../data/products.json');
-const path = require('path'); 
-const fs= require('fs');
-const guardarJson= (array)=>fs.writeFileSync(path.resolve(__dirname,'..','data', 'products.json'), JSON.stringify(array, null, 3),'utf-8')
+const path = require('path');
+const fs = require('fs');
+const guardarJson = (array) => fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), JSON.stringify(array, null, 3), 'utf-8')
 
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
         res.render('productCart')
     },
     product: (req, res) => {
-        res.render('products')
+        res.render('products', {products})
     },
     gift: (req, res) => {
         res.render('gifts')
@@ -29,26 +29,37 @@ module.exports = {
             materials,
             size,
             description,
-            category, 
-            price, 
+            category,
+            price,
             unidades
         } = req.body;
         const producto = {
-            id: products[products.length-1].id+1, 
-            name, 
+            id: products[products.length - 1].id + 1,
+            name,
             materials,
             size,
             description,
             category,
             price: +price,
-            unidades: +unidades, 
-            img1: "noimage.JPG", 
-            img2: "noimage.JPG", 
-            img3: "noimage.JPG", 
+            unidades: +unidades,
+            img1: "noimage.JPG",
+            img2: "noimage.JPG",
+            img3: "noimage.JPG",
 
         }
         products.push(producto);
         guardarJson(products);
         return res.redirect('/product')
+    },
+    search: (req, res) => {
+        const {
+            keyword
+        } = req.query;
+        const results = products.filter(producto => producto.name.toLowerCase().includes(keyword.toLowerCase()) || producto.description.toLowerCase().includes(keyword.toLowerCase()));
+
+        res.render('results', {
+            results,
+            keyword
+        })
     }
 }

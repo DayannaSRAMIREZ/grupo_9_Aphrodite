@@ -119,8 +119,8 @@ body.home {
 .tarjeta {
     background-color: var(--colorRosaClaro);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    height: 320px;
+    width: 160px;
+    height: 250px;
     border-radius: 20px;
     margin: 10px;
     animation-name: mianimacion;
@@ -130,7 +130,7 @@ body.home {
 }
 
 .tarjeta h4 {
-    font-size: 19px;
+    font-size: 16px;
     text-align: center;
     padding: 15px 0px 0px 0px;
 }
@@ -141,8 +141,8 @@ body.home {
 }
 
 .tarjeta img {
-    height: 150px;
-    width: 130px;
+    height: 130px;
+    width: 115px;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -427,13 +427,13 @@ body.home {
 
     .tarjeta {
 
-        width: 230px;
-        height: 350px;
+        width: 180px; 
+        height: 280px;
 
     }
 
     .tarjeta h4 {
-        font-size: 25px;
+        font-size: 15px!important; 
         text-align: center;
         padding: 25px 0px 0px 0px;
     }
@@ -454,8 +454,8 @@ body.home {
 
     .tarjeta button {
 
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 7px 15px ;
+        font-size: 12px  ;
         border-radius: 10px;
     }
 

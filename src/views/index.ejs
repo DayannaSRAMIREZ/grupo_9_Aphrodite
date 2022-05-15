@@ -104,32 +104,25 @@
       <h3 class="home_destacados">DESTACADOS</h3>
 
       <section class="home_cards">
-        <article>
-          <div class="tarjeta tarjeta1">
-            <h4>Adonis</h4>
-            <div class="home__contenedor">
-              <p>10% off</p>
-              <img src="/images/home/adonis.jpg" alt="destacados1" />
+        <% for( let index = 0; index <= 3; index++ ) { %>
+         <article>
+            <div class="tarjeta tarjeta1">
+              <h4><%= products[index].name %> </h4>
+              <div class="home__contenedor">
+                <p>10% off</p>
+                
+                <img src="/images/products/<%= products[index].img1 %> " alt="destacados1" />
+            
+              </div>
+              <div class="tarjeta__pie">
+                <h6>u$s 5<%= products[index].price %> </h6>
+                <button><a href="/product/detail/<%= products[index].id %> ">ver más</a></button>
+              </div>
             </div>
-            <div class="tarjeta__pie">
-              <h6>$50.000</h6>
-              <button><a href="/product/detail">ver más</a></button>
-            </div>
-          </div>
-        </article>
-        <article>
-          <div class="tarjeta tarjeta2">
-            <h4>Adonis</h4>
-            <div class="home__contenedor">
-              <p>10% off</p>
-              <img src="/images/home/adonis.jpg" alt="destacados1" />
-            </div>
-            <div class="tarjeta__pie">
-              <h6>$50.000</h6>
-              <button><a href="/product/detail">ver más</a></button>
-            </div>
-          </div>
-        </article>
+          </article>
+        <% } %>
+    
+    
       </section>
 
       <section class="home__main__fuente">

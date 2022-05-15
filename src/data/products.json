@@ -8,9 +8,9 @@
       "category": "anillos",
       "price": 2100,
       "unidades": 2,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 2,
@@ -21,9 +21,9 @@
       "category": "anillos",
       "price": 5500,
       "unidades": 22,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 3,
@@ -34,9 +34,9 @@
       "category": "anillos",
       "price": 3000,
       "unidades": 15,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 4,
@@ -47,9 +47,9 @@
       "category": "anillos",
       "price": 3500,
       "unidades": 23,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 5,
@@ -60,9 +60,9 @@
       "category": "anillos",
       "price": 2000,
       "unidades": 13,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 6,
@@ -73,9 +73,9 @@
       "category": "collares",
       "price": 2800,
       "unidades": 12,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 7,
@@ -86,9 +86,9 @@
       "category": "collares",
       "price": 3800,
       "unidades": 14,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 8,
@@ -99,9 +99,9 @@
       "category": "collares",
       "price": 2100,
       "unidades": 12,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 9,
@@ -112,9 +112,9 @@
       "category": "collares",
       "price": 2200,
       "unidades": 15,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 10,
@@ -125,9 +125,9 @@
       "category": "collares",
       "price": 3200,
       "unidades": 12,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 11,
@@ -138,9 +138,9 @@
       "category": "pulseras",
       "price": 2500,
       "unidades": 18,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 12,
@@ -151,9 +151,9 @@
       "category": "pulseras",
       "price": 1800,
       "unidades": 22,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 13,
@@ -164,9 +164,9 @@
       "category": "pulseras",
       "price": 1200,
       "unidades": 12,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 14,
@@ -177,9 +177,9 @@
       "category": "pulseras",
       "price": 2100,
       "unidades": 13,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 15,
@@ -190,9 +190,9 @@
       "category": "pulseras",
       "price": 2800,
       "unidades": 9,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 16,
@@ -203,9 +203,9 @@
       "category": "aritos",
       "price": 2500,
       "unidades": 12,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 17,
@@ -216,9 +216,9 @@
       "category": "aritos",
       "price": 3200,
       "unidades": 15,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 18,
@@ -229,9 +229,9 @@
       "category": "aritos",
       "price": 2100,
       "unidades": 14,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 19,
@@ -242,9 +242,9 @@
       "category": "aritos",
       "price": 3100,
       "unidades": 12,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 20,
@@ -255,9 +255,9 @@
       "category": "aritos",
       "price": 3100,
       "unidades": 24,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 21,
@@ -268,9 +268,9 @@
       "category": "relojes",
       "price": 6500,
       "unidades": 4,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 22,
@@ -281,9 +281,9 @@
       "category": "relojes",
       "price": 5200,
       "unidades": 6,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 23,
@@ -294,9 +294,9 @@
       "category": "relojes",
       "price": 5100,
       "unidades": 6,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 24,
@@ -307,9 +307,9 @@
       "category": "relojes",
       "price": 5200,
       "unidades": 6,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    },
    {
       "id": 25,
@@ -320,8 +320,8 @@
       "category": "relojes",
       "price": 4200,
       "unidades": 9,
-      "img1": "noimage.JPG",
-      "img2": "noimage.JPG",
-      "img3": "noimage.JPG"
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    }
 ]
