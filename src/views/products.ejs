@@ -4,10 +4,13 @@
 <body>
   <%- include('./partials/header') %> 
   <main>
-    <form action="/product/result" method="GET" >
+    <div class="buscador_productos">
+       <form action="/product/result" method="GET"  >
       <input type="text" name="keyword" placeholder="Buscar un producto... "> 
       <button type="submit">Buscar</button> 
       </form>
+    </div>
+   
   <section class="home_cards">
 
     <% products.forEach(({id, name, price, img1}) => { %>
