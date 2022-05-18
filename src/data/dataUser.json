@@ -1,0 +1,92 @@
+[
+    {
+     "id": 1,
+     "first_name": "Pyotr",
+     "last_name": "Pulford",
+     "email": "ppulford0@mac.com",
+     "password": "O6tyXyUl",
+     "categoria": "Structural & Misc Steel Erection",
+     "img": "noimage.png"
+    },
+   {
+     "id": 2,
+     "first_name": "Enrica",
+     "last_name": "Knipe",
+     "email": "eknipe1@google.fr",
+     "password": "pQkv127",
+     "categoria": "Sitework & Site Utilities",
+     "img": "noimage.png"
+    },
+    {
+     "id": 3,
+     "first_name": "Lambert",
+     "last_name": "Hecks",
+     "email": "lhecks2@redcross.org",
+     "password": "xyhE6psxfiX",
+     "categoria": "HVAC",
+     "img": "noimage.png"
+    },
+    {
+     "id": 4,
+     "first_name": "Hadlee",
+     "last_name": "Binnion",
+     "email": "hbinnion3@zimbio.com",
+     "password": "0zdkaJ1LtH",
+     "categoria": "Drilled Shafts",
+     "img": "noimage.png"
+    },
+    {
+     "id": 5,
+     "first_name": "Vern",
+     "last_name": "Breawood",
+     "email": "vbreawood4@huffingtonpost.com",
+     "password": "yonaQRvHLqA",
+     "categoria": "Doors, Frames & Hardware",
+     "img": "noimage.png"
+    }, 
+   {
+     "id": 6,
+     "first_name": "Leigh",
+     "last_name": "Brandoni",
+     "email": "lbrandoni5@accuweather.com",
+     "password": "cmH8AjN",
+     "categoria": "Site Furnishings",
+     "img": "noimage.png"
+    },
+   {
+     "id": 7,
+     "first_name": "Darb",
+     "last_name": "Hovell",
+     "email": "dhovell6@51.la",
+     "password": "cz6x9cEzw1Y",
+     "categoria": "Termite Control",
+     "img": "noimage.png"
+    }, 
+   {
+     "id": 8,
+     "first_name": "Hervey",
+     "last_name": "Pauli",
+     "email": "hpauli7@google.com.au",
+     "password": "ROk54rDU4",
+     "categoria": "EIFS",
+     "img": "noimage.png"
+    },
+   {
+     "id": 9,
+     "first_name": "Marja",
+     "last_name": "Mateo",
+     "email": "mmateo8@google.com",
+     "password": "BJYXmwCiWLF",
+     "categoria": "Drilled Shafts",
+     "img": "noimage.png"
+    },
+   {
+     "id": 10,
+     "first_name": "Margalit",
+     "last_name": "Petranek",
+     "email": "mpetranek9@google.ca",
+     "password": "xHnTxjyuJm",
+     "categoria": "Temp Fencing, Decorative Fencing and Gates",
+     "img": "noimage.png"
+    }
+  ]

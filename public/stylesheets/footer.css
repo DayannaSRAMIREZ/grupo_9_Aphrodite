@@ -175,12 +175,11 @@ padding-left: 0 !important;
     .home__main__lonuevo{
         background-size: contain;
     }
-    footer button, input, optgroup, select, textarea {
+    footer button, input, optgroup, select {
       
-    
         font-size: 10 !important; 
-         line-height: 0 !important; 
-    }
+          line-height: 0 !important; 
+     }
     .footer__subscripcion button{
       margin-top: 2vh;
         padding: 0.9vw 2vh;

@@ -191,5 +191,7 @@ article {
         height: 24px;
         margin: 5px 0px;
     }
-    
+    .textarea__clase {
+        height: 100px;
+    }
 }
