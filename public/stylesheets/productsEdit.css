@@ -19,6 +19,8 @@
 }
 .sectionForm{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .art{
@@ -93,10 +95,11 @@
     background-color: var(--colorRosaClaro);
     border: none;
     padding: 5px;
+    width: 80%;
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 }
 .selectFormTalle{
-    width: 60%;
+    width: 80%;
     background-color: var(--colorRosaClaro);
     border: none;
     padding: 5px;
@@ -161,13 +164,12 @@ article {
 
 
     .mainEdit h2 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .boxEditForm {
         width: 30%;
         height: 20%;
-        margin-left: 35%;
         margin-bottom: 20px;
         background: rgba(255, 255, 255, 0.2);
         border-radius: 16px;

@@ -1,172 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
+  <%- include('./partials/headBostrap') %>
 
-<%- include('./partials/headBostrap') %>
+  <body class="product__detail">
+    <%- include('./partials/header') %>
+    <br />
 
-<body class="product__detail">
-  <%- include('./partials/header') %>
-  <br>
-
-  <main>
-
-    <div class="desktop__formato">
-      <section class="detalle__imagenes">
-        <div
-        id="carouselExampleIndicators"
-        class="carousel slide carousel__detail"
-        data-ride="carousel"
-      >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="foto d-block w-100"
-              src="/images/detalleProducto/collar  1.jpeg"
-              alt="collar  1"
-            />
+    <main>
+      <div class="desktop__formato">
+        <section class="detalle__imagenes">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide carousel__detail"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="foto d-block w-100"
+                  src="/images/products/<%= product.img1 %>"
+                  alt="collar  1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="/images/products/<%= product.img2%>"
+                  alt="collar 2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block w-100"
+                  src="/images/products/<%= product.img3 %>"
+                  alt="collar 3"
+                />
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <div class="carousel-item">
+
+          <article class="imagenes__chicas"></article>
+        </section>
+
+        <section class="product__detail__interarte">
+          <h3>También puede interesarte ...</h3>
+          <article class="interesarte__fotos">
+            <span
+              class="iconify arrow__gruesa__left"
+              data-icon="bx:left-arrow"
+            ></span>
             <img
-              class="d-block w-100"
-              src="/images/detalleProducto/collar 2.jpeg"
-              alt="collar 2"
+              src="/images/detalleProducto/interesarte1.jpeg"
+              alt="interesarte1"
             />
-          </div>
-          <div class="carousel-item">
             <img
-              class="d-block w-100"
-              src="/images/detalleProducto/collar 3.jpeg"
-              alt="collar 3"
+              src="/images/detalleProducto/interesarte2.jpeg"
+              alt="interesarte2"
             />
-          </div>
-        </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+            <img
+              src="/images/detalleProducto/interesarte3.jpeg"
+              alt="interesarte3"
+            />
+            <span
+              class="iconify arrow__gruesa__right"
+              data-icon="bx:right-arrow"
+            ></span>
+          </article>
+        </section>
       </div>
 
+      <section class="detalle__desk">
+        <section class="detalle__producto">
+          <article class="detalle__producto__art1">
+            <h2><%= product.name %></h2>
+            <h3>u$s <%= product.price %></h3>
+            <div class="detalle__estrella">
+              <img src="/images/estrella.png" alt="estrella" />
+              <img src="/images/estrella.png" alt="estrella" />
+              <img src="/images/estrella.png" alt="estrella" />
+              <img src="/images/estrella.png" alt="estrella" />
+              <img src="/images/estrella.png" alt="estrella" />
+            </div>
 
-        <article class="imagenes__chicas"> </article>
-      </section>
+            <hr />
 
-      <section class="product__detail__interarte">
-        <h3>También puede interesarte ...</h3>
-        <article class="interesarte__fotos">
-          <span class="iconify arrow__gruesa__left" data-icon="bx:left-arrow"></span>
-          <img src="/images/detalleProducto/interesarte1.jpeg" alt="interesarte1">
-          <img src="/images/detalleProducto/interesarte2.jpeg" alt="interesarte2">
-          <img src="/images/detalleProducto/interesarte3.jpeg" alt="interesarte3">
-          <span class="iconify arrow__gruesa__right" data-icon="bx:right-arrow"></span>
-        </article>
+            <p>talla <%= product.size %></p>
+            <div class="botoncm"><button>45cm</button></div>
+          </article>
 
-      </section>
-    </div>
+          <article class="detalle__producto__art2">
+            <div class="comprar">
+              <button>Comprar</button>
+            </div>
 
-    <section class="detalle__desk">
-      <section class="detalle__producto">
-        <article class="detalle__producto__art1">
-          <h2>Chameleon Necklace</h2>
-          <h3>$25.000</h3>
-          <div class="detalle__estrella">
-            <img src="/images/estrella.png" alt="estrella">
-            <img src="/images/estrella.png" alt="estrella">
-            <img src="/images/estrella.png" alt="estrella">
-            <img src="/images/estrella.png" alt="estrella">
-            <img src="/images/estrella.png" alt="estrella">
+            <div class="deseos">
+              <button>
+                Lista de deseos<span
+                  class="iconify"
+                  data-icon="bx:diamond"
+                ></span>
+              </button>
+            </div>
 
+            <div>
+              <a href="../edit/<%= product.id %> " class="deseos"
+                ><button>Editar</button></a
+              >
+            </div>
+
+            <div>
+              <form
+                action="/product/remove/<%= product.id %>?_method=DELETE"
+                method="POST"
+              >
+                <button type="submit">Eliminar</button>
+              </form>
+            </div>
+          </article>
+        </section>
+
+        <section class="detalle__envios">
+          <div>
+            <span
+              class="iconify camion"
+              data-icon="mdi:truck-fast-outline"
+            ></span>
           </div>
+          <article>
+            <h3>Exclusivo CABA - Llega el lunes 21 de mayo</h3>
+            <p>Comprando entre las próximas <span>2h 24 minutos</span></p>
+          </article>
+        </section>
+        <section class="detalle__medios__pago">
+          <p>MEDIOS DE PAGO</p>
+          <div class="tarjetas__credito__detail">
+            <div class="visa">
+              <img src="/images/mediosPago/visa.png" alt="visa" />
+            </div>
+            <div class="amer">
+              <img src="/images/mediosPago/amer.png" alt="amer" />
+            </div>
+            <div class="master">
+              <img src="/images/mediosPago/master.png" alt="master" />
+            </div>
+          </div>
+        </section>
 
-          <hr>
+        <section class="detalle__productos">
+          <article class="detalle__productos__descripcion">
+            <h3>Descripción</h3>
+            <div>
+              <span class="iconify menos" data-icon="akar-icons:minus"></span>
+            </div>
+            <hr />
+            <p><%= product.description %></p>
+          </article>
+          <article class="detalle__productos__caracteristicas">
+            <h3>Características</h3>
+            <div>
+              <span class="iconify menos" data-icon="akar-icons:minus"></span>
+            </div>
 
-          <p>talla 45cm</p>
-          <div class="botoncm"><button> 45cm </button></div>
-        </article>
+            <hr />
 
-        <article class="detalle__producto__art2">
+            <p>Categoria: <%= product.category %></p>
+            <p>Material: <%= product.materials %></p>
+          </article>
+          <article class="detalle__productos__envios">
+            <h3>Envíos y Devoluciones</h3>
+            <div>
+              <span class="iconify menos" data-icon="akar-icons:minus"></span>
+            </div>
 
-          <div class="comprar"><button>Comprar</button></div>
-          <div class="deseos"><button>Lista de deseos
-              <span class="iconify" data-icon="bx:diamond"></span> </button></div>
-        </article>
+            <hr />
+            <p>
+              Podes realizar envíos y devoluciones dentro de las 24 horas de
+              recibido el paquete, y contamos con nuestra propia seguridad para
+              el manejo del mismo
+            </p>
+          </article>
+        </section>
       </section>
+    </main>
 
-
-      <section class="detalle__envios">
-        <div><span class="iconify camion" data-icon="mdi:truck-fast-outline"></span></div>
-        <article>
-          <h3>Exclusivo CABA - Llega el lunes 21 de mayo</h3>
-          <p>Comprando entre las próximas <span>2h 24 minutos</span> </p>
-
-        </article>
-      </section>
-      <section class="detalle__medios__pago">
-        <p>MEDIOS DE PAGO</p>
-        <div class="tarjetas__credito__detail">
-          <div class="visa"><img src="/images/mediosPago/visa.png" alt="visa"></div>
-          <div class="amer"><img src="/images/mediosPago/amer.png" alt="amer"></div>
-          <div class="master"><img src="/images/mediosPago/master.png" alt="master"></div>
-        </div>
-      </section>
-
-      <section class="detalle__productos">
-        <article class="detalle__productos__descripcion">
-          <h3> Descripción </h3>
-          <div><span class="iconify menos" data-icon="akar-icons:minus"></span></div>
-          <hr>
-          <p>Sofisticada y glamurosa, esta joya se enrosca al rededor del cuello y sorprende por la preciosa belleza de
-            las escamas y por la distintiva sinuosidad de la serpiente </p>
-
-        </article>
-        <article class="detalle__productos__caracteristicas">
-          <h3>Características </h3>
-          <div><span class="iconify menos" data-icon="akar-icons:minus"></span></div>
-
-          <hr>
-
-          <p>Detalle central: 5.05cts </p>
-          <p>Material: oro blanco de 18 quilates</p>
-          <p>Peso total en quilates: 122.05cts</p>
-        </article>
-        <article class="detalle__productos__envios">
-          <h3>Envíos y Devoluciones</h3>
-          <div><span class="iconify menos" data-icon="akar-icons:minus"></span></div>
-
-          <hr>
-          <p>Podes realizar envíos y devoluciones dentro de las 24 horas de recibido el paquete, y contamos con nuestra
-            propia seguridad para el manejo del mismo</p>
-        </article>
-      </section>
-    </section>
-
-  </main>
-
-  <%- include('./partials/footerBoostrap') %>
-
-
-
-</body>
-
+    <%- include('./partials/footerBoostrap') %>
+  </body>
 </html>

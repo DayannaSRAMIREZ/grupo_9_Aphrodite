@@ -1,11 +1,16 @@
-const products = require('../data/products.json');
 const path = require('path');
 const fs = require('fs');
-const guardarJson = (array) => fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), JSON.stringify(array, null, 3), 'utf-8')
+const productsFilePath = path.join(__dirname, '../data/products.json');
+
+const readProducts = () => {
+	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	return products
+}
 
 
 module.exports= {
     index: (req,res)=>{
+    let products= readProducts(); 
         res.render('index', {products})
     },
     weAre: (req,res)=>{

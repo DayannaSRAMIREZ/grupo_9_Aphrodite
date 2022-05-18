@@ -7,73 +7,80 @@
     <main class="mainEdit">
         <h2>Edición de productos</h2>
         <section class="sectionForm">
-        <form class="boxEditForm" method="post" action="">
-                <h3>Producto</h3>
+        <form class="boxEditForm" method="POST" action="/product/update/<%= product.id %>?_method=PUT">
+                <h3><%= product.name %> </h3>
+
                 <article class="art">
-                <div class="formEdit">
-                    <label for="nameProduct">Nombre:</label>
-                    <input class="editFormInputName" type="text" id="name" name="name">
-                </div>
-                <div class="formEdit">
-                    <label class="formSelectOption" for="category">Categoria:</label>
-                    <select class="selectForm" name="materials" id="materials">
-                        <option hidden selected>Seleccione uno:</option>
-                        <option value="pul">Pulseras</option>
-                        <option value="col">Collares</option>
-                        <option value="an">Anillos</option>
-                        <option value="rlj">Relojes</option>
-                        <option value="tob">Tobilleras</option>
-                        <option value="con">Conjuntos</option>
-                    </select>
-                </div>
+                    <div class="formEdit">
+                        <label for="nameProduct">Nombre:</label>
+                        <input class="editFormInputName" type="text" id="name" name="name" value="<%= product.name %>" >
+                    </div>
+                    <div class="formEdit">
+                        <label class="formSelectOption" for="category">Categoria:</label>
+                        <select class="selectForm" name="category" id="category">
+                            <option hidden >Seleccione uno:</option>
+              
+                            <option value="pulseras" <%= product.category === "pulseras"&& 'selected' %>>Pulseras</option>
+                            <option value="collares" <%= product.category=== "collares"&& 'selected' %>>Collares</option>
+                            <option value="anillos" <%= product.category === "anillos"&& 'selected' %>>Anillos</option>
+                            <option value="relojes" <%= product.category === "relojes" && 'selected' %>>Relojes</option>
+                        </select>
+                    </div>
+                </article>
                 <div class="formEdit">
                     <label class="formSelectOption" for="materials"> Material:</label>
                     <select class="selectForm" name="materials" id="materials">
                         <option hidden selected>Seleccione uno:</option>
-                        <option value="or">Oro</option>
-                        <option value="ar">Plata</option>
-                        <option value="fan">Fantasía</option>
+                        <option value="oro" <%= product.materials === "oro" && 'selected' %>>Oro</option>
+                        <option value="plata" <%= product.materials === "plata" && 'selected'%>>Plata</option>
                     </select>
                 </div>
-                
-            </article>
-            <article class="artDos">
-                <div class="formEdit">
-                    <label class="formSelectOption" for="size">Talles</label>
-                    <select class="selectFormTalle" name="size" id="size">
-                        <option hidden selected>Seleccione uno:</option>
-                        <option value="xl">XL</option>
-                        <option value="l">L</option>
-                        <option value="m">M</option>
-                        <option value="s">S</option>
-                        <option value="xs">XS</option>
-                    </select>
-                </div>
-                <div class="formEdit">
-                    <label for="uni">Unidades:</label>
-                    <input class="editFormInputUni" type="number" name="unidades" id="unidades">
-                </div>
-                <div class="formEdit">
-                    <label for="price">Precio:</label>
-                    <input class="editFormInputPrecio" type="number" name="price" id="price">
-                </div>
-            </article>
-            <article class="art">
-                
-                <div class="formEdit">
-                    <label class="labelArea" for="description">Descripción:</label>
 
-                    <textarea class="textarea__clase" name="textarea" rows="10" cols="50"
-                        placeholder="Descripción del producto..."></textarea>
-                </div>
-                <div class="formEdit">
-                    <label for="nameProduct">Cargar Imágen</label>
-                    <input class="editFormInputFile" type="file" id="file" name="file">
-                </div>
-                <div class="boxButton">
-                    <button class="buttonEdit" type="submit">Editar</button>
-                </div>
-            </article>
+
+                <article class="artDos">
+                
+                    <div class="formEdit">
+                        <label for="uni">Unidades:</label>
+                        <input class="editFormInputUni" type="number" name="unidades" id="unidades" value="<%= product.unidades %>">
+                    </div>
+
+                    <div class="formEdit">
+                        <label for="price">Precio:</label>
+                        <input class="editFormInputPrecio" type="number" name="price" id="price" value="<%= product.price %>">
+                    </div>
+
+                </article>
+                <article>
+                    <div class="formEdit">
+                        <label class="formSelectOption" for="size">Talles</label>
+                        <select class="selectFormTalle" name="size" id="size">
+                            <option hidden selected>Seleccione uno:</option>
+                            <option value="xl" <%= product.size === "xl" && 'selected'%>>XL</option>
+                            <option value="l" <%= product.size === "l" && 'selected'%>>L</option>
+                            <option value="m" <%= product.size === "m" && 'selected'%>>M</option>
+                            <option value="s" <%= product.size === "s" && 'selected'%>>S</option>
+                            <option value="xs" <%= product.size === "xs" && 'selected'%>>XS</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="art">
+
+                    <div class="formEdit">
+                        <label class="labelArea" for="description">Descripción:</label>
+    
+                        <textarea class="textarea__clase" name="description" rows="10" cols="50"
+                            placeholder="Descripción del producto..."><%= product.description %></textarea>
+                    </div>
+                    <div class="formEdit">
+                        <label for="nameProduct">Cargar Imágen</label>
+                        <input class="editFormInputFile" type="file" id="file" name="file">
+                    </div>
+                    <div class="boxButton">
+                        <button class="buttonEdit" type="submit">Editar</button>
+                    </div>
+                </article>
+
+
         </form>
     </section>
         <%- include('./partials/footer') %>

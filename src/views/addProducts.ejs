@@ -6,10 +6,9 @@
 <body>
     <%- include('./partials/header') %>
     <main class="mainEdit">
-        <h2>Edición de productos</h2>
+        <h2>Agregar producto</h2>
         <section class="sectionForm">
-            <form class="boxEditForm" method="post" action="">
-                <h3>Producto</h3>
+            <form class="boxEditForm" method="POST" action="">
                 <article class="art">
                     <div class="formEdit">
                         <label for="nameProduct">Nombre:</label>
@@ -26,7 +25,8 @@
                             <option value="aritos">Aritos</option>
                             
                         </select>
-                    </div>
+                    </div>  
+                </article>
                     <div class="formEdit">
                         <label class="formSelectOption" for="materials"> Material:</label>
                         <select class="selectForm" name="materials" id="materials">
@@ -37,8 +37,21 @@
                         </select>
                     </div>
 
-                </article>
+
                 <article class="artDos">
+                
+                    <div class="formEdit">
+                        <label for="uni">Unidades:</label>
+                        <input class="editFormInputUni" type="number" name="unidades" id="unidades">
+                    </div>
+
+                    <div class="formEdit">
+                        <label for="price">Precio:</label>
+                        <input class="editFormInputPrecio" type="number" name="price" id="price">
+                    </div>
+
+                </article>
+                <article>
                     <div class="formEdit">
                         <label class="formSelectOption" for="size">Talles</label>
                         <select class="selectFormTalle" name="size" id="size">
@@ -49,14 +62,6 @@
                             <option value="s">S</option>
                             <option value="xs">XS</option>
                         </select>
-                    </div>
-                    <div class="formEdit">
-                        <label for="uni">Unidades:</label>
-                        <input class="editFormInputUni" type="number" name="unidades" id="unidades">
-                    </div>
-                    <div class="formEdit">
-                        <label for="price">Precio:</label>
-                        <input class="editFormInputPrecio" type="number" name="price" id="price">
                     </div>
                 </article>
                 <article class="art">

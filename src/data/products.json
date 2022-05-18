@@ -1,26 +1,13 @@
 [
    {
-      "id": 1,
-      "name": "Diva's Dream",
-      "materials": "oro",
-      "size": "XS",
-      "description": "Anillo Contraire DIVAS' DREAM pequeño en oro rosa de 18 qt con madreperla y pavé de diamantes",
-      "category": "anillos",
-      "price": 2100,
-      "unidades": 2,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
-   },
-   {
       "id": 2,
       "name": "Fiorever",
       "materials": "oro",
-      "size": "l",
+      "size": "Seleccione uno:",
       "description": "Anillo Fiorever en oro blanco de 18 qt con un diamante redondo talla brillante central y pavé de diamantes.",
       "category": "anillos",
       "price": 5500,
-      "unidades": 22,
+      "unidades": 2200,
       "img1": "noimage.png",
       "img2": "noimage.png",
       "img3": "noimage.png"
@@ -47,19 +34,6 @@
       "category": "anillos",
       "price": 3500,
       "unidades": 23,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
-   },
-   {
-      "id": 5,
-      "name": "Hojas Relucientes",
-      "materials": "plata",
-      "size": "xl",
-      "description": "Usa un deslumbrante tributo a la naturaleza con el Anillo Hojas relucientes. Este anillo acabado a mano en metal enchapado en oro rosa de 14k, tiene dos hojas colocadas una frente a la otra. Las hojas están adornadas con hileras de circonias cúbicas transparentes talla brillante engastadas en pavé. Con su silueta sutilmente curvada y las puntas que se cruzan ligeramente, estas hojas tienen una elegancia fluida que elevará cualquier estilo. Si amas naturaleza y también adoras el estilo que resplandece, este anillo de hojas es para ti",
-      "category": "anillos",
-      "price": 2000,
-      "unidades": 13,
       "img1": "noimage.png",
       "img2": "noimage.png",
       "img3": "noimage.png"
@@ -92,7 +66,7 @@
    },
    {
       "id": 8,
-      "name": "Collar Circulo Y Cuadrado Brillantes",
+      "name": "Cuadrado Brillantes",
       "materials": "plata",
       "size": "l",
       "description": "Este delicado Collar Círculo y Cuadrado Brillantes es un clásico moderno que aguantará el paso del tiempo. Acabado a mano en plata de primera ley, el collar incluye un colgante embellecido con brillantes circonitas cúbicas con dos tallas y tamaños distintos: una gema redonda sobre una gema cuadrada, que se sujetan a la cadena con puntas largas. La longitud del collar es ajustable, lo que convierte esta versátil joya en el toque final ideal para cualquier outfit",
@@ -320,6 +294,19 @@
       "category": "relojes",
       "price": 4200,
       "unidades": 9,
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
+   },
+   {
+      "id": 26,
+      "name": "prueba",
+      "materials": "oro",
+      "size": "xl",
+      "description": "",
+      "category": "pulseras",
+      "price": 5742,
+      "unidades": 5,
       "img1": "noimage.png",
       "img2": "noimage.png",
       "img3": "noimage.png"

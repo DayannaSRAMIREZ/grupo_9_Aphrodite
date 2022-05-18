@@ -4,9 +4,10 @@ footer {
     color: var(--colorNegroClaro);
     font-family: rosarivo;
     font-size: 12px;
-    /* position: absolute;
-    bottom: 0; */
+     /* position: absolute;  */
+
     width: 100%;
+  /* bottom: 0; */
 }
 
 footer section a {

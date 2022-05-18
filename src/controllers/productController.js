@@ -1,18 +1,36 @@
-const products = require('../data/products.json');
 const path = require('path');
 const fs = require('fs');
-const guardarJson = (array) => fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'), JSON.stringify(array, null, 3), 'utf-8')
+const productsFilePath = path.join(__dirname, '../data/products.json');
+
+const readProducts = () => {
+	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	return products
+}; 
+const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const guardarJson = (array) => fs.writeFileSync(productsFilePath, JSON.stringify(array, null, 3));
 
 
 module.exports = {
     detail: (req, res) => {
-        res.render('productDetail')
+        let products= readProducts(); 
+        const {
+            id
+        } = req.params;
+        const product = products.find(producto => producto.id === +id);
+
+        res.render('productDetail', {
+            product
+        })
     },
     cart: (req, res) => {
         res.render('productCart')
     },
     product: (req, res) => {
-        res.render('products', {products})
+        let products= readProducts(); 
+        res.render('products', {
+            products
+        })
     },
     gift: (req, res) => {
         res.render('gifts')
@@ -21,9 +39,18 @@ module.exports = {
         res.render('addProducts')
     },
     productsEdit: (req, res) => {
-        res.render('productsEdit')
+        let products= readProducts(); 
+        const {
+            id
+        } = req.params;
+        const product = products.find(producto => producto.id === +id);
+
+        res.render('productsEdit', {
+            product
+        })
     },
     store: (req, res) => {
+        let products= readProducts(); 
         const {
             name,
             materials,
@@ -42,9 +69,9 @@ module.exports = {
             category,
             price: +price,
             unidades: +unidades,
-            img1: "noimage.JPG",
-            img2: "noimage.JPG",
-            img3: "noimage.JPG",
+            img1: "noimage.png",
+            img2: "noimage.png",
+            img3: "noimage.png",
 
         }
         products.push(producto);
@@ -52,6 +79,7 @@ module.exports = {
         return res.redirect('/product')
     },
     search: (req, res) => {
+        let products= readProducts(); 
         const {
             keyword
         } = req.query;
@@ -61,5 +89,52 @@ module.exports = {
             results,
             keyword
         })
+    },
+    update: (req, res) => {
+        let products= readProducts(); 
+        const {
+            id
+        } = req.params;
+        const {
+            name,
+            materials,
+            size,
+            description,
+            category,
+            price,
+            unidades,
+
+        } = req.body
+
+        const arrayModify = products.map(product => {
+            if (product.id === +id) {
+                let productModify = {
+
+                    ...product,
+                    name,
+                    materials,
+                    size,
+                    description,
+                    category,
+                    price: +price,
+                    unidades: +unidades,
+
+                }
+                return productModify;
+            }
+            return product
+        });
+        guardarJson(arrayModify);
+        return res.redirect('/product');
+
+    },
+    remove: (req, res) => {
+        let products= readProducts(); 
+        const {
+            id
+        } = req.params;
+        const productsModify = products.filter(product => product.id !== +id);
+        guardarJson(productsModify)
+        res.redirect('/product');
     }
 }
