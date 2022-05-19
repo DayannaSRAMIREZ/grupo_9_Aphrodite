@@ -21,7 +21,7 @@ router.get('/detail/:id', detail)
       .post('/add',upload.single('image'), store)
       .get('/edit/:id', productsEdit)
       .get('/result', search)
-      .put('/update/:id', update)
+      .put('/update/:id',upload.single('image'),update)
       .delete('/remove/:id', remove)
       
 

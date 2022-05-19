@@ -194,4 +194,8 @@ article {
     .textarea__clase {
         height: 100px;
     }
+    .sectionForm{
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
 <body>
     <%- include('./partials/header') %>
     <main class="mainEdit">
         <h2>Edición de productos</h2>
         <section class="sectionForm">
-        <form class="boxEditForm" method="POST" action="/product/update/<%= product.id %>?_method=PUT">
+         
+            
+            <form class="boxEditForm" method="POST" action="/product/update/<%= product.id %>?_method=PUT"
+                enctype="multipart/form-data" >
                 <h3><%= product.name %> </h3>
 
                 <article class="art">
                     <div class="formEdit">
                         <label for="nameProduct">Nombre:</label>
-                        <input class="editFormInputName" type="text" id="name" name="name" value="<%= product.name %>" >
+                        <input class="editFormInputName" type="text" id="name" name="name" value="<%= product.name %>">
                     </div>
                     <div class="formEdit">
                         <label class="formSelectOption" for="category">Categoria:</label>
                         <select class="selectForm" name="category" id="category">
-                            <option hidden >Seleccione uno:</option>
-              
-                            <option value="pulseras" <%= product.category === "pulseras"&& 'selected' %>>Pulseras</option>
-                            <option value="collares" <%= product.category=== "collares"&& 'selected' %>>Collares</option>
+                            <option hidden>Seleccione uno:</option>
+
+                            <option value="pulseras" <%= product.category === "pulseras"&& 'selected' %>>Pulseras
+                            </option>
+                            <option value="collares" <%= product.category=== "collares"&& 'selected' %>>Collares
+                            </option>
                             <option value="anillos" <%= product.category === "anillos"&& 'selected' %>>Anillos</option>
                             <option value="relojes" <%= product.category === "relojes" && 'selected' %>>Relojes</option>
                         </select>
@@ -38,15 +43,17 @@
 
 
                 <article class="artDos">
-                
+
                     <div class="formEdit">
                         <label for="uni">Unidades:</label>
-                        <input class="editFormInputUni" type="number" name="unidades" id="unidades" value="<%= product.unidades %>">
+                        <input class="editFormInputUni" type="number" name="unidades" id="unidades"
+                            value="<%= product.unidades %>">
                     </div>
 
                     <div class="formEdit">
                         <label for="price">Precio:</label>
-                        <input class="editFormInputPrecio" type="number" name="price" id="price" value="<%= product.price %>">
+                        <input class="editFormInputPrecio" type="number" name="price" id="price"
+                            value="<%= product.price %>">
                     </div>
 
                 </article>
@@ -67,13 +74,13 @@
 
                     <div class="formEdit">
                         <label class="labelArea" for="description">Descripción:</label>
-    
+
                         <textarea class="textarea__clase" name="description" rows="10" cols="50"
                             placeholder="Descripción del producto..."><%= product.description %></textarea>
                     </div>
                     <div class="formEdit">
                         <label for="nameProduct">Cargar Imágen</label>
-                        <input class="editFormInputFile" type="file" id="file" name="file">
+                        <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*">
                     </div>
                     <div class="boxButton">
                         <button class="buttonEdit" type="submit">Editar</button>
@@ -81,8 +88,12 @@
                 </article>
 
 
-        </form>
-    </section>
+            </form>
+            <div>
+             <img src="/images/products/<%= product.img1%> " alt="imagenPoducto">    
+            </div>
+           
+        </section>
         <%- include('./partials/footer') %>
 </body>
 

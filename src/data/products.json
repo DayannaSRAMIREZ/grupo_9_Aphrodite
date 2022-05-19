@@ -297,18 +297,5 @@
       "img1": "noimage.png",
       "img2": "noimage.png",
       "img3": "noimage.png"
-   },
-   {
-      "id": 26,
-      "name": "sda",
-      "materials": "Seleccione uno:",
-      "size": "Seleccione uno:",
-      "description": "",
-      "category": "Seleccione uno:",
-      "price": 0,
-      "unidades": 0,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
    }
 ]
