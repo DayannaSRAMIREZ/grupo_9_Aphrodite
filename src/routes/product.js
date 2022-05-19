@@ -1,11 +1,12 @@
 const express = require('express');
-const router = express.Router(); 
+const router = express.Router();
+const path = require('path'); 
 const multer= require('multer');
 
 const storage= multer.diskStorage({destination:(req,file,callback)=>{
-      callback(null,'public/images')
+      callback(null,'public/images/products')
 }, filename: (req,file, callback)=>{
-      callback(null, 'prueba.png')
+      callback(null, file.fieldname+'-'+ Date.now()+ path.extname(file.originalname))
 }
 }); 
 

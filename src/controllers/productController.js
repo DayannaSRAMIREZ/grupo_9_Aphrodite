@@ -69,7 +69,7 @@ module.exports = {
             category,
             price: +price,
             unidades: +unidades,
-            img1: "noimage.png",
+            img1: req.file ? req.file.filename : 'noimage.png' ,
             img2: "noimage.png",
             img3: "noimage.png",
 
