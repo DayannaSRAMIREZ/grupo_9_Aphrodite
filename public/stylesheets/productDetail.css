@@ -107,23 +107,22 @@
 
 .comprar button {
 
-    display: flex;
     justify-content: center;
     width: 90px;
     background-color: var(--colorRosaFuerte);
-    padding: 9px 8px 9px 5px;
+    padding: 10px 70px;
     margin: 10px;
+    margin-right: 0px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
 }
 
 .deseos button {
 
-    display: flex;
     flex-direction: row;
     background-color: var(--colorRosaClaro);
     width: 60x;
     color: var(--colorNegroClaro);
-    padding: 9px 10px 9px 5px;
+    padding: 10px 30px;
     justify-content: flex-end;
     margin: 10px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
@@ -169,19 +168,34 @@
 .detalle__producto__art2 {
 
     display: flex;
-    justify-content: center;
-
-
+    align-items: flex-start;
+    flex-direction: column;
+    
+    
 
 }
+.box1{
+    display: flex;
+    margin-bottom: -15px;
+}
 
+.box2{
+    display: flex;
+}
 .detalle__producto__art2 button {
 
     display: flex;
     margin-top: 24px;
-    align-self: initial;
+
+}
 
 
+.btEditar button{
+    padding: 10px 56px;   
+}
+.btEliminar{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px 52px;
 }
 
 .detalle__estrella img {
@@ -301,6 +315,7 @@
 
 }
 
+
 @media (min-width:768px) {
 
     .detalle__imagenes .arrow_right,
@@ -325,6 +340,12 @@
         padding-left: 15px;
 
 
+    }
+    .detalle__producto__art2{
+        align-items: center;
+    }
+    .btEditar button{
+        margin-left: 0px;
     }
 
     .collar1 {

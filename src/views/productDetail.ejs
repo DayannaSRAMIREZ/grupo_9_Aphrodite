@@ -128,32 +128,36 @@
           </article>
 
           <article class="detalle__producto__art2">
-            <div class="comprar">
-              <button>Comprar</button>
+            <div class="box1">
+              <div class="comprar">
+                <button>Comprar</button>
+              </div>
+              
+              <div class="deseos">
+                <button>
+                  Lista de deseos<span
+                    class="iconify"
+                    data-icon="bx:diamond"
+                  ></span>
+                </button>
+              </div>
             </div>
 
-            <div class="deseos">
-              <button>
-                Lista de deseos<span
-                  class="iconify"
-                  data-icon="bx:diamond"
-                ></span>
-              </button>
-            </div>
-
-            <div>
-              <a href="../edit/<%= product.id %> " class="deseos"
-                ><button>Editar</button></a
-              >
-            </div>
-
-            <div>
-              <form
-                action="/product/remove/<%= product.id %>?_method=DELETE"
-                method="POST"
-              >
-                <button type="submit">Eliminar</button>
-              </form>
+            <div class="box2">
+              <div class="btEditar">
+                <a href="../edit/<%= product.id %> " class="deseos"
+                  ><button>Editar</button></a
+                >
+              </div>
+              
+              <div>
+                <form
+                  action="/product/remove/<%= product.id %>?_method=DELETE"
+                  method="POST"
+                >
+                  <button class="btEliminar" type="submit">Eliminar</button>
+                </form>
+              </div>
             </div>
           </article>
         </section>
