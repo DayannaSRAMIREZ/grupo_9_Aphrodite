@@ -62,14 +62,14 @@ module.exports = {
         } = req.body;
         const producto = {
             id: products[products.length - 1].id + 1,
-            name,
+            name: name.trim(),
             materials,
             size,
-            description,
+            description: description.trim(),
             category,
             price: +price,
             unidades: +unidades,
-            img1: "noimage.png",
+            img1: req.file ? req.file.filename : 'noimage.png' ,
             img2: "noimage.png",
             img3: "noimage.png",
 
@@ -102,28 +102,31 @@ module.exports = {
             description,
             category,
             price,
-            unidades,
+            unidades, imagen
 
         } = req.body
+       
 
         const arrayModify = products.map(product => {
             if (product.id === +id) {
                 let productModify = {
 
                     ...product,
-                    name,
+                    name: name,
                     materials,
                     size,
-                    description,
+                    description: description,
                     category,
                     price: +price,
                     unidades: +unidades,
+                    img1: req.file ? req.file.filename : product.img1,
 
                 }
                 return productModify;
             }
             return product
         });
+
         guardarJson(arrayModify);
         return res.redirect('/product');
 

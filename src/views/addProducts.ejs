@@ -8,7 +8,7 @@
     <main class="mainEdit">
         <h2>Agregar producto</h2>
         <section class="sectionForm">
-            <form class="boxEditForm" method="POST" action="">
+            <form class="boxEditForm" method="POST" action="" enctype="multipart/form-data">
                 <article class="art">
                     <div class="formEdit">
                         <label for="nameProduct">Nombre:</label>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="formEdit">
                         <label for="nameProduct">Cargar Imágen</label>
-                        <input class="editFormInputFile" type="file" id="file" name="file">
+                        <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*">
                     </div>
                     <div class="boxButton">
                         <button class="buttonEdit" type="submit">Enviar</button>
