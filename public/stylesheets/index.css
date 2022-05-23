@@ -170,6 +170,68 @@ body.home {
     background-color: var(--colorDorado);
 }
 
+.home_cards2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta2 {
+    background-color: var(--colorRosaClaro);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 160px;
+    height: 260px;
+    border-radius: 20px;
+    margin: 10px;
+    animation-name: mianimacion;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+}
+
+.tarjeta2 h4 {
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 0px 0px 0px;
+}
+
+.tarjeta2 h6 {
+
+    padding: 0.5px;
+}
+
+.tarjeta2 img {
+    height: 100px;
+    width: 115px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.tarjeta2 p {
+    text-align: center;
+}
+
+.tarjeta__pie2 {
+    text-align: center;
+}
+
+.tarjeta2 button {
+    background-color: var(--colorRosaFuerte);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    padding: 10px 20px;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+
+.tarjeta__pie2 button:hover {
+    background-color: var(--colorDorado);
+}
+
 @keyframes mianimacion1 {
     0% {
 

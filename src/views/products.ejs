@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('./partials/head') %> 
-<body>
+<body class="main__productos">
   <%- include('./partials/header') %> 
-  <main>
+
+  <main >
     <div class="buscador_productos">
        <form action="/product/result" method="GET"  >
       <input type="text" name="keyword" placeholder="Buscar un producto... "> 
       <button type="submit">Buscar</button> 
       </form>
     </div>
+
+    <h2 class="titulo__productos">Anillos</h2>
    
   <section class="home_cards">
 
-    <% products.forEach(({id, name, price, img1}) => { %>
+    <% arrayAnillos.forEach(({id, name, price, img1}) => { %>
       <article>
         <div class="tarjeta tarjeta1">
           <h4><%= name %> </h4>
@@ -33,6 +36,111 @@
      
   
     </section>
+    
+    <h2  class="titulo__productos">Relojes</h2>
+   
+  <section class="home_cards">
+
+    <% arrayRelojes.forEach(({id, name, price, img1}) => { %>
+      <article>
+        <div class="tarjeta tarjeta1">
+          <h4><%= name %> </h4>
+          <div class="home__contenedor">
+            <p>10% off</p>
+            
+            <img src="/images/products/<%= img1 %> " alt="destacados1" />
+        
+          </div>
+          <div class="tarjeta__pie">
+            <h6>u$s 5<%= price %> </h6>
+            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+          </div>
+        </div>
+      </article>
+    <% }) %>
+     
+  
+    </section>
+
+    
+    <h2  class="titulo__productos" >Pulseras</h2>
+   
+  <section class="home_cards">
+
+    <% arrayPulseras.forEach(({id, name, price, img1}) => { %>
+      <article>
+        <div class="tarjeta tarjeta1">
+          <h4><%= name %> </h4>
+          <div class="home__contenedor">
+            <p>10% off</p>
+            
+            <img src="/images/products/<%= img1 %> " alt="destacados1" />
+        
+          </div>
+          <div class="tarjeta__pie">
+            <h6>u$s 5<%= price %> </h6>
+            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+          </div>
+        </div>
+      </article>
+    <% }) %>
+     
+  
+    </section>
+
+    
+    <h2  class="titulo__productos">Aritos</h2>
+   
+  <section class="home_cards">
+
+    <% arrayAritos.forEach(({id, name, price, img1}) => { %>
+      <article>
+        <div class="tarjeta tarjeta1">
+          <h4><%= name %> </h4>
+          <div class="home__contenedor">
+            <p>10% off</p>
+            
+            <img src="/images/products/<%= img1 %> " alt="destacados1" />
+        
+          </div>
+          <div class="tarjeta__pie">
+            <h6>u$s 5<%= price %> </h6>
+            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+          </div>
+        </div>
+      </article>
+    <% }) %>
+
+  
+    </section>
+
+
+       
+    <h2  class="titulo__productos">Collares</h2>
+   
+  <section class="home_cards">
+
+    <% arrayCollares.forEach(({id, name, price, img1}) => { %>
+      <article>
+        <div class="tarjeta tarjeta1">
+          <h4><%= name %> </h4>
+          <div class="home__contenedor">
+            <p>10% off</p>
+            
+            <img src="/images/products/<%= img1 %> " alt="destacados1" />
+        
+          </div>
+          <div class="tarjeta__pie">
+            <h6>u$s 5<%= price %> </h6>
+            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+          </div>
+        </div>
+      </article>
+    <% }) %>
+     
+  
+    </section>
+     
   </main>
 
    <%- include('./partials/footer') %> 

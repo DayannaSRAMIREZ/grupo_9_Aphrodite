@@ -18,6 +18,7 @@ module.exports = {
             id
         } = req.params;
         const product = products.find(producto => producto.id === +id);
+      
 
         res.render('productDetail', {
             product
@@ -28,8 +29,19 @@ module.exports = {
     },
     product: (req, res) => {
         let products= readProducts(); 
+        let arrayAnillos= products.filter(product=>product.category === "anillos" ); 
+        let arrayCollares= products.filter(product=>product.category === "collares" ); 
+        let arrayPulseras= products.filter(product=>product.category === "pulseras" ); 
+        let arrayRelojes= products.filter(product=>product.category === "relojes" ); 
+        let arrayAritos= products.filter(product=>product.category === "aritos" ); 
+      
         res.render('products', {
-            products
+            arrayAnillos,
+            arrayAritos,
+            arrayCollares,
+            arrayPulseras,
+            arrayPulseras,
+            arrayRelojes   
         })
     },
     gift: (req, res) => {

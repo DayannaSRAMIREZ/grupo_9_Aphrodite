@@ -22,6 +22,13 @@
     border-radius: 5px;
    
 }
+.titulo__productos{
+    text-align: center;
+    margin: 20px;
+}
+.main__productos{
+    background-color: rgb(233, 230, 230);
+}
 @media (min-width:768px) {
     .buscador_productos input{
         width: 380px;
