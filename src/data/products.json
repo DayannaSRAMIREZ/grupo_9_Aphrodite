@@ -177,9 +177,9 @@
       "category": "aritos",
       "price": 2500,
       "unidades": 12,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "DivasDreamAros1.jpeg",
+      "img2": "DivasDreamAros2.jpeg",
+      "img3": "DivasDreamAros3.jpeg"
    },
    {
       "id": 17,
@@ -190,9 +190,10 @@
       "category": "aritos",
       "price": 3200,
       "unidades": 15,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "FioreverAros1.jpeg",
+      "img2": "FioreverAros2.jpeg",
+      "img3": "FioreverAros3.jpeg"
+      
    },
    {
       "id": 18,
@@ -203,9 +204,9 @@
       "category": "aritos",
       "price": 2100,
       "unidades": 14,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "HaloCorazon1.jpeg",
+      "img2": "HaloCorazon2.jpeg",
+      "img3": "HaloCorazon3.jpeg"
    },
    {
       "id": 19,
@@ -216,9 +217,9 @@
       "category": "aritos",
       "price": 3100,
       "unidades": 12,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "NinfadeOro1.jpeg",
+      "img2": "NinfadeOro2.jpeg",
+      "img3": "NinfadeOro3.jpeg"
    },
    {
       "id": 20,
@@ -229,9 +230,9 @@
       "category": "aritos",
       "price": 3100,
       "unidades": 24,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "ArosTuBrillo1.jpeg",
+      "img2": "ArosTuBrillo2.jpeg",
+      "img3": "ArosTuBrillo3.jpeg"
    },
    {
       "id": 21,
@@ -242,9 +243,9 @@
       "category": "relojes",
       "price": 6500,
       "unidades": 4,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "DivasDreamReloj1.jpeg",
+      "img2": "DivasDreamReloj2.jpeg",
+      "img3": "DivasDreamReloj3.jpeg"
    },
    {
       "id": 22,
@@ -255,9 +256,9 @@
       "category": "relojes",
       "price": 5200,
       "unidades": 6,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "DivasDreamReloj1.jpeg",
+      "img2": "DivasDreamReloj2.jpeg",
+      "img3": "DivasDreamReloj3.jpeg"
    },
    {
       "id": 23,
@@ -268,9 +269,9 @@
       "category": "relojes",
       "price": 5100,
       "unidades": 6,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "SerpentiSeductori1.jpeg",
+      "img2": "SerpentiSeductori2.jpeg",
+      "img3": "SerpentiSeductori3.jpeg"
    },
    {
       "id": 24,
@@ -281,9 +282,9 @@
       "category": "relojes",
       "price": 5200,
       "unidades": 6,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "LuceaReloj1.jpeg",
+      "img2": "LuceaReloj2.jpeg",
+      "img3": "LuceaReloj3.jpeg"
    },
    {
       "id": 25,
@@ -294,8 +295,8 @@
       "category": "relojes",
       "price": 4200,
       "unidades": 9,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "CrystalFlower1.jpeg",
+      "img2": "CrystalFlower2.jpeg",
+      "img3": "CrystalFlower3.jpeg"
    }
 ]
