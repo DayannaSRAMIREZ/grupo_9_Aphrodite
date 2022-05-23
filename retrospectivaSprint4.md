@@ -24,4 +24,4 @@
 - Procrastinar (Dani)
 
 ** **
-![RetrospectivaModeloEstrella](/imagenes_readme/retrospectivaSprint4.jpeg)
+![RetrospectivaModeloEstrella](/imagenes_readme/cuadroRetroSprint4.jpeg)
