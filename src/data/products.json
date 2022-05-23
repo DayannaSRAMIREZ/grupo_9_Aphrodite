@@ -73,9 +73,9 @@
       "category": "collares",
       "price": 2100,
       "unidades": 12,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "CirculoCuadradoCollar1.jpeg",
+      "img2": "CirculoCuadradoCollar2.jpeg",
+      "img3": "CirculoCuadradoCollar3.jpeg"
    },
    {
       "id": 9,
@@ -125,9 +125,9 @@
       "category": "pulseras",
       "price": 1800,
       "unidades": 22,
-      "img1": "noimage.png",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
+      "img1": "PulseraBrisaAzul1.jpeg",
+      "img2": "PulseraBrisaAzul2.jpeg",
+      "img3": "PulseraBrisaAzul3.jpeg"
    },
    {
       "id": 13,
