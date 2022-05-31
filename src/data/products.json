@@ -180,7 +180,6 @@
       "img1": "FioreverAros1.jpeg",
       "img2": "FioreverAros2.jpeg",
       "img3": "FioreverAros3.jpeg"
-      
    },
    {
       "id": 18,
@@ -285,5 +284,31 @@
       "img1": "CrystalFlower1.jpeg",
       "img2": "CrystalFlower2.jpeg",
       "img3": "CrystalFlower3.jpeg"
+   },
+   {
+      "id": 26,
+      "name": "day",
+      "materials": "Seleccione uno:",
+      "size": "Seleccione uno:",
+      "description": "",
+      "category": "Seleccione uno:",
+      "price": 544,
+      "unidades": 15,
+      "img1": "image-1654034753905.jpg",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
+   },
+   {
+      "id": 27,
+      "name": "da",
+      "materials": "oro",
+      "size": "xl",
+      "description": "dsfdf",
+      "category": "collares",
+      "price": 54234,
+      "unidades": 1,
+      "img1": "image-1654034794288.jpg",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    }
 ]
