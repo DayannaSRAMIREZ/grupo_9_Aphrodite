@@ -4,10 +4,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <section class="footer__section__sectionUno">
-      <form class="footer__buscador" action="">
-        <input class="placeholder__buscador" type="text" placeholder="Buscar" />
-        <button type="submit"></button>
+      <form class="footer__buscador" action="/product/result" method="GET" >
+        <input class="placeholder__buscador" type="text" placeholder="Buscar" name="keyword"/>
+        <button type="submit">Buscar</button>
       </form>
+      
       <form class="footer__subscripcion" action="">
         <input class="placeholder" type="email" placeholder="Correo electrónico" required />
         <button type="submit">Suscribirse</button>
