@@ -5,12 +5,13 @@
   <%- include('./partials/header') %> 
 
     <main class="main__login">
-         <form action="/users/login" method="POST">
+         <form action="../routes/users.js" method="POST">
            <div>
              <label for="nombre">Email</label>
              <br>
-             <input class="login__nombre input__comun" type="mail" id="mail" name="nombre">
+             <input class="login__nombre input__comun" type="email" id="email" name="nombre">
            </div>
+           <small class="textDanger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
            
            <div>
              <label for="password">Contraseña</label>
