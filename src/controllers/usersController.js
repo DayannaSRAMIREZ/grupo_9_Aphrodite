@@ -74,7 +74,7 @@ module.exports = {
             }
             res.redirect('/')
         } else {
-            return res.render("userLogin", {
+            return res.render("login", {
                 old: req.body,
                 errors: errors.mapped(),
             });
