@@ -1,23 +1,19 @@
 const bcryptjs = require('bcryptjs');
 
-const {
-    check
-} = require('express-validator');
+const {check} = require('express-validator');
 
 const users = require('../data/dataUser.json');
 
 
 
 module.exports = [
-    check('email')
+    check('email') 
     .notEmpty().withMessage("Ingrese su email").bail()
     .isEmail().withMessage("Ingrese email válido"),
 
     check('password')
     .notEmpty().withMessage("Ingrese su contraseña").bail()
-    .custom((value, {
-        req
-    }) => {
+    .custom((value, {req}) => {
         const user = users.find(user => user.email === req.body.email);
         if (!user) {
             return false

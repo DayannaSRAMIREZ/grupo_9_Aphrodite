@@ -1,6 +1,4 @@
-const {
-    validationResult
-} = require('express-validator');
+const {validationResult} = require('express-validator');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const path = require('path');
@@ -58,20 +56,20 @@ module.exports = {
     },
     processLogin: (req, res) => {
         const errors = validationResult(req);
-        if (errors.isEmpy()) {
+          if (errors.isEmpty()) {
             const {
                 id,
                 name,
                 image
             } = users.find(user => user.email === req.body.email)
-            req.session.userLogin = {
+            req.session.login = {
                 id,
                 name,
                 image
             }
             if (req.body.remember) {
-                res.cookie("grupo_9_aphrodite", req.session.userLogin, {
-                    maxAge: 1000 * 60 * 2
+                res.cookie("grupo_9_aphrodite", req.session.login, {
+                    maxAge: 1000*60*2
                 })
             }
             res.redirect('/')
@@ -82,4 +80,10 @@ module.exports = {
             });
         }
     },
-}
+    logout : (req,res) => {
+        req.session.destroy();
+        res.cookie('userAphrodite',null,{maxAge : -1})
+        return res.redirect('/')
+      },
+      
+} 

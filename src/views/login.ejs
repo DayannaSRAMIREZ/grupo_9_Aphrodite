@@ -6,7 +6,7 @@
   <%- include('./partials/header') %>
 
   <main class="main__login">
-    <form action="../routes/users.js" method="POST">
+    <form action="/users.js/login" method="POST">
       <div>
         <label for="nombre">Email</label>
         <br>
@@ -19,6 +19,7 @@
         <br>
         <input class="input__comun" type="password" name="password" id="password">
       </div>
+      <small class="textDanger"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
       <div>
         <input type="radio" name="remember" id="remember">
         <label class="login__recordarme" for="remember">Recordarme</label>
