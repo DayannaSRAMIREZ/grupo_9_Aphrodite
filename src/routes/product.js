@@ -12,7 +12,7 @@ router.get('/detail/:id', detail)
       .post('/add',upload.single('image'),productsValidator,  store)
       .get('/edit/:id', productsEdit)
       .get('/result', search)
-      .put('/update/:id',upload.single('image'),update)
+      .put('/update/:id',upload.single('image'), productsValidator,update)
       .delete('/remove/:id', remove)
       
 

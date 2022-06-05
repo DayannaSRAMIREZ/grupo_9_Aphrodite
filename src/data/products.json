@@ -297,5 +297,18 @@
       "img1": "image-1654034753905.jpg",
       "img2": "noimage.png",
       "img3": "noimage.png"
+   },
+   {
+      "id": 27,
+      "name": "eeeeeeeeee",
+      "materials": "plata",
+      "size": "m",
+      "description": "fasfasf",
+      "category": "collares",
+      "price": 4,
+      "unidades": 4,
+      "img1": "noimage.png",
+      "img2": "noimage.png",
+      "img3": "noimage.png"
    }
 ]

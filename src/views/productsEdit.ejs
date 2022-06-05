@@ -17,11 +17,12 @@
                     <div class="formEdit">
                         <label for="nameProduct">Nombre:</label>
                         <input class="editFormInputName" type="text" id="name" name="name" value="<%= product.name %>">
+                        <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                     </div>
                     <div class="formEdit">
                         <label class="formSelectOption" for="category">Categoria:</label>
                         <select class="selectForm" name="category" id="category">
-                            <option hidden>Seleccione uno:</option>
+                            <option hidden value="" >Seleccione uno...</option>
 
                             <option value="pulseras" <%= product.category === "pulseras"&& 'selected' %>>Pulseras
                             </option>
@@ -29,15 +30,17 @@
                             </option>
                             <option value="anillos" <%= product.category === "anillos"&& 'selected' %>>Anillos</option>
                             <option value="relojes" <%= product.category === "relojes" && 'selected' %>>Relojes</option>
+                            <span class="alert-products"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                         </select>
                     </div>
                 </article>
                 <div class="formEdit">
                     <label class="formSelectOption" for="materials"> Material:</label>
                     <select class="selectForm" name="materials" id="materials">
-                        <option hidden selected>Seleccione uno:</option>
+                        <option hidden selected value="">Seleccione uno:</option>
                         <option value="oro" <%= product.materials === "oro" && 'selected' %>>Oro</option>
                         <option value="plata" <%= product.materials === "plata" && 'selected'%>>Plata</option>
+                        <span class="alert-products"><%= locals.errors && errors.materials ? errors.materials.msg : null %> </span>
                     </select>
                 </div>
 
@@ -45,15 +48,15 @@
                 <article class="artDos">
 
                     <div class="formEdit">
-                        <label for="uni">Unidades:</label>
-                        <input class="editFormInputUni" type="number" name="unidades" id="unidades"
-                            value="<%= product.unidades %>">
+                        <label for="unidades">Unidades:</label>
+                        <input class="editFormInputUni" type="number" name="unidades" id="unidades" value="<%= product.unidades %>">
+                        <span class="alert-products"><%= locals.errors && errors.unidades ? errors.unidades.msg : null %> </span>
                     </div>
 
                     <div class="formEdit">
                         <label for="price">Precio:</label>
-                        <input class="editFormInputPrecio" type="number" name="price" id="price"
-                            value="<%= product.price %>">
+                        <input class="editFormInputPrecio" type="number" name="price" id="price" value="<%= product.price %>">
+                        <span class="alert-products"><%= locals.errors&& errors.price ? errors.price.msg : null %> </span>
                     </div>
 
                 </article>
@@ -61,13 +64,14 @@
                     <div class="formEdit">
                         <label class="formSelectOption" for="size">Talles</label>
                         <select class="selectFormTalle" name="size" id="size">
-                            <option hidden selected>Seleccione uno:</option>
+                            <option hidden selected value="">Seleccione uno:</option>
                             <option value="xl" <%= product.size === "xl" && 'selected'%>>XL</option>
                             <option value="l" <%= product.size === "l" && 'selected'%>>L</option>
                             <option value="m" <%= product.size === "m" && 'selected'%>>M</option>
                             <option value="s" <%= product.size === "s" && 'selected'%>>S</option>
                             <option value="xs" <%= product.size === "xs" && 'selected'%>>XS</option>
                         </select>
+                        <span class="alert-products"><%= locals.errors && errors.size ? errors.size.msg : null %> </span>
                     </div>
                 </article>
                 <article class="art">
@@ -77,6 +81,7 @@
 
                         <textarea class="textarea__clase" name="description" rows="10" cols="50"
                             placeholder="Descripción del producto..."><%= product.description %></textarea>
+                            <span class="alert-products"><%= locals.errors && errors.description ?  errors.description.msg : null %></span>
                     </div>
                     <div class="formEdit">
                         <label for="nameProduct">Cargar Imágen</label>

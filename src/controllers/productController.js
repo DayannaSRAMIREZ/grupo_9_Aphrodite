@@ -116,45 +116,56 @@ module.exports = {
     },
     update: (req, res) => {
         let products= readProducts(); 
-        const {
-            id
-        } = req.params;
-        const {
-            name,
-            materials,
-            size,
-            description,
-            category,
-            price,
-            unidades,
-             imagen
+        let errors = validationResult(req); 
 
-        } = req.body
-       
-
-        const arrayModify = products.map(product => {
-            if (product.id === +id) {
-                let productModify = {
-
-                    ...product,
-                    name: name,
-                    materials,
-                    size,
-                    description: description,
-                    category,
-                    price: +price,
-                    unidades: +unidades,
-                    img1: req.file ? req.file.filename : product.img1,
-
+        if(errors.isEmpty()){
+            const {
+                id
+            } = req.params;
+            const {
+                name,
+                materials,
+                size,
+                description,
+                category,
+                price,
+                unidades,
+                 imagen
+    
+            } = req.body
+           
+    
+            const arrayModify = products.map(product => {
+                if (product.id === +id) {
+                    let productModify = {
+    
+                        ...product,
+                        name: name,
+                        materials,
+                        size,
+                        description: description,
+                        category,
+                        price: +price,
+                        unidades: +unidades,
+                        img1: req.file ? req.file.filename : product.img1,
+    
+                    }
+                    return productModify;
                 }
-                return productModify;
-            }
-            return product
-        });
+                return product
+            });
+    
+            guardarJson(arrayModify);
+            return res.redirect('/product')
 
-        guardarJson(arrayModify);
-        return res.redirect('/product');
-
+        }else{
+            return res.render( 'productsEdit', {
+                product : req.body,
+                errors : errors.mapped()
+              });
+         
+        }
+       
     },
     remove: (req, res) => {
         let products= readProducts(); 
