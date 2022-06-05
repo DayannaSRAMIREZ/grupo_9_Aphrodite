@@ -117,6 +117,7 @@ module.exports = {
     update: (req, res) => {
         let products= readProducts(); 
         let errors = validationResult(req); 
+    
 
         if(errors.isEmpty()){
             const {
@@ -156,12 +157,16 @@ module.exports = {
             });
     
             guardarJson(arrayModify);
-            return res.redirect('/product')
+            return res.redirect('/product');
 
         }else{
-            return res.render( 'productsEdit', {
-                product : req.body,
-                errors : errors.mapped()
+            return res.render('productsEdit', {
+                product:{
+                    id: req.params.id, 
+                    ...req.body
+                }, 
+                errors : errors.mapped(), 
+          
               });
          
         }
