@@ -297,18 +297,5 @@
       "img1": "image-1654034753905.jpg",
       "img2": "noimage.png",
       "img3": "noimage.png"
-   },
-   {
-      "id": 27,
-      "name": "da",
-      "materials": "oro",
-      "size": "xl",
-      "description": "dsfdf",
-      "category": "collares",
-      "price": 54234,
-      "unidades": 1,
-      "img1": "image-1654034794288.jpg",
-      "img2": "noimage.png",
-      "img3": "noimage.png"
    }
 ]

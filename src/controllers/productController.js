@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
+const { validationResult } = require("express-validator");
 
 const readProducts = () => {
 	const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -63,7 +64,10 @@ module.exports = {
     },
     store: (req, res) => {
         let products= readProducts(); 
-        const {
+        let errors = validationResult(req)
+
+        if(errors.isEmpty()){
+             const {
             name,
             materials,
             size,
@@ -89,6 +93,14 @@ module.exports = {
         products.push(producto);
         guardarJson(products);
         return res.redirect('/product')
+        }else{
+            res.render('addProducts', {
+                errors: errors.mapped(),
+                old : req.body, 
+            })
+       
+        }
+       
     },
     search: (req, res) => {
         let products= readProducts(); 
@@ -114,7 +126,8 @@ module.exports = {
             description,
             category,
             price,
-            unidades, imagen
+            unidades,
+             imagen
 
         } = req.body
        

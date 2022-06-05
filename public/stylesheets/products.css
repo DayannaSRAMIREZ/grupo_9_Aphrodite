@@ -29,6 +29,10 @@
 .main__productos{
     background-color: rgb(233, 230, 230);
 }
+.alert-products{
+    font-size: 11px;
+    color: red;
+}
 @media (min-width:768px) {
     .buscador_productos input{
         width: 380px;

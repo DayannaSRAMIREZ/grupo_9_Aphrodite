@@ -11,43 +11,47 @@
             <form class="boxEditForm" method="POST" action="" enctype="multipart/form-data">
                 <article class="art">
                     <div class="formEdit">
-                        <label for="nameProduct">Nombre:</label>
-                        <input class="editFormInputName" type="text" id="name" name="name">
+                        <label for="name">Nombre:</label>
+                        <input class="editFormInputName" type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null%>"> 
+                        <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                     </div>
                     <div class="formEdit">
                         <label class="formSelectOption" for="category">Categoria:</label>
                         <select class="selectForm" name="category" id="category">
-                            <option hidden selected>Seleccione uno:</option>
-                            <option value="pulseras">Pulseras</option>
-                            <option value="collares">Collares</option>
-                            <option value="anillos">Anillos</option>
-                            <option value="relojes">Relojes</option>
-                            <option value="aritos">Aritos</option>
-                            
+                            <option hidden selected value="">Seleccione uno..</option>
+                            <option value="pulseras" <%= locals.old && old.category === 'pulseras' ? 'selected' : null %> >Pulseras</option>
+                            <option value="collares" <%= locals.old && old.category === 'collares' ? 'selected' : null %>>Collares</option>
+                            <option value="anillos" <%= locals.old && old.category === 'anillos' ? 'selected' : null %>>Anillos</option>
+                            <option value="relojes" <%= locals.old && old.category === 'relojes' ? 'selected' : null %>>Relojes</option>
+                            <option value="aritos" <%= locals.old && old.category === 'aritos' ? 'selected' : null %>>Aritos</option>    
                         </select>
+                        <span class="alert-products"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                     </div>  
                 </article>
                     <div class="formEdit">
                         <label class="formSelectOption" for="materials"> Material:</label>
                         <select class="selectForm" name="materials" id="materials">
-                            <option hidden selected>Seleccione uno:</option>
-                            <option value="oro">Oro</option>
-                            <option value="plata">Plata</option>
-                            <option value="fantasia">Fantasía</option>
+                            <option hidden selected value="">Seleccione uno..</option>
+                            <option value="oro" <%= locals.old && old.materials === 'oro' ? 'selected' : null %>>Oro</option>
+                            <option value="plata" <%= locals.old && old.materials === 'plata' ? 'selected' : null %>>Plata</option>
+                            <option value="fantasia" <%= locals.old && old.materials === 'fantasia' ? 'selected' : null %>>Fantasía</option>
                         </select>
+                        <span class="alert-products"><%= locals.errors && errors.materials ? errors.materials.msg : null %> </span>
                     </div>
 
 
                 <article class="artDos">
                 
                     <div class="formEdit">
-                        <label for="uni">Unidades:</label>
-                        <input class="editFormInputUni" type="number" name="unidades" id="unidades">
+                        <label for="unidades">Unidades:</label>
+                        <input class="editFormInputUni" type="number" name="unidades" id="unidades" value="<%= locals.old && old.unidades? old.unidades : null %>">
+                        <span class="alert-products"><%= locals.errors && errors.unidades ? errors.unidades.msg : null %> </span>
                     </div>
 
                     <div class="formEdit">
                         <label for="price">Precio:</label>
-                        <input class="editFormInputPrecio" type="number" name="price" id="price">
+                        <input class="editFormInputPrecio" type="number" name="price" id="price" value="<%= locals.old && old.unidades? old.unidades : null %>">
+                        <span class="alert-products"><%= locals.errors&& errors.price ? errors.price.msg : null %> </span>
                     </div>
 
                 </article>
@@ -55,13 +59,14 @@
                     <div class="formEdit">
                         <label class="formSelectOption" for="size">Talles</label>
                         <select class="selectFormTalle" name="size" id="size">
-                            <option hidden selected>Seleccione uno:</option>
-                            <option value="xl">XL</option>
-                            <option value="l">L</option>
-                            <option value="m">M</option>
-                            <option value="s">S</option>
-                            <option value="xs">XS</option>
+                            <option hidden selected value="">Seleccione uno..</option>
+                            <option value="xl" <%= locals.old && old.size === 'xl' ? 'selected' : null %>>XL</option>
+                            <option value="l" <%= locals.old && old.size === 'l' ? 'selected' : null %>>L</option>
+                            <option value="m" <%= locals.old && old.size === 'm' ? 'selected' : null %>>M</option>
+                            <option value="s" <%= locals.old && old.size === 's' ? 'selected' : null %>>S</option>
+                            <option value="xs" <%= locals.old && old.size === 'xs' ? 'selected' : null %>>XS</option>
                         </select>
+                        <span class="alert-products"><%= locals.errors && errors.size ? errors.size.msg : null %> </span>
                     </div>
                 </article>
                 <article class="art">
@@ -70,10 +75,12 @@
                         <label class="labelArea" for="description">Descripción:</label>
 
                         <textarea class="textarea__clase" name="description" rows="10" cols="50"
-                            placeholder="Descripción del producto..."></textarea>
+                            placeholder="Descripción del producto..." ><%= locals.old && old.description? old.description: null %></textarea>
+                         <span class="alert-products"><%= locals.errors && errors.description ?  errors.description.msg : null %></span>
                     </div>
+               
                     <div class="formEdit">
-                        <label for="nameProduct">Cargar Imágen</label>
+                        <label for="image">Cargar Imágen</label>
                         <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*">
                     </div>
                     <div class="boxButton">
