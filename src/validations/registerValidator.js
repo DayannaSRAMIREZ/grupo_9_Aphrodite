@@ -33,7 +33,6 @@ module.exports = [
         max: 12
     }).withMessage("Tu contraseña debe tener como mínimo 8 caracteres y maximo 12"),
 
-
     body("password2")
     .notEmpty().withMessage("Tenes que escribir una contraseña").bail()
     .custom((value, {
@@ -51,6 +50,8 @@ module.exports = [
     .notEmpty().withMessage('Debes seleccionar una opcion'),
     body('date')
     .notEmpty().withMessage('Debes seleccionar una fecha'),
+    body('terminos')
+    .isString('on').withMessage('Debes aceptar términos y condiciones'),
 
 
 ]

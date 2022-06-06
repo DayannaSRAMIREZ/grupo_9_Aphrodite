@@ -100,8 +100,10 @@
         <div class="register__form-box">
 
           <div class="register__radio-box__suscribir">
-            <input class="checkbox" type="checkbox" name="suscribe" id="suscribirse" value="g">
-            <label for="suscribirse">Suscribirse al newsletter</label>
+            <input class="checkbox" type="checkbox" name="terminos" id="terminos" value="g">
+            <label for="terminos">Acepta terminos y condiciones</label>
+            <br>
+            <span class="alert-products"><%= locals.errors && errors.terminos? errors.terminos.msg : null %></span>
           </div>
         </div>
       </article>
