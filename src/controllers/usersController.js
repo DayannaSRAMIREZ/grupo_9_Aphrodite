@@ -55,18 +55,20 @@ module.exports = {
         res.render('login')
     },
     processLogin: (req, res) => {
-        const errors = validationResult(req);
+        let errors = validationResult(req);
           if (errors.isEmpty()) {
             const {
                 id,
                 name,
-                image
+                rol
             } = users.find(user => user.email === req.body.email)
+
             req.session.login = {
                 id,
                 name,
-                image
+                rol
             }
+            
             if (req.body.remember) {
                 res.cookie("grupo_9_aphrodite", req.session.login, {
                     maxAge: 1000*60*2
