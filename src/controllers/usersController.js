@@ -36,6 +36,7 @@ module.exports = {
                 date,
                 country: country.trim(),
                 gender,
+                image: 'noimage.png',
                 rol: "guest",
             }
 

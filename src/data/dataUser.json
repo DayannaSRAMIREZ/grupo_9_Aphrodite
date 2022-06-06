@@ -1,61 +1,6 @@
 [
    {
       "id": 1,
-      "name": "Dayanna",
-      "surname": "Ramírez vallejos",
-      "email": "Casafamilia2877@gmail.com",
-      "password": "$2a$10$8A53Oz7dtLWMl471KX0Iceu6QX/C2BhM3t5C/NkhQdzU2RIIE5rbu",
-      "date": "2022-07-27",
-      "country": "ar",
-      "gender": "n",
-      "rol": "guest"
-   },
-   {
-      "id": 2,
-      "name": "Dayanna",
-      "surname": "Ramírez vallejos",
-      "email": "day@gmail.com",
-      "password": "$2a$10$3q/rdowFidj9cgJ0u.uZkeCqEcKnHdrcTtw9GaU55UeHEOvfZGxRi",
-      "date": "2022-07-27",
-      "country": "ar",
-      "gender": "femenino",
-      "rol": "guest"
-   },
-   {
-      "id": 3,
-      "name": "Dayanna",
-      "surname": "Ramírez vallejos",
-      "email": "Ca@gmail.com",
-      "password": "$2a$10$2x1DRqqyXCS.weRa0H3bueAAJPojMiWaXkZGAFKMuPBhPAHadxNbO",
-      "date": "2022-06-20",
-      "country": "br",
-      "gender": "m",
-      "rol": "guest"
-   },
-   {
-      "id": 4,
-      "name": "Dayanna",
-      "surname": "Ramírez vallejos",
-      "email": "Csa@gmail.com",
-      "password": "$2a$10$Je4LLVkJg8s6IqRpY5jM6eLGtQKh7hdy/y1UbuNBsp0TXfN43UzPa",
-      "date": "2022-06-20",
-      "country": "br",
-      "gender": "m",
-      "rol": "guest"
-   },
-   {
-      "id": 5,
-      "name": "Dayanna",
-      "surname": "Ramírez vallejos",
-      "email": "Cssa@gmail.com",
-      "password": "$2a$10$VutxHcZ8ZazW7N9qaH6R9u0Z5BCERsDS7QguDEIa1UZtUwkm8UjTK",
-      "date": "2022-06-20",
-      "country": "br",
-      "gender": "m",
-      "rol": "guest"
-   },
-   {
-      "id": 6,
       "name": "daiana",
       "surname": "ramirez",
       "email": "daichu@gmail.com",
@@ -63,17 +8,19 @@
       "date": "2022-06-29",
       "country": "br",
       "gender": "femenino",
+      "image": "noimage.png",
       "rol": "admin"
    },
    {
-      "id": 7,
+      "id": 2,
       "name": "Paula",
       "surname": "Burgos",
       "email": "pauli@gmail.com",
-      "password": "$2a$10$FD.J0Qfq6UwRk9cNQYypSuBcRWMNM2Dchr6yDZzTGnh51o3AYbFlm",
-      "date": "2022-06-20",
-      "country": "vnz",
+      "password": "$2a$10$GiPJClmKAsP0zTXsnPgMhuDwUGVxhPtcxFiRPKHkGlIRCRzg7IVf2",
+      "date": "2022-06-14",
+      "country": "ar",
       "gender": "femenino",
-      "rol": "guest"
+      "image": "noimage.png",
+      "rol": "admin"
    }
 ]
