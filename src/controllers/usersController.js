@@ -56,37 +56,10 @@ module.exports = {
         res.render('login')
     },
     processLogin: (req, res) => {
-        let errors = validationResult(req);
-          if (errors.isEmpty()) {
-            const {
-                id,
-                name,
-                rol
-            } = users.find(user => user.email === req.body.email)
-
-            req.session.login = {
-                id,
-                name,
-                rol
-            }
-            
-            if (req.body.remember) {
-                res.cookie("grupo_9_aphrodite", req.session.login, {
-                    maxAge: 1000*60*2
-                })
-            }
-            res.redirect('/')
-        } else {
-            return res.render("login", {
-                old: req.body,
-                errors: errors.mapped(),
-            });
-        }
+      res.send('logeada')
     },
     logout : (req,res) => {
-        req.session.destroy();
-        res.cookie('userAphrodite',null,{maxAge : -1})
-        return res.redirect('/')
-      },
+        res.send('deslogeada')
+    }
       
 } 
