@@ -30,7 +30,7 @@ module.exports = {
             let newUser = {
                 id: +lastId + 1,
                 name: name.trim(),
-                surname: surname.tirm(),
+                surname: surname.trim(),
                 email,
                 password: bcryptjs.hashSync(password, 10),
                 date,
@@ -41,10 +41,10 @@ module.exports = {
 
             users.push(newUser)
             guardarJson(users);
-            
-            return res.redirect('/');
-
+            res.redirect('/')
+         
         }else{
+        
             return res.render('register', {
                 old: req.body, 
                 errors: errors.mapped()

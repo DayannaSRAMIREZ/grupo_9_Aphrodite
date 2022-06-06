@@ -6,9 +6,10 @@ const {register, login, processLogin, registerController,logout}= require('../co
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator');
 
-router.get('/register', register);
+
 router.get('/login', login);
 router.post('/login', loginValidator, processLogin);
+router.get('/register', register);
 router.post('/register', registerValidator, registerController);
 router.get('/logout',logout);
 
