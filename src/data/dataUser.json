@@ -22,5 +22,65 @@
       "gender": "femenino",
       "image": "noimage.png",
       "rol": "admin"
+   },
+   {
+      "id": 3,
+      "name": "Dayanna",
+      "surname": "Ramírez vallejos",
+      "email": "Casafamiliass2877@gmail.com",
+      "password": "$2a$10$lEX6EWfAfx4yVX5X40Vrku1RXnRVNreEVETnVY7AoFO.FnOq9UJ2a",
+      "date": "2022-06-06",
+      "country": "ar",
+      "gender": "masculino",
+      "image": "noimage.png",
+      "rol": "guest"
+   },
+   {
+      "id": 4,
+      "name": "Dayanna",
+      "surname": "Ramírez vallejos",
+      "email": "maria@gmail.com",
+      "password": "$2a$10$yiMf8J31vuAypM4cRYUEKeREdiDsuMrp.UpMrtCRlepshB3TrnkWa",
+      "date": "2022-06-17",
+      "country": "ar",
+      "gender": "femenino",
+      "image": "noimage.png",
+      "rol": "guest"
+   },
+   {
+      "id": 5,
+      "name": "Dayanna",
+      "surname": "Ramírez vallejos",
+      "email": "day@gmail.com",
+      "password": "$2a$10$iZfjTaXIUd3cuUbEZEM0OOA7MAUjuJ/zvdjNYBjl/abkkkCBJWRfy",
+      "date": "2022-06-21",
+      "country": "br",
+      "gender": "femenino",
+      "image": "noimage.png",
+      "rol": "admin"
+   },
+   {
+      "id": 6,
+      "name": "Dayanna",
+      "surname": "Ramírez vallejos",
+      "email": "Casafamilia2877@gmail.com",
+      "password": "$2a$10$0Oi6k123UP7dv7BB/QAdIewx.rwS68JT2iODON5XdmTVP0m.rGp86",
+      "date": "2022-06-13",
+      "country": "ar",
+      "gender": "femenino",
+      "image": "noimage.png",
+      "rol": "guest"
+   },
+   {
+      "id": 7,
+      "name": "Dayanna",
+      "surname": "Ramírez vallejos",
+      "email": "Casa@gmail.com",
+      "password": "$2a$10$YznXZpq5Jqtc9p5AgOSDnuTh7Eelc0LTF6ArYpY2umYFmRsHU09ie",
+      "date": "2022-06-22",
+      "country": "ar",
+      "gender": "femenino",
+      "image": "noimage.png",
+      "rol": "admin"
    }
 ]

@@ -4,11 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session')
-
+const localsCheck = require('../src/middlewares/localCheck')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
-
+const cookiesCheck = require('./middlewares/cookiesChek')
 const methodOverride = require('method-override');
 
 
@@ -32,8 +32,10 @@ app.use(session({
   saveUninitialized: true
 }))
 
-app.use(methodOverride('_method'));
 
+app.use(methodOverride('_method'));
+app.use(cookiesCheck);
+app.use(localsCheck); 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product', productRouter);

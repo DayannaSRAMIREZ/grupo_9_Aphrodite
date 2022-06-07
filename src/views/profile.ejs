@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %> 
+<body>
+  <%- include('./partials/header') %> 
+
+  <form class="register__form" action="/users/register" method="post">
+    <article>
+      <div class="register__form-box">
+        <label for="nombre">Nombre</label>
+        <br>
+        <input class="register__form-input" type="text" id="name" name="name" value="<%= locals.old && locals.old.name %>">
+        <br>
+        <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+
+      </div>
+      <div class="register__form-box">
+        <label for="nombre">Apellido</label>
+        <br>
+        <input class="register__form-input" type="text" id="surname" name="surname" value="<%= locals.old && locals.old.surname %>">
+        <br>
+        <span class="alert-products"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
+
+      </div>
+  
+      <div class="register__form-box">
+        <label for="password">Contraseña</label>
+        <br>
+        <input class="register__form-input" type="password" id="password" name="password">
+        <br>
+        <span class="alert-products"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+
+      </div>
+      <div class="register__form-box">
+        <label for="password"> Repetir Contraseña</label>
+        <br>
+        <input class="register__form-input" type="password" id="password" name="password2">
+        <br>
+        <span class="alert-products"><%= locals.errors && errors.password2? errors.password2.msg : null %></span>
+
+      </div>
+      <div class="register__form-box">
+        <label for="date">Fecha de nacimiento</label>
+        <br>
+        <input class="register__date" type="date" id="date" name="date" value="<%= locals.old && locals.old.date %>">
+      </div>
+      <span class="alert-products"><%= locals.errors && errors.date? errors.date.msg : null %></span>
+      <div class="register__form-box pais">
+        <label class="register__pais" for="pais">País</label>
+
+        <select class="register__form-select" name="country" id="country">
+          <option value="" hidden selected>Por favor elegí uno...</option>
+          <option value="ar" <%= locals.old && old.country && old.country == 'ar' ? 'selected' : null %>>Argentina</option>
+          <option value="bol" <%= locals.old && old.country && old.country == 'bol' ? 'selected' : null %>>Bolivia</option>
+          <option value="br" <%= locals.old && old.country && old.country == 'br' ? 'selected' : null %>>Brasil</option>
+          <option value="cl" <%= locals.old && old.country && old.country == 'cl' ? 'selected' : null %>>Chile</option>
+          <option value="col" <%= locals.old && old.country && old.country == 'col' ? 'selected' : null %>>Colombia</option>
+          <option value="mx" <%= locals.old && old.country && old.country == 'mx' ? 'selected' : null %>>México</option>
+          <option value="par" <%= locals.old && old.country && old.country == 'par' ? 'selected' : null %>>Paraguay</option>
+          <option value="per" <%= locals.old && old.country && old.country == 'per' ? 'selected' : null %>>Perú</option>
+          <option value="uy" <%= locals.old && old.country && old.country == 'uy' ? 'selected' : null %>>Uruguay</option>
+          <option value="vnz" <%= locals.old && old.country && old.country == 'vnz' ? 'selected' : null %>>Venezuela</option>
+        </select>
+        <br>
+        <span class="alert-products"><%= locals.errors && errors.country? errors.country.msg : null %></span>
+
+      </div>
+      <div class="genero__titulo">
+        <h4>Género</h4>
+      </div>
+
+      <div class="register__form-box__genero">
+        <div class="register__radio-box">
+          <input class="" type="radio" name="gender" id="masculino" value="masculino"<%= locals.old && old.gender && old.gender == "masculino"? 'checked' : null %>>
+          <label for="masculino">M</label>
+        </div>
+        <div class="register__radio-box">
+          <input class="" type="radio" name="gender" id="femenino" value="femenino" <%= locals.old && old.gender && old.gender == "femenino"? 'checked' : null %>>
+          <label for="femenino">F</label>
+        </div>
+        <div class="register__radio-box">
+          <input class="" type="radio" name="gender" id="nodice" value="nodice" <%= locals.old && old.gender && old.gender == "nodice"? 'checked' : null %>>
+          <label for="nodice">Otro</label>
+        </div>
+      </div>
+      <span class="alert-products"><%= locals.errors && errors.gender? errors.gender.msg : null %></span>
+  
+    </article>
+    <div class="button_register_box">
+      <button  type="submit">EDITAR</button>
+    </div>
+  </form>
+    <%- include('./partials/footer') %> 
+</body>
+</html>

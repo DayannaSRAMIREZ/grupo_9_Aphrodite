@@ -3,10 +3,12 @@ header {
     background-color: var(--colorRosaClaro);
     display: flex;
     flex-direction: row;
+    width: 100%;
     /* position: fixed;
     width: 100%;
     top:  0; */
 }
+
 
 #menu {
 
@@ -55,6 +57,12 @@ header {
 
 
 }
+.header__menu__usuarios{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
+
+}
 
 .header__nav__ul-menuPrincipal li {
 
@@ -65,7 +73,7 @@ header {
 
     display: flex;
     flex-direction: row;
-    width: 50%;
+
     padding: 5px;
     justify-content: space-between;
 
@@ -125,10 +133,10 @@ header {
 
 
     }
-
-    .header__nav__ul-menuPrincipal li {
+  .header__nav__ul-menuPrincipal li {
         padding: 0px 10px 0px 10px;
-    }
+    } 
+  
 
     .header__nav__ul-menuSecundario li {
 

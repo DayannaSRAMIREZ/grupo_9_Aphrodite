@@ -8,18 +8,18 @@
   <main class="main__login">
     <form action="" method="POST">
       <div>
-        <label for="nombre">Email</label>
+        <label for="email">Email</label>
         <br>
         <input class="login__nombre input__comun" type="email" id="email" name="email">
       </div>
-      <small class="textDanger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
+      <small class="alert-products"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
 
       <div>
         <label for="password">Contraseña</label>
         <br>
         <input class="input__comun" type="password" name="password" id="password">
       </div>
-      <small class="textDanger"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
+      <small class="alert-products"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
       <div>
         <input type="radio" name="remember" id="remember">
         <label class="login__recordarme" for="remember">Recordarme</label>
@@ -27,11 +27,11 @@
       <div>
         <button class="boton__login" type="submit">Login</button>
       </div>
-      <div class="boton__registrar">
+      <!-- <div class="boton__registrar">
         <label for="register"> ¿Todavía no tenés cuenta? </label>
         <br>
         <button class="boton__login__registrar" type="register"> <a href="../users/register">Registrarse</a></button>
-      </div>
+      </div> -->
     </form>
 
   </main>

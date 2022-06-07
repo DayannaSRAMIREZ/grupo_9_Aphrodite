@@ -56,10 +56,35 @@ module.exports = {
         res.render('login')
     },
     processLogin: (req, res) => {
-      res.send('logeada')
+        const errors = validationResult(req)
+        if(errors.isEmpty()){
+            const {id, name, image, rol} = users.find(user=> user.email === req.body.email)
+            // levanto session
+            req.session.userLogin={
+                id,
+                name,
+                image,
+                rol
+            }
+            if(req.body.remember){
+                res.cookie('userAprhodite', req.session.userLogin, {maxAge: 1000*60*2})
+            }
+            res.redirect('/')
+        }else{
+            res.render('login', {
+                errors: errors.mapped()
+            })
+           
+        }
+    
+    },
+    profile: (req,res)=>{
+        res.render('profile')
     },
     logout : (req,res) => {
-        res.send('deslogeada')
+       req.session.destroy(); 
+       res.cookie('userAprhodite', null, {maxAge: -1}); 
+       res.redirect('/')
     }
       
 } 
