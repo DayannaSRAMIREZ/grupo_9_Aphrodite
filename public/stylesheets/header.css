@@ -79,6 +79,10 @@ header {
 
 
 }
+.navUser{
+    padding: 0px 15px;
+    margin-bottom: 8px;
+}
 
 .header__nav__ul-menuSecundario li {
 
