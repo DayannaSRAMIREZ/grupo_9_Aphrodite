@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/uploadImagesProducts'); 
-const productsValidator = require('..//validations/productValidator'); 
+const productsValidator = require('../validations/productValidator'); 
+const adminCheck = require('../middlewares/adminCheck'); 
 
 const{detail, cart, product, gift, addProduct, productsEdit, store, search, update, remove}= require('../controllers/productController');
 router.get('/detail/:id', detail)
       .get('/cart', cart )
       .get('/', product)
       .get('/gifts', gift)
-      .get('/add', addProduct)
+      .get('/add',adminCheck, addProduct)
       .post('/add',upload.single('image'),productsValidator,  store)
-      .get('/edit/:id', productsEdit)
+      .get('/edit/:id',adminCheck, productsEdit)
       .get('/result', search)
       .put('/update/:id',upload.single('image'), productsValidator,update)
       .delete('/remove/:id', remove)

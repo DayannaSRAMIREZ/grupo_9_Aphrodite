@@ -142,8 +142,8 @@
                 </button>
               </div>
             </div>
-
-            <div class="box2">
+            <% if (locals.userLogin?.rol ==="admin" ) { %>
+             <div class="box2">
               <div class="btEditar">
                 <a href="../edit/<%= product.id %> " class="deseos"
                   ><button>Editar</button></a
@@ -159,6 +159,8 @@
                 </form>
               </div>
             </div>
+            <% } %>
+           
           </article>
         </section>
 

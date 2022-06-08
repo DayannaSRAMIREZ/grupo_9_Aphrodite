@@ -21,7 +21,7 @@ module.exports = [
 
 
     check('password')
-    .notEmpty().withMessage('Debes ingresar un email.')
+    .notEmpty().withMessage('Debes ingresar una contraseña.')
     .custom((value, {
         req
     }) => {

@@ -73,14 +73,70 @@
    },
    {
       "id": 7,
-      "name": "Dayanna",
+      "name": "Maria",
       "surname": "Ramírez vallejos",
-      "email": "Casa@gmail.com",
-      "password": "$2a$10$YznXZpq5Jqtc9p5AgOSDnuTh7Eelc0LTF6ArYpY2umYFmRsHU09ie",
+      "password": "$2a$10$8TQaGmH8EuOKqSkansd.xuef8y7o.Yi09nWJf3pttLDXqsHrO4CfC",
       "date": "2022-06-22",
       "country": "ar",
       "gender": "femenino",
       "image": "noimage.png",
       "rol": "admin"
+   },
+   {
+      "id": 8,
+      "name": "Dayanna",
+      "surname": "Ramírez vallejos",
+      "email": "user@gmail.com",
+      "password": "$2a$10$fkBA1K.KIfE5hn3ZLDeCpu1xd8caXR7G05paNyn4duCU3dqc6bmn2",
+      "date": "2022-06-05",
+      "country": "mx",
+      "gender": "femenino",
+      "image": "noimage.png",
+      "rol": "guest"
+   },
+   {
+      "id": 9,
+      "name": "Maria",
+      "surname": "Ramírez vallejos",
+      "password": "$2a$10$o6RLDSUW5nzKJzqj04tToeXQZ8NRw4QflextCiwxxKxJAvRCUNLDm",
+      "date": "2022-06-14",
+      "country": "ar",
+      "gender": "masculino",
+      "image": "noimage.png",
+      "rol": "admin"
+   },
+   {
+      "id": 10,
+      "name": "Dayanna",
+      "surname": "Ramírez vallejos",
+      "email": "Casa@gmail.com",
+      "password": "$2a$10$SNpE8ad0sobsqRPIHK6ILefGUTJPkJxVmzTkDubnnYP8XsX24jA2W",
+      "date": "2022-06-21",
+      "country": "ar",
+      "gender": "femenino",
+      "image": "noimage.png",
+      "rol": "guest"
+   },
+   {
+      "id": 11,
+      "name": "maria",
+      "surname": "masdsad",
+      "email": "Casa4@gmail.com",
+      "password": "$2a$10$NVYeKyiVgtGZTOj29RsdHOKEb/ULyfzh6lWmJdm.SCLY1G0ycumB.",
+      "country": "br",
+      "gender": "masculino",
+      "image": "image-1654651886012.jpeg",
+      "rol": "guest"
+   },
+   {
+      "id": 12,
+      "name": "dara",
+      "surname": "ramirezv",
+      "email": "Casa5@gmail.com",
+      "password": "$2a$10$MSdB3syBsyzVnav7/uvr2uHgcSy5vU.OXDkDVRH8DRmlQYmxYc3eO",
+      "country": "uy",
+      "gender": "femenino",
+      "image": "image-1654654799310.jpg",
+      "rol": "guest"
    }
 ]

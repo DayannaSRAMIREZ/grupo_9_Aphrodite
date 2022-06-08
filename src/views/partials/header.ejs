@@ -17,7 +17,10 @@
           <li><a href="/product">PRODUCTS</a></li>
           <li><a href="/find">FIND A STORE</a></li>
           <li><a href="/weAre">WE ARE</a></li>
-          <li><a href="/product/add">AGREGAR PRODUCTO</a></li>
+         <% if (locals.userLogin?.rol ==="admin" ) { %>
+           <li><a href="/product/add">AGREGAR PRODUCTO</a></li>
+         <% } %>
+         
         </ul>
     </nav>
     <nav>
@@ -27,6 +30,7 @@
             <li><a href="/users/register">REGISTRATE|</a></li>
             <li><a href="/users/login">INGRESA</a></li>
         <% }else{ %>
+          <li>HOLA <%= locals.userLogin.name %></li>
             <li><a href="/users/profile">MI PERFIL|</a></li>
             <li><a href="/users/logout">SALIR</a></li>
         <% } %>

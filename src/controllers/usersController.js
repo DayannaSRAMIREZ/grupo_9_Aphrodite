@@ -1,8 +1,16 @@
-const {validationResult} = require('express-validator');
+const {
+    validationResult
+} = require('express-validator');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const path = require('path');
-const users = require('../data/dataUser.json');
+const usersFilePath = path.join(__dirname, '../data/dataUser.json');
+
+const readUsers = () => {
+    const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+	return users
+}; 
+
 const guardarJson = (array) => fs.writeFileSync(
     path.resolve(__dirname, "..", "data", "dataUser.json"),
     JSON.stringify(array, null, 3),
@@ -16,6 +24,7 @@ module.exports = {
     },
     registerController: (req, res) => {
         let errors = validationResult(req)
+        let users= readUsers(); 
         if (errors.isEmpty()) {
             let {
                 name,
@@ -43,11 +52,11 @@ module.exports = {
             users.push(newUser)
             guardarJson(users);
             res.redirect('/')
-         
-        }else{
-        
+
+        } else {
+
             return res.render('register', {
-                old: req.body, 
+                old: req.body,
                 errors: errors.mapped()
             });
         }
@@ -56,35 +65,111 @@ module.exports = {
         res.render('login')
     },
     processLogin: (req, res) => {
-        const errors = validationResult(req)
-        if(errors.isEmpty()){
-            const {id, name, image, rol} = users.find(user=> user.email === req.body.email)
+        const errors = validationResult(req);
+        let users= readUsers(); 
+
+        if (errors.isEmpty()) {
+            const {
+                id,
+                name,
+                image,
+                rol
+            } = users.find(user => user.email === req.body.email)
             // levanto session
-            req.session.userLogin={
+            req.session.userLogin = {
                 id,
                 name,
                 image,
                 rol
             }
-            if(req.body.remember){
-                res.cookie('userAprhodite', req.session.userLogin, {maxAge: 1000*60*2})
+            if (req.body.remember) {
+                res.cookie('userAprhodite', req.session.userLogin, {
+                    maxAge: 1000 * 60 * 2
+                })
             }
             res.redirect('/')
-        }else{
+        } else {
             res.render('login', {
                 errors: errors.mapped()
             })
-           
+
         }
-    
+
     },
-    profile: (req,res)=>{
-        res.render('profile')
+    profile: (req, res) => {
+        let users= readUsers(); 
+        const usuario = users.find(usuario => usuario.id === req.session.userLogin.id);
+
+        return res.render('profile', {
+            usuario
+        })
+
     },
-    logout : (req,res) => {
-       req.session.destroy(); 
-       res.cookie('userAprhodite', null, {maxAge: -1}); 
-       res.redirect('/')
+    profileUpdate: (req, res) => {
+
+        const errors = validationResult(req);
+        let users= readUsers(); 
+
+        if (errors.isEmpty()) {
+            let {
+                name,
+                surname,
+                password,
+                date,
+                country,
+                gender
+            } = req.body;
+            const {
+                id
+            } = users.find(user => user.id === req.session.userLogin.id);
+
+            const usuariosModificados = users.map((usuario) => {
+                if (usuario.id === id) {
+                    let usuarioModificado = {
+                        ...usuario,
+                        name: name.trim(),
+                        surname: surname.trim(),
+                        date,
+                        country,
+                        gender,
+                        image: req.file ? req.file.filename : usuario.image,
+                     
+                    };
+
+                  
+                    
+                    return usuarioModificado;
+                }
+                return usuario;
+            });
+
+            guardarJson(usuariosModificados)
+            req.session.userLogin = {
+                ...req.session.userLogin,
+                name
+            }
+
+            return res.redirect("/");
+
+
+        } else {
+
+            return res.render('profile', {
+                usuario: req.body,
+                errors: errors.mapped(),
+
+            });
+
+        }
+
+
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.cookie('userAprhodite', null, {
+            maxAge: -1
+        });
+        res.redirect('/')
     }
-      
-} 
+
+}
