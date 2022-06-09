@@ -180,5 +180,37 @@ module.exports = {
         const productsModify = products.filter(product => product.id !== +id);
         guardarJson(productsModify)
         res.redirect('/product');
+    },
+    collares:(req,res)=>{
+        let products= readProducts(); 
+        const collares = products.filter(product=> product.category=== 'collares'); 
+        res.render( 'collares', {collares})
+
+
+    },
+    anillos:(req,res)=>{
+        let products= readProducts(); 
+        const anillos = products.filter(product=> product.category === 'anillos'); 
+         res.render( 'anillos', {anillos})
+
+    },
+    pulseras:(req,res)=>{
+        let products= readProducts(); 
+        const pulseras = products.filter(product=> product.category === 'pulseras'); 
+        res.render( 'pulseras', {pulseras})
+ 
+
+    },
+    aritos:(req,res)=>{
+        let products= readProducts(); 
+        const aritos = products.filter(product=> product.category === 'aritos'); 
+        res.render( 'aritos', {aritos})
+
+    },
+    relojes:(req,res)=>{
+        let products= readProducts(); 
+        const relojes = products.filter(product=> product.category === 'relojes'); 
+        res.render( 'relojes', {relojes})
+      
     }
 }

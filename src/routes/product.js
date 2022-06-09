@@ -4,10 +4,15 @@ const upload = require('../middlewares/uploadImagesProducts');
 const productsValidator = require('../validations/productValidator'); 
 const adminCheck = require('../middlewares/adminCheck'); 
 
-const{detail, cart, product, gift, addProduct, productsEdit, store, search, update, remove}= require('../controllers/productController');
+const{detail, cart, product, gift, addProduct, productsEdit, store, search, update, remove, relojes,anillos,aritos, pulseras,collares}= require('../controllers/productController');
 router.get('/detail/:id', detail)
       .get('/cart', cart )
       .get('/', product)
+      .get('/relojes', relojes)
+      .get('/anillos', anillos)
+      .get('/pulseras', pulseras)
+      .get('/collares', collares)
+      .get('/aritos', aritos)
       .get('/gifts', gift)
       .get('/add',adminCheck, addProduct)
       .post('/add',upload.single('image'),productsValidator,  store)

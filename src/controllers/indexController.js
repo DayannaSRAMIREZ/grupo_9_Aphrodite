@@ -11,6 +11,7 @@ const readProducts = () => {
 module.exports= {
     index: (req,res)=>{
     let products= readProducts(); 
+
         res.render('index', {products})
     },
     weAre: (req,res)=>{
