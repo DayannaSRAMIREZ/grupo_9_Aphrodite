@@ -27,13 +27,18 @@
       <ul class="header__menu__usuarios">
         
         <% if (!locals.userLogin) { %>
-            <li><a href="/users/register">REGISTRATE|</a></li>
-            <li><a href="/users/login">INGRESA</a></li>
+          <div class="boxIngreso">
+            <li class="btnRegistrate"><a href="/users/register">REGISTRATE|</a></li>
+            <li class="ingresaBtn"><a href="/users/login">INGRESA</a></li>
+          </div>
         <% }else{ %>
-          <li>HOLA <%= locals.userLogin.name %></li>
-            <li><a href="/users/profile">MI PERFIL|</a></li>
-            <li><a href="/users/logout">SALIR</a></li>
+          
+             <li class="saludoUser">HOLA <%= locals.userLogin.name %></li>
+            <li class="profile"><a href="/users/profile">MI PERFIL|</a></li>
+            <li class="salir"><a href="/users/logout">SALIR</a></li>
+         
         <% } %>
+
        </ul>
  
       </div>

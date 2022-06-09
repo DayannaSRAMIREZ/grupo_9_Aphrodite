@@ -138,5 +138,17 @@
       "gender": "femenino",
       "image": "image-1654654799310.jpg",
       "rol": "guest"
+   },
+   {
+      "id": 13,
+      "name": "Daniela",
+      "surname": "Orbes",
+      "email": "danielaorbes73@gmail.com",
+      "password": "$2a$10$wm1eXd8IjyyOXOLmmXg04eZRskOFKC.58UIRg6egm3VUfoiFJFk8G",
+      "date": "2022-06-08",
+      "country": "uy",
+      "gender": "nodice",
+      "image": "noimage.png",
+      "rol": "guest"
    }
 ]
