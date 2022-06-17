@@ -1,0 +1,49 @@
+.buscador_productos{
+    margin: 30px;
+    text-align: center;
+   
+}
+.buscador_productos input{
+    width: 180px;
+    height: 30px;
+    padding: 2px;
+   
+}
+.buscador_productos button{
+    width: 50px;
+    height: 38px;
+    font-family: 'rosarivo';
+   
+}
+.buscador_productos button:hover{
+  
+    font-family: 'rosarivo';
+    background-color: var(--colorRosaClaro);
+    border-radius: 5px;
+   
+}
+.titulo__productos{
+    text-align: center;
+    margin: 20px;
+}
+.main__productos{
+    background-color: rgb(233, 230, 230);
+}
+.alert-products{
+    font-size: 11px;
+    color: red;
+}
+@media (min-width:768px) {
+    .buscador_productos input{
+        width: 380px;
+        height: 30px;
+        padding: 2px;
+       
+    }
+    .buscador_productos button{
+        width: 80px;
+        height: 38px;
+      
+       
+    }
+}

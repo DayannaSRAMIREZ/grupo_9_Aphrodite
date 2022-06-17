@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %> 
+<body class="profile">
+  <%- include('./partials/header') %> 
+
+  <form class="register__form form__profile" action="/users//profile-update?_method=PUT" method="post" enctype="multipart/form-data">
+    <article>
+      <div class="register__form-box caja__imagen">
+        <div><img class="profile__image" src="/images/profileImages/<%= locals.userLogin.image %> " alt=""></div>
+        <label for="name">Nombre</label>
+        <br>
+        <input class="register__form-input" type="text" id="name" name="name" value="<%= locals.usuario && locals.usuario.name %>">
+        <br>
+        <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+
+      </div>
+      <div class="register__form-box">
+        <label for="nombre">Apellido</label>
+        <br>
+        <input class="register__form-input" type="text" id="surname" name="surname" value="<%= locals.usuario && locals.usuario.surname %>">
+        <br>
+        <span class="alert-products"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
+
+      </div>
+  
+    
+    
+      <div class="register__form-box pais">
+        <label class="register__pais" for="pais">País</label>
+
+        <select class="register__form-select" name="country" id="country">
+          <option value="" hidden selected>Por favor elegí uno...</option>
+          <option value="ar" <%= locals.usuario && usuario.country && usuario.country == 'ar' ? 'selected' : null %>>Argentina</option>
+          <option value="bol" <%= locals.usuario && usuario.country && usuario.country == 'bol' ? 'selected' : null %>>Bolivia</option>
+          <option value="br" <%= locals.usuario && usuario.country && usuario.country == 'br' ? 'selected' : null %>>Brasil</option>
+          <option value="cl" <%= locals.usuario && usuario.country && usuario.country == 'cl' ? 'selected' : null %>>Chile</option>
+          <option value="col" <%= locals.usuario && usuario.country && usuario.country == 'col' ? 'selected' : null %>>Colombia</option>
+          <option value="mx" <%= locals.usuario && usuario.country && usuario.country == 'mx' ? 'selected' : null %>>México</option>
+          <option value="par" <%= locals.usuario && usuario.country && usuario.country == 'par' ? 'selected' : null %>>Paraguay</option>
+          <option value="per" <%= locals.usuario && usuario.country && usuario.country == 'per' ? 'selected' : null %>>Perú</option>
+          <option value="uy" <%= locals.usuario && usuario.country && usuario.country == 'uy' ? 'selected' : null %>>Uruguay</option>
+          <option value="vnz" <%= locals.usuario && usuario.country && usuario.country == 'vnz' ? 'selected' : null %>>Venezuela</option>
+        </select>
+        <br>
+        <span class="alert-products"><%= locals.errors && errors.country? errors.country.msg : null %></span>
+
+      </div>
+      <div class="genero__titulo">
+        <h4>Género</h4>
+      </div>
+
+      <div class="register__form-box__genero">
+        <div class="register__radio-box">
+          <input class="" type="radio" name="gender" id="masculino" value="masculino"<%= locals.usuario && usuario.gender && usuario.gender == "masculino"? 'checked' : null %>>
+          <label for="masculino">M</label>
+        </div>
+        <div class="register__radio-box">
+          <input class="" type="radio" name="gender" id="femenino" value="femenino" <%= locals.usuario && usuario.gender && usuario.gender == "femenino"? 'checked' : null %>>
+          <label for="femenino">F</label>
+        </div>
+        <div class="register__radio-box">
+          <input class="" type="radio" name="gender" id="nodice" value="nodice" <%= locals.usuario && usuario.gender && usuario.gender == "nodice"? 'checked' : null %>>
+          <label for="nodice">Otro</label>
+        </div>
+      </div>
+      <span class="alert-products"><%= locals.errors && errors.gender? errors.gender.msg : null %></span>
+  
+    </article>
+    <div class="formEdit">
+      <label for="nameProduct">Cargar Imágen de perfil</label>
+      <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*">
+  </div>
+    <div class="button_register_box">
+      <button  type="submit">EDITAR</button>
+    </div>
+  </form>
+    <%- include('./partials/footer') %> 
+</body>
+</html>

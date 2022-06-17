@@ -4,9 +4,10 @@ footer {
     color: var(--colorNegroClaro);
     font-family: rosarivo;
     font-size: 12px;
-    /* position: absolute;
-    bottom: 0; */
+     /* position: absolute;  */
+
     width: 100%;
+  /* bottom: 0; */
 }
 
 footer section a {
@@ -171,15 +172,15 @@ padding-left: 0 !important;
         font-size: 1vw;
      
     }
+    
     .home__main__lonuevo{
         background-size: contain;
     }
-    footer button, input, optgroup, select, textarea {
+    footer button, input, optgroup, select {
       
-    
         font-size: 10 !important; 
-         line-height: 0 !important; 
-    }
+          line-height: 0 !important; 
+     }
     .footer__subscripcion button{
       margin-top: 2vh;
         padding: 0.9vw 2vh;

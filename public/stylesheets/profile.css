@@ -1,0 +1,11 @@
+ .profile{
+    background-color: var(--colorRosaClaro);
+}
+.form__profile{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 5vh 5vh;
+}
+.profile__image{
+    width: 60px;
+}
