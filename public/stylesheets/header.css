@@ -179,6 +179,16 @@
     }
        
 }
-
+@media (min-width: 2560px){
+    .header__menu__usuarios {
+        width: 460px;
+    }
+    .btnRegistrate {
+        width: 186px;
+    }
+    .navUser {
+        margin-right: 54px;
+    }
+}
 
 
