@@ -5,6 +5,87 @@ body.home {
 .home a {
     color: var(--colorNegroClaro);
 }
+.card1 {
+    background: url('../images/home/atajos/anillo.jpeg') center no-repeat;
+}
+.card2 {
+    background: url('../images/home/atajos/pulsera.jpeg') center no-repeat;
+}
+.card3 {
+    background: url('../images/home/atajos/reloj.jpeg') center no-repeat;
+}
+.card4 {
+    background: url('../images/home/atajos/aritos.jpeg') center no-repeat;
+}
+.card5 {
+    background: url('../images/home/atajos/collar.jpeg') center no-repeat;
+}
+.card {
+    position: relative;
+    width: 29vh;
+    height: 29vh;
+    color: white;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    padding: 10px;
+    background-size: cover;
+    border-width: 1.5px;
+    border-color: var(--colorRosaFuerte);
+    z-index: 1;
+    overflow: hidden;
+    margin: 0.5vw;
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(60% + 35px);
+    background-color: var(--colorRosaClaro);
+    transition: transform .5s.25s ease-in;
+    z-index: -1;
+}
+
+.card::before {
+    top: 0;
+    clip-path:
+        polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+    transform: translateY(-100%);
+}
+
+.card::after {
+    bottom: 0;
+    clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+    transform: translateY(100%);
+}
+
+.card__content {
+    opacity: 0;
+    transition: opacity .25s;
+    color:var(--colorDorado);    
+}
+
+.card__title {
+    color:var(--colorDorado);   
+    margin-bottom: 15px;
+}
+
+.card__description {
+    font-size: 1.9vh;
+}
+
+.card:hover::before,
+.card:hover::after {
+    transform: translateY(0);
+}
+
+.card:hover .card__content {
+    opacity: 1;
+    transition-delay: .75s;
+}
 
 
 #video {
@@ -47,13 +128,8 @@ body.home {
 
 }
 
-.home__main__atajos__clickeables {
 
-    border: solid 1px var(--colorRosaFuerte);
-}
-
-.home__main__atajos__mas,
-.home__main__atajos__clickeables {
+.home__main__atajos__mas {
     height: 30vw;
     width: 32vw;
     margin-top: 1vh;
@@ -366,8 +442,7 @@ body.home {
         grid-template-columns: auto auto;
     }
 
-    .home__main__atajos__mas,
-    .home__main__atajos__clickeables {
+    .home__main__atajos__mas {
         height: 15vw;
         width: 19vw;
         margin: 1vh 0;
@@ -449,13 +524,7 @@ body.home {
         display: flex;
     }
 
-    .home__main__atajos__clickeables {
-        height: 12vw;
-        width: 14vw;
-        margin: 1vh 0;
-        text-align: center;
-        padding: 0 0 2vw 0;
-    }
+
 
     .home__main__carrousel__foto {
         display: none;
