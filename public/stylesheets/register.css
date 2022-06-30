@@ -164,6 +164,7 @@
     border: none;
     padding: 5px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    line-height: normal !important;
 }
 @media (min-width: 460px) {
     .register__main {

@@ -58,16 +58,32 @@ header {
 
 }
 .header__menu__usuarios{
-    margin-top: 2vh;
+    margin-top: 3vh;
     display: flex;
     justify-content: space-between;
+    width: 158px;
+    flex-direction: column;
+    margin-top: 40px;
 
 }
+
 
 .header__nav__ul-menuPrincipal li {
 
     margin: 3px;
 }
+
+
+.btnRegistrate{
+    width: 80px;
+
+}
+.boxIngreso{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 
 .header__nav__ul-menuSecundario {
 
@@ -78,6 +94,10 @@ header {
     justify-content: space-between;
 
 
+}
+.navUser{
+    padding: 0px 50px;
+    margin-bottom: 29px;
 }
 
 .header__nav__ul-menuSecundario li {
@@ -98,7 +118,7 @@ header {
 
     display: flex;
     flex-direction: column-reverse;
-
+    
 }
 
 
@@ -136,11 +156,41 @@ header {
   .header__nav__ul-menuPrincipal li {
         padding: 0px 10px 0px 10px;
     } 
-  
+    .boxIngreso{
+        display: flex;
+        flex-direction: row;
+    }
+    .btnRegistrate {
+        width: 56px;
+    }
 
     .header__nav__ul-menuSecundario li {
 
         margin-inline-end: 8px;
     }
+    .header__menu__usuarios {
+        width: 162px;
+        flex-direction: row;
+    }
+    @media (min-width: 1024px) {
+    .header__menu__usuarios {
+        width: 208px;
+        flex-direction: row;
+        }
+        .btnRegistrate {
+            width: 80px;
+        }
+    }
 
+    @media (min-width: 1440px) {
+    .header__menu__usuarios {
+        width: 268px;
+        flex-direction: row;
+     }
+     .btnRegistrate {
+        width: 108px;
+    }
+       
+    }
 }
+
