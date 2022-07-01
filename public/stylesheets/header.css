@@ -1,134 +1,120 @@
-header {
-
-    background-color: var(--colorRosaClaro);
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    /* position: fixed;
-    width: 100%;
-    top:  0; */
-}
 
 
-#menu {
-
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    padding: 4px;
-    justify-content: space-between;
-
-}
-
-#menu button {
-
-    background-color: var(--colorRosaClaro);
-    color: var(--colorNegroClaro);
-    border: none;
-    font-size: 20px;
-
-}
-
-.header__nav__button {
-
-    background-color: var(--colorRosaClaro);
-    color: var(--colorNegroClaro);
-    border: none;
-    font-size: 14px;
-    border: solid 1px var(--colorNegroClaro);
-    border-radius: 5px;
-}
-
-.logo a {
-
-    color: var(--colorNegroClaro);
-    display: flex;
-    flex-direction: center;
-    padding: 8.3px;
-    justify-content: space-between;
-}
+    header {
+       background-color: var(--colorRosaClaro);
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+       /* position: fixed;
+      width: 100%;
+      top:  0; */
+    }
 
 
-.header__nav__ul-menuPrincipal a {
+    #menu {
 
-    color: var(--colorNegroClaro);
-    display: flex;
-    justify-content: left;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        padding: 4px;
+        justify-content: space-between;
 
+    }
 
-}
-.header__menu__usuarios{
-    margin-top: 3vh;
-    display: flex;
-    justify-content: space-between;
-    width: 158px;
-    flex-direction: column;
-    margin-top: 40px;
+    #menu button {
 
-}
+        background-color: var(--colorRosaClaro);
+        color: var(--colorNegroClaro);
+        border: none;
+        font-size: 20px;
+    }
 
+    .header__nav__button {
 
-.header__nav__ul-menuPrincipal li {
+        background-color: var(--colorRosaClaro);
+        color: var(--colorNegroClaro);
+        border: none;
+        font-size: 14px;
+        border: solid 1px var(--colorNegroClaro);
+        border-radius: 5px;
+    }
 
-    margin: 3px;
-}
+    .logo a {
 
-
-.btnRegistrate{
-    width: 80px;
-
-}
-.boxIngreso{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-
-.header__nav__ul-menuSecundario {
-
-    display: flex;
-    flex-direction: row;
-
-    padding: 5px;
-    justify-content: space-between;
+        color: var(--colorNegroClaro);
+        display: flex;
+        flex-direction: center;
+        padding: 8.3px;
+        justify-content: space-between;
+    }
 
 
-}
-.navUser{
-    padding: 0px 50px;
-    margin-bottom: 29px;
-}
+    .header__nav__ul-menuPrincipal a {
 
-.header__nav__ul-menuSecundario li {
+        color: var(--colorNegroClaro);
+        display: flex;
+        justify-content: left;
+    }
+    .header__menu__usuarios{
+        margin-top: 3vh;
+        display: flex;
+        justify-content: space-between;
+        width: 158px;
+        flex-direction: column;
+        margin-top: 40px;
+    }
 
-    margin-inline-end: 4px;
-}
+    .header__nav__ul-menuPrincipal li {
+        margin: 3px;
+    }
 
-.header__nav__ul-menuSecundario a {
-
-    color: var(--colorNegroClaro);
-    display: flex;
-    justify-content: center;
-
-
-}
-
-.listas {
-
-    display: flex;
-    flex-direction: column-reverse;
-    
-}
-
-
-.header__nav {
+    .btnRegistrate{
+        width: 80px;
+    }
+    .boxIngreso{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
 
-    width: 100%;
+    .header__nav__ul-menuSecundario {
+
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        justify-content: space-between;
+    } 
+    .userProfile{
+        margin-right: 10px;
+    }
+    .navUser{
+        margin-right: 15px;
+        margin-bottom: 29px;
+    }
+
+    .header__nav__ul-menuSecundario li {
+
+        margin-inline-end: 4px;
+    }
+
+    .header__nav__ul-menuSecundario a {
+
+        color: var(--colorNegroClaro);
+        display: flex;
+        justify-content: center;
+    }
+
+    .listas {
+
+        display: flex;
+        flex-direction: column-reverse;   
+    }
 
 
-}
+    .header__nav {
+        width: 100%;
+    }
 
 @media (min-width: 768px) {
 
@@ -172,6 +158,7 @@ header {
         width: 162px;
         flex-direction: row;
     }
+}
     @media (min-width: 1024px) {
     .header__menu__usuarios {
         width: 208px;
@@ -191,6 +178,17 @@ header {
         width: 108px;
     }
        
+}
+@media (min-width: 2560px){
+    .header__menu__usuarios {
+        width: 460px;
+    }
+    .btnRegistrate {
+        width: 186px;
+    }
+    .navUser {
+        margin-right: 54px;
     }
 }
+
 
