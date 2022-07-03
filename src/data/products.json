@@ -1,9 +1,8 @@
-[
-   {
+[{
       "id": 2,
       "name": "Fiorever",
       "materials": "oro",
-      "size": "Seleccione uno:",
+      "size": "xs",
       "description": "Anillo Fiorever en oro blanco de 18 qt con un diamante redondo talla brillante central y pavé de diamantes.",
       "category": "anillos",
       "price": 5500,
