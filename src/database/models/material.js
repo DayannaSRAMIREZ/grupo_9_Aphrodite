@@ -10,14 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Material.hasMany(models.Product,{
-        as : 'products',
-        foreignKey : 'materialsId'
-       })
-      
+      Material.hasMany(models.Product, {
+        as: 'products',
+        foreignKey: 'materialId'
+      })
+
     }
-    }
-  
+  }
+
   Material.init({
     name: DataTypes.STRING(50)
   }, {

@@ -2,7 +2,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Users', {
-   
+
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -51,7 +51,7 @@ module.exports = {
       updatedAt: {
         allowNull: true,
         type: Sequelize.DATE
-      }, 
+      },
       deletedAt: {
         allowNull: true,
         type: Sequelize.DATE

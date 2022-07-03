@@ -128,13 +128,13 @@
         <div class="tarjeta2 ">
           <h4><%= products[index].name %> </h4>
           <div class="home__contenedor2">
-            <p>10% off</p>
-
-            <img src="/images/products/<%= products[index].img1 %> " alt="destacados1" />
+            
+            <p><%= products[index].discount%>  % off</p>
+            <img src="/images/products/<%= products[index].images[0].name%> " alt="destacados1"/>
 
           </div>
           <div class="tarjeta__pie2">
-            <h6>u$s 5<%= products[index].price %> </h6>
+            <h6>u$s<%= products[index].price %> </h6>
             <button><a href="/product/detail/<%= products[index].id %> ">ver más</a></button>
           </div>
         </div>
