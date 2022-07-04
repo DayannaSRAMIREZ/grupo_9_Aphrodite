@@ -139,9 +139,13 @@
           </div>
 
           <hr />
-          <!-- dayshana arregla esto -->
-          <p>Categoria: <% product.categoryId%></p> <!-- !!!!!!!!!!!!! -->
-          <p>Material: <%= product.materials %></p>
+        
+          <p>Categoria: <% categories.forEach(category => { %>
+           <%= category.id === product.categoryId ? category.name:null%> 
+          <% }) %></p>
+          <p>Material:<% materials.forEach(material=> { %>
+            <%= material.id === product.materialId ? material.name:null%> 
+           <% }) %></p> <!-- !!!!!!!!!!!!! --></p>
         </article>
         <article class="detalle__productos__envios">
           <h3>Envíos y Devoluciones</h3>

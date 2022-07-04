@@ -22,13 +22,16 @@ module.exports = {
             include: ['images']
         })
         let categories = db.Category.findAll()
+        let materials = db.Material.findAll()
 
-        Promise.all([product, categories])
-            .then(([product, categories]) => {
+        Promise.all([product, categories, materials])
+            .then(([product, categories, materials]) => {
                 return res.render('productDetail', {
                     product,
-                    categories
+                    categories,
+                    materials
                 })
+
             })
             .catch(error => console.log('error'))
     },
