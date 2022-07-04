@@ -66,7 +66,10 @@
 
           <hr />
 
-          <p>talla <%= product.size %></p>
+          <p>talla <% sizes.forEach(size => { %>
+            <%= size.id === product.sizeId ? size.name:null%> 
+           <% }) %></p>
+          
           <div class="botoncm"><button>45cm</button></div>
         </article>
 

@@ -23,13 +23,15 @@ module.exports = {
         })
         let categories = db.Category.findAll()
         let materials = db.Material.findAll()
+        let sizes = db.Size.findAll()
 
-        Promise.all([product, categories, materials])
-            .then(([product, categories, materials]) => {
+        Promise.all([product, categories, materials, sizes])
+            .then(([product, categories, materials, sizes]) => {
                 return res.render('productDetail', {
                     product,
                     categories,
-                    materials
+                    materials,
+                    sizes
                 })
 
             })
@@ -67,15 +69,25 @@ module.exports = {
         res.render('addProducts')
     },
     productsEdit: (req, res) => {
-        let products = readProducts();
-        const {
-            id
-        } = req.params;
-        const product = products.find(producto => producto.id === +id);
-
-        res.render('productsEdit', {
-            product
+        let product = db.Product.findByPk(req.params.id, {
+            include: ['images']
         })
+        let categories = db.Category.findAll()
+        let materials = db.Material.findAll()
+        let sizes = db.Size.findAll()
+
+        Promise.all([product, categories, materials, sizes])
+            .then(([product, categories, materials,sizes]) => {
+                return res.render('productsEdit', {
+                    product,
+                    categories,
+                    materials,
+                    sizes
+                })
+
+            })
+            .catch(error => console.log('error'))   
+      
     },
     store: (req, res) => {
         let products = readProducts();
