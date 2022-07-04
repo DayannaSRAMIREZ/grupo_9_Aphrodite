@@ -16,13 +16,15 @@
    
   <section class="home_cards">
 
-    <% arrayAnillos.forEach(({id, name, price, images}) => { %>
+    <% arrayAnillos.forEach(({id, name, price, images, discount}) => { %>
       <article>
         <div class="tarjeta tarjeta1">
           <h4><%= name %> </h4>
           <div class="home__contenedor">
-            <p>10% off</p>
-            
+            <% if (discount>0) { %>
+              <p><%= discount %>% off</p>
+            <% } %>
+           
             <img src="/images/products/<%= images[0].name%>" alt="destacados1" />
         
           </div>
@@ -41,12 +43,15 @@
    
   <section class="home_cards">
 
-    <% arrayRelojes.forEach(({id, name, price, images}) => { %>
+    <% arrayRelojes.forEach(({id, name, price, images, discount}) => { %>
       <article>
         <div class="tarjeta tarjeta1">
           <h4><%= name %> </h4>
           <div class="home__contenedor">
-            <p>10% off</p>
+            <% if (discount>0) { %>
+              <p><%= discount %>% off</p>
+            <% } %>
+           
             
             <img src="/images/products/<%= images[0].name%>" alt="destacados1" />
         
@@ -67,12 +72,15 @@
    
   <section class="home_cards">
 
-    <% arrayPulseras.forEach(({id, name, price, images}) => { %>
+    <% arrayPulseras.forEach(({id, name, price, images,discount}) => { %>
       <article>
         <div class="tarjeta tarjeta1">
           <h4><%= name %> </h4>
           <div class="home__contenedor">
-            <p>10% off</p>
+            <% if (discount>0) { %>
+              <p><%= discount %>% off</p>
+            <% } %>
+           
             
             <img src="/images/products/<%= images[0].name%>" alt="destacados1" />
         
@@ -93,13 +101,15 @@
    
   <section class="home_cards">
 
-    <% arrayAritos.forEach(({id, name, price, images}) => { %>
+    <% arrayAritos.forEach(({id, name, price, images,discount}) => { %>
       <article>
         <div class="tarjeta tarjeta1">
           <h4><%= name %> </h4>
           <div class="home__contenedor">
-            <p>10% off</p>
-            
+            <% if (discount>0) { %>
+              <p><%= discount %>% off</p>
+            <% } %>
+           
             <img src="/images/products/<%= images[0].name%>" alt="destacados1" />
         
           </div>
@@ -120,12 +130,15 @@
    
   <section class="home_cards">
 
-    <% arrayCollares.forEach(({id, name, price, images}) => { %>
+    <% arrayCollares.forEach(({id, name, price, images,discount}) => { %>
       <article>
         <div class="tarjeta tarjeta1">
           <h4><%= name %> </h4>
           <div class="home__contenedor">
-            <p>10% off</p>
+            <% if (discount>0) { %>
+              <p><%= discount %>% off</p>
+            <% } %>
+           
             
             <img src="/images/products/<%= images[0].name%>" alt="destacados1" />
         

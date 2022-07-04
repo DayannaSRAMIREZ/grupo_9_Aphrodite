@@ -1,10 +1,12 @@
 const db = require('../database/models');
 const path = require('path');
 const fs = require('fs');
+
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const {
     validationResult
 } = require("express-validator");
+const { Op } = require('sequelize');
 
 const readProducts = () => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -24,6 +26,7 @@ module.exports = {
         let categories = db.Category.findAll()
         let materials = db.Material.findAll()
         let sizes = db.Size.findAll()
+        
 
         Promise.all([product, categories, materials, sizes])
             .then(([product, categories, materials, sizes]) => {
@@ -130,16 +133,33 @@ module.exports = {
 
     },
     search: (req, res) => {
-        let products = readProducts();
-        const {
-            keyword
-        } = req.query;
-        const results = products.filter(producto => producto.name.toLowerCase().includes(keyword.toLowerCase()) || producto.description.toLowerCase().includes(keyword.toLowerCase()));
+        const {keyword} = req.query;
 
-        res.render('results', {
-            results,
-            keyword
-        })
+		db.Product.findAll({
+			where : {
+				[Op.or] : [
+					{
+						name : {
+							[Op.substring] : keyword
+						}
+					},
+					{
+						description : {
+							[Op.substring] : keyword
+						}
+					}
+				]
+			},
+			include : ['images']
+		}).then(results => {
+			return res.render('results',{
+				results,
+				keyword,
+			
+			})
+		}).catch(error => console.log(error))
+	
+     
     },
     update: (req, res) => {
         let products = readProducts();
@@ -209,45 +229,84 @@ module.exports = {
         res.redirect('/product');
     },
     collares: (req, res) => {
-        let products = readProducts();
-        const collares = products.filter(product => product.category === 'collares');
-        res.render('collares', {
-            collares
+        db.Product.findAll({include:['images']})
+
+        .then(products =>{
+            
+             let collares = products.filter(product => product.categoryId === 2);
+           
+            res.render('collares', {
+    
+                collares
+            })
         })
 
 
     },
     anillos: (req, res) => {
-        let products = readProducts();
-        const anillos = products.filter(product => product.category === 'anillos');
-        res.render('anillos', {
-            anillos
+        db.Product.findAll({include:['images']})
+
+        .then(products =>{
+            
+             let anillos = products.filter(product => product.categoryId === 1);
+           
+            res.render('anillos', {
+       
+                anillos
+            })
         })
+        .catch(error=>console.log(error))
+    
+    
 
     },
     pulseras: (req, res) => {
-        let products = readProducts();
-        const pulseras = products.filter(product => product.category === 'pulseras');
-        res.render('pulseras', {
-            pulseras
-        })
+        db.Product.findAll({include:['images']})
 
+        .then(products =>{
+            
+             let pulseras = products.filter(product => product.categoryId === 3);
+           
+            res.render('pulseras', {
+       
+                pulseras
+            })
+        })
+        .catch(error=>console.log(error))
+    
+    
 
     },
     aritos: (req, res) => {
-        let products = readProducts();
-        const aritos = products.filter(product => product.category === 'aritos');
-        res.render('aritos', {
-            aritos
+        db.Product.findAll({include:['images']})
+
+        .then(products =>{
+            
+             let aritos = products.filter(product => product.categoryId === 5);
+           
+            res.render('aritos', {
+       
+                aritos
+            })
         })
+        .catch(error=>console.log(error))
+    
+    
 
     },
     relojes: (req, res) => {
-        let products = readProducts();
-        const relojes = products.filter(product => product.category === 'relojes');
-        res.render('relojes', {
-            relojes
-        })
+        db.Product.findAll({include:['images']})
 
+        .then(products =>{
+            
+             let relojes = products.filter(product => product.categoryId === 4);
+           
+            res.render('relojes', {
+       
+                relojes
+            })
+        })
+        .catch(error=>console.log(error))
+    
     }
 }

@@ -8,14 +8,15 @@
 
     
 
-  <% relojes.forEach(({id, name, price, img1}) => { %>
+  <% relojes.forEach(({id, name, price, images, discount}) => { %>
     <article>
       <div class="tarjeta tarjeta1">
         <h4><%= name %> </h4>
         <div class="home__contenedor">
-          <p>10% off</p>
-          
-          <img src="/images/products/<%= img1 %> " alt="destacados1" />
+          <% if (discount>0) { %>
+            <p><%= discount %>% off</p>
+          <% } %>
+          <img src="/images/products/<%= images[0].name %> " alt="destacados1" />
       
         </div>
         <div class="tarjeta__pie">
