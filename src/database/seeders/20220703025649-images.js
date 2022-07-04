@@ -322,59 +322,78 @@ module.exports = {
       }
       ,
       {
-        name:"SerpentiSeductori1.jpeg",
+        name:"SerpentiReloj1.jpeg",
         primary: true,
         productId: 18,
         createdAt: new Date
       },
       {
-        name:"SerpentiSeductori2.jpeg",
+        name:"SerpentiReloj2.jpeg",
         primary: false,
         productId: 18,
         createdAt: new Date
       },
       {
-        name:"SerpentiSeductori3.jpeg",
+        name:"SerpentiReloj3.jpeg",
         primary: false,
         productId: 18,
+        createdAt: new Date
+      }
+      ,
+      {
+        name:"SerpentiSeductori1.jpeg",
+        primary: true,
+        productId: 19,
+        createdAt: new Date
+      },
+      {
+        name:"SerpentiSeductori2.jpeg",
+        primary: false,
+        productId: 19,
+        createdAt: new Date
+      },
+      {
+        name:"SerpentiSeductori3.jpeg",
+        primary: false,
+        productId: 19,
         createdAt: new Date
       }
       ,
       {
         name: "LuceaReloj1.jpeg",
         primary: true,
-        productId: 19,
+        productId: 20,
         createdAt: new Date
       },
       {
         name: "LuceaReloj2.jpeg",
         primary: false,
-        productId: 19,
+        productId: 20,
         createdAt: new Date
       },
       {
         name: "LuceaReloj3.jpeg",
         primary: false,
-        productId: 19,
+        productId: 20,
         createdAt: new Date
       }
       ,
       {
         name: "CrystalFlower1.jpeg",
         primary: true,
-        productId: 20,
+        productId: 21,
         createdAt: new Date
       },
       {
         name: "CrystalFlower2.jpeg",
         primary: false,
-        productId: 20,
+        productId: 21,
         createdAt: new Date
       },
       {
         name: "CrystalFlower3.jpeg",
         primary: false,
-        productId: 20,
+        productId: 21,
         createdAt: new Date
       }
 

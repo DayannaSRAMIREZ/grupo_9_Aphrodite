@@ -39,21 +39,26 @@ module.exports = {
         res.render('productCart')
     },
     product: (req, res) => {
-        let products = readProducts();
-        let arrayAnillos = products.filter(product => product.category === "anillos");
-        let arrayCollares = products.filter(product => product.category === "collares");
-        let arrayPulseras = products.filter(product => product.category === "pulseras");
-        let arrayRelojes = products.filter(product => product.category === "relojes");
-        let arrayAritos = products.filter(product => product.category === "aritos");
+    db.Product.findAll({include:['images']})
 
-        res.render('products', {
-            arrayAnillos,
-            arrayAritos,
-            arrayCollares,
-            arrayPulseras,
-            arrayPulseras,
-            arrayRelojes
+        .then(products =>{
+            
+           let arrayAnillos = products.filter(product => product.categoryId === 1);
+            let arrayCollares = products.filter(product => product.categoryId === 2);
+            let arrayPulseras = products.filter(product => product.categoryId === 3);
+             let arrayRelojes = products.filter(product => product.categoryId === 4);
+            let arrayAritos = products.filter(product => product.categoryId === 5);
+            res.render('products', {
+                arrayAnillos,
+                arrayAritos,
+                arrayCollares,
+                arrayPulseras,
+                arrayPulseras,
+                arrayRelojes
+            })
         })
+        .catch(error=>console.log(error))
+  
     },
     gift: (req, res) => {
         res.render('gifts')
