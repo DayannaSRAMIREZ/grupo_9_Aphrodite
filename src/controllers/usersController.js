@@ -159,8 +159,8 @@ module.exports = {
         }
 
 
-    },
-*/
+    
+*/},
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('userAprhodite', null, {
