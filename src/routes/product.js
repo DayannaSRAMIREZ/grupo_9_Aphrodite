@@ -18,7 +18,7 @@ router.get('/detail/:id', detail)
       .post('/add',upload.array('images'),productsValidator,  store)
       .get('/edit/:id',adminCheck, productsEdit)
       .get('/result', search)
-      .put('/update/:id',upload.array('image'), productsValidator,update)
+      .put('/update/:id',upload.single('image'), productsValidator,update)
       .delete('/remove/:id', remove)
       
 

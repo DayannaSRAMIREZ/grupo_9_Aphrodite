@@ -1,26 +1,8 @@
 const {
     validationResult
 } = require('express-validator');
-const fs = require('fs');
 const bcryptjs = require('bcryptjs');
-const path = require('path');
-const usersFilePath = path.join(__dirname, '../data/dataUser.json');
-
-const readUsers = () => {
-    const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-	return users
-}; 
-
-const guardarJson = (array) => fs.writeFileSync(
-    path.resolve(__dirname, "..", "data", "dataUser.json"),
-    JSON.stringify(array, null, 3),
-    "utf-8"
-);
-
 const db = require ('../database/models');
-const { brotliDecompress } = require('zlib');
-
-
 module.exports = {
     register: (req, res) => {
         res.render('register')
@@ -78,9 +60,9 @@ module.exports = {
                 id : +user.id,
                 name: user.name,
                 image: user.image,
-                rol : user.rol}
+                rol : user.rol
+            }
 
-            
          // levanto session
             if (req.body.remember) {
                 res.cookie('userAprhodite', req.session.userLogin, {
@@ -106,10 +88,9 @@ module.exports = {
 
     },
     profileUpdate: (req, res) => {
-
-        /*const errors = validationResult(req);
-        
-
+     
+       const errors = validationResult(req);
+ 
         if (errors.isEmpty()) {
             
             let {
@@ -128,28 +109,17 @@ module.exports = {
                         dob:date,
                         country,
                         gender,
-                        image: req.file ? req.file.filename : usuario.image,
+                        image: req.file && req.file.filename                    
+                    
             },
             {
                  where:{
                     id:req.session.userLogin.id
                  }
             } )
-            .then( (usuario) => res.redirect('/users/profile', {usuario}))
-
-            
+            .then( () => res.redirect('/users/profile'))
              .catch(error => console.log(error))
-
-                  
-                    
-                  
-
-        
-
-           
-
-        } else {
-
+      } else {
             return res.render('profile', {
                 usuario: req.body,
                 errors: errors.mapped(),
@@ -157,10 +127,7 @@ module.exports = {
             });
 
         }
-
-
-    
-*/},
+    },
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('userAprhodite', null, {

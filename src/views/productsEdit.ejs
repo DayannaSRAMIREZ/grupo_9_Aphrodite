@@ -24,7 +24,7 @@
                         <select class="selectForm" name="categoryId" id="categoryId">
                             <option hidden value="" >Seleccione uno...</option>
                             <% categories.forEach(category=> { %>
-                                <option value=<%= category.id %>  <%= product.categoryId === category.id && 'selected' %>><%= category.name %> 
+                                <option value=<%= category.id %>  <%= product.categoryId == category.id && 'selected' %>><%= category.name %> 
                                 </option>
                             <% }) %>
                             <span class="alert-products"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
@@ -36,7 +36,7 @@
                     <select class="selectForm" name="materialId" id="materialId">
                         <option hidden value="" >Seleccione uno...</option>
                         <% materials.forEach(material=> { %>
-                            <option value=<%= material.id %>  <%= product.materialId === material.id && 'selected' %>><%= material.name %> 
+                            <option value=<%= material.id %>  <%= product.materialId == material.id && 'selected' %>><%= material.name %> 
                             </option>
                         <% }) %>
                         
@@ -72,7 +72,7 @@
                         <select class="selectFormTalle" name="sizeId" id="sizeId">
                             <option hidden selected value="">Seleccione uno:</option>
                             <% sizes.forEach(size=> { %>
-                                <option value=<%= size.id %>  <%= product.sizeId === size.id && 'selected' %>><%= size.name %> 
+                                <option value=<%= size.id %>  <%= product.sizeId == size.id && 'selected' %>><%= size.name %> 
                                 </option>
                             <% }) %>
                             
@@ -101,11 +101,14 @@
 
             </form>
             <div>
-                <% product.images.forEach(image => { %>
-                    <% if (image.primary) { %>
-                      <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
-                    <% } %>
-                  <% }) %>
+                <% if (product.images) { %>
+                    <% product.images.forEach(image => { %>
+                        <% if (image.primary) { %>
+                          <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+                        <% } %>
+                      <% }) %>
+                <% } %>
+              
             
             </div>
            

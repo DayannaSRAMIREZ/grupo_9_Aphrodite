@@ -3,7 +3,9 @@ const db = require('../database/models');
 const {
     validationResult
 } = require("express-validator");
-const { Op } = require('sequelize');
+const {
+    Op
+} = require('sequelize');
 
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -17,7 +19,7 @@ module.exports = {
         let categories = db.Category.findAll()
         let materials = db.Material.findAll()
         let sizes = db.Size.findAll()
-        
+
 
         Promise.all([product, categories, materials, sizes])
             .then(([product, categories, materials, sizes]) => {
@@ -35,26 +37,28 @@ module.exports = {
         res.render('productCart')
     },
     product: (req, res) => {
-    db.Product.findAll({include:['images']})
-
-        .then(products =>{
-            
-           let arrayAnillos = products.filter(product => product.categoryId === 1);
-            let arrayCollares = products.filter(product => product.categoryId === 2);
-            let arrayPulseras = products.filter(product => product.categoryId === 3);
-             let arrayRelojes = products.filter(product => product.categoryId === 4);
-            let arrayAritos = products.filter(product => product.categoryId === 5);
-            res.render('products', {
-                arrayAnillos,
-                arrayAritos,
-                arrayCollares,
-                arrayPulseras,
-                arrayPulseras,
-                arrayRelojes
+        db.Product.findAll({
+                include: ['images']
             })
-        })
-        .catch(error=>console.log(error))
-  
+
+            .then(products => {
+
+                let arrayAnillos = products.filter(product => product.categoryId === 1);
+                let arrayCollares = products.filter(product => product.categoryId === 2);
+                let arrayPulseras = products.filter(product => product.categoryId === 3);
+                let arrayRelojes = products.filter(product => product.categoryId === 4);
+                let arrayAritos = products.filter(product => product.categoryId === 5);
+                res.render('products', {
+                    arrayAnillos,
+                    arrayAritos,
+                    arrayCollares,
+                    arrayPulseras,
+                    arrayPulseras,
+                    arrayRelojes
+                })
+            })
+            .catch(error => console.log(error))
+
     },
     gift: (req, res) => {
         res.render('gifts')
@@ -64,16 +68,16 @@ module.exports = {
         let materials = db.Material.findAll()
         let sizes = db.Size.findAll()
 
-        Promise.all([ categories, materials, sizes])
-            .then(([ categories, materials,sizes]) => {
-                return res.render('addProducts', { 
+        Promise.all([categories, materials, sizes])
+            .then(([categories, materials, sizes]) => {
+                return res.render('addProducts', {
                     categories,
                     materials,
                     sizes
                 })
 
             })
-            .catch(error => console.log('error'))  
+            .catch(error => console.log('error'))
     },
     productsEdit: (req, res) => {
         let product = db.Product.findByPk(req.params.id, {
@@ -84,7 +88,7 @@ module.exports = {
         let sizes = db.Size.findAll()
 
         Promise.all([product, categories, materials, sizes])
-            .then(([product, categories, materials,sizes]) => {
+            .then(([product, categories, materials, sizes]) => {
                 return res.render('productsEdit', {
                     product,
                     categories,
@@ -93,94 +97,107 @@ module.exports = {
                 })
 
             })
-            .catch(error => console.log('error'))   
-      
+            .catch(error => console.log('error'))
+
     },
     store: (req, res) => {
-        let errors= validationResult(req)
-        if(errors.isEmpty()){
-            const {name,price,discount,sizeId, materialId, description, categoryId, units}= req.body; 
-            db.Product.create({
-                name: name.trim(), 
-                price: +price,
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            const {
+                name,
+                price,
+                discount,
                 sizeId,
-                discount: +discount,
-                description: description.trim(),
                 materialId,
-                units: +units,
+                description,
                 categoryId,
-                materialId,
-               
-            })
-            .then(product=>{
-                if(req.files.length>0){
-                    let images =req.files.map(({filename},i)=>{
-                        let image ={
-                            name: filename,
-                            productId: product.id,
-                            primary: i===0? 1:0
-                        }
-                        return image
-                    })
-                    db.Image.bulkCreate(images, {validate: true})
-                    .then(result=>  res.redirect('/product'))
+                units
+            } = req.body;
+            db.Product.create({
+                    name: name.trim(),
+                    price: +price,
+                    sizeId,
+                    discount: +discount,
+                    description: description.trim(),
+                    materialId,
+                    units: +units,
+                    categoryId,
+                    materialId,
 
-                }
-                
+                })
+                .then(product => {
+                    if (req.files.length > 0) {
+                        let images = req.files.map(({
+                            filename
+                        }, i) => {
+                            let image = {
+                                name: filename,
+                                productId: product.id,
+                                primary: i === 0 ? 1 : 0
+                            }
+                            return image
+                        })
+                        db.Image.bulkCreate(images, {
+                                validate: true
+                            })
+                            .then(result => res.redirect('/product'))
 
-            })
-            .catch(error=> console.log(error))
+                    }
 
-        }else{
-            let categories= db.Category.findAll()
-            let materials =db.Material.findAll()
+
+                })
+                .catch(error => console.log(error))
+
+        } else {
+            let categories = db.Category.findAll()
+            let materials = db.Material.findAll()
             let sizes = db.Size.findAll()
 
-            Promise.all([categories,materials,sizes])
-            .then(([categories,materials,sizes])=>{
-                return res.render('addProducts',{
-                    categories,
-                    materials,
-                    sizes,
-                    errors:errors.mapped(),
-                    old:req.body
+            Promise.all([categories, materials, sizes])
+                .then(([categories, materials, sizes]) => {
+                    return res.render('addProducts', {
+                        categories,
+                        materials,
+                        sizes,
+                        errors: errors.mapped(),
+                        old: req.body
+                    })
                 })
-            })
 
         }
 
     },
     search: (req, res) => {
-        const {keyword} = req.query;
+        const {
+            keyword
+        } = req.query;
 
-		db.Product.findAll({
-			where : {
-				[Op.or] : [
-					{
-						name : {
-							[Op.substring] : keyword
-						}
-					},
-					{
-						description : {
-							[Op.substring] : keyword
-						}
-					}
-				]
-			},
-			include : ['images']
-		}).then(results => {
-			return res.render('results',{
-				results,
-				keyword,
-			
-			})
-		}).catch(error => console.log(error))
-	
-     
+        db.Product.findAll({
+            where: {
+                [Op.or]: [{
+                        name: {
+                            [Op.substring]: keyword
+                        }
+                    },
+                    {
+                        description: {
+                            [Op.substring]: keyword
+                        }
+                    }
+                ]
+            },
+            include: ['images']
+        }).then(results => {
+            return res.render('results', {
+                results,
+                keyword,
+
+            })
+        }).catch(error => console.log(error))
+
+
     },
     update: (req, res) => {
-        let products = readProducts();
         let errors = validationResult(req);
 
 
@@ -190,141 +207,185 @@ module.exports = {
             } = req.params;
             const {
                 name,
-                materials,
-                size,
+                materialId,
+                sizeId,
                 description,
-                category,
+                categoryId,
+                discount,
                 price,
-                unidades,
-                imagen
+                units,
 
             } = req.body
 
+            db.Product.update({
+                    name: name.trim(),
+                    price: +price,
+                    sizeId,
+                    discount: +discount,
+                    description: description.trim(),
+                    materialId,
+                    units: +units,
+                    categoryId,
+                    materialId,
 
-            const arrayModify = products.map(product => {
-                if (product.id === +id) {
-                    let productModify = {
-
-                        ...product,
-                        name: name,
-                        materials,
-                        size,
-                        description: description,
-                        category,
-                        price: +price,
-                        unidades: +unidades,
-                        img1: req.file ? req.file.filename : product.img1,
+                }, {
+                    where: {
+                        id: req.params.id
 
                     }
-                    return productModify;
-                }
-                return product
-            });
+                })
+                .then(async () => {
+                
+                    if(req.file){
+                        try {
+                            await db.Image.update(
+                                {
+                                    file : req.file.filename
+                                },
+                                {
+                                    where : {
+                                        productId : req.params.id,
+                                        primary : true
+                                    }
+                                }
+                            )
+                        } catch (error) {
+                            console.log(error);
+                        }
+                    }
+                    return res.redirect('/product');
+        
+                })
+                .catch(error => console.log(error))
 
-            guardarJson(arrayModify);
-            return res.redirect('/product');
+
 
         } else {
-            return res.render('productsEdit', {
-                product: {
-                    id: req.params.id,
-                    ...req.body
-                },
-                errors: errors.mapped(),
+            let categories = db.Category.findAll()
+            let sizes = db.Size.findAll()
+            let materials = db.Material.findAll()
 
-            });
 
+            Promise.all([categories, sizes, materials])
+                .then(([categories, sizes, materials]) => {
+                    return res.render('productsEdit', {
+
+
+                        product: {
+                            id: req.params.id,
+                            ...req.body
+                        },
+                        errors: errors.mapped(),
+                        categories,
+                        materials,
+                        sizes
+
+                    });
+
+                })
         }
 
     },
     remove: (req, res) => {
-        let products = readProducts();
-        const {
-            id
-        } = req.params;
-        const productsModify = products.filter(product => product.id !== +id);
-        guardarJson(productsModify)
-        res.redirect('/product');
+        db.Product.destroy({
+			where : {
+				id : req.params.id
+			}
+		})
+			.then((info) => {
+				return res.redirect('/product');
+			})
+			.catch(error => console.log(error))
     },
     collares: (req, res) => {
-        db.Product.findAll({include:['images']})
-
-        .then(products =>{
-            
-             let collares = products.filter(product => product.categoryId === 2);
-           
-            res.render('collares', {
-    
-                collares
+        db.Product.findAll({
+                include: ['images']
             })
-        })
+
+            .then(products => {
+
+                let collares = products.filter(product => product.categoryId === 2);
+
+                res.render('collares', {
+
+                    collares
+                })
+            })
 
 
     },
     anillos: (req, res) => {
-        db.Product.findAll({include:['images']})
-
-        .then(products =>{
-            
-             let anillos = products.filter(product => product.categoryId === 1);
-           
-            res.render('anillos', {
-       
-                anillos
+        db.Product.findAll({
+                include: ['images']
             })
-        })
-        .catch(error=>console.log(error))
-    
-    
+
+            .then(products => {
+
+                let anillos = products.filter(product => product.categoryId === 1);
+
+                res.render('anillos', {
+
+                    anillos
+                })
+            })
+            .catch(error => console.log(error))
+
+
 
     },
     pulseras: (req, res) => {
-        db.Product.findAll({include:['images']})
-
-        .then(products =>{
-            
-             let pulseras = products.filter(product => product.categoryId === 3);
-           
-            res.render('pulseras', {
-       
-                pulseras
+        db.Product.findAll({
+                include: ['images']
             })
-        })
-        .catch(error=>console.log(error))
-    
-    
+
+            .then(products => {
+
+                let pulseras = products.filter(product => product.categoryId === 3);
+
+                res.render('pulseras', {
+
+                    pulseras
+                })
+            })
+            .catch(error => console.log(error))
+
+
 
     },
     aritos: (req, res) => {
-        db.Product.findAll({include:['images']})
-
-        .then(products =>{
-            
-             let aritos = products.filter(product => product.categoryId === 5);
-           
-            res.render('aritos', {
-       
-                aritos
+        db.Product.findAll({
+                include: ['images']
             })
-        })
-        .catch(error=>console.log(error))
-    
-    
+
+            .then(products => {
+
+                let aritos = products.filter(product => product.categoryId === 5);
+
+                res.render('aritos', {
+
+                    aritos
+                })
+            })
+            .catch(error => console.log(error))
+
+
 
     },
     relojes: (req, res) => {
-        db.Product.findAll({include:['images']})
-
-        .then(products =>{
-            
-             let relojes = products.filter(product => product.categoryId === 4);
-           
-            res.render('relojes', {
-       
-                relojes
+        db.Product.findAll({
+                include: ['images']
             })
-        })
-        .catch(error=>console.log(error))
-    
+
+            .then(products => {
+
+                let relojes = products.filter(product => product.categoryId === 4);
+
+                res.render('relojes', {
+
+                    relojes
+                })
+            })
+            .catch(error => console.log(error))
+
     }
 }
