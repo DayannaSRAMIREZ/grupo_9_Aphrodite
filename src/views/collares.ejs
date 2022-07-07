@@ -14,8 +14,12 @@
           <% if (discount>0) { %>
             <p><%= discount %>% off</p>
           <% } %>
-          <img src="/images/products/<%= images[0].name %> " alt="destacados1" />
-      
+          <% images.forEach(image => { %>
+            <% if (image.primary) { %>
+              <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+            <% } %>
+          <% }) %>
+    
         </div>
         <div class="tarjeta__pie">
           <h6>u$s 5<%= price %> </h6>

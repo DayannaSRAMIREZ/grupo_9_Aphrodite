@@ -130,7 +130,12 @@
           <div class="home__contenedor2">
             
             <p><%= products[index].discount%>  % off</p>
-            <img src="/images/products/<%= products[index].images[0].name%> " alt="destacados1"/>
+            <% products[index].images.forEach(image => { %>
+              <% if (image.primary) { %>
+                <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+              <% } %>
+            <% }) %>
+           
 
           </div>
           <div class="tarjeta__pie2">

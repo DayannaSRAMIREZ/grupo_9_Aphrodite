@@ -15,10 +15,10 @@ router.get('/detail/:id', detail)
       .get('/aritos', aritos)
       .get('/gifts', gift)
       .get('/add',adminCheck, addProduct)
-      .post('/add',upload.single('image'),productsValidator,  store)
+      .post('/add',upload.array('images'),productsValidator,  store)
       .get('/edit/:id',adminCheck, productsEdit)
       .get('/result', search)
-      .put('/update/:id',upload.single('image'), productsValidator,update)
+      .put('/update/:id',upload.array('image'), productsValidator,update)
       .delete('/remove/:id', remove)
       
 

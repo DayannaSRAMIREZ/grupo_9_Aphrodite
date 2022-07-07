@@ -11,15 +11,22 @@
     <section class="home_cards">
   
    <br>
-  <% results.forEach(({id, name,materials,size,description,category, price,unidades, images}) => { %>
+  <% results.forEach(({id, name, price, discount, images}) => { %>
       
     
         <article>
         <div class="tarjeta tarjeta1">
           <h4> <%=name%> </h4>
           <div class="home__contenedor">
-            <p>10% off</p>
-            <img src="/images/products/<%= images[0].name %> " alt="destacados1" />
+            <% if (discount>0) { %>
+              <p><%= discount %>% off</p>
+            <% } %>
+            <% images.forEach(image => { %>
+              <% if (image.primary) { %>
+                <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+              <% } %>
+            <% }) %>
+      
           </div>
           <div class="tarjeta__pie">
             <h6> u$s <%= price %> </h6>
