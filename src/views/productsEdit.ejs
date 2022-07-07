@@ -20,8 +20,8 @@
                         <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                     </div>
                     <div class="formEdit">
-                        <label class="formSelectOption" for="category">Categoria:</label>
-                        <select class="selectForm" name="category" id="category">
+                        <label class="formSelectOption" for="categoryId">Categoria:</label>
+                        <select class="selectForm" name="categoryId" id="categoryId">
                             <option hidden value="" >Seleccione uno...</option>
                             <% categories.forEach(category=> { %>
                                 <option value=<%= category.id %>  <%= product.categoryId === category.id && 'selected' %>><%= category.name %> 
@@ -32,8 +32,8 @@
                     </div>
                 </article>
                 <div class="formEdit">
-                    <label class="formSelectOption" for="materials"> Material:</label>
-                    <select class="selectForm" name="materials" id="materials">
+                    <label class="formSelectOption" for="materialId"> Material:</label>
+                    <select class="selectForm" name="materialId" id="materialId">
                         <option hidden value="" >Seleccione uno...</option>
                         <% materials.forEach(material=> { %>
                             <option value=<%= material.id %>  <%= product.materialId === material.id && 'selected' %>><%= material.name %> 
@@ -49,7 +49,7 @@
 
                     <div class="formEdit">
                         <label for="unidades">Unidades:</label>
-                        <input class="editFormInputUni" type="number" name="unidades" id="unidades" value="<%= product.units %>">
+                        <input class="editFormInputUni" type="number" name="units" id="units" value="<%= product.units %>">
                         <span class="alert-products"><%= locals.errors && errors.units ? errors.units.msg : null %> </span>
                     </div>
 
@@ -58,12 +58,18 @@
                         <input class="editFormInputPrecio" type="number" name="price" id="price" value="<%= product.price %>">
                         <span class="alert-products"><%= locals.errors&& errors.price ? errors.price.msg : null %> </span>
                     </div>
+                    <div class="formEdit">
+                        <label for="price">Descuento:</label>
+                        <input class="editFormInputPrecio" type="number" name="discount" id="discount" value="<%= product.discount%>">
+                        <span class="alert-products"><%= locals.errors&& errors.discount ? errors.discount.msg : null %> </span>
+                    </div>
+
 
                 </article>
                 <article>
                     <div class="formEdit">
-                        <label class="formSelectOption" for="size">Talles</label>
-                        <select class="selectFormTalle" name="size" id="size">
+                        <label class="formSelectOption" for="sizeId">Talles</label>
+                        <select class="selectFormTalle" name="sizeId" id="sizeId">
                             <option hidden selected value="">Seleccione uno:</option>
                             <% sizes.forEach(size=> { %>
                                 <option value=<%= size.id %>  <%= product.sizeId === size.id && 'selected' %>><%= size.name %> 
@@ -85,7 +91,7 @@
                     </div>
                     <div class="formEdit">
                         <label for="nameProduct">Cargar Imágen</label>
-                        <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*">
+                        <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*" multiple>
                     </div>
                     <div class="boxButton">
                         <button class="buttonEdit" type="submit">Editar</button>
@@ -95,7 +101,12 @@
 
             </form>
             <div>
-             <img src="/images/products/<%= product.images[0].name%> " alt="imagenPoducto">    
+                <% product.images.forEach(image => { %>
+                    <% if (image.primary) { %>
+                      <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+                    <% } %>
+                  <% }) %>
+            
             </div>
            
         </section>

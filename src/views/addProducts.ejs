@@ -16,27 +16,27 @@
                         <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                     </div>
                     <div class="formEdit">
-                        <label class="formSelectOption" for="category">Categoria:</label>
-                        <select class="selectForm" name="category" id="category">
+                        <label class="formSelectOption" for="categoryId">Categoria:</label>
+                        <select class="selectForm" name="categoryId" id="categoryId">
                             <option hidden selected value="">Seleccione uno..</option>
-                            <option value="pulseras" <%= locals.old && old.category === 'pulseras' ? 'selected' : null %> >Pulseras</option>
-                            <option value="collares" <%= locals.old && old.category === 'collares' ? 'selected' : null %>>Collares</option>
-                            <option value="anillos" <%= locals.old && old.category === 'anillos' ? 'selected' : null %>>Anillos</option>
-                            <option value="relojes" <%= locals.old && old.category === 'relojes' ? 'selected' : null %>>Relojes</option>
-                            <option value="aritos" <%= locals.old && old.category === 'aritos' ? 'selected' : null %>>Aritos</option>    
+                            <% categories.forEach(category => { %>
+                                <option value=<%= category.id %> <%= locals.old && old.categoryId == category.id ? 'selected' : null %> ><%= category.name%></option>
+                            
+                            <% }) %>
+
                         </select>
-                        <span class="alert-products"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
+                        <span class="alert-products"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null %> </span>
                     </div>  
                 </article>
                     <div class="formEdit">
-                        <label class="formSelectOption" for="materials"> Material:</label>
-                        <select class="selectForm" name="materials" id="materials">
+                        <label class="formSelectOption" for="materialId"> Material:</label>
+                        <select class="selectForm" name="materialId" id="materials">
                             <option hidden selected value="">Seleccione uno..</option>
-                            <option value="oro" <%= locals.old && old.materials === 'oro' ? 'selected' : null %>>Oro</option>
-                            <option value="plata" <%= locals.old && old.materials === 'plata' ? 'selected' : null %>>Plata</option>
-                            <option value="fantasia" <%= locals.old && old.materials === 'fantasia' ? 'selected' : null %>>Fantasía</option>
+                            <% materials.forEach(material => { %>
+                                <option value=<%= material.id %>  <%= locals.old && old.materialId == material.id ? 'selected' : null %> ><%= material.name%> </option>
+                            <% }) %>
                         </select>
-                        <span class="alert-products"><%= locals.errors && errors.materials ? errors.materials.msg : null %> </span>
+                        <span class="alert-products"><%= locals.errors && errors.materialId ? errors.materialId.msg : null %> </span>
                     </div>
 
 
@@ -44,29 +44,32 @@
                 
                     <div class="formEdit">
                         <label for="unidades">Unidades:</label>
-                        <input class="editFormInputUni" type="number" name="unidades" id="unidades" value="<%= locals.old && old.unidades? old.unidades : null %>">
-                        <span class="alert-products"><%= locals.errors && errors.unidades ? errors.unidades.msg : null %> </span>
+                        <input class="editFormInputUni" type="number" name="units" id="unidades" value="<%= locals.old && old.units? old.units : null %>">
+                        <span class="alert-products"><%= locals.errors && errors.units ? errors.units.msg : null %> </span>
                     </div>
 
                     <div class="formEdit">
                         <label for="price">Precio:</label>
-                        <input class="editFormInputPrecio" type="number" name="price" id="price" value="<%= locals.old && old.unidades? old.unidades : null %>">
+                        <input class="editFormInputPrecio" type="number" name="price" id="price" value="<%= locals.old && old.price? old.price : null %>">
                         <span class="alert-products"><%= locals.errors&& errors.price ? errors.price.msg : null %> </span>
+                    </div>
+                    <div class="formEdit">
+                        <label for="discount">Descuento:</label>
+                        <input class="editFormInputPrecio" type="number" name="discount" id="discount" value="<%= locals.old && old.discount? old.discount : null %>">
+                        <span class="alert-products"><%= locals.errors&& errors.price ? errors.discount.msg : null %> </span>
                     </div>
 
                 </article>
                 <article>
                     <div class="formEdit">
-                        <label class="formSelectOption" for="size">Talles</label>
-                        <select class="selectFormTalle" name="size" id="size">
+                        <label class="formSelectOption" for="sizeId">Talles</label>
+                        <select class="selectFormTalle" name="sizeId" id="sizeId">
                             <option hidden selected value="">Seleccione uno..</option>
-                            <option value="xl" <%= locals.old && old.size === 'xl' ? 'selected' : null %>>XL</option>
-                            <option value="l" <%= locals.old && old.size === 'l' ? 'selected' : null %>>L</option>
-                            <option value="m" <%= locals.old && old.size === 'm' ? 'selected' : null %>>M</option>
-                            <option value="s" <%= locals.old && old.size === 's' ? 'selected' : null %>>S</option>
-                            <option value="xs" <%= locals.old && old.size === 'xs' ? 'selected' : null %>>XS</option>
+                            <% sizes.forEach(size => { %>
+                                <option value=<%= size.id %>  <%= locals.old && old.sizeId == size.id ? 'selected' : null %> ><%= size.name%> </option>
+                            <% }) %>
                         </select>
-                        <span class="alert-products"><%= locals.errors && errors.size ? errors.size.msg : null %> </span>
+                        <span class="alert-products"><%= locals.errors && errors.sizeId ? errors.sizeId.msg : null %> </span>
                     </div>
                 </article>
                 <article class="art">
@@ -80,8 +83,8 @@
                     </div>
                
                     <div class="formEdit">
-                        <label for="image">Cargar Imágen</label>
-                        <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*">
+                        <label for="images">Cargar Imágenes</label>
+                        <input class="editFormInputFile" type="file" id="images" name="images" accept="image/*" multiple>
                     </div>
                     <div class="boxButton">
                         <button class="buttonEdit" type="submit">Enviar</button>

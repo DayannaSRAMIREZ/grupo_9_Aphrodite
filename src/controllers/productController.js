@@ -1,20 +1,11 @@
 const db = require('../database/models');
-const path = require('path');
-const fs = require('fs');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
 const {
     validationResult
 } = require("express-validator");
 const { Op } = require('sequelize');
 
-const readProducts = () => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-    return products
-};
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-const guardarJson = (array) => fs.writeFileSync(productsFilePath, JSON.stringify(array, null, 3));
 
 
 module.exports = {
@@ -69,7 +60,20 @@ module.exports = {
         res.render('gifts')
     },
     addProduct: (req, res) => {
-        res.render('addProducts')
+        let categories = db.Category.findAll()
+        let materials = db.Material.findAll()
+        let sizes = db.Size.findAll()
+
+        Promise.all([ categories, materials, sizes])
+            .then(([ categories, materials,sizes]) => {
+                return res.render('addProducts', { 
+                    categories,
+                    materials,
+                    sizes
+                })
+
+            })
+            .catch(error => console.log('error'))  
     },
     productsEdit: (req, res) => {
         let product = db.Product.findByPk(req.params.id, {
@@ -93,40 +97,54 @@ module.exports = {
       
     },
     store: (req, res) => {
-        let products = readProducts();
-        let errors = validationResult(req)
-
-        if (errors.isEmpty()) {
-            const {
-                name,
-                materials,
-                size,
-                description,
-                category,
-                price,
-                unidades
-            } = req.body;
-            const producto = {
-                id: products[products.length - 1].id + 1,
-                name: name.trim(),
-                materials,
-                size,
-                description: description.trim(),
-                category,
+        let errors= validationResult(req)
+        if(errors.isEmpty()){
+            const {name,price,discount,sizeId, materialId, description, categoryId, units}= req.body; 
+            db.Product.create({
+                name: name.trim(), 
                 price: +price,
-                unidades: +unidades,
-                img1: req.file ? req.file.filename : 'noimage.png',
-                img2: "noimage.png",
-                img3: "noimage.png",
+                sizeId,
+                discount: +discount,
+                description: description.trim(),
+                materialId,
+                units: +units,
+                categoryId,
+                materialId,
+               
+            })
+            .then(product=>{
+                if(req.files.length>0){
+                    let images =req.files.map(({filename},i)=>{
+                        let image ={
+                            name: filename,
+                            productId: product.id,
+                            primary: i===0? 1:0
+                        }
+                        return image
+                    })
+                    db.Image.bulkCreate(images, {validate: true})
+                    .then(result=>  res.redirect('/product'))
 
-            }
-            products.push(producto);
-            guardarJson(products);
-            return res.redirect('/product')
-        } else {
-            res.render('addProducts', {
-                errors: errors.mapped(),
-                old: req.body,
+                }
+                
+
+            })
+            .catch(error=> console.log(error))
+
+        }else{
+            let categories= db.Category.findAll()
+            let materials =db.Material.findAll()
+            let sizes = db.Size.findAll()
+
+            Promise.all([categories,materials,sizes])
+            .then(([categories,materials,sizes])=>{
+                return res.render('addProducts',{
+                    categories,
+                    materials,
+                    sizes,
+                    errors:errors.mapped(),
+                    old:req.body
+                })
             })
 
         }
