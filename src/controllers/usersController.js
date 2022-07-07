@@ -17,6 +17,9 @@ const guardarJson = (array) => fs.writeFileSync(
     "utf-8"
 );
 
+const db = require ('../database/models');
+const { brotliDecompress } = require('zlib');
+
 
 module.exports = {
     register: (req, res) => {
@@ -24,7 +27,7 @@ module.exports = {
     },
     registerController: (req, res) => {
         let errors = validationResult(req)
-        let users= readUsers(); 
+
         if (errors.isEmpty()) {
             let {
                 name,
@@ -35,23 +38,19 @@ module.exports = {
                 country,
                 gender
             } = req.body
-            let lastId = users.length !== 0 ? users[users.length - 1].id : 0
-            let newUser = {
-                id: +lastId + 1,
+            db.User.create ({
                 name: name.trim(),
                 surname: surname.trim(),
-                email,
+                email: email.trim(),
                 password: bcryptjs.hashSync(password, 10),
-                date,
+                dob:date,
                 country: country.trim(),
                 gender,
                 image: 'noimage.png',
                 rol: "guest",
-            }
-
-            users.push(newUser)
-            guardarJson(users);
-            res.redirect('/')
+            })
+            .then( () => {
+                return res.redirect("/")})
 
         } else {
 
@@ -65,29 +64,31 @@ module.exports = {
         res.render('login')
     },
     processLogin: (req, res) => {
-        const errors = validationResult(req);
-        let users= readUsers(); 
+        const errors = validationResult(req); 
 
         if (errors.isEmpty()) {
-            const {
-                id,
-                name,
-                image,
-                rol
-            } = users.find(user => user.email === req.body.email)
-            // levanto session
-            req.session.userLogin = {
-                id,
-                name,
-                image,
-                rol
+         
+        db.User.findOne({
+            where: {
+                email: req.body.email
             }
+        })
+        .then((user)=> {
+            req.session.userLogin = {
+                id : +user.id,
+                name: user.name,
+                image: user.image,
+                rol : user.rol}
+
+            
+         // levanto session
             if (req.body.remember) {
                 res.cookie('userAprhodite', req.session.userLogin, {
                     maxAge: 1000 * 60 * 2
                 })
             }
-            res.redirect('/')
+            res.redirect('/') 
+        })
         } else {
             res.render('login', {
                 errors: errors.mapped()
@@ -97,20 +98,20 @@ module.exports = {
 
     },
     profile: (req, res) => {
-        let users= readUsers(); 
-        const usuario = users.find(usuario => usuario.id === req.session.userLogin.id);
-
-        return res.render('profile', {
-            usuario
-        })
+        db.User.findByPk(req.session.userLogin.id) 
+        .then((user) => res.render("profile", {
+            usuario : user,
+          }))
+          .catch (error => console.log(error)) 
 
     },
     profileUpdate: (req, res) => {
 
-        const errors = validationResult(req);
-        let users= readUsers(); 
+        /*const errors = validationResult(req);
+        
 
         if (errors.isEmpty()) {
+            
             let {
                 name,
                 surname,
@@ -119,38 +120,33 @@ module.exports = {
                 country,
                 gender
             } = req.body;
-            const {
-                id
-            } = users.find(user => user.id === req.session.userLogin.id);
-
-            const usuariosModificados = users.map((usuario) => {
-                if (usuario.id === id) {
-                    let usuarioModificado = {
-                        ...usuario,
+            
+            db.User.update ({
+                     
                         name: name.trim(),
                         surname: surname.trim(),
-                        date,
+                        dob:date,
                         country,
                         gender,
                         image: req.file ? req.file.filename : usuario.image,
-                     
-                    };
+            },
+            {
+                 where:{
+                    id:req.session.userLogin.id
+                 }
+            } )
+            .then( (usuario) => res.redirect('/users/profile', {usuario}))
+
+            
+             .catch(error => console.log(error))
 
                   
                     
-                    return usuarioModificado;
-                }
-                return usuario;
-            });
+                  
 
-            guardarJson(usuariosModificados)
-            req.session.userLogin = {
-                ...req.session.userLogin,
-                name
-            }
+        
 
-            return res.redirect("/");
-
+           
 
         } else {
 
@@ -164,6 +160,7 @@ module.exports = {
 
 
     },
+*/
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('userAprhodite', null, {

@@ -99,8 +99,7 @@
       "name": "Maria",
       "surname": "Ramírez vallejos",
       "password": "$2a$10$o6RLDSUW5nzKJzqj04tToeXQZ8NRw4QflextCiwxxKxJAvRCUNLDm",
-      "date": "2022-06-14",
-      "country": "ar",
+      "country": "col",
       "gender": "masculino",
       "image": "noimage.png",
       "rol": "admin"
@@ -149,6 +148,6 @@
       "country": "uy",
       "gender": "nodice",
       "image": "noimage.png",
-      "rol": "guest"
+      "rol": "admin"
    }
 ]

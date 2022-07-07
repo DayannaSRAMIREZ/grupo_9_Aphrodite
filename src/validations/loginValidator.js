@@ -2,21 +2,24 @@ const bcryptjs = require('bcryptjs');
 const {
     check
 } = require('express-validator');
-const users = require('../data/dataUser.json');
+const db = require ('../database/models');
 
 module.exports = [
     check('email')
     .notEmpty().withMessage('Debes ingresar un email.').bail()
     .isEmail().withMessage('Debes ingresar un email valido')
-    .custom((value) => {
-        let registrado = users.find(user => user.email === value)
-        if (!registrado) {
-            console.log(registrado)
-            returnfalse
-        } else {
-            return true
+    .custom((value,{req}) => {
+       return db.User.findOne({
+        where: {
+            email: req.body.email
         }
-    }).withMessage('El usuario no existe'),
+       })
+       .then (user =>{
+        if(!user) {
+            return Promise.reject() 
+        }
+       }).catch(() => Promise.reject('Credenciales inválidas'))
+    }),
 
 
 
@@ -25,17 +28,14 @@ module.exports = [
     .custom((value, {
         req
     }) => {
-        let registrado = users.find(user => user.email === req.body.email)
-        if (!registrado) {
-            return false
-        } else {
-            if (bcryptjs.compareSync(value, registrado.password)) {
-                return true
-            } else {
-                return false
+        return db.User.findOne({
+            where : {
+              email : req.body.email
             }
-
-        }
-    }).withMessage('Contraseña erronea'),
-
+          }).then(user => {
+            if(!user || !bcryptjs.compareSync(value, user.password)){
+              return Promise.reject()
+            }
+          }).catch(() => Promise.reject('Credenciales inválidas'))
+        })
 ]
