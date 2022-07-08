@@ -96,7 +96,6 @@ module.exports = {
             let {
                 name,
                 surname,
-                password,
                 date,
                 country,
                 gender

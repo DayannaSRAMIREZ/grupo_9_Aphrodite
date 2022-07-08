@@ -201,6 +201,7 @@ module.exports = {
         let errors = validationResult(req);
 
 
+
         if (errors.isEmpty()) {
             const {
                 id
@@ -234,28 +235,41 @@ module.exports = {
 
                     }
                 })
-                .then(async () => {
-                
-                    if(req.file){
-                        try {
-                            await db.Image.update(
-                                {
-                                    file : req.file.filename
-                                },
-                                {
-                                    where : {
-                                        productId : req.params.id,
-                                        primary : true
+                .then(() => {
+                        if (req.files.length > 0) {
+                            db.Image.destroy({
+                                    where: {
+                                        productId: req.params.id
                                     }
-                                }
-                            )
-                        } catch (error) {
-                            console.log(error);
+                                })
+                                .then(() => {
+
+                                    let images = req.files.map(({
+                                        filename
+                                    }, i) => {
+                                        let image = {
+                                            name: filename,
+                                            productId: req.params.id,
+                                            primary: i === 0 ? 1 : 0
+                                        }
+                                        return image
+                                    })
+                                    db.Image.bulkCreate(images, {
+                                            validate: true
+                                        })
+                                        .then(() => {
+                                            return res.redirect('/product')
+                                        })
+
+                                })
+
+                        }else{
+                            return res.redirect('/product')
                         }
+
                     }
-                    return res.redirect('/product');
-        
-                })
+
+                )
                 .catch(error => console.log(error))
 
 
@@ -288,14 +302,14 @@ module.exports = {
     },
     remove: (req, res) => {
         db.Product.destroy({
-			where : {
-				id : req.params.id
-			}
-		})
-			.then((info) => {
-				return res.redirect('/product');
-			})
-			.catch(error => console.log(error))
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then((info) => {
+                return res.redirect('/product');
+            })
+            .catch(error => console.log(error))
     },
     collares: (req, res) => {
         db.Product.findAll({
