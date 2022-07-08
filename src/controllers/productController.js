@@ -6,7 +6,8 @@ const {
 const {
     Op
 } = require('sequelize');
-
+const fs = require("fs");
+const path = require("path");
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
@@ -236,15 +237,33 @@ module.exports = {
                     }
                 })
                 .then(() => {
+                /*Por ahora se deben subir siempre la misma cantidad de imagenes a las que ya tenia (3)  */
                         if (req.files.length > 0) {
+                            
+                            db.Product.findByPk(req.params.id,{
+                                include: ['images']
+                            })
+                            .then(product=>{
+                                if(product.images.length>0){
+                                
+                                }
+                                product.images.forEach(image => {
+                                    fs.unlinkSync(
+                                        path.resolve(__dirname,"..", "..", "public", "images","products", image.name)
+                                     )
+                                    
+                                })
+                                
+                           
+                             
                             db.Image.destroy({
                                     where: {
                                         productId: req.params.id
                                     }
                                 })
                                 .then(() => {
-
-                                    let images = req.files.map(({
+                                    
+                                  let images = req.files.map(({
                                         filename
                                     }, i) => {
                                         let image = {
@@ -262,7 +281,8 @@ module.exports = {
                                         })
 
                                 })
-
+   
+                            })
                         }else{
                             return res.redirect('/product')
                         }
@@ -300,6 +320,7 @@ module.exports = {
         }
 
     },
+
     remove: (req, res) => {
         db.Product.destroy({
                 where: {
