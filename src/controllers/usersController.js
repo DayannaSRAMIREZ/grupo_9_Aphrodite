@@ -3,6 +3,8 @@ const {
 } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const db = require ('../database/models');
+const fs = require("fs");
+const path = require("path");
 module.exports = {
     register: (req, res) => {
         res.render('register')
@@ -92,6 +94,12 @@ module.exports = {
        const errors = validationResult(req);
  
         if (errors.isEmpty()) {
+
+            if(req.session.userLogin.image&&req.file&&req.session.userLogin.image!="noimage.png"){
+                fs.unlinkSync(
+                    path.resolve(__dirname,"..", "..", "public", "images","profileImages",req.session.userLogin.image)
+                 )
+            }
             
             let {
                 name,
@@ -116,7 +124,19 @@ module.exports = {
                     id:req.session.userLogin.id
                  }
             } )
-            .then( () => res.redirect('/users/profile'))
+            .then( () => {
+              
+                    req.session.userLogin = {
+                    id : req.session.userLogin.id,
+                    name: req.body.name,
+                    image: req.file && req.file.filename||req.session.userLogin.image,
+                    rol :  req.session.userLogin.rol
+                    }
+                
+                res.redirect('/users/profile')
+            })  
+                
+              
              .catch(error => console.log(error))
       } else {
             return res.render('profile', {
