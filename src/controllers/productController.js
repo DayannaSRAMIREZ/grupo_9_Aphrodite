@@ -237,7 +237,7 @@ module.exports = {
                     }
                 })
                 .then(() => {
-                /*Por ahora se deben subir siempre la misma cantidad de imagenes a las que ya tenia (3)  */
+              
                         if (req.files.length > 0) {
                             
                             db.Product.findByPk(req.params.id,{
@@ -246,7 +246,7 @@ module.exports = {
                             .then(product=>{
                                 if(product.images.length>0){
                                 
-                                }
+                               
                                 product.images.forEach(image => {
                                     fs.unlinkSync(
                                         path.resolve(__dirname,"..", "..", "public", "images","products", image.name)
@@ -255,7 +255,7 @@ module.exports = {
                                 })
                                 
                            
-                             
+                              }
                             db.Image.destroy({
                                     where: {
                                         productId: req.params.id
