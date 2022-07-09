@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head') %> 
-<body>
-  <%- include('./partials/header') %> 
+<%- include('./partials/head') %>
 
-  <main class="main__gifts">
-    <div class="gifts">
-      <h1 class="gifts">Los mejores regalos para esas ocasiones especiales</h1>
-      <img class="fondo_principal_gifts" src="/images/home/gifts/fondo0.jpg" alt="">
-    </div>
-      
-    <section class="gifts">
+  <body>
+    <%- include('./partials/header') %>
 
-      <article class="gifts">
-        <img class="gifts" src="/images/home/gifts/fondo1.jpg" alt="">
-            <a href="/product"><h2 class="gifts">Aniversarios</h2></a>
-            <p class="gifts">Ya sea por medio de un collar repleto de piedras exquisitas, un llamativo anillo, símbolo del amor eterno, o un reloj que capta la atención, estas piezas están diseñadas para llevarlas y atesorarlas de por vida.</p>
-      </article>  
-      
-      <article class="gifts">
-        <img class="gifts" src="/images/home/gifts/fondo2.jpg" alt="">
-            <a href="/product"><h2 class="gifts">Cumpleaños</h2></a>
-            <p class="gifts">Marcá un hito especial o celebrá una fecha importante con un collar, un reloj, un accesorio de cristal único o una figura. Lográ que sea un día sencillamente inolvidable.</p>
-      </article>
+      <main class="main__gifts">
+        <div class="gifts">
+          <h1 class="gifts">Los mejores regalos para esas ocasiones especiales</h1>
+          <img class="fondo_principal_gifts" src="/images/home/gifts/fondo0.jpg" alt="">
+        </div>
 
-      <article class="gifts">
-        <img class="gifts" src="/images/home/gifts/fondo3.jpg" alt="">
-            <a href="/product"><h2 class="gifts">Graduación</h2></a>
-            <p class="gifts">Que mejor que un presente para celebrar ese largo camino que con tanta dedicación logro culminar. Has que siempre recuerde ese día con un precioso collar o una de nuestras delicadas pulseras.</p>
-      </article>
-    </section>
-      
+        <div class="contenedor_gifts">
+          <div class="contenedor_tarjeta_gifts">
+            <a href="/product">
+              <figure>
+                <img src="/images/home/gifts/1.jpg" class="frontal" alt="">
+                <figcaption class="trasera">
+                  <h2 class="gifts">Aniversarios</h2>
+                  <hr class="gifts">
+                  <p class="gifts">Ya sea por medio de un collar repleto de piedras exquisitas, un llamativo anillo,
+                    símbolo del amor eterno, o un reloj que capta la atención, estas piezas están diseñadas para
+                    llevarlas y atesorarlas de por vida.</p>
+                </figcaption>
+              </figure>
+            </a>
 
-  </main>
+          </div>
+          <div class="contenedor_tarjeta_gifts">
+            <a href="/product">
+              <figure>
+                <img src="/images/home/gifts/2.jpg" class="frontal" alt="">
+                <figcaption class="trasera">
+                  <h2 class="gifts">Cumpleaños</h2>
+                  <hr class="gifts">
+                  <p class="gifts">Marcá un hito especial o celebrá una fecha importante con un collar, un reloj, un
+                    accesorio de cristal único o una figura. Lográ que sea un día sencillamente inolvidable.</p>
+                </figcaption>
+              </figure>
+            </a>
 
-    <%- include('./partials/footer') %> 
-</body>
+          </div>
+          <div class="contenedor_tarjeta_gifts">
+            <a href="/product">
+              <figure>
+                <img src="/images/home/gifts/3.jpg" class="frontal" alt="">
+                <figcaption class="trasera">
+                  <h2 class="gifts">Graduación</h2>
+                  <hr class="gifts">
+                  <p class="gifts">Que mejor que un presente para celebrar ese largo camino que con tanta dedicación
+                    logro culminar. Has que siempre recuerde ese día con un precioso collar o una de nuestras delicadas
+                    pulseras.</p>
+                </figcaption>
+              </figure>
+            </a>
+
+          </div>
+        </div>
+
+      </main>
+
+      <%- include('./partials/footer') %>
+  </body>
+
 </html>
