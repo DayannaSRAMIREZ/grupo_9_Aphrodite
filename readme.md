@@ -40,7 +40,7 @@ We liked the idea of a video as a presentation in their home page. We will be do
 ****
 ### Paleta de Colores
 
-Decidimos trabajar con una gama de rosados, dorados y duraznos porque quedaba mas sofisticado, mas elegante.
+Decidimos trabajar con una gama de rosados, dorados y duraznos porque quedaba mas sofisticado, mas elegante y delicado.
 
 We decided to work with a frame of pink, golden, and peach colors, that gave a more sophisticated and elegant effect.
 
