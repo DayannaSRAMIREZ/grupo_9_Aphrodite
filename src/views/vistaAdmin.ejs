@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/headBostrap') %>
+
+<body>
+    <%- include('./partials/header') %>
+    <h3 class="users">Usuarios Registrados</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <i class="bi bi-pencil"></i>
+
+            <% usuarios.forEach(usuario => { %>
+            <tr>
+                <th scope="row"><%= usuario.name%></th>
+                <td><%= usuario.surname%></td>
+                <td><%= usuario.email%></td>
+                <td><%= usuario.rol%></td>
+                <td><button type="button" class="btn btn-success">Editar</button></td>
+                
+            </tr>
+            <% }) %>
+
+
+
+        </tbody>
+    </table>
+    <%- include('./partials/footerBoostrap') %>
+</body>
+
+</html>

@@ -153,6 +153,20 @@ module.exports = {
             maxAge: -1
         });
         res.redirect('/')
+    },
+    admin: (req,res) =>{
+    
+        db.User.findAll()
+        .then(usuarios => {
+
+           //let pulseras = products.filter(product => product.categoryId === 3);
+
+            res.render('vistaAdmin', {
+
+               usuarios
+            })
+        })
+        .catch(error => console.log(error))
     }
 
 }
