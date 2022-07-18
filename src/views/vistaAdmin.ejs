@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('./partials/headBostrap') %>
 
-<body>
+<body class="bodyAdmin">
     <%- include('./partials/header') %>
     <h3 class="users">Usuarios Registrados</h3>
     <table class="table table-striped">
@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <i class="bi bi-pencil"></i>
+        
 
             <% usuarios.forEach(usuario => { %>
             <tr>
@@ -24,8 +24,8 @@
                 <td><%= usuario.surname%></td>
                 <td><%= usuario.email%></td>
                 <td><%= usuario.rol%></td>
-                <td><button type="button" class="btn btn-success">Editar</button></td>
-                
+                <td><button type="submit" class="btn btn-success" >Editar <span class="iconify" data-icon="bi:pencil"></span></button></td>
+ 
             </tr>
             <% }) %>
 

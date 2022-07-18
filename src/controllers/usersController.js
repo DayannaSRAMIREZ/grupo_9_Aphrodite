@@ -159,14 +159,15 @@ module.exports = {
         db.User.findAll()
         .then(usuarios => {
 
-           //let pulseras = products.filter(product => product.categoryId === 3);
-
             res.render('vistaAdmin', {
 
                usuarios
             })
         })
         .catch(error => console.log(error))
+    },
+    menuAdmin: (req,res)=>{
+        res.render('menuAdmin')
     }
 
 }

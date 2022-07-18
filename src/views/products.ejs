@@ -6,38 +6,58 @@
 
   <main >
     <div class="buscador_productos">
-       <form action="/product/result" method="GET" >
-      <input type="text" name="keyword" placeholder="Buscar un producto... "> 
-      <button type="submit">Buscar</button> 
-      </form>
-    </div>
+    <div class="search__container">
+      <form action="/product/result" method="GET" >
+      <input class="search__input" name="keyword" type="text" placeholder=" Search">
+    </form>
+  </div>
+</div>
+  
 
     <h2 class="titulo__productos">Anillos</h2>
+
+    
    
   <section class="home_cards">
 
-    <% arrayAnillos.forEach(({id, name, price, images, discount}) => { %>
-      <article>
-        <div class="tarjeta tarjeta1">
-          <h4><%= name %> </h4>
-          <div class="home__contenedor">
-            <% if (discount>0) { %>
-              <p><%= discount %>% off</p>
-            <% } %>
-           
-            <% images.forEach(image => { %>
-              <% if (image.primary) { %>
-                <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
-              <% } %>
-            <% }) %>
+    <% arrayAnillos.forEach(({id, name, price, images, discount, units}) => { %>
+      <a href="/product/detail/<%= id %> ">
+
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <% images.forEach(image => { %>
+                  <% if (image.primary) { %>
+                    <img  class="img" id="imagen" src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+                  <% } %>
+                <% }) %>
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-company"><%= name %> </span>
+                  </div>
+                  <div class="a-size">Disponibles: <span class="size"><%= units %> </span></div>
+                </div>
+              </div>
       
-          </div>
-          <div class="tarjeta__pie">
-            <h6>u$s <%= price %> </h6>
-            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+      
+                <a class="cart" href="#">
+                  <span class="price">$<%= price %> </span>
+                  <span class="add-to-cart">
+                    <span class="txt"> Ver más</span>
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
+    </a>
     <% }) %>
      
   
@@ -47,29 +67,44 @@
    
   <section class="home_cards">
 
-    <% arrayRelojes.forEach(({id, name, price, images, discount}) => { %>
-      <article>
-        <div class="tarjeta tarjeta1">
-          <h4><%= name %> </h4>
-          <div class="home__contenedor">
-            <% if (discount>0) { %>
-              <p><%= discount %>% off</p>
-            <% } %>
-           
-            
-            <% images.forEach(image => { %>
-              <% if (image.primary) { %>
-                <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
-              <% } %>
-            <% }) %>
-      
-          </div>
-          <div class="tarjeta__pie">
-            <h6>u$s 5<%= price %> </h6>
-            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+    <% arrayRelojes.forEach(({id, name, price, images, discount,sizeId, units}) => { %>
+      <a href="/product/detail/<%= id %> ">
+
+        <div class="container page-wrapper">
+          <div class="page-inner">
+            <div class="row">
+              <div class="el-wrapper">
+                <div class="box-up">
+                  <% images.forEach(image => { %>
+                    <% if (image.primary) { %>
+                      <img  class="img" id="imagen" src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+                    <% } %>
+                  <% }) %>
+                  <div class="img-info">
+                    <div class="info-inner">
+                      <span class="p-company"><%= name %> </span>
+                    </div>
+                    <div class="a-size">Disponibles: <span class="size"><%= units %> </span></div>
+                  </div>
+                </div>
+        
+                <div class="box-down">
+                  <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                  </div>
+        
+                  <a class="cart" href="#">
+                    <span class="price">$<%= price %> </span>
+                    <span class="add-to-cart">
+                      <span class="txt"> Ver más</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </a>
     <% }) %>
      
   
@@ -80,61 +115,44 @@
    
   <section class="home_cards">
 
-    <% arrayPulseras.forEach(({id, name, price, images,discount}) => { %>
-      <article>
-        <div class="tarjeta tarjeta1">
-          <h4><%= name %> </h4>
-          <div class="home__contenedor">
-            <% if (discount>0) { %>
-              <p><%= discount %>% off</p>
-            <% } %>
-           
-            
-            <% images.forEach(image => { %>
-              <% if (image.primary) { %>
-                <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
-              <% } %>
-            <% }) %>
-      
-          </div>
-          <div class="tarjeta__pie">
-            <h6>u$s 5<%= price %> </h6>
-            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+    <% arrayPulseras.forEach(({id, name, price, images,discount, units}) => { %>
+      <a href="/product/detail/<%= id %> ">
+
+        <div class="container page-wrapper">
+          <div class="page-inner">
+            <div class="row">
+              <div class="el-wrapper">
+                <div class="box-up">
+                  <% images.forEach(image => { %>
+                    <% if (image.primary) { %>
+                      <img  class="img" id="imagen" src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+                    <% } %>
+                  <% }) %>
+                  <div class="img-info">
+                    <div class="info-inner">
+                      <span class="p-company"><%= name %> </span>
+                    </div>
+                    <div class="a-size">Disponibles:<span class="size"><%= units %> </span></div>
+                  </div>
+                </div>
+        
+                <div class="box-down">
+                  <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                  </div>
+        
+                  <a class="cart" href="#">
+                    <span class="price">$<%= price %> </span>
+                    <span class="add-to-cart">
+                      <span class="txt"> Ver más</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
-    <% }) %>
-     
-  
-    </section>
-
-    
-    <h2  class="titulo__productos">Aritos</h2>
-   
-  <section class="home_cards">
-
-    <% arrayAritos.forEach(({id, name, price, images,discount}) => { %>
-      <article>
-        <div class="tarjeta tarjeta1">
-          <h4><%= name %> </h4>
-          <div class="home__contenedor">
-            <% if (discount>0) { %>
-              <p><%= discount %>% off</p>
-            <% } %>
-           
-            <% images.forEach(image => { %>
-              <% if (image.primary) { %>
-                <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
-              <% } %>
-            <% }) %>
-      
-          </div>
-          <div class="tarjeta__pie">
-            <h6>u$s 5<%= price %> </h6>
-            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
-          </div>
-        </div>
-      </article>
+      </a>
     <% }) %>
 
   
@@ -146,28 +164,44 @@
    
   <section class="home_cards">
 
-    <% arrayCollares.forEach(({id, name, price, images,discount}) => { %>
-      <article>
-        <div class="tarjeta tarjeta1">
-          <h4><%= name %> </h4>
-          <div class="home__contenedor">
-            <% if (discount>0) { %>
-              <p><%= discount %>% off</p>
-            <% } %>
-           
-            <% images.forEach(image => { %>
-              <% if (image.primary) { %>
-                <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
-              <% } %>
-            <% }) %>
-      
-          </div>
-          <div class="tarjeta__pie">
-            <h6>u$s 5<%= price %> </h6>
-            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+    <% arrayCollares.forEach(({id, name, price, images,discount, units}) => { %>
+      <a href="/product/detail/<%= id %> ">
+
+        <div class="container page-wrapper">
+          <div class="page-inner">
+            <div class="row">
+              <div class="el-wrapper">
+                <div class="box-up">
+                  <% images.forEach(image => { %>
+                    <% if (image.primary) { %>
+                      <img  class="img" id="imagen" src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+                    <% } %>
+                  <% }) %>
+                  <div class="img-info">
+                    <div class="info-inner">
+                      <span class="p-company"><%= name %> </span>
+                    </div>
+                    <div class="a-size">Disponibles:<span class="size"><%= units %> </span></div>
+                  </div>
+                </div>
+        
+                <div class="box-down">
+                  <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                  </div>
+        
+                  <a class="cart" href="#">
+                    <span class="price">$<%= price %> </span>
+                    <span class="add-to-cart">
+                      <span class="txt"> Ver más</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </a>
     <% }) %>
      
   
