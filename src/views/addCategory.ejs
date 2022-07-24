@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body class="categories_body">
+    <%- include('./partials/header') %>
+<main main_category>
+ 
+        <form action="" method="POST" class="form_category">
+            <h2>AGREGAR CATEGORÍA</h2>
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+            </div>
+                <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+            <div>
+                <button type="submit">Agregar</button>
+            </div>
+        </form>
+</main>
+        
+    
+   
+
+    <%- include('./partials/footer') %>
+</body>
+
+</html>

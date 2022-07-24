@@ -37,6 +37,14 @@
     font-size: 11px;
     color: red;
 }
+.crear_producto{
+ display: flex;
+ justify-content: center;
+ margin: 0 0 10vh 0;
+}
+.contenedor_a{
+  width: 100%;
+}
 @media (min-width:768px) {
     .buscador_productos input{
         width: 580px;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body class="categories_body">
+    <%- include('./partials/header') %>
+    <table class="table_categories">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <thead>
+            <tbody>
+                <% categories.forEach(({id,name}) => { %>
+
+                <tr>
+                    <td><%= id %> </td>
+                    <td><%= name %> </td>
+                    <td>
+                        <div class="editarCategoria">
+                            <a href="../categories/edit/<%= id %> " class="deseos"><button>Editar</button></a>
+                        </div>
+                    </td>
+                    <td>
+                        <form action="/categories/remove/<%= id %>?_method=DELETE" method="POST"class="deseos">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+            <table />
+            <div class="contenedor_a">
+                <a href="/categories/add"class="deseos crear_producto"><button >CREAR NUEVA CATEGORIA</button></a> 
+                </div>
+            <%- include('./partials/footer') %>
+</body>
+
+</html>

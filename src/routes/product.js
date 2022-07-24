@@ -4,7 +4,7 @@ const upload = require('../middlewares/uploadImagesProducts');
 const productsValidator = require('../validations/productValidator'); 
 const adminCheck = require('../middlewares/adminCheck'); 
 
-const{detail, cart, product, gift, addProduct, productsEdit, store, search, update, remove, relojes,anillos,aritos, pulseras,collares}= require('../controllers/productController');
+const{detail,list, cart, product, gift, addProduct, productsEdit, store, search, update, remove, relojes,anillos,aritos, pulseras,collares}= require('../controllers/productController');
 router.get('/detail/:id', detail)
       .get('/cart', cart )
       .get('/', product)
@@ -19,7 +19,9 @@ router.get('/detail/:id', detail)
       .get('/edit/:id',adminCheck, productsEdit)
       .get('/result', search)
       .put('/update/:id',upload.array('image'), productsValidator,update)
-      .delete('/remove/:id', remove)
+      .get('/list', list)
+      .delete('/remove/:id', remove), 
+      
       
 
 

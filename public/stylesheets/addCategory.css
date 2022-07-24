@@ -1,0 +1,45 @@
+.form_category {
+    margin: 10vh auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 30vw;
+    height: 40vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   color: white;
+   
+}
+.form_category div{
+color: aliceblue;
+margin: 15px;
+}
+.form_category input{
+    width: 230px;
+    height: 25px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.form_category div button{
+    background-color: transparent;
+    border: 1px solid white;
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 1.5vh;
+}
+.form_category div button:hover{
+    background-color: white;
+    color: var(--colorRosaFuerte);
+}

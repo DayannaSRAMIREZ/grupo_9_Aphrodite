@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/headBostrap') %>
+<%- include('./partials/head') %>
 
-<body class="bodyAdmin">
+<body class="categories_body">
     <%- include('./partials/header') %>
-    <h3 class="users">Usuarios Registrados</h3>
-    <table class="table table-striped">
+    <table class="table_categories">
         <thead>
             <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">Email</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Editar</th>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>SURNAME</th>
+                <th>EMAIL</th>
+                <th>GENDER</th>
+                <th>DOB</th>
+                <th>ROL</th>
+                <th></th>
+                <th></th>
             </tr>
-        </thead>
-        <tbody>
-        
+            <thead>
+            <tbody>
+                <% users.forEach(({id,name,surname, email,gender,dob,rol}) => { %>
 
-            <% usuarios.forEach(usuario => { %>
-            <tr>
-                <th scope="row"><%= usuario.name%></th>
-                <td><%= usuario.surname%></td>
-                <td><%= usuario.email%></td>
-                <td><%= usuario.rol%></td>
-                <td><button type="submit" class="btn btn-success" >Editar <span class="iconify" data-icon="bi:pencil"></span></button></td>
- 
-            </tr>
-            <% }) %>
-
-
-
-        </tbody>
+                <tr>
+                    <td><%= id %> </td>
+                    <td><%= name %> </td>
+                    <td><%= surname %> </td>
+                    <td><%= email %> </td>
+                    <td><%= gender %> </td>
+                    <td><%=  `${dob.getDay()}/${dob.getMonth()}/${dob.getYear()}  `%> </td>
+                    <td><%= rol %> </td>
+                    <td>
+                        <div class="editarCategoria">
+                            <form action="/users/update/<%= id %>?_method=PUT" method="POST" class="deseos">
+                                <button type="submit"><%= rol==="admin" ? 'Guest':'Admin' %> </button>
+                            </form>
+                        </div>
+                    </td>
+                    <td>
+                        <form action="/users/remove/<%= id %>?_method=DELETE" method="POST" class="deseos">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
     </table>
-    <%- include('./partials/footerBoostrap') %>
+
+
+
+    <%- include('./partials/footer') %>
 </body>
 
 </html>

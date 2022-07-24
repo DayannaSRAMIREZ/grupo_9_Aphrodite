@@ -422,5 +422,12 @@ module.exports = {
             })
             .catch(error => console.log(error))
 
+    }, 
+    list: (req,res)=>{
+        db.Product.findAll()
+        .then(products=>{
+          res.render('productsList', {products})  
+        })
+        
     }
 }

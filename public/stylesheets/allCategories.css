@@ -1,0 +1,93 @@
+.categories_body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/productos.png');
+    background-size: cover;
+}
+.editarCategoria{
+    text-align: end;
+}
+.table_categories {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 15vh auto;
+    position: relative;
+   
+  }
+  .table_categories * {
+    position: relative;
+  }
+  .table_categories td, table th {
+    padding-left: 8px;
+  }
+  .table_categories thead tr {
+    height: 60px;
+    background: var(--colorRosaClaro);
+  }
+  .table_categories tbody tr {
+    height: 48px;
+    border-bottom: 1px solid  var(--colorRosaFuerte);
+  }
+  .table_categories  tbody tr:last-child {
+    border: 0;
+  }
+  .table_categories td, table th {
+    text-align: left;
+  }
+  .table_categories td.l, table th.l {
+    text-align: right;
+  }
+  .table_categories td.c, table th.c {
+    text-align: center;
+  }
+  .table_categories td.r, table th.r {
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 35.5em) {
+    .table_categories {
+      display: block;
+    }
+    .table_categories > *, table tr, table td, table th {
+      display: block;
+    }
+    .table_categories thead {
+      display: none;
+    }
+    .table_categories tbody tr {
+      height: auto;
+      padding: 8px 0;
+    }
+    .table_categories tbody tr td {
+      padding-left: 45%;
+      margin-bottom: 12px;
+    }
+    .table_categories tbody tr td:last-child {
+      margin-bottom: 0;
+    }
+    .table_categories tbody tr td:before {
+      position: absolute;
+      font-weight: 700;
+      width: 40%;
+      left: 10px;
+      top: 0;
+    }
+    .table_categories tbody tr td:nth-child(1):before {
+      content: "Code";
+    }
+    .table_categories tbody tr td:nth-child(2):before {
+      content: "Stock";
+    }
+    .table_categories tbody tr td:nth-child(3):before {
+      content: "Cap";
+    }
+    .table_categories tbody tr td:nth-child(4):before {
+      content: "Inch";
+    }
+    .table_categories tbody tr td:nth-child(5):before {
+      content: "Box Type";
+    }
+  }

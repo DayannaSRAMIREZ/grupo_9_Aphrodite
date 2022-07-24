@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body class="categories_body">
+    <%- include('./partials/header') %>
+    <main main_category>
+
+        <form method="POST" class="form_category" action="/categories/update/<%= category.id %>?_method=PUT">
+
+            <h2>EDITAR CATEGORÍA</h2>
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" value="<%= category.name %> ">
+            </div>
+            <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+            </div>
+            <div>
+                <button type="submit">Editar</button>
+            </div>
+        </form>
+    </main>
+
+
+    <%- include('./partials/footer') %>
+</body>
+
+</html>

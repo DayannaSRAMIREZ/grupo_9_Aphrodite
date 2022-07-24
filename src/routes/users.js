@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-const {register, login, processLogin, registerController,logout, profile, profileUpdate, admin, menuAdmin}= require('../controllers/usersController'); 
+const {register,adminUpdate, login, processLogin, registerController,logout, profile, profileUpdate, admin, menuAdmin, remove}= require('../controllers/usersController'); 
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator');
 const profileValidator= require('../validations/profileValidatior'); 
@@ -20,6 +20,8 @@ router.get('/profile',profileCheck,profile);
 router.get('/menuAdmin', adminCheck, menuAdmin);
 router.get('/admin', adminCheck, admin);
 router.put('/profile-update',uploadImagesUsers.single('image'),profileValidator, profileUpdate);
+router.put('/update/:id', adminUpdate); 
+router.delete('/remove/:id',  remove), 
 
 
 module.exports = router;
