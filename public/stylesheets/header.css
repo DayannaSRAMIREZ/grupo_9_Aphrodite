@@ -145,6 +145,8 @@
     .boxIngreso{
         display: flex;
         flex-direction: row;
+        width: 300px;
+        justify-content: space-between;
     }
     .btnRegistrate {
         width: 56px;
@@ -155,7 +157,7 @@
         margin-inline-end: 8px;
     }
     .header__menu__usuarios {
-        width: 162px;
+        width: 300px;
         flex-direction: row;
     }
 }
@@ -171,7 +173,7 @@
 
     @media (min-width: 1440px) {
     .header__menu__usuarios {
-        width: 268px;
+        width: 300px;
         flex-direction: row;
      }
      .btnRegistrate {
