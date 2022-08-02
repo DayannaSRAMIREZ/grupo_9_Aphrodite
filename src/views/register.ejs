@@ -10,14 +10,14 @@
     <marquee>Comprá más rápido y llevá el control de tus pedidos, ¡en un solo lugar!</marquee>
     <div class="register__login"><a href="/login">¡Ya tengo una cuenta!</a></div>
     <hr class="linea__salto">
-    <form class="register__form" action="/users/register" method="post">
+    <form class="register__form" action="/users/register" id="register" method="post">
       <article>
         <div class="register__form-box">
           <label for="nombre">Nombre</label>
           <br>
           <input class="register__form-input" type="text" id="name" name="name" value="<%= locals.old && locals.old.name %>">
           <br>
-          <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+          <span class="alert-products" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -25,7 +25,7 @@
           <br>
           <input class="register__form-input" type="text" id="surname" name="surname" value="<%= locals.old && locals.old.surname %>">
           <br>
-          <span class="alert-products"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
+          <span class="alert-products" id="errorSurname"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -33,7 +33,7 @@
           <br>
           <input class="register__form-input" type="email" id="email" name="email" value="<%= locals.old && locals.old.email %>">
           <br>
-          <span class="alert-products"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+          <span class="alert-products" id="errorEmail"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -47,7 +47,7 @@
         <div class="register__form-box">
           <label for="password"> Repetir Contraseña</label>
           <br>
-          <input class="register__form-input" type="password" id="password" name="password2">
+          <input class="register__form-input" type="password" id="password2" name="password2">
           <br>
           <span class="alert-products"><%= locals.errors && errors.password2? errors.password2.msg : null %></span>
 
@@ -116,6 +116,9 @@
 
 
   <%- include('./partials/footer') %>
+
+  <script src="/JavaScript/registerValidator.js"></script>
+
 </body>
 
 </html>

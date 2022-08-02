@@ -6,20 +6,20 @@
   <%- include('./partials/header') %>
 
   <main class="main__login">
-    <form action="" method="POST">
+    <form id="form" action="" method="POST">
       <div>
         <label for="email">Email</label>
         <br>
         <input class="login__nombre input__comun" type="email" id="email" name="email">
       </div>
-      <small class="alert-products"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
+      <small class="alert-products" id="errorEmail"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
 
       <div>
         <label for="password">Contraseña</label>
         <br>
         <input class="input__comun" type="password" name="password" id="password">
       </div>
-      <small class="alert-products"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
+      <small class="alert-products" id="errorPass"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
       <div>
         <input type="radio" name="remember" id="remember">
         <label class="login__recordarme" for="remember">Recordarme</label>
@@ -32,6 +32,9 @@
 
   </main>
   <%- include('./partials/footer') %>
+
+  <script src="/JavaScript/loginValidator.js"></script>
+
 </body>
 
 </html>
