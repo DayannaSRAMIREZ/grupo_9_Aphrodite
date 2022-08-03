@@ -1,25 +1,31 @@
 body.home {
-    font-family:  'rosarivo';
+    font-family: 'rosarivo';
 }
 
 .home a {
     color: var(--colorNegroClaro);
 }
+
 .card1 {
     background: url('../images/home/atajos/anillo.jpeg') center no-repeat;
 }
+
 .card2 {
     background: url('../images/home/atajos/pulsera.jpeg') center no-repeat;
 }
+
 .card3 {
     background: url('../images/home/atajos/reloj.jpeg') center no-repeat;
 }
+
 .card4 {
     background: url('../images/home/atajos/aritos.jpeg') center no-repeat;
 }
+
 .card5 {
     background: url('../images/home/atajos/collar.jpeg') center no-repeat;
 }
+
 .card {
     position: relative;
     width: 29vh;
@@ -45,8 +51,8 @@ body.home {
     width: 100%;
     height: calc(60% + 35px);
     background-color: var(--colorRosaClaro);
-    transition: transform .5s.25s ease-in;
-    z-index: -1;
+    transition: transform .5s .25s ease-in;
+    z-index: index -1;
 }
 
 .card::before {
@@ -65,11 +71,11 @@ body.home {
 .card__content {
     opacity: 0;
     transition: opacity .25s;
-    color:var(--colorDorado);    
+    color: var(--colorDorado);
 }
 
 .card__title {
-    color:var(--colorDorado);   
+    color: var(--colorDorado);
     margin-bottom: 15px;
 }
 
@@ -558,13 +564,13 @@ body.home {
 
     .tarjeta {
 
-        width: 180px; 
+        width: 180px;
         height: 280px;
 
     }
 
     .tarjeta h4 {
-        font-size: 15px!important; 
+        font-size: 15px !important;
         text-align: center;
         padding: 25px 0px 0px 0px;
     }
@@ -585,8 +591,8 @@ body.home {
 
     .tarjeta button {
 
-        padding: 7px 15px ;
-        font-size: 12px  ;
+        padding: 7px 15px;
+        font-size: 12px;
         border-radius: 10px;
     }
 

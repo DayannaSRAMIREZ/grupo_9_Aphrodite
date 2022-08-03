@@ -1,160 +1,198 @@
-main.main__gifts{
-    align-items: center;
-    margin-bottom: 30px;
+main.main__gifts {
+   align-items: center;
+   margin-bottom: 30px;
 }
-div.gifts{
-    width: 90%;
-    position: relative;
-    display: inline-block;
-    align-items: center;
-}
-h1.gifts{
-    font-family: 'rosarivo';   
-    text-align: center;
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-}
-img.fondo_principal_gifts{
-    margin-top: 20px;
-    width: 99vw;
-    height: 32vw;
-    display: flex;
-    flex-wrap: wrap;
+main.main__gifts .home__main__cuotas {
+   background-color: var(--colorRosaFuerte);
+   font-size: 14px;
+   padding-top: 4px;
+   font-style: var(--colorNegroClaro);
+   width: 1200px;
+   margin-right: 33px;
+
 }
 
+div.gifts {
+   width: 90%;
+   position: relative;
+   display: inline-block;
+   align-items: center;
+}
 
- div.contenedor_gifts{
-    max-width: 1200px;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
- }
+h1.gifts {
+   font-family: 'rosarivo';
+   text-align: center;
+   position: absolute;
+   bottom: 15px;
+   left: 0;
+   right: 0;
+   width: 100vw;
+   color: var(--colorNegroClaro);
+   border-color: var(--colorDorado);
+}
 
- div.contenedor_tarjeta_gifts{
-    margin: 20px;
- }
-
- div.contenedor_tarjeta_gifts a{
-    display: inline-block;
- }
-
-
-
-
- img.frontal{
-    width: 300px;
-    height: 350px;
-    margin: 0;
- }
+img.fondo_principal_gifts {
+   margin-top: 20px;
+   width: 99vw;
+   height: 32vw;
+   display: flex;
+   flex-wrap: wrap;
+}
 
 
- figure{
-    width: 300px;
-    height: 350px;
-    margin: 0;
-    position: relative;
-    transition: all ease .5s;
-    transform-style: preserve-3d;
-    transform: perspective(600px) rotateY(0deg);
- }
+div.contenedor_gifts {
+   max-width: 1200px;
+   margin: 50px auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}
 
- figure .frontal, figure .trasera{
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    transition: all ease .5s;
- }
+div.contenedor_tarjeta_gifts {
+   margin: 20px;
+}
 
- figure .frontal{
-    display: block;
+div.contenedor_tarjeta_gifts a {
+   display: inline-block;
+}
+
+
+
+
+img.frontal {
+   width: 300px;
+   height: 350px;
+   margin: 0;
+}
+
+
+figure {
+   width: 300px;
+   height: 350px;
+   margin: 0;
+   position: relative;
+   transition: all ease .5s;
+   transform-style: preserve-3d;
+   transform: perspective(600px) rotateY(0deg);
+}
+
+figure .frontal,
+figure .trasera {
+   width: 100%;
+   height: 100%;
+   border-radius: 5px;
+   transition: all ease .5s;
+}
+
+figure .frontal {
+   display: block;
    /*  backface-visibility: hidden; */
- }
+}
 
- figure .trasera{
-    position: absolute;
-    top: 0;
-    transform: perspective(600px) rotateY(0deg);
+figure .trasera {
+   position: absolute;
+   top: 0;
+   transform: perspective(600px) rotateY(0deg);
    /*  backface-visibility: hidden; */
-    
- }
 
- div.contenedor_tarjeta_gifts:nth-child(1) figure .trasera{
-    background: rgb(137,46,210);
-    background: linear-gradient(180deg, rgba(137,46,210,0.6250875350140056) 15%, rgba(190,51,235,0.639093137254902) 50%, rgba(234,199,244,0.6194852941176471) 82%);
- }
-  
- div.contenedor_tarjeta_gifts:nth-child(2) figure .trasera{
-    background: rgb(246,143,245);
-    background: linear-gradient(0deg, rgba(246,143,245,1) 15%, rgba(214,90,211,0.6054796918767507) 50%, rgba(190,121,178,0.5382528011204482) 82%);
- }
+}
 
- div.contenedor_tarjeta_gifts:nth-child(3) figure .trasera{
-    background: rgb(135,52,143);
-background: linear-gradient(180deg, rgba(135,52,143,0.5718662464985995) 15%, rgba(170,129,195,0.5802696078431373) 50%, rgba(209,174,223,0.5802696078431373) 82%);
- }
+div.contenedor_tarjeta_gifts:nth-child(1) figure .trasera {
+   background: rgba(194, 210, 46, 0.562);
+   background: linear-gradient(180deg, rgba(62, 93, 102, 0.625) 15%, rgba(194, 154, 174, 0.639) 50%, rgba(234, 199, 244, 0.6194852941176471) 82%);
+}
 
- h2.gifts {
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    color: rgb(253, 224, 224) ;
-    backface-visibility: hidden;
-    overflow: auto;
-    
+div.contenedor_tarjeta_gifts:nth-child(2) figure .trasera {
+   background: rgb(246, 143, 245);
+   background: linear-gradient(0deg, rgba(246, 143, 245, 1) 15%, rgba(214, 90, 211, 0.6054796918767507) 50%, rgba(190, 121, 178, 0.5382528011204482) 82%);
+}
+
+div.contenedor_tarjeta_gifts:nth-child(3) figure .trasera {
+   background: rgb(135, 52, 143);
+   background: linear-gradient(180deg, rgba(135, 52, 143, 0.5718662464985995) 15%, rgba(170, 129, 195, 0.5802696078431373) 50%, rgba(209, 174, 223, 0.5802696078431373) 82%);
+}
+
+h2.gifts {
+   text-align: center;
+   margin-top: 15px;
+   margin-bottom: 10px;
+   color: rgb(253, 224, 224);
+   backface-visibility: hidden;
+   overflow: auto;
+
+}
+
+figure .trasera hr.gifts {
+   height: 2px;
+   color: rgb(253, 224, 224);
+   margin-top: 10px;
+}
+
+figure .trasera p.gifts {
+   width: 90%;
+   text-align: center;
+   padding: 10px;
+   line-height: 30px;
+   margin-top: 35px;
+   color: rgb(241, 239, 239);
+}
+
+
+@media(min-width: 768px) {
+   h1.gifts {
+
+      bottom: 40px;
+      color: var(--colorNegroClaro);
+      border-color: var(--colorGris);
+      font-size: 30px;
    }
-
- figure .trasera hr.gifts{
-    height: 2px;
-    color: rgb(253, 224, 224) ;
-    margin-top: 10px;
-   }
-
-  figure .trasera p.gifts{
-    width: 90%;
-    text-align: center;
-    padding: 10px;
-    line-height: 30px;
-    margin-top: 35px;
-    color: rgb(241, 239, 239);
-   }
+   main.main__gifts .home__main__cuotas {
+      background-color: var(--colorRosaFuerte);
+      font-size: 14px;
+      padding-top: 4px;
+      font-style: var(--colorNegroClaro);
+      width: 1200px;
+      margin-right: 33px;
    
-
-   @media(min-width: 768px){
-    h1.gifts{
-       
-        bottom: 40px;
-        
    }
+}
+
+@media(min-width: 1024px) {
+
+   figure .trasera {
+      position: absolute;
+      top: 0;
+      transform: perspective(600px) rotateY(180deg);
+      backface-visibility: hidden;
+
    }
+   main.main__gifts .home__main__cuotas {
+   background-color: var(--colorRosaFuerte);
+   font-size: 14px;
+   padding-top: 4px;
+   font-style: var(--colorNegroClaro);
+   width: 1200px;
+   margin-right: 33px;
 
-   @media(min-width: 1024px) {
+}
 
-    figure .trasera{
-    position: absolute;
-    top: 0;
-    transform: perspective(600px) rotateY(180deg);
-    backface-visibility: hidden;
-    
- }
-    h1.gifts{
-        bottom: 50px;
-        
+   h1 .gifts {
+      bottom: 50px;
+      color: var(--colorNegroClaro);
+      border-color: var(--colorGris);
+
    }
 
 
    div.contenedor_tarjeta_gifts:hover figure {
-    -webkit-transform: perspective(600px) rotateY(180deg) ;
-    -ms-transform: perspective(600px) rotateY(180deg) ;
-    -o-transform: perspective(600px) rotateY(180deg) ;
-    transform: perspective(600px) rotateY(180deg) ;
+      -webkit-transform: perspective(600px) rotateY(180deg);
+      -ms-transform: perspective(600px) rotateY(180deg);
+      -o-transform: perspective(600px) rotateY(180deg);
+      transform: perspective(600px) rotateY(180deg);
 
-    -webkit-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
-    -moz-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
-    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.3);
- }
+      -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+   }
 }
