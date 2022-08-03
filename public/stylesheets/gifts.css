@@ -7,15 +7,13 @@ main.main__gifts .home__main__cuotas {
    font-size: 14px;
    padding-top: 4px;
    font-style: var(--colorNegroClaro);
-   width: 1200px;
+   width: 100%;
    margin-right: 33px;
 
 }
 
 div.gifts {
-   width: 90%;
-   position: relative;
-   display: inline-block;
+   width: 100%;
    align-items: center;
 }
 
@@ -33,7 +31,7 @@ h1.gifts {
 
 img.fondo_principal_gifts {
    margin-top: 20px;
-   width: 99vw;
+   width: 100%;
    height: 32vw;
    display: flex;
    flex-wrap: wrap;
@@ -172,7 +170,7 @@ figure .trasera p.gifts {
    font-size: 14px;
    padding-top: 4px;
    font-style: var(--colorNegroClaro);
-   width: 1200px;
+   width: 100%;
    margin-right: 33px;
 
 }
