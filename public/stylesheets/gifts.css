@@ -2,14 +2,16 @@ main.main__gifts {
    align-items: center;
    margin-bottom: 30px;
 }
-main.main__gifts .home__main__cuotas {
-   background-color: var(--colorRosaFuerte);
+.main__gifts .home__main__cuotas {
+   /*color: var(--colorGris);*/
+   color: var(--colorGris);
+   font-style: var(--colorRosaClaro);
    font-size: 14px;
    padding-top: 4px;
-   font-style: var(--colorNegroClaro);
    width: 100%;
    margin-right: 33px;
-
+   font-weight: 500;
+   background-color:var(--colorRosaFuerte);
 }
 
 div.gifts {
@@ -103,12 +105,12 @@ div.contenedor_tarjeta_gifts:nth-child(1) figure .trasera {
 
 div.contenedor_tarjeta_gifts:nth-child(2) figure .trasera {
    background: rgb(246, 143, 245);
-   background: linear-gradient(0deg, rgba(246, 143, 245, 1) 15%, rgba(214, 90, 211, 0.6054796918767507) 50%, rgba(190, 121, 178, 0.5382528011204482) 82%);
+   background: linear-gradient(0deg, rgba(212, 210, 188, 0.603) 15%, rgba(118, 145, 142, 0.605) 50%, rgba(190, 121, 178, 0.5382528011204482) 82%);
 }
 
 div.contenedor_tarjeta_gifts:nth-child(3) figure .trasera {
-   background: rgb(135, 52, 143);
-   background: linear-gradient(180deg, rgba(135, 52, 143, 0.5718662464985995) 15%, rgba(170, 129, 195, 0.5802696078431373) 50%, rgba(209, 174, 223, 0.5802696078431373) 82%);
+   background: rgb(211, 216, 148);
+   background: linear-gradient(180deg, rgba(219, 188, 46, 0.572) 15%, rgba(144, 146, 121, 0.58) 50%, rgba(226, 211, 231, 0.58) 82%);
 }
 
 h2.gifts {
