@@ -8,7 +8,7 @@ window.addEventListener ('load', () => {
         errorEmail = qs('#errorEmail'),
         errorPass = qs('#errorPass'),
         regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/,
-        regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/,
+        regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/,
         errores;
 
 
@@ -16,7 +16,7 @@ window.addEventListener ('load', () => {
             switch (true) {
                 case email.value.length == 0:
                     errorEmail.innerHTML = 'El campo es obligarorio'
-                    email.classList.add('')
+                    email.classList.add('is-invalid')
                     errores = true
                 break;
 
@@ -36,12 +36,12 @@ window.addEventListener ('load', () => {
     pass.addEventListener('blur', () => {
         switch (true) {
             case pass.value.length == 0:
-                errorPass.innerHTML = 'el campo es obligarorio'
+                errorPass.innerHTML = 'El campo es obligarorio'
                 pass.classList.add('is-invalid')
                 errores = true
                 break;
             case !regExPass.test(pass.value):
-                errorPass.innerHTML = 'la contraseña no es válida'
+                errorPass.innerHTML = 'La contraseña no es válida'
                 pass.classList.add('is-invalid')
                 errores = true
                 break;
@@ -53,26 +53,26 @@ window.addEventListener ('load', () => {
                 break;
         }
         })
-        login.addEventListener('submit', (event) => {
+        login.addEventListener('submit', (e) => {
             e.preventDefault()
             switch (true) {
                 case email.value.length == 0:
-                    errorEmail.innerHTML = 'el campo es obligatorio'
+                    errorEmail.innerHTML = 'Campo requerido'
                     email.classList.add('is-invalid')
                     errores = true
                     break;
                 case !regExEmail.test(email.value):
-                    errorEmail.innerHTML = 'escriba un mail valido'
+                    errorEmail.innerHTML = 'Escriba un mail valido'
                     email.classList.add('is-invalid')
                     errores = true
                     break;
                 case pass.value.length == 0:
-                    errorPass.innerHTML = 'el campo es obligarorio'
+                    errorPass.innerHTML = 'Campo requerido'
                     pass.classList.add('is-invalid')
                     errores = true
                     break;
                 case !regExPass.test(pass.value):
-                    errorPass.innerHTML = 'escriba un Password valido'
+                    errorPass.innerHTML = 'Escriba un Password valido'
                     pass.classList.add('is-invalid')
                     errores = true
                     break;
