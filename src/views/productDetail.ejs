@@ -46,35 +46,34 @@
 
       <section class="product__detail__interarte">
         <h3>También puede interesarte ...</h3>
-        <article class="home_cards2">
-          <% for( let index = 0; index <= 3; index++ ) { %>
+        <section class="home_cards2">
+          <% for( let index = 0; index <= 2; index++ ) { %>
           <article>
             <div class="tarjeta2 ">
-              <h4><%= products[detail].name %> </h4>
+              <h4><%= products[index].name %> </h4>
               <div class="home__contenedor2">
-
-                <p><%= products[detail].discount%> % off</p>
+                
+                <p><%= products[index].discount%>  % off</p>
                 <% products[index].images.forEach(image => { %>
-                <% if (image.primary) { %>
-                <img src="/images/products/<%= image.name%> " alt="imagePrimary" />
-                <% } %>
+                  <% if (image.primary) { %>
+                    <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+                  <% } %>
                 <% }) %>
-
-
+               
+    
               </div>
               <div class="tarjeta__pie2">
                 <h6>u$s<%= products[index].price %> </h6>
-                <button>
-                  <article href="/product/detail/<%= products[index].id %> ">ver más</a>
-                </button>
+                <button><a href="/product/detail/<%= products[index].id %> ">ver más</a></button>
               </div>
             </div>
           </article>
           <% } %>
-
-
-        </article>
-
+    
+    
+        </section>
+    
+        
       </section>
     </div>
 
