@@ -18,17 +18,14 @@ window.addEventListener ('load', () => {
             switch (true) {
                  case name.value.length == 0:
                     errorName.innerHTML = 'Campo requerido';
-                    name.classList.add('is-invalid');
                     errores = true
                     break;
                 case name.value.length <= 1 :
                     errorName.innerHTML = 'minimo 2 caracteres';
-                    name.classList.add('is-invalid');
                     errores = true;
                     break;
                 default:
                     name.classList.remove('is-invalid');
-                    name.classList.add('is-valid');
                     errorName.innerHTML = "";
                     errores = false
                     break;
@@ -39,15 +36,11 @@ window.addEventListener ('load', () => {
             switch (true) {
                 case surname.value.length == 0:
                     errorSurname.innerHTML = 'Campo requerido';
-                    surname.classList.add('is-invalid');
                     break;
                 case surname.value.length <= 1 :
                     errorSurname.innerHTML = 'minimo 2 caracteres';
-                    surname.classList.add('is-invalid');
                     break;
                 default:
-                    surname.classList.remove('is-invalid');
-                    surname.classList.add('is-valid');
                     errorSurname.innerHTML = "";
                     break;
             }
@@ -80,7 +73,6 @@ window.addEventListener ('load', () => {
                 result.data.forEach(element => {
                     if(email.value === element.email){
                         errorEmail.innerHTML = "email ya registrado";
-                        email.classList.add('is-invalid');
                         errores = true;
                     }
                 });
@@ -90,17 +82,13 @@ window.addEventListener ('load', () => {
             switch (true) {
                 case pass.value.length == "":
                     errorPass.innerHTML = "Campo requerido";
-                    pass.classList.add('is-invalid');
                     errores = true;
                     break;
                 case !regExPass.test(pass.value):
                     errorPass.innerHTML = "La contraseña debe tener: un minimo de 8 caracteres, al menos un número, una minúscula y una mayúscula";
-                    pass.classList.add('is-invalid');
                     errores = true;
                     break;
                 default:
-                    pass.classList.remove('is-invalid');
-                    pass.classList.add('is-valid');
                     errorPass.innerHTML = "";
                     errores = false;
                     break; 
@@ -110,17 +98,13 @@ window.addEventListener ('load', () => {
             switch (true) {
                 case pass2.value.length == "":
                     errorPass2.innerHTML = "Campo requerido";
-                    pass2.classList.add('is-invalid');
                     errores = true;
                     break;
                 case pass2.value != pass.value:
                     errorPass2.innerHTML = "Las contraseñas no coinciden";
-                    pass2.classList.add('is-invalid');
                     errores = true;
                     break;
                 default:
-                    pass2.classList.remove('is-invalid');
-                    pass2.classList.add('is-valid');
                     errorPass2.innerHTML = "";
                     errores = false;
                     break; 
@@ -130,12 +114,9 @@ window.addEventListener ('load', () => {
             switch (true) {
                 case pass.value != pass2.value:
                     errorPass2.innerHTML = "Las contraseñas no coinciden";
-                    pass2.classList.add('is-invalid');
                     errores = true;
                     break;
                 default:
-                    pass2.classList.remove('is-invalid');
-                    pass2.classList.add('is-valid');
                     errorPass2.innerHTML = "";
                     errores = false;
                     break;
@@ -148,10 +129,10 @@ window.addEventListener ('load', () => {
             let elementosForm = register.elements
             
             for (let i = 0; i < elementosForm.length-1; i++) {
-                if(elementosForm[i].value === ""  || elementosForm[i].classList.contains('is-invalid')){
-                    elementosForm[i].classList.add('is-invalid');
+                if(elementosForm[i].value === "" ){
                     errorForm.innerHTML = "Revisa los campos señalados";
                     errores = true;
+                    break; 
                 }else{
                     errores = false;
                 }

@@ -6,23 +6,26 @@
     <%- include('./partials/header') %>
 <main main_category>
  
-        <form action="" method="POST" class="form_category">
+        <form action="" id="form" method="POST" class="form_category">
             <h2>AGREGAR CATEGORÍA</h2>
+            <span class="alert-products" id="errorForm"></span>
             <div>
                 <label for="name">Nombre</label>
                 <input type="text" name="name" id="name">
             </div>
-                <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                <span class="alert-products" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
             <div>
                 <button type="submit">Agregar</button>
             </div>
         </form>
 </main>
         
+
     
    
-
+    <script src="/JavaScript/categoryValidator.js"></script>
     <%- include('./partials/footer') %>
+
 </body>
 
 </html>

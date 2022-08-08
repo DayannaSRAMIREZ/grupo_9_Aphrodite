@@ -10,14 +10,15 @@
          
             
             <form class="boxEditForm" method="POST" action="/product/update/<%= product.id %>?_method=PUT"
-                enctype="multipart/form-data" >
+                enctype="multipart/form-data" id="form" >
                 <h3><%= product.name %> </h3>
+                <span class="alert-products" id="errorForm"> </span>
 
                 <article class="art">
                     <div class="formEdit">
                         <label for="nameProduct">Nombre:</label>
                         <input class="editFormInputName" type="text" id="name" name="name" value="<%= product.name %>">
-                        <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
+                        <span class="alert-products" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                     </div>
                     <div class="formEdit">
                         <label class="formSelectOption" for="categoryId">Categoria:</label>
@@ -27,7 +28,7 @@
                                 <option value=<%= category.id %>  <%= product.categoryId == category.id && 'selected' %>><%= category.name %> 
                                 </option>
                             <% }) %>
-                            <span class="alert-products"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
+                            <span class="alert-products" id="errorCategory"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                         </select>
                     </div>
                 </article>
@@ -40,7 +41,7 @@
                             </option>
                         <% }) %>
                         
-                        <span class="alert-products"><%= locals.errors && errors.materials ? errors.materials.msg : null %> </span> 
+                        <span class="alert-products" id="errorMaterial"><%= locals.errors && errors.materials ? errors.materials.msg : null %> </span> 
                     </select>
                 </div>
 
@@ -50,18 +51,18 @@
                     <div class="formEdit">
                         <label for="unidades">Unidades:</label>
                         <input class="editFormInputUni" type="number" name="units" id="units" value="<%= product.units %>">
-                        <span class="alert-products"><%= locals.errors && errors.units ? errors.units.msg : null %> </span>
+                        <span class="alert-products" id="errorUnits"><%= locals.errors && errors.units ? errors.units.msg : null %> </span>
                     </div>
 
                     <div class="formEdit">
                         <label for="price">Precio:</label>
                         <input class="editFormInputPrecio" type="number" name="price" id="price" value="<%= product.price %>">
-                        <span class="alert-products"><%= locals.errors&& errors.price ? errors.price.msg : null %> </span>
+                        <span class="alert-products" id="errorPrice"><%= locals.errors&& errors.price ? errors.price.msg : null %> </span>
                     </div>
                     <div class="formEdit">
                         <label for="price">Descuento:</label>
                         <input class="editFormInputPrecio" type="number" name="discount" id="discount" value="<%= product.discount%>">
-                        <span class="alert-products"><%= locals.errors&& errors.discount ? errors.discount.msg : null %> </span>
+                        <span class="alert-products" id="errorDiscount"><%= locals.errors&& errors.discount ? errors.discount.msg : null %> </span>
                     </div>
 
 
@@ -77,7 +78,7 @@
                             <% }) %>
                             
                         </select>
-                        <span class="alert-products"><%= locals.errors && errors.size ? errors.size.msg : null %> </span>
+                        <span class="alert-products" id="errorSize"><%= locals.errors && errors.size ? errors.size.msg : null %> </span>
                     </div>
                 </article>
                 <article class="art">
@@ -86,12 +87,13 @@
                         <label class="labelArea" for="description">Descripción:</label>
 
                         <textarea class="textarea__clase" name="description" rows="10" cols="50"
-                            placeholder="Descripción del producto..."><%= product.description %></textarea>
-                            <span class="alert-products"><%= locals.errors && errors.description ?  errors.description.msg : null %></span>
+                            placeholder="Descripción del producto..." id="description"><%= product.description %></textarea>
+                            <span class="alert-products" id="errorDescription"><%= locals.errors && errors.description ?  errors.description.msg : null %></span>
                     </div>
                     <div class="formEdit">
                         <label for="nameProduct">Cargar Imágen</label>
-                        <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*" multiple>
+                        <input class="editFormInputFile" type="file"  id="images" name="images" accept="image/*" multiple>
+                        <span class="alert-products" id="errorImages"></span>
                     </div>
                     <div class="boxButton">
                         <button class="buttonEdit" type="submit">Editar</button>
@@ -108,11 +110,11 @@
                         <% } %>
                       <% }) %>
                 <% } %>
-              
-            
+  
             </div>
            
         </section>
+        <script src="/JavaScript/addProductsValidator.js"></script>
         <%- include('./partials/footer') %>
 </body>
 

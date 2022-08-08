@@ -4,15 +4,16 @@
 <body class="profile">
   <%- include('./partials/header') %> 
 
-  <form class="register__form form__profile" action="/users//profile-update?_method=PUT" method="post" enctype="multipart/form-data">
+  <form class="register__form form__profile"id="form" action="/users//profile-update?_method=PUT"  method="post" enctype="multipart/form-data">
     <article>
       <div class="register__form-box caja__imagen">
+        <span class="alert-products" id="errorForm"> </span>
         <div><img class="profile__image" src="/images/profileImages/<%= locals.userLogin.image %> " alt=""></div>
         <label for="name">Nombre</label>
         <br>
         <input class="register__form-input" type="text" id="name" name="name" value="<%= locals.usuario && locals.usuario.name %>">
         <br>
-        <span class="alert-products"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+        <span class="alert-products" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
 
       </div>
       <div class="register__form-box">
@@ -20,7 +21,7 @@
         <br>
         <input class="register__form-input" type="text" id="surname" name="surname" value="<%= locals.usuario && locals.usuario.surname %>">
         <br>
-        <span class="alert-products"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
+        <span class="alert-products" id="errorSurname"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
 
       </div>
   
@@ -75,6 +76,7 @@
       <button  type="submit">EDITAR</button>
     </div>
   </form>
+  <script src="/JavaScript/profileEditValidator.js"></script>
     <%- include('./partials/footer') %> 
 </body>
 </html>
