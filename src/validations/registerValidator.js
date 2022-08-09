@@ -8,13 +8,13 @@ module.exports = [
     .notEmpty().withMessage("No puede estar vacío").bail()
     .isAlpha().withMessage("Solo se permiten letras")
     .isLength({
-        min: 4
-    }).withMessage("Mínimo 4 letras"),
+        min: 3
+    }).withMessage("Mínimo 3 letras"),
     body("surname")
     .notEmpty().withMessage("No puede estar vacío").bail()
     .isLength({
-        min: 4
-    }).withMessage("Mínimo 4 letras"),
+        min: 3
+    }).withMessage("Mínimo 3 letras"),
     body("email")
     .notEmpty().withMessage("No puede estar vacío").bail()
     .isEmail().withMessage("Tienes que poner un email válido")
@@ -33,9 +33,9 @@ module.exports = [
     body("password")
     .notEmpty().withMessage("Tenes que escribir una contraseña").bail()
     .isLength({
-        min: 8,
-        max: 16
-    }).withMessage("Tu contraseña debe tener como mínimo 8 caracteres y maximo 16"), 
+        min: 6,
+        max: 12
+    }).withMessage("Tu contraseña debe tener como mínimo 6 caracteres y maximo 12"), 
 //     .custom((value)=>{
 //         let oneUpperCase= false; 
 //        console.log(value);
