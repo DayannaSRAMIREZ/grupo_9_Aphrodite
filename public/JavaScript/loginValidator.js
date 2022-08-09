@@ -58,8 +58,30 @@ window.addEventListener ('load', () => {
         })
         login.addEventListener('submit', (e) => {
             e.preventDefault()
-            
-            
+            let elements = login.elements;
+            let error = false;
+        
+            for (let i = 0; i < elements.length - 2; i++) {
+                if(!elements[i].value.trim()){
+                    elements[i].classList.add('notValid');
+                    error = true;
+                   
+                }
+            }
+        
+            for (let i = 0; i < elements.length - 2; i++) {
+                if(elements[i].classList.contains('notValid')){
+                    error = true
+                }
+            }
+
+            if(error){
+                qs('.erroresLogin').innerHTML = "*Los campos señalados son obligatorios"
+            }else{
+                qs('.erroresLogin').innerHTML = ""
+                e.target.submit();
+            }
+        
         })
 
 })
