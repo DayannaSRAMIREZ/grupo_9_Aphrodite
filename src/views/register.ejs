@@ -15,9 +15,9 @@
         <div class="register__form-box">
           <label for="nombre">Nombre</label>
           <br>
-          <input class="register__form-input" type="text" id="name" name="name" value="<%= locals.old && locals.old.name %>">
+          <input class="register__form-input " type="text" id="name" name="name" value="<%= locals.old && locals.old.name %>">
           <br>
-          <span class="alert-products" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+          <span class="alert-name alert-products" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -25,7 +25,7 @@
           <br>
           <input class="register__form-input" type="text" id="surname" name="surname" value="<%= locals.old && locals.old.surname %>">
           <br>
-          <span class="alert-products" id="errorSurname"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
+          <span class="alert-surname alert-products" id="errorSurname"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -33,7 +33,7 @@
           <br>
           <input class="register__form-input" type="email" id="email" name="email" value="<%= locals.old && locals.old.email %>">
           <br>
-          <span class="alert-products" id="errorEmail"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+          <span class="alert-products alert-email" id="errorEmail"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -84,15 +84,15 @@
 
         <div class="register__form-box__genero">
           <div class="register__radio-box">
-            <input class="" type="radio" name="gender" id="masculino" value="masculino"<%= locals.old && old.gender && old.gender == "masculino"? 'checked' : null %>>
+            <input class="gender"  type="radio" name="gender" id="masculino" value="masculino"<%= locals.old && old.gender && old.gender == "masculino"? 'checked' : null %>>
             <label for="masculino">M</label>
           </div>
           <div class="register__radio-box">
-            <input class="" type="radio" name="gender" id="femenino" value="femenino" <%= locals.old && old.gender && old.gender == "femenino"? 'checked' : null %>>
+            <input class="gender"  type="radio" name="gender" id="femenino" value="femenino" <%= locals.old && old.gender && old.gender == "femenino"? 'checked' : null %>>
             <label for="femenino">F</label>
           </div>
           <div class="register__radio-box">
-            <input class="" type="radio" name="gender" id="nodice" value="nodice" <%= locals.old && old.gender && old.gender == "nodice"? 'checked' : null %>>
+            <input class="gender"  type="radio" name="gender" id="nodice" value="nodice" <%= locals.old && old.gender && old.gender == "nodice"? 'checked' : null %>>
             <label for="nodice">Otro</label>
           </div>
         </div>

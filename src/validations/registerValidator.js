@@ -34,9 +34,25 @@ module.exports = [
     .notEmpty().withMessage("Tenes que escribir una contraseña").bail()
     .isLength({
         min: 8,
-        max: 12
-    }).withMessage("Tu contraseña debe tener como mínimo 8 caracteres y maximo 12"),
+        max: 16
+    }).withMessage("Tu contraseña debe tener como mínimo 8 caracteres y maximo 16"), 
+//     .custom((value)=>{
+//         let oneUpperCase= false; 
+//        console.log(value);
+// for (let i = 0; i < value.length; i++) {
+//     console.log(value[i]);
+//     if(value[i]==value[i].toUpperCase() && typeof value[i] === 'string'){
+//         oneUpperCase= true
+//         console.log('mayuscula');
+//     }   
+// }
+  //     if(!oneUpperCase){
+    //         return false
+    //     }else{
+    //         return true
+    //     }
 
+    // }).withMessage("Al menos debe contener una mayuscula"),
     body("password2")
     .notEmpty().withMessage("Tenes que escribir una contraseña").bail()
     .custom((value, {
