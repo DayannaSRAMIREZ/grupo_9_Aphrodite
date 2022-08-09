@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
 
     name.addEventListener('blur', () => {
       if(name.value.length ===0){
-        console.log('error');
         errorName.innerHTML = "Debes ingresar el nombre de la categoria" 
       }else{
         errorName.innerHTML = "Debes ingresar el nombre de la categoria" 

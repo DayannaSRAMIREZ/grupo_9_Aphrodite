@@ -23,26 +23,22 @@ window.addEventListener('load', () => {
 
 
     name.addEventListener('blur', () => {
-        switch (true) {
-            case name.value.length < 3:
-                errorName.innerHTML = 'Debes ingresar un nombre con mas de tres letras.'
+        if(name.value.length < 3){
+    errorName.innerHTML = 'Debes ingresar un nombre con mas de tres letras.'
                 errores = true
-                break;
-            default:
-                errorName.innerHTML = ''
-
+        }else{
+    errorName.innerHTML = ''
         }
+       
     })
     category.addEventListener('blur', () => {
-        switch (true) {
-            case category.value.length === 0:
-                errorCategory.innerHTML = 'Debes seleccionar una categoria'
+        if(category.value.length === 0){
+   errorCategory.innerHTML = 'Debes seleccionar una categoria'
                 errores = true
-                break;
-            default:
-                errorCategory.innerHTML = ''
-
+        }else{
+    errorCategory.innerHTML = ''
         }
+      
     })
     units.addEventListener('blur', () => {
         switch (true) {

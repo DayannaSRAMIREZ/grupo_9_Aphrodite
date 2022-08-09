@@ -1,7 +1,7 @@
 const {
     body
 } = require('express-validator');
-const users = require('../data/dataUser.json');
+const db = require ('../database/models');
 
 module.exports = [
     body("name")
@@ -18,14 +18,18 @@ module.exports = [
     body("email")
     .notEmpty().withMessage("No puede estar vacío").bail()
     .isEmail().withMessage("Tienes que poner un email válido")
+  
     .custom((value) => {
-        const user = users.find(user => user.email === value)
-        if (user) {
-            return false
-        } else {
-            return true
+        return db.User.findOne({
+            where: {
+                email: value
+            }
+        }).then(user=>{
+            if(user){
+            return Promise.reject() 
         }
-    }).withMessage("Este email ya está registrado"),
+       }).catch(() => Promise.reject('El mail ya se encuentra registrado'))
+        }),
     body("password")
     .notEmpty().withMessage("Tenes que escribir una contraseña").bail()
     .isLength({
