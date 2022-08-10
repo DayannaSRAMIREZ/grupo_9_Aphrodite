@@ -35,24 +35,8 @@ module.exports = [
     .isLength({
         min: 6,
         max: 12
-    }).withMessage("Tu contraseña debe tener como mínimo 6 caracteres y maximo 12"), 
-//     .custom((value)=>{
-//         let oneUpperCase= false; 
-//        console.log(value);
-// for (let i = 0; i < value.length; i++) {
-//     console.log(value[i]);
-//     if(value[i]==value[i].toUpperCase() && typeof value[i] === 'string'){
-//         oneUpperCase= true
-//         console.log('mayuscula');
-//     }   
-// }
-  //     if(!oneUpperCase){
-    //         return false
-    //     }else{
-    //         return true
-    //     }
-
-    // }).withMessage("Al menos debe contener una mayuscula"),
+    }).withMessage("Tu contraseña debe tener como mínimo 6 caracteres y maximo 12") 
+    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/).withMessage('La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter'),
     body("password2")
     .notEmpty().withMessage("Tenes que escribir una contraseña").bail()
     .custom((value, {
