@@ -44,7 +44,7 @@
           <option value="vnz" <%= locals.usuario && usuario.country && usuario.country == 'vnz' ? 'selected' : null %>>Venezuela</option>
         </select>
         <br>
-        <span class="alert-products"><%= locals.errors && errors.country? errors.country.msg : null %></span>
+        <span class="alert-products alert-country "><%= locals.errors && errors.country? errors.country.msg : null %></span>
 
       </div>
       <div class="genero__titulo">

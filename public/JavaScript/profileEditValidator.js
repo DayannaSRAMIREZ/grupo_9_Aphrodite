@@ -3,8 +3,8 @@ window.addEventListener('load', () => {
     let form = qs('#form');
     let name = qs('#name');
     let surname = qs('#surname');
-    let image = qs('#image')
-   
+    let image = qs('#image'); 
+ 
     let errorName = qs('#errorName');
     let errorSurname = qs('#errorSurname');
     let errorImage = qs('#errorImage');
@@ -13,27 +13,30 @@ window.addEventListener('load', () => {
 
 
     name.addEventListener('blur', () => {
-        switch (true) {
-            case name.value.length === 0:
-            
+   
+            if(name.value.length < 3){
                 errorName.innerHTML = 'Debes ingresar un nombre con mas de tres letras.'
                 errores = true
-                break;
-            default:
-          
+                name.classList.remove('isValid')
+                name.classList.add('notValid')
+            }else{
                 errorName.innerHTML = ''
+                name.classList.remove('notValid')
+                name.classList.add('isValid')
+                
+            }
 
-        }
     })
     surname.addEventListener('blur', () => {
-        switch (true) {
-            case surname.value.length === 0:
-                errorSurname.innerHTML = 'Debes seleccionar un apellido'
-                errores = true
-                break;
-            default:
-                errorSurname.innerHTML = ''
-
+        if(surname.value.length === 0){
+            errorSurname.innerHTML = 'Debes seleccionar un apellido'
+            surname.classList.remove('isValid')
+            surname.classList.add('notValid')
+            errores = true
+        }else{
+            surname.classList.remove('notValid')
+            surname.classList.add('isValid')
+            errorSurname.innerHTML = ''
         }
     })
 
@@ -46,6 +49,7 @@ window.addEventListener('load', () => {
         errorImage.innerHTML = ''
     }
     })
+
     
     form.addEventListener('submit',(event) => {
 
@@ -56,7 +60,7 @@ window.addEventListener('load', () => {
         
         for (let i = 0; i < elementosForm.length-3; i++) {
             if(elementosForm[i].value === "" ){
-              errorForm.innerHTML = "*Revisa los campos señalados";
+            errorForm.innerHTML = "*Revisa los campos señalados";
                 errores = true;
                 break; 
             }else{
