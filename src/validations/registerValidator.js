@@ -1,38 +1,42 @@
 const {
     body
 } = require('express-validator');
-const users = require('../data/dataUser.json');
+const db = require ('../database/models');
 
 module.exports = [
     body("name")
     .notEmpty().withMessage("No puede estar vacío").bail()
     .isAlpha().withMessage("Solo se permiten letras")
     .isLength({
-        min: 4
-    }).withMessage("Mínimo 4 letras"),
+        min: 3
+    }).withMessage("Mínimo 3 letras"),
     body("surname")
     .notEmpty().withMessage("No puede estar vacío").bail()
     .isLength({
-        min: 4
-    }).withMessage("Mínimo 4 letras"),
+        min: 3
+    }).withMessage("Mínimo 3 letras"),
     body("email")
     .notEmpty().withMessage("No puede estar vacío").bail()
     .isEmail().withMessage("Tienes que poner un email válido")
+  
     .custom((value) => {
-        const user = users.find(user => user.email === value)
-        if (user) {
-            return false
-        } else {
-            return true
+        return db.User.findOne({
+            where: {
+                email: value
+            }
+        }).then(user=>{
+            if(user){
+            return Promise.reject() 
         }
-    }).withMessage("Este email ya está registrado"),
+       }).catch(() => Promise.reject('El mail ya se encuentra registrado'))
+        }),
     body("password")
     .notEmpty().withMessage("Tenes que escribir una contraseña").bail()
     .isLength({
-        min: 8,
+        min: 6,
         max: 12
-    }).withMessage("Tu contraseña debe tener como mínimo 8 caracteres y maximo 12"),
-
+    }).withMessage("Tu contraseña debe tener como mínimo 6 caracteres y maximo 12") 
+    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/).withMessage('La contraseña debe tener entre 6 y 12 caracteres, un número, una mayúscula y un caracter'),
     body("password2")
     .notEmpty().withMessage("Tenes que escribir una contraseña").bail()
     .custom((value, {

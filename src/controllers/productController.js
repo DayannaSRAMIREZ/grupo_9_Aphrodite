@@ -20,15 +20,19 @@ module.exports = {
         let categories = db.Category.findAll()
         let materials = db.Material.findAll()
         let sizes = db.Size.findAll()
+        let products = db.Product.findAll({
+            include:['images']
+        })
 
 
-        Promise.all([product, categories, materials, sizes])
-            .then(([product, categories, materials, sizes]) => {
+        Promise.all([product, categories, materials, sizes, products])
+            .then(([product, categories, materials, sizes, products]) => {
                 return res.render('productDetail', {
                     product,
                     categories,
                     materials,
-                    sizes
+                    sizes,
+                    products
                 })
 
             })

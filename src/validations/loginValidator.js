@@ -22,9 +22,9 @@ module.exports = [
     }),
 
 
-
     check('password')
     .notEmpty().withMessage('Debes ingresar una contraseña.')
+    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/).withMessage('Contraseña invalida')
     .custom((value, {
         req
     }) => {

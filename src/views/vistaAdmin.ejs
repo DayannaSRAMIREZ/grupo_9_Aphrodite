@@ -32,7 +32,7 @@
                     <td>
                         <div class="editarCategoria">
                             <form action="/users/update/<%= id %>?_method=PUT" method="POST" class="deseos">
-                                <button type="submit"><%= rol==="admin" ? 'Guest':'Admin' %> </button>
+                                <button type="submit" value="<%= rol==="admin" ? 'Guest':'Admin' %> "><%= rol==="admin" ? 'Guest':'Admin' %> </button>
                             </form>
                         </div>
                     </td>

@@ -12,12 +12,15 @@
     <hr class="linea__salto">
     <form class="register__form" action="/users/register" id="register" method="post">
       <article>
+        <div>
+          <span class="msgError alert-products"></span>
+        </div>
         <div class="register__form-box">
           <label for="nombre">Nombre</label>
           <br>
-          <input class="register__form-input" type="text" id="name" name="name" value="<%= locals.old && locals.old.name %>">
+          <input class="register__form-input " type="text" id="name" name="name" value="<%= locals.old && locals.old.name %>">
           <br>
-          <span class="alert-products" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
+          <span class="alert-name alert-products" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -25,7 +28,7 @@
           <br>
           <input class="register__form-input" type="text" id="surname" name="surname" value="<%= locals.old && locals.old.surname %>">
           <br>
-          <span class="alert-products" id="errorSurname"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
+          <span class="alert-surname alert-products" id="errorSurname"><%= locals.errors && errors.surname? errors.surname.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -33,7 +36,7 @@
           <br>
           <input class="register__form-input" type="email" id="email" name="email" value="<%= locals.old && locals.old.email %>">
           <br>
-          <span class="alert-products" id="errorEmail"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+          <span class="alert-products alert-email" id="errorEmail"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -41,7 +44,7 @@
           <br>
           <input class="register__form-input" type="password" id="password" name="password">
           <br>
-          <span class="alert-products"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+          <span class="alert-products alert-password"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -49,7 +52,7 @@
           <br>
           <input class="register__form-input" type="password" id="password2" name="password2">
           <br>
-          <span class="alert-products"><%= locals.errors && errors.password2? errors.password2.msg : null %></span>
+          <span class="alert-products alert-password2" id="errorPass2"><%= locals.errors && errors.password2? errors.password2.msg : null %></span>
 
         </div>
         <div class="register__form-box">
@@ -57,7 +60,7 @@
           <br>
           <input class="register__date" type="date" id="date" name="date" value="<%= locals.old && locals.old.date %>">
         </div>
-        <span class="alert-products"><%= locals.errors && errors.date? errors.date.msg : null %></span>
+        <span class="alert-products alert-date"><%= locals.errors && errors.date? errors.date.msg : null %></span>
         <div class="register__form-box pais">
           <label class="register__pais" for="pais">País</label>
 
@@ -75,7 +78,7 @@
             <option value="vnz" <%= locals.old && old.country && old.country == 'vnz' ? 'selected' : null %>>Venezuela</option>
           </select>
           <br>
-          <span class="alert-products"><%= locals.errors && errors.country? errors.country.msg : null %></span>
+          <span class="alert-products alert-country"><%= locals.errors && errors.country? errors.country.msg : null %></span>
 
         </div>
         <div class="genero__titulo">
@@ -84,32 +87,33 @@
 
         <div class="register__form-box__genero">
           <div class="register__radio-box">
-            <input class="" type="radio" name="gender" id="masculino" value="masculino"<%= locals.old && old.gender && old.gender == "masculino"? 'checked' : null %>>
+            <input class="gender"  type="radio" name="gender" id="masculino" value="masculino"<%= locals.old && old.gender && old.gender == "masculino"? 'checked' : null %>>
             <label for="masculino">M</label>
           </div>
           <div class="register__radio-box">
-            <input class="" type="radio" name="gender" id="femenino" value="femenino" <%= locals.old && old.gender && old.gender == "femenino"? 'checked' : null %>>
+            <input class="gender"  type="radio" name="gender" id="femenino" value="femenino" <%= locals.old && old.gender && old.gender == "femenino"? 'checked' : null %>>
             <label for="femenino">F</label>
           </div>
           <div class="register__radio-box">
-            <input class="" type="radio" name="gender" id="nodice" value="nodice" <%= locals.old && old.gender && old.gender == "nodice"? 'checked' : null %>>
+            <input class="gender"  type="radio" name="gender" id="nodice" value="nodice" <%= locals.old && old.gender && old.gender == "nodice"? 'checked' : null %>>
             <label for="nodice">Otro</label>
           </div>
         </div>
-        <span class="alert-products"><%= locals.errors && errors.gender? errors.gender.msg : null %></span>
+        <span class="alert-products alert-gender"><%= locals.errors && errors.gender? errors.gender.msg : null %></span>
         <div class="register__form-box">
 
           <div class="register__radio-box__suscribir">
             <input class="checkbox" type="checkbox" name="terminos" id="terminos" >
             <label for="terminos">Acepta terminos y condiciones</label>
             <br>
-            <span class="alert-products"><%= locals.errors && errors.terminos? errors.terminos.msg : null %></span>
+            <span class="alert-products alert-terminos"><%= locals.errors && errors.terminos? errors.terminos.msg : null %></span>
           </div>
         </div>
       </article>
       <div class="button_register_box">
         <button class="button_register" type="submit">REGISTRARSE</button>
       </div>
+     
     </form>
 
   </main>
