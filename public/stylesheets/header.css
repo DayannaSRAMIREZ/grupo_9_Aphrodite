@@ -47,6 +47,9 @@
         padding: 8.3px;
         justify-content: space-between;
     }
+    .icon i{
+        margin: 8px 6px;
+    }
 
 
     .header__nav__ul-menuPrincipal a {
@@ -56,12 +59,11 @@
         justify-content: left;
     }
     .header__menu__usuarios{
-        margin-top: 3vh;
+        margin-top: 10px;
         display: flex;
-        justify-content: space-between;
-        width: 158px;
-        flex-direction: column;
-        margin-top: 40px;
+        width: 240px;
+        font-size: smaller;
+        text-align: center;
     }
 
     .header__nav__ul-menuPrincipal li {
@@ -69,12 +71,10 @@
     }
 
     .btnRegistrate{
-        width: 80px;
+        width: 100px;
     }
     .boxIngreso{
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
 
@@ -89,8 +89,8 @@
         margin-right: 10px;
     }
     .navUser{
-        margin-right: 15px;
-        margin-bottom: 29px;
+        margin-right: 60px;
+       
     }
 
     .header__nav__ul-menuSecundario li {
@@ -105,29 +105,17 @@
         justify-content: center;
     }
 
-    .listas {
-
-        display: flex;
-        flex-direction: column-reverse;   
-    }
+    
 
 
     .header__nav {
         width: 100%;
     }
     .icon{
-        margin-top: 2px;
-        padding: 14px 16px;
+        margin: 2px;
         
      }
-     .active {
-         background-color: #04AA6D;
-         color: white;
-     }
-     .header__nav a:hover{
-         background-color: #ddd;
-         color: black;
-     }
+    
      .header__nav__ul-menuPrincipal {
 
         display: none;
@@ -142,10 +130,16 @@
         font-size: 1vw;
     }
 
-    #menu button {
+    .icon {
 
         display: none;
 
+    }
+    .listas {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;   
     }
 
     
@@ -154,6 +148,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin-top: 16px;
 
 
     }
@@ -165,7 +160,7 @@
     .boxIngreso{
         display: flex;
         flex-direction: row;
-        width: 300px;
+        width: 110px;
         justify-content: space-between;
     }
     .btnRegistrate {
@@ -177,17 +172,20 @@
         margin-inline-end: 8px;
     }
     .header__menu__usuarios {
-        width: 300px;
+        width: 185px;
         flex-direction: row;
     }
 }
     @media (min-width: 1024px) {
-    .header__menu__usuarios {
+       .header__menu__usuarios {
         width: 208px;
         flex-direction: row;
         }
         .btnRegistrate {
             width: 80px;
+        }
+        .boxIngreso{
+            width: 130px;
         }
     }
 
@@ -198,6 +196,9 @@
      }
      .btnRegistrate {
         width: 108px;
+    }
+    .boxIngreso {
+        width: 190px;
     }
        
 }
