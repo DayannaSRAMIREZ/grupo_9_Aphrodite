@@ -194,6 +194,27 @@ module.exports = {
                 return res.redirect('/users/admin');
             })
             .catch(error => console.log(error))
+    },
+    /*API */
+    checkEmail: async(req,res)=>{
+        try{
+           let user = await db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+            let response= {
+                ok: true,
+                data: user ? true:false
+            }
+            return res.status(200).json(response)
+
+        }catch(error){
+            return res.status(error.status || 500).json({
+                ok: false,
+                msg: error.message || 'Comuniquese con el administrador'
+            })
+        }
     }
 
 

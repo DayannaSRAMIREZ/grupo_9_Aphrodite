@@ -51,8 +51,8 @@ body.home {
     width: 100%;
     height: calc(60% + 35px);
     background-color: var(--colorRosaClaro);
-    transition: transform .5s .25s ease-in;
-    z-index: index -1;
+    transition: transform .5s.25s ease-in;
+    z-index: -1;
 }
 
 .card::before {

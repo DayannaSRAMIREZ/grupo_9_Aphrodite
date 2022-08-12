@@ -6,6 +6,12 @@
     background-repeat: no-repeat;
     position: relative;
 }
+.notValid{
+border: solid 2px rgba(255, 0, 0, 0.185) !important; 
+}
+.isValid{
+    border: solid 2px rgba(0, 255, 0, 0.103) !important; 
+}
 
 .register__main::before {
     content: '';
