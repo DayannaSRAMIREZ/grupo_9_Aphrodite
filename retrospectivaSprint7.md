@@ -1,29 +1,29 @@
 # RETROSPECTIVA (Sprint 7)
 
 ## SEGUIR HACIENDO:
--  (Pau)
+- Retoques en la página (Pau)
 - (Day)
-- (Dani)
+- Estudiando para mejorar(Dani)
 - (Vivi)
 
 ** **
 ## HACER MAS:
-- (Pau)
-- (Day)
-- (Dani)
+- Practicar(Pau)
+- Descansar(Day)
+- Organizar los tiempos(Dani)
 - (Vivi)
 ** **
 ## EMPEZAR A HACER:
-- (Pau)
+- Resumenes(Pau)
 - (Day)
-- (Dani)
+- Practicar para la presentación(Dani)
 - (Vivi)
 
 ** **
 ## HACER MENOS:
-- (Pau)
+- Entrar en pánico(Pau)
 - (Day)
-- (Dani)
+- Proclastinar(Dani)
 - (Vivi)
 ** **
 ![RetrospectivaModeloEstrella]()

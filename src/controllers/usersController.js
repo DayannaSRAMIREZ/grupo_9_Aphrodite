@@ -169,20 +169,21 @@ module.exports = {
     menuAdmin: (req, res) => {
         res.render('menuAdmin')
     },
-    adminUpdate:(req,res)=>{
-    
-        db.User.update( {
-            rol: 'admin'
-        }, {
-            where :{
-                id:req.params.id
-            }
-        })
-        .then((info) => {
-            return res.redirect('/users/admin');
-        })
-        .catch(error => console.log(error))
+    adminUpdate:async(req,res)=>{
+        try {
+           
+            let {rol} = await db.User.findByPk(req.params.id)
 
+           if(rol=== "admin"){
+            await db.User.update( {rol: 'guest'}, {where :{ id:req.params.id}})
+
+           }else{
+            await db.User.update( {rol: 'admin'}, {where :{ id:req.params.id}})
+           }
+           return res.redirect('/users/admin');
+        } catch (error) {
+            console.log(error);
+        }
     }, 
     remove: (req, res) => {
         db.User.destroy({
