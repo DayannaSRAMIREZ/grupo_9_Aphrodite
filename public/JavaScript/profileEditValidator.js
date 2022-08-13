@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
     image.addEventListener('change', () => {
     
     if(!allowedExtensions.exec(image.value)){
-        images.value = ""
+        image.value = ""
         errorImage.innerHTML = 'Formato no valido'
     }else{
         errorImage.innerHTML = ''
