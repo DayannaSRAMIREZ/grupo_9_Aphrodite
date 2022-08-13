@@ -2,7 +2,7 @@
 
 ## SEGUIR HACIENDO:
 - Retoques en la página (Pau)
-- (Day)
+- Repasando nuevos temas(Day)
 - Estudiando para mejorar(Dani)
 - (Vivi)
 
@@ -15,14 +15,14 @@
 ** **
 ## EMPEZAR A HACER:
 - Resumenes(Pau)
-- (Day)
+- No estresarme(Day)
 - Practicar para la presentación(Dani)
 - (Vivi)
 
 ** **
 ## HACER MENOS:
 - Entrar en pánico(Pau)
-- (Day)
+- Interrumpir la corrección de Mati(Day)
 - Proclastinar(Dani)
 - (Vivi)
 ** **
