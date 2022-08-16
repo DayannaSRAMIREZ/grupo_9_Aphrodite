@@ -71,12 +71,15 @@
     <div class="formEdit">
       <label for="nameProduct">Cargar Imágen de perfil</label>
       <input class="editFormInputFile" type="file" id="image" name="image" accept="image/*">
+      <span class="alert-products" id="errorImage"><%= locals.errors && errors.image? errors.image.msg : null %></span>
+
   </div>
     <div class="button_register_box">
       <button  type="submit">EDITAR</button>
     </div>
   </form>
   <script src="/JavaScript/profileEditValidator.js"></script>
+
     <%- include('./partials/footer') %> 
 </body>
 </html>
