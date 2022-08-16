@@ -45,7 +45,8 @@
 }
 @media (min-width: 768px) {
     .imgJoyeria{
-        margin: 0px 10px;
+        width: 100%;
+        margin: 0px -170px -10px 0px;
     }
     .tituloMap{
         width: 100%;
@@ -60,6 +61,16 @@
     
 }
 @media (min-width: 1024px){
+    .boxImg{
+        display: flex;
+        align-items: center;
+    }
+    .frase{
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        margin-top: 20px;
+    }
     .boxInfoMap{
         margin: 5px 0px;
         display: flex;

@@ -28,8 +28,15 @@
         <div class="boxIngreso">
         <% if (!locals.userLogin) { %>
          
-            <li class="btnRegistrate"><a href="/users/register">REGISTRATE</a></li>
-            <li class="ingresaBtn"><a href="/users/login">INGRESA</a></li>
+            <li class="btnRegistrate">
+
+              <a href="/users/register">
+                <i class="fa-solid fa-user"></i>REGISTRATE</a>
+            </li>
+            <li class="ingresaBtn">
+              <a href="/users/login">
+                <i class="fa-solid fa-right-to-bracket"></i>INGRESA</a>
+            </li>
           
         <% }else{ %>
           

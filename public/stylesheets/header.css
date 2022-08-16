@@ -92,6 +92,9 @@
         margin-right: 60px;
        
     }
+    .links{
+        display: none;
+    }
 
     .header__nav__ul-menuSecundario li {
 
@@ -185,7 +188,7 @@
             width: 80px;
         }
         .boxIngreso{
-            width: 130px;
+            width: 148px;
         }
     }
 
@@ -203,14 +206,24 @@
        
 }
 @media (min-width: 2560px){
+    header {
+
+        height: 85px;
+    }
     .header__menu__usuarios {
         width: 460px;
     }
     .btnRegistrate {
         width: 186px;
     }
+    .boxIngreso{
+        width: 400px;
+    }
     .navUser {
-        margin-right: 54px;
+        margin-right: 200px;
+    }
+    .userProfile{
+        margin-right: 5%;
     }
 }
 
