@@ -1,6 +1,13 @@
 .mainMap{
     background-color: var(--colorRosaFuerte);
 }
+.mainMap marquee{
+    padding: 1px;
+    color: white;
+    margin:0px;
+    background: var(--colorDorado);
+
+}
 .imgJoyeria{
     margin: 0px 5px;
 }
@@ -11,6 +18,9 @@
 .h5Map{
     text-align: center;
     margin: 5px;
+}
+.logo-card{
+    display: none;
 }
 .imgJoyeria2{
     display: none;
@@ -62,14 +72,91 @@
 }
 @media (min-width: 1024px){
     .boxImg{
+        margin-top: -7px;
         display: flex;
         align-items: center;
     }
-    .frase{
+    .boxFrase{
         display: flex;
         flex-direction: column;
-        padding: 5%;
-        margin-top: 20px;
+        align-items: center;
+    }
+    
+
+    .logoFind{
+        
+        width: 100%;
+    }
+    #rotate {
+        animation: rotation 8s infinite linear;
+      }
+      
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotatey(360deg);
+        }
+      }
+      
+    
+
+    .logo-card {
+        position: relative;
+        width: 29vh;
+        height: 29vh;
+        
+        text-align: center;
+        display: grid;
+        place-content: center;
+        padding: 10px;
+        background-size: cover;
+        border-width: 1.5px;
+        border-color: var(--colorRosaFuerte);
+        z-index: 1;
+        overflow: hidden;
+        margin: 0.5vw;
+    }
+    .logo-card::before,
+    .logo-card::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: calc(60% + 35px);
+        background-color: var(--colorRosaClaro);
+        transition: transform .5s.25s ease-in;
+        z-index: -1;
+    }
+    
+    .logo-card::before {
+        top: 0;
+        clip-path:
+        polygon(0 0, 100% 0, 100% 45%, 0% 100%);
+        transform: translateY(-100%);
+    }
+
+    .logo-card::after {
+        bottom: 0;
+       clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+        transform: translateY(100%);
+    }
+    .logo-card:hover::before,
+    .logo-card:hover::after {
+        transform: translateY(0);
+    }
+
+    .logo-card:hover .box-card__content {
+        opacity: 1;
+        transition-delay: .75s;
+    }
+    .frase{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 19px;
+        align-items: center;
     }
     .boxInfoMap{
         margin: 5px 0px;
@@ -93,8 +180,8 @@
         margin-bottom: 25px;
     }
     .imgJoyeria2{
-        margin-right: 10px;
         display: inline;
+        margin-bottom: -11px;
     }
     
     

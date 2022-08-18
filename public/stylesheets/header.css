@@ -9,8 +9,7 @@
       width: 100%;
       top:  0; */
     }
-
-
+   
     #menu {
 
         display: flex;
@@ -50,6 +49,7 @@
     .icon i{
         margin: 8px 6px;
     }
+    
 
 
     .header__nav__ul-menuPrincipal a {
@@ -61,8 +61,6 @@
     .header__menu__usuarios{
         margin-top: 10px;
         display: flex;
-        width: 240px;
-        font-size: smaller;
         text-align: center;
     }
 
@@ -71,11 +69,20 @@
     }
 
     .btnRegistrate{
-        width: 100px;
+        width: 45px;
     }
     .boxIngreso{
         display: flex;
     }
+   .ingresoNone{
+    display: none;
+   }
+   .saludoUser{
+    width: 150px;
+   }
+   .userProfile{
+    margin: 0px;
+   }
 
 
     .header__nav__ul-menuSecundario {
@@ -89,11 +96,14 @@
         margin-right: 10px;
     }
     .navUser{
-        margin-right: 60px;
+        margin-right: 30px;
        
     }
     .links{
         display: none;
+    }
+    .navUser ul{
+        margin: 6px;
     }
 
     .header__nav__ul-menuSecundario li {
@@ -113,6 +123,7 @@
 
     .header__nav {
         width: 100%;
+        margin-bottom: 16px;
     }
     .icon{
         margin: 2px;
@@ -180,6 +191,12 @@
     }
 }
     @media (min-width: 1024px) {
+
+        .icon i:hover{
+            color: aqua;
+            background-color: blueviolet;
+        }
+    
        .header__menu__usuarios {
         width: 208px;
         flex-direction: row;
@@ -189,6 +206,15 @@
         }
         .boxIngreso{
             width: 148px;
+        }
+        .boxIngreso i{
+            display: none;
+        }
+        .boxIngreso a{
+            display: block;
+        }
+        .ingresoNone{
+            display: block;
         }
     }
 
