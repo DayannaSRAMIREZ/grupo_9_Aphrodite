@@ -8,9 +8,14 @@
     background: var(--colorDorado);
 
 }
-.imgJoyeria{
-    margin: 0px 5px;
+.video-store{
+    width: 320px;
+    margin-top: -7px;
 }
+.imgJoyeria2{
+    display: none;
+}
+
 .h4Map{
     text-align: center;
     margin: 10px;
@@ -20,9 +25,6 @@
     margin: 5px;
 }
 .logo-card{
-    display: none;
-}
-.imgJoyeria2{
     display: none;
 }
 
@@ -53,11 +55,19 @@
     width: 100%;
     position: absolute;
 }
+@media (min-width:365px) {
+    .video-store {
+        width: 375px; 
+        }
+    
+}
+@media (min-width:425px) {
+    .video-store {
+        width: 425px; 
+        }
+    
+}
 @media (min-width: 768px) {
-    .imgJoyeria{
-        width: 100%;
-        margin: 0px -170px -10px 0px;
-    }
     .tituloMap{
         width: 100%;
     }
@@ -68,7 +78,11 @@
         font-size: 20px;
     }
     
-    
+    .video-store{
+        height: 331px;
+        width: 768px;
+        object-fit: cover;
+    }
 }
 @media (min-width: 1024px){
     .boxImg{
@@ -78,14 +92,27 @@
     }
     .boxFrase{
         display: flex;
-        flex-direction: column;
+        
         align-items: center;
     }
+    .box-video{
+        margin-top: 86px;
+        position: absolute;
+    }
     
-
+    .video-store{
+        margin-top: -80px;
+        height: 329px;
+        width: 175%;
+        object-fit: cover;
+    }
+    
     .logoFind{
         
         width: 100%;
+    }
+    .logoFind p{
+        font-size: 30px;
     }
     #rotate {
         animation: rotation 8s infinite linear;
@@ -104,20 +131,17 @@
 
     .logo-card {
         position: relative;
-        width: 29vh;
-        height: 29vh;
-        
+        width: 1024px;
+        height: 331px;
         text-align: center;
-        display: grid;
-        place-content: center;
-        padding: 10px;
+        display: flex;
         background-size: cover;
-        border-width: 1.5px;
         border-color: var(--colorRosaFuerte);
         z-index: 1;
         overflow: hidden;
-        margin: 0.5vw;
+        align-items: center;
     }
+   
     .logo-card::before,
     .logo-card::after {
         content: '';
@@ -151,6 +175,10 @@
         opacity: 1;
         transition-delay: .75s;
     }
+    .logoFind {
+        color: var(--colorDorado);
+        margin-bottom: 15px;
+    }
     .frase{
         margin-left: 20px;
         display: flex;
@@ -163,7 +191,7 @@
         display: flex;
         flex-direction: row-reverse;
         align-items: center
-  }
+    }
     .direccionMap {
         margin: 8% 0px;
         text-align: center;
@@ -180,9 +208,32 @@
         margin-bottom: 25px;
     }
     .imgJoyeria2{
+        margin-top: -11px;
         display: inline;
         margin-bottom: -11px;
     }
-    
-    
+    }
+    @media (min-width: 1366px){
+        .video-store {
+            width: 1366px; 
+          }
+          
+         .logo-card{
+            width: 1366px;
+         }
+    }
+    @media (min-width: 1440px){
+        .video-store {
+           width: 1440px; 
+         }
+        .logo-card{
+           width: 1440px;
+        }
+    }
+    @media (min-width: 2560px){
+        .video-store {
+            width: 2560px; 
+            }
+        .logo-card{
+            width: 2560px;}
 }
