@@ -179,6 +179,33 @@
         color: var(--colorDorado);
         margin-bottom: 15px;
     }
+    #animacion{padding:0;
+        margin:0 auto;
+        height: 364px;
+        width: 960px;}
+     
+    #animacion img{ position:absolute;
+        top: 0;
+        transition: all 1s ease-in-out;}
+     
+    #animacion img.novisible{
+        width: 502px;
+        opacity: 0;
+        height: 520px;
+    }
+       
+     
+    #animacion:hover img.novisible{
+        opacity:1;
+        filter:alpha(opacity=100);}
+     
+    #animacion:hover img.visible {
+        opacity:0;
+        filter:alpha(opacity=0);}
+     
+    #animacion img.visible:hover {
+        opacity:0;
+        filter:alpha(opacity=0);}
     .frase{
         margin-left: 20px;
         display: flex;
@@ -187,10 +214,10 @@
         align-items: center;
     }
     .boxInfoMap{
-        margin: 5px 0px;
+        
+        position: relative;
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center
+        flex-direction: row;
     }
     .direccionMap {
         margin: 8% 0px;
@@ -212,15 +239,64 @@
         display: inline;
         margin-bottom: -11px;
     }
+
+    .contactMap{
+        margin-bottom: 0px;
+        margin-left: 0px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 510px;
+        margin-top: 0px;
+    }
+    
+    .contactMap:before,
+    .contactMap:after{
+        content: "";
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s;
+    }
+    
+    .contactMap:before{
+        width: 5px;
+        height: 0;
+        box-shadow: 145px 150px #fff;
+    }
+    
+    .contactMap:hover:before{
+        height: 100%;
+        box-shadow: 100px 0 #fff;
+    }
+    
+    .contactMap:after{
+        width: 0;
+        height: 5px;
+        box-shadow: 150px 145px #fff;
+    }
+    
+    .contactMap:hover:after{
+        width: 100%;
+        box-shadow: 0 145px #fff;
+    }
+    .tituloMap {
+        margin-top: 20px;
+       
+    }
+
     }
     @media (min-width: 1366px){
         .video-store {
-            width: 1366px; 
-          }
-          
-         .logo-card{
-            width: 1366px;
+           width: 1366px; 
          }
+        .logo-card{
+           width: 1366px;
+        }
+        .contactMap{
+            margin-left: -112px;
+        }
     }
     @media (min-width: 1440px){
         .video-store {
@@ -228,6 +304,9 @@
          }
         .logo-card{
            width: 1440px;
+        }
+        .contactMap {
+            margin-left: -126px;
         }
     }
     @media (min-width: 2560px){
