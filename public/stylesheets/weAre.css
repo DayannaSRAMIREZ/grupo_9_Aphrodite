@@ -1,0 +1,34 @@
+.card_weare img{
+    width: 750px; 
+ 
+}
+.section_weare{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+div#slider { overflow: hidden; } /* las imágenes no van a salir del márgen de la pantalla*/
+div#slider figure img { width: 20%; float: left; }
+
+div#slider figure { 
+  position: relative;
+  width: 250%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 15s slidy infinite; /*el movimiento se va a mantener de forma indefinida -infinito-*/
+}
+
+
+/*esta parte del código define el movimiento de las imágenes a la izquierda*/
+@keyframes slidy {
+0% { left: 100%; }
+
+
+
+30% { left: 50%; }
+
+
+80% { left: -50%; }
+}
