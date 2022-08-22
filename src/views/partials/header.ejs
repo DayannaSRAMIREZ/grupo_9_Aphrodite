@@ -10,11 +10,11 @@
       </a>
       <div class="listas">
         <ul id="links" class="header__nav__ul-menuPrincipal">
-          <li><a href="/">HOME</a></li>
-          <li><a href="/product/gifts">GIFTS</a></li>
-          <li><a href="/product">PRODUCTS</a></li>
-          <li><a href="/find">FIND A STORE</a></li>
-          <li><a href="/weAre">WE ARE</a></li>
+          <li><a href="/">INICIO</a></li>
+          <li><a href="/product/gifts">REGALOS</a></li>
+          <li><a href="/product">PRODUCTOS</a></li>
+          <li><a href="/find">ENCONTRANOS</a></li>
+          <li><a href="/weAre">NOSOTRAS</a></li>
          <% if (locals.userLogin?.rol ==="admin" ) { %>
           <li><a href="/users/menuAdmin">MENU ADMIN</a></li>
         <% } %>
@@ -43,7 +43,7 @@
              <li class="saludoUser">HOLA <%= locals.userLogin.name %></li>
 
              <a class="userProfile" href="/users/profile"><i class="fas fa-user-circle"></i></a>
-            <li class="ingresoNone" ><a class="userProfile" href="/users/profile">MI PERFIL|</a></li>
+            <li class="ingresoNone" ><a class="userProfile" href="/users/profile">MI PERFIL</a></li>
 
             <a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
             <li class="ingresoNone" class="salir"><a class="salir" href="/users/logout">SALIR</a></li>

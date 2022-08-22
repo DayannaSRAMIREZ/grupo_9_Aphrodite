@@ -11,32 +11,50 @@
     <section class="home_cards">
   
    <br>
-  <% results.forEach(({id, name, price, discount, images}) => { %>
+   <section class="home_cards">
+
+    <% results.forEach(({id, name, price, images, discount, units}) => { %>
+      <a href="/product/detail/<%= id %> ">
+
+      <div class="container page-wrapper">
+        <div class="page-inner">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <% images.forEach(image => { %>
+                  <% if (image.primary) { %>
+                    <img  class="img" id="imagen" src="/images/products/<%= image.name%> " alt="imagePrimary"/>
+                  <% } %>
+                <% }) %>
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-company"><%= name %> </span>
+                  </div>
+                  <div class="a-size">Disponibles: <span class="size"><%= units %> </span></div>
+                </div>
+              </div>
       
-    
-        <article>
-        <div class="tarjeta tarjeta1">
-          <h4> <%=name%> </h4>
-          <div class="home__contenedor">
-            <% if (discount>0) { %>
-              <p><%= discount %>% off</p>
-            <% } %>
-            <% images.forEach(image => { %>
-              <% if (image.primary) { %>
-                <img src="/images/products/<%= image.name%> " alt="imagePrimary"/>
-              <% } %>
-            <% }) %>
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
       
-          </div>
-          <div class="tarjeta__pie">
-            <h6> u$s <%= price %> </h6>
-            <button><a href="/product/detail/<%= id %> ">ver más</a></button>
+                <a class="cart" href="#">
+                  <span class="price">$<%= price %> </span>
+                  <span class="add-to-cart">
+                    <span class="txt"> Ver más</span>
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
-   
-  <% }) %>
-    
+      </div>
+    </a>
+    <% }) %>
+     
+  
+  
   
     </section>
   </main>
