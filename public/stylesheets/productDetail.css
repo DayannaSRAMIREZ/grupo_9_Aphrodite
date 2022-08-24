@@ -328,6 +328,8 @@
     .detalle__imagenes .arrow_left {
         display: block;
     }
+    
+
 
     .product__detail main {
 
@@ -428,8 +430,8 @@
     }
 
     .interesarte__fotos img {
-
-        width: 20%;
+        margin: auto;
+        border: solid 1.5px var(--colorGris);
     }
 
     .desktop__formato {
@@ -459,7 +461,7 @@
 
     .product__detail__interarte img {
 
-        margin: 20px;
+        margin: auto;
         border: solid 1.5px var(--colorGris);
     }
 

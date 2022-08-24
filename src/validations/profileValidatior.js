@@ -15,7 +15,7 @@ module.exports = [
     .isLength({
         min: 4
     }).withMessage("Mínimo 4 letras"),
-    body("image")
-    .matches(/(\.jpg|\.jpeg|\.png|\.gif)$/i).withMessage('Formato de imágen no válido')
+    // body("image")
+    // .matches(/(\.jpg|\.jpeg|\.png|\.gif)$/i).withMessage('Formato de imágen no válido')
 
 ]
